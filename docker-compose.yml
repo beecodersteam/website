@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  ngrok:
+    image: wernight/ngrok
+    ports:
+    - "4040:4040"
+    network_mode: "host"
+    env_file:
+      - .env
+    environment:
+      - NGROK_PORT=localhost:3000
