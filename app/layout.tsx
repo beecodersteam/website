@@ -1,7 +1,8 @@
 
-import './css/style.css'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
+import './css/style.css'
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           {children}
           <Footer />
+          <SpeedInsights />
         </div>
       </body>
     </html>
