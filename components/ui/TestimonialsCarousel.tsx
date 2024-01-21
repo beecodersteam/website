@@ -43,7 +43,7 @@ export default function TestimonielasCarousel() {
       profession: "Fundador",
       company: "Nitelive",
       img: "/images/testimonials/luis.jpeg",
-      review: `A Bee Coders tem sido uma inspiração desde o início do projeto. Acompanhei de perto a evolução da equipe e posso dizer que o resultado é muito bom. Um projeto com um alto grau de complexidade, os colaboradores da Bee Coders dedicaram-se à causa desde o início com uma atitude evolutiva, grande profissionalismo e desenvolveram o projeto projetando soluções elegantes para cada problema. Não só recomendo a contratação da Bee Coders, como também quero solicitar seus serviços novamente em um futuro próximo para uma nova etapa deste projeto.`,
+      review: `A Bee Coders foi uma inspiração desde o início do projeto. Acompanhei de perto a evolução da equipe e posso dizer que o resultado é muito bom. Um projeto com um alto grau de complexidade, os colaboradores da Bee Coders dedicaram-se à causa desde o início com grande profissionalismo e desenvolveram o projeto com soluções elegantes. Não só recomendo a contratação da Bee Coders, como também quero solicitar seus serviços novamente para uma nova etapa deste projeto.`,
     },
   ];
 
@@ -73,7 +73,7 @@ export default function TestimonielasCarousel() {
               </div>
             </div>
 
-            <blockquote className="text-md font-medium mt-40">
+            <blockquote className="text-md font- mt-40">
               “{item.review}“
             </blockquote>
             <cite className="block font-bold text-lg not-italic mb-2">
