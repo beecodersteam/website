@@ -48,11 +48,11 @@ export default function Technologies() {
         </svg>
       </div>
 
-      <div className="bg-[#6B1C8F] mx-auto px-4 sm:px-6 mt-12">
+      <div className="bg-[#6B1C8F] px-4 sm:px-6 mt-12">
         <div className="py-12 md:py-20">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="sm:col-span-1">
-              <p className="text-white h4 font-bold">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="sm:col-span-2">
+              <p className="h2 mb-4 text-white">
                 Tecnologias que utilizamos
               </p>
               <p className="text-white h6 font-light">
@@ -61,7 +61,7 @@ export default function Technologies() {
               </p>
             </div>
             <div className="sm:col-span-2">
-              <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 rounded-lg">
+              <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 rounded-lg justify-items-center">
                 <FaJs size={56} color="white" />
                 <FaPhp size={56} color="white" />
                 <FaReact size={56} color="white" />

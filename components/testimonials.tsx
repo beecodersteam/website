@@ -46,7 +46,7 @@ export default function Testimonials() {
               A opinião dos nossos parceiros é sempre levada a sério
             </h2>
             <p className="text-xl text-gray-600" data-aos="zoom-y-out">
-              Veja o que dizem alguns dos nossos clientes.
+              Veja o que dizem alguns dos nossos clientes:
             </p>
           </div>
 

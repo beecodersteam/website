@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
-import Slider from "react-slick";
+import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-const NextArrow = (props: any) => (
+const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   <div {...props}>
     <FaArrowRight color="black" size={20} />
   </div>
 );
 
-const PrevArrow = (props: any) => (
+const PrevArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   <div {...props}>
     <FaArrowLeft color="black" size={20} />
   </div>
@@ -49,10 +49,10 @@ export default function TestimonielasCarousel() {
 
 
   return (
-    <div className="max-w-3xl mx-auto " data-aos="zoom-y-out">
+    <div className="max-w-6xl mx-5 md:mx-40" data-aos="zoom-y-out">
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div className="relative text-center px-12 py-8 pt-20 mx-4 md:mx-0">
+          <div key={index} className="relative text-center pt-20">
             <div className="relative">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                 <Image

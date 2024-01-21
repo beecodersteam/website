@@ -34,16 +34,24 @@ export default function Features() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">A nossa Colmeia</h1>
-            <p className="text-xl text-gray-600">
-              A Bee Coders promove um ambiente de aprendizado contínuo e
-              colaboração, permitindo que os profissionais da área de TI se
-              conectem, compartilhem conhecimento e cresçam juntos. Através de
-              treinamentos, eventos e recursos exclusivos, buscamos impulsionar
-              o desenvolvimento profissional e aprimorar as habilidades dos
-              nossos membros.
-            </p>
+          <div className="max-w-6xl mx-auto pb-12 md:pb-16">
+            <h1 className="h2 mb-4 text-beePrimary-normal text-center">A nossa Colmeia</h1>
+            <div className="md:grid md:grid-cols-12">
+              <div className="relative h-[260px] rounded-lg overflow-hidden col-span-5" data-aos="fade-up" data-aos-offset="200">
+                <iframe src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="absolute top-50 left-50 w-full h-full object-cover"></iframe>
+              </div>
+              <div className="text-xl text-gray-600 col-span-7 ml-6">
+              <p className="mb-6">
+                A Bee Coders promove um ambiente de aprendizado contínuo e
+                colaboração, permitindo que os profissionais da área de TI se
+                conectem, compartilhem conhecimento e cresçam juntos. 
+              </p>
+              <p>Através de treinamentos, eventos e recursos exclusivos, buscamos impulsionar
+                o desenvolvimento profissional e aprimorar as habilidades dos
+                nossos membros.</p>
+              </div>
+              
+            </div>
           </div>
 
           {/* Section content */}
@@ -54,7 +62,7 @@ export default function Features() {
               data-aos="fade-right"
             >
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">O nosso Portfólio</h3>
+                <h3 className="h3 mb-3 text-beePrimary-normal">Últimos projetos</h3>
                 <p className="text-xl text-gray-600">
                   Na nossa jornada, a busca pela excelência é constante. Cada
                   projeto no nosso portfólio é um reflexo do nosso
@@ -64,11 +72,10 @@ export default function Features() {
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 1
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1
                       ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
                       : "bg-gray-200 border-transparent"
-                  }`}
+                    }`}
                   href="#0"
                   onClick={(e) => {
                     e.preventDefault();
@@ -94,11 +101,10 @@ export default function Features() {
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 2
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2
                       ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
                       : "bg-gray-200 border-transparent"
-                  }`}
+                    }`}
                   href="#0"
                   onClick={(e) => {
                     e.preventDefault();
@@ -127,11 +133,10 @@ export default function Features() {
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
-                    tab !== 3
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 3
                       ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
                       : "bg-gray-200 border-transparent"
-                  }`}
+                    }`}
                   href="#0"
                   onClick={(e) => {
                     e.preventDefault();

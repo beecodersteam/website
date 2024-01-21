@@ -8,24 +8,18 @@ export default function CompanyMission() {
         <div className="py-12">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-10">
+            <h2 className="h2 mb-4 text-beePrimary-normal">Nossa Missão</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="relative h-[500px] rounded-lg overflow-hidden" data-aos="fade-up" data-aos-offset="300">
-              <video className="absolute top-50 left-50 w-full h-full object-cover" controls>
-                <source src="videos/bee-coffee.mp4" type="video/mp4" />
-                Seu broser não suporta video
-            </video>
+          <div className="md:grid md:grid-cols-2">
+            <div className="relative rounded-lg overflow-hidden col-span-1" data-aos="fade-up" data-aos-offset="200">
+              <img src="/images/pexels-03.jpg" alt="" />
             </div>
-
-            <div className="h-[500px] p-4 rounded-lg bg-slate-100 shadow-sm overflow-auto" data-aos="fade-down" data-aos-offset="300">
-              <h2 className="h2 mb-4 text-beePrimary-normal">Nossa Missão</h2>
-
-              <p className="text-md md:text-xl text-gray-600">Na BeeCoders, nossa missão é impulsionar o sucesso de nossos clientes através de soluções de software inovadoras e personalizadas. Estamos comprometidos em transformar ideias em realidade, fornecendo serviços de desenvolvimento de software de alta qualidade que atendem às necessidades exclusivas de cada cliente.</p>
+            <div className="rounded-lg overflow-auto col-span-1 ml-6" data-aos="fade-down" data-aos-offset="100">
+              <p className="text-md md:text-xl text-gray-600">Na Bee Coders, nossa missão é impulsionar o sucesso de nossos clientes através de soluções de software inovadoras e personalizadas. Estamos comprometidos em transformar ideias em realidade, fornecendo serviços de desenvolvimento de software de alta qualidade que atendem às necessidades exclusivas de cada cliente.</p>
               <p className="text-md md:text-xl text-gray-600 mt-4">Nosso compromisso é com a excelência, a inovação e a integridade. Trabalhamos com transparência e mantemos padrões éticos elevados em todas as nossas interações. Nosso objetivo é construir relacionamentos de longo prazo, baseados na confiança e na satisfação dos clientes.</p>
             </div>
           </div>
-
 
         </div>
       </div>

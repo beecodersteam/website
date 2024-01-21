@@ -13,7 +13,7 @@ import CompanyMission from '@/components/company-mission'
 import Highlights from '@/components/highlights'
 import Technologies from '@/components/technologies'
 
-export default function Home() {
+export default function Home() {  
   return (
     <>
       <Hero />
