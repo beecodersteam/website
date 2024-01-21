@@ -38,7 +38,7 @@ export default function Features() {
             <h1 className="h2 mb-4 text-beePrimary-normal text-center">A nossa Colmeia</h1>
             <div className="md:grid md:grid-cols-12">
               <div className="relative h-[260px] rounded-lg overflow-hidden col-span-5" data-aos="fade-up" data-aos-offset="200">
-                <iframe src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="absolute top-50 left-50 w-full h-full object-cover"></iframe>
+                <iframe src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" title="YouTube video player" allow="autoplay;" allowFullScreen className="absolute top-50 left-50 w-full h-full object-cover"></iframe>
               </div>
               <div className="text-xl text-gray-600 col-span-7 ml-6" data-aos="fade-up" data-aos-offset="200">
               <p className="mb-6">
