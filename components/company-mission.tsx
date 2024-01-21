@@ -12,7 +12,7 @@ export default function CompanyMission() {
             <h2 className="h2 mb-4 text-beePrimary-normal">Nossa Missão</h2>
           </div>
           <div className="md:grid md:grid-cols-2">
-            <div className="relative rounded-lg overflow-hidden col-span-1" data-aos="fade-up" data-aos-offset="200">
+            <div className="relative rounded-lg overflow-hidden col-span-1" data-aos="zoom-in" data-aos-offset="200">
               <img src="/images/pexels-03.jpg" alt="" />
             </div>
             <div className="rounded-lg overflow-auto col-span-1 ml-6" data-aos="fade-down" data-aos-offset="100">

@@ -51,7 +51,7 @@ export default function Technologies() {
       <div className="bg-[#6B1C8F] px-4 sm:px-6 mt-12">
         <div className="py-12 md:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="200">
               <p className="h2 mb-4 text-white">
                 Tecnologias que utilizamos
               </p>
@@ -60,7 +60,7 @@ export default function Technologies() {
                 inovadoras aos nossos clientes
               </p>
             </div>
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-2" data-aos="slide-left" data-aos-offset="200">
               <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 rounded-lg justify-items-center">
                 <FaJs size={56} color="white" />
                 <FaPhp size={56} color="white" />
