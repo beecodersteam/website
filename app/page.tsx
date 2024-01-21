@@ -2,6 +2,7 @@ export const metadata = {
   title: 'Bee Coders',
   description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence',
   keywords: 'beecoders, community, developers, software development, mobile apps',
+  image: 'https://www.beecoders.net/images/og-beecoders.jpg',
 }
 
 import Hero from '@/components/hero'
