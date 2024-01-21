@@ -1,15 +1,11 @@
-"use client"
+
 import './css/style.css'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  });
+  
   return (
     <html lang="en">
       <body className={` font-roboto antialiased bg-white text-gray-900 tracking-tight`}>
@@ -21,4 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   )
+}
+export const metadata = {
+  metadataBase: new URL('https://www.beecoders.net'),
+  title: 'Bee Coders',
+  description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence',
+  keywords: 'beecoders, community, developers, software development, mobile apps',
+  image: 'https://www.beecoders.net/images/og-beecoders.png',
+  start_url: '/',
 }

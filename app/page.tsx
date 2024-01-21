@@ -1,10 +1,4 @@
-export const metadata = {
-  title: 'Bee Coders',
-  description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence',
-  keywords: 'beecoders, community, developers, software development, mobile apps',
-  image: 'https://www.beecoders.net/images/og-beecoders.jpg',
-}
-
+"use client"
 import Hero from '@/components/hero'
 import Features from '@/components/features'
 import FeaturesBlocks from '@/components/features-blocks'
@@ -13,8 +7,14 @@ import Newsletter from '@/components/newsletter'
 import CompanyMission from '@/components/company-mission'
 import Highlights from '@/components/highlights'
 import Technologies from '@/components/technologies'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export default function Home() {  
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  });
   return (
     <>
       <Hero />
@@ -28,3 +28,4 @@ export default function Home() {
     </>
   )
 }
+

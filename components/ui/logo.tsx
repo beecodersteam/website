@@ -8,14 +8,14 @@ import BeeLogoVertBlack from '@/public/images/logos/mini/logo-vert-black.png'
 export default function Logo() {
   return (
     <Link href="/" className="block" aria-label="Cruip">
-      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className='w-48' />
+      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className="w-48" priority />
     </Link>
   )
 }
 export function LogoHorizBlack() {
   return (
     <Link href="/" className="block" aria-label="bee logo">
-      <Image src={BeeLogoHorizBlack} alt="Bee Logo" className='w-48' />
+      <Image src={BeeLogoHorizBlack} alt="Bee Logo" className="w-48" />
     </Link>
   )
 }
@@ -23,14 +23,14 @@ export function LogoHorizBlack() {
 export function LogoVertWhite() {
   return (
     <Link href="/" className="block" aria-label="bee logo">
-      <Image src={BeeLogoVertWhite} alt="Bee Logo" className='w-48' />
+      <Image src={BeeLogoVertWhite} alt="Bee Logo" className="w-48" />
     </Link>
   )
 }
 export function LogoVertBlack() {
   return (
     <Link href="/" className="block" aria-label="bee logo">
-      <Image src={BeeLogoVertBlack} alt="Bee Logo" className='w-48' />
+      <Image src={BeeLogoVertBlack} alt="Bee Logo" className="w-48" />
     </Link>
   )
 }

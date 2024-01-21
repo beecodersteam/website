@@ -35,14 +35,14 @@ export default function TestimonielasCarousel() {
       name: `Alexandre Santos`,
       profession: "Diretor",
       company: "Alfasystems",
-      img: "/images/alexandre.jpg",
+      img: "/images/testimonials/alexandre.jpg",
       review: `Fiquei extremamente satisfeito com os serviços da Bee Coders. Eles demonstraram um profissionalismo excepcional, entregando um trabalho de alta qualidade dentro do prazo estipulado. A equipe foi altamente competente, ágil e colaborativa, tornando todo o processo suave e eficiente. Recomendo fortemente seus serviços a quem procura excelência em programação. Parabéns pelo excelente trabalho!`,
     },
     {
       name: `Luis Amado`,
       profession: "Fundador",
       company: "Nitelive",
-      img: "/images/luis.jpeg",
+      img: "/images/testimonials/luis.jpeg",
       review: `A Bee Coders tem sido uma inspiração desde o início do projeto. Acompanhei de perto a evolução da equipe e posso dizer que o resultado é muito bom. Um projeto com um alto grau de complexidade, os colaboradores da Bee Coders dedicaram-se à causa desde o início com uma atitude evolutiva, grande profissionalismo e desenvolveram o projeto projetando soluções elegantes para cada problema. Não só recomendo a contratação da Bee Coders, como também quero solicitar seus serviços novamente em um futuro próximo para uma nova etapa deste projeto.`,
     },
   ];
