@@ -1,9 +1,7 @@
-"use client";
 import VideoContainer from './video-banner'
 
-
 export default function Hero() {
-  
+
   return (
     <VideoContainer videoSrc={getRandomVideo()}>
       <div className='text-center'>
@@ -11,8 +9,8 @@ export default function Hero() {
           Comprometidos com a <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-beePrimary-lightest to-beeSecondary-dark">
             Qualidade do Seu Projeto
-            </span>
-            <p></p>
+          </span>
+          <p></p>
         </h1>
         <div className="max-w-3xl">
           <p className="text-md md:text-xl text-white mb-8" data-aos="zoom-y-out" data-aos-delay="200" data-aos-duration="500">
@@ -38,9 +36,9 @@ export default function Hero() {
 // create a function to return a random number between 0 and 20
 function getRandomVideo() {
   var videos = [
-    "backgrounds/office-group.mp4", 
-    "backgrounds/office-wood.mp4", 
-    "backgrounds/office-phone.mp4", 
+    "backgrounds/office-group.mp4",
+    "backgrounds/office-wood.mp4",
+    "backgrounds/office-phone.mp4",
     "backgrounds/office-toghether.mp4",
     "backgrounds/office-agreement.mp4",
     // "backgrounds/network-blacklines.mp4",

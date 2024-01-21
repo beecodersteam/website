@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CompanyMission() {
   return (
     <section className="relative bg-white">
@@ -12,8 +14,8 @@ export default function CompanyMission() {
             <h2 className="h2 mb-4 text-beePrimary-normal">Nossa Missão</h2>
           </div>
           <div className="md:grid md:grid-cols-2">
-            <div className="relative rounded-lg overflow-hidden col-span-1" data-aos="zoom-in" data-aos-offset="200">
-              <img src="/images/pexels-03.jpg" alt="" />
+            <div className="relative col-span-1" data-aos="zoom-in" data-aos-offset="200">
+              <Image src="/images/pexels-03.jpg" alt="mission image" width={600} height={500} className="rounded-lg overflow-hidden" />
             </div>
             <div className="rounded-lg overflow-auto col-span-1 ml-6" data-aos="fade-down" data-aos-offset="100">
               <p className="text-md md:text-xl text-gray-600">Na Bee Coders, nossa missão é impulsionar o sucesso de nossos clientes através de soluções de software inovadoras e personalizadas. Estamos comprometidos em transformar ideias em realidade, fornecendo serviços de desenvolvimento de software de alta qualidade que atendem às necessidades exclusivas de cada cliente.</p>
