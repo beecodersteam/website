@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Bee Coders',
-  description: 'Page description',
-  keywords: 'Page keywords',
+  description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence',
+  keywords: 'beecoders, community, developers, software development, mobile apps',
 }
 
 import Hero from '@/components/hero'
