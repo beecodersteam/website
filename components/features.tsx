@@ -40,7 +40,7 @@ export default function Features() {
               <div className="relative h-[260px] rounded-lg overflow-hidden col-span-5" data-aos="fade-up" data-aos-offset="200">
                 <iframe src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" title="YouTube video player" allow="autoplay;" allowFullScreen className="absolute top-50 left-50 w-full h-full object-cover"></iframe>
               </div>
-              <div className="text-xl text-gray-600 col-span-7 ml-6" data-aos="fade-up" data-aos-offset="200">
+              <div className="text-xl text-gray-600 col-span-7 md:ml-6 mt-6 md:mt-0" data-aos="fade-up" data-aos-offset="200">
               <p className="mb-6">
                 A Bee Coders promove um ambiente de aprendizado contínuo e
                 colaboração, permitindo que os profissionais da área de TI se
