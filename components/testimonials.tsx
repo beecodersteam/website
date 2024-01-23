@@ -42,7 +42,7 @@ export default function Testimonials() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="h2 mb-4">
+            <h2 className="h2 mb-4 session" id="testimonials">
               A opinião dos nossos parceiros é sempre levada a sério
             </h2>
             <p className="text-xl text-gray-600" data-aos="zoom-y-out">

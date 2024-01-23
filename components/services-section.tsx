@@ -1,4 +1,4 @@
-export default function FeaturesBlocks() {
+export default function ServicesSection() {
   return (
     <section className="relative bg-slate-100">
 
@@ -11,7 +11,7 @@ export default function FeaturesBlocks() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4 text-beePrimary-normal">Nossos serviços</h2>
+            <h2 className="h2 mb-4 text-beePrimary-normal session" id="services">Nossos serviços</h2>
             <p className="text-md md:text-xl text-gray-600">Oferecemos uma gama diversificada de soluções e serviços especializados, projetados para impulsionar o seu negócio no cenário digital. Com uma equipe de profissionais altamente qualificados, estamos comprometidos em entregar excelência e inovação em cada projeto, garantindo resultados que superam as expectativas de nossos clientes. </p>
           </div>
 

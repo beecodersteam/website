@@ -36,30 +36,42 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
+              {/* <li>
                 <Link href="/" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
                   Início</Link>
+              </li> */}
+              <li>
+                <Link href="/#mission" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  Missão</Link>
               </li>
               <li>
-                <Link href="/#about" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Sobre</Link>
-              </li>
-              <li>
-                <Link href="/signin" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                <Link href="/#services" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
                   Serviços</Link>
               </li>
               <li>
-                <Link href="/signin" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Equipe</Link>
+                <Link href="/#hive" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  Colmeia</Link>
               </li>
               <li>
+                <Link href="/#portifolio" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  Projetos</Link>
+              </li>
+              <li>
+                <Link href="/#technologies" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  Tecnologias</Link>
+              </li>
+              <li>
+                <Link href="/#contact" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  Contato</Link>
+              </li>
+              {/* <li>
                 <Link href="/signup" className="btn-sm text-white border-1 border-white bg-transparent hover:bg-white hover:text-beePrimary-normal ml-3">
                   <span>Acesso</span>
                   <svg className="w-3 h-3 fill-current shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
                   </svg>
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
           </nav>

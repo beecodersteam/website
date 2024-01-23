@@ -1,15 +1,16 @@
 "use client"
 import Hero from '@/components/hero'
-import Features from '@/components/features'
-import FeaturesBlocks from '@/components/features-blocks'
+import OurHive from '@/components/our-hive'
 import Testimonials from '@/components/testimonials'
-import Newsletter from '@/components/newsletter'
+import ContactForm from '@/components/contact-form'
 import CompanyMission from '@/components/company-mission'
 import Highlights from '@/components/highlights'
 import Technologies from '@/components/technologies'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import ServicesSection from '@/components/services-section'
+import Portifolio from '@/components/portifolio'
 
 export default function Home() {  
   useEffect(() => {
@@ -20,11 +21,12 @@ export default function Home() {
       <Hero />
       <Highlights/>
       <CompanyMission />
-      <FeaturesBlocks />
-      <Features />
+      <ServicesSection />
+      <OurHive />
+      <Portifolio />
       <Technologies />
       <Testimonials />
-      <Newsletter />
+      <ContactForm />
     </>
   )
 }

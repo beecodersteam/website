@@ -65,6 +65,30 @@ export default function MobileMenu() {
         >
           <ul className="px-5 py-2">
             <li>
+              <Link href="/#mission" className="flex font-medium text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Missão</Link>
+            </li>
+            <li>
+              <Link href="/#services" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Serviços</Link>
+            </li>
+            <li>
+              <Link href="/#hive" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Colmeia</Link>
+            </li>
+            <li>
+              <Link href="/#portifolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Projetos</Link>
+            </li>
+            <li>
+              <Link href="/#technologies" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Tecnologias</Link>
+            </li>
+            <li>
+              <Link href="/#contact" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Contato</Link>
+            </li>
+            {/* <li>
               <Link href="/signin" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Sign in</Link>
             </li>
             <li>
@@ -74,7 +98,7 @@ export default function MobileMenu() {
                   <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill="#999" fillRule="nonzero" />
                 </svg>
               </Link>
-            </li>
+            </li> */}
           </ul>          
         </Transition>
       </div>

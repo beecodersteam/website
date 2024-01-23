@@ -16,6 +16,11 @@
     }
 }
 
-.slick-slide > div {
+.slick-slide>div {
     margin: 0 10px;
+}
+
+.session {
+    scroll-margin-top: 100px;
+    /* Ajuste conforme necessário */
 }

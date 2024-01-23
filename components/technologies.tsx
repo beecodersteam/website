@@ -52,7 +52,7 @@ export default function Technologies() {
         <div className="py-12 md:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="200">
-              <p className="h2 mb-4 text-white">
+              <p className="h2 mb-4 text-white session" id="technologies">
                 Tecnologias que utilizamos
               </p>
               <p className="text-white h6 font-light">

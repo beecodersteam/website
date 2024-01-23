@@ -10,8 +10,8 @@ export default function CompanyMission() {
         <div className="py-12">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-10">
-            <h2 className="h2 mb-4 text-beePrimary-normal">Nossa Missão</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="h2 mb-4 text-beePrimary-normal session" id="mission">Nossa Missão</h2>
           </div>
           <div className="md:grid md:grid-cols-2">
             <div className="relative col-span-1" data-aos="zoom-in" data-aos-offset="200">
