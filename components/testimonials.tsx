@@ -43,10 +43,10 @@ export default function Testimonials() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="h2 mb-4 session" id="testimonials">
-              A opinião dos nossos parceiros é sempre levada a sério
+              Our partners' feedback is always taken seriously
             </h2>
             <p className="text-xl text-gray-600" data-aos="zoom-y-out">
-              Veja o que dizem alguns dos nossos clientes:
+              See what some of our clients have to say:
             </p>
           </div>
 

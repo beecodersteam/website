@@ -6,24 +6,24 @@ export default function Hero() {
     <VideoContainer videoSrc={getRandomVideo()}>
       <div className='text-center'>
         <h1 className="text-3xl md:text-5xl text-white font-extrabold drop-shadow-md tracking-tighter mb-4" data-aos="zoom-in">
-          Comprometidos com a <br />
+          Committed to <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-beePrimary-lightest to-beeSecondary-dark">
-            Qualidade do Seu Projeto
+            Quality of Your Project
           </span>
-          <p></p>
+          {/* optional spacing element retained if needed */}
         </h1>
         <div className="max-w-3xl">
           <p className="text-md md:text-xl text-white mb-8" data-aos="zoom-y-out" data-aos-delay="200" data-aos-duration="500">
-            Transformamos ideias visionárias dos nossos clientes em realidade, trabalhando lado a lado para moldar soluções tecnológicas que impulsionam o progresso e a inovação. <strong>Cada projeto é uma oportunidade de ultrapassar fronteiras</strong>.</p>
+            We transform our clients' visionary ideas into reality, working side by side to shape technological solutions that drive progress and innovation. <strong>Each project is an opportunity to push boundaries</strong>.</p>
           <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div>
               <a className="btn text-beeSecondary-light bg-beePrimary-normal hover:bg-beePrimary-light w-full mb-4 sm:w-auto sm:mb-0" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300" href="#0">
-                Entre para a colmeia
+                Join the hive
               </a>
             </div>
             <div>
               <a className="btn text-beePrimary-dark bg-beeSecondary-normal hover:bg-beeSecondary-light w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#0">
-                Contate-nos
+                Contact us
               </a>
             </div>
           </div>

@@ -53,11 +53,10 @@ export default function Technologies() {
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="200">
               <p className="h2 mb-4 text-white session" id="technologies">
-                Tecnologias que utilizamos
+                Technologies we use
               </p>
               <p className="text-white h6 font-light">
-                Utilizamos tecnologia de vanguarda para oferecer soluções
-                inovadoras aos nossos clientes
+                We use cutting-edge technology to deliver innovative solutions to our clients
               </p>
             </div>
             <div className="sm:col-span-2" data-aos="slide-left" data-aos-offset="200">

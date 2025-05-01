@@ -66,27 +66,27 @@ export default function MobileMenu() {
           <ul className="px-5 py-2">
             <li>
               <Link href="/#mission" className="flex font-medium text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Missão</Link>
+                Mission</Link>
             </li>
             <li>
               <Link href="/#services" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Serviços</Link>
+                Services</Link>
             </li>
             <li>
               <Link href="/#hive" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Colmeia</Link>
+                Hive</Link>
             </li>
             <li>
-              <Link href="/#portifolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Projetos</Link>
+              <Link href="/#portfolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                Projects</Link>
             </li>
             <li>
               <Link href="/#technologies" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Tecnologias</Link>
+                Technologies</Link>
             </li>
             <li>
               <Link href="/#contact" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Contato</Link>
+                Contact</Link>
             </li>
             {/* <li>
               <Link href="/signin" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Sign in</Link>

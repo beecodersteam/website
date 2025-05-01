@@ -33,17 +33,17 @@ export default function TestimonielasCarousel() {
   const data = [
     {
       name: `Alexandre Santos`,
-      profession: "Diretor",
+      profession: "Director",
       company: "Alfasystems",
       img: "/images/testimonials/alexandre.jpg",
-      review: `Fiquei extremamente satisfeito com os serviços da Bee Coders. Eles demonstraram um profissionalismo excepcional, entregando um trabalho de alta qualidade dentro do prazo estipulado. A equipe foi altamente competente, ágil e colaborativa, tornando todo o processo suave e eficiente. Recomendo fortemente seus serviços a quem procura excelência em programação. Parabéns pelo excelente trabalho!`,
+      review: `I was extremely satisfied with Bee Coders' services. They demonstrated exceptional professionalism, delivering high-quality work within the stipulated timeframe. The team was highly competent, agile, and collaborative, making the entire process smooth and efficient. I strongly recommend their services to anyone seeking excellence in software development. Congratulations on the excellent work!`,
     },
     {
       name: `Luis Amado`,
-      profession: "Fundador",
+      profession: "Founder",
       company: "Nitelive",
       img: "/images/testimonials/luis.jpeg",
-      review: `A Bee Coders foi uma inspiração desde o início do projeto. Acompanhei de perto a evolução da equipe e posso dizer que o resultado é muito bom. Um projeto com um alto grau de complexidade, os colaboradores da Bee Coders dedicaram-se à causa desde o início com grande profissionalismo e desenvolveram o projeto com soluções elegantes. Não só recomendo a contratação da Bee Coders, como também quero solicitar seus serviços novamente para uma nova etapa deste projeto.`,
+      review: `Bee Coders was an inspiration from the very beginning of the project. I closely followed the team's progress and can say that the results are outstanding. Despite the project's high level of complexity, the Bee Coders team dedicated themselves from the start with great professionalism and delivered elegant solutions. Not only do I recommend hiring Bee Coders, but I also look forward to engaging their services again for the next phase of this project.`,
     },
   ];
 

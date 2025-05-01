@@ -30,11 +30,9 @@ export default function Portifolio() {
                         data-aos="fade-right"
                     >
                         <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                            <h3 className="h3 mb-3 text-beePrimary-normal session" id="portifolio">Últimos projetos</h3>
+                            <h3 className="h3 mb-3 text-beePrimary-normal session" id="portifolio">Latest Projects</h3>
                             <p className="text-xl text-gray-600">
-                                Na nossa jornada, a busca pela excelência é constante. Cada
-                                projeto no nosso portfólio é um reflexo do nosso
-                                comprometimento com os mais altos padrões de qualidade.
+                                On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.
                             </p>
                         </div>
                         {/* Tabs buttons */}
@@ -55,7 +53,7 @@ export default function Portifolio() {
                                         Nitelive
                                     </div>
                                     <div className="text-gray-600">
-                                        Nitelive é o seu guia em tempo real para os melhores lugares, colocando a diversão na ponta dos seus dedos.
+                                        Nitelive is your real-time guide to the best places, putting fun at your fingertips.
                                     </div>
                                 </div>
                                 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -87,7 +85,7 @@ export default function Portifolio() {
                                         Alfabets
                                     </div>
                                     <div className="text-gray-600">
-                                        Sistema web e aplicativo para o gerenciamento de casas de apostas.
+                                        Web system and application for managing betting houses.
                                     </div>
                                 </div>
                                 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -114,10 +112,10 @@ export default function Portifolio() {
                             >
                                 <div>
                                     <div className="font-bold leading-snug tracking-tight mb-1">
-                                        Mulher + Segura
+                                        Safer Women
                                     </div>
                                     <div className="text-gray-600">
-                                        Sistema e aplicativo para mulheres que tenham medidas protetivas.
+                                        System and application for women under protective measures.
                                     </div>
                                 </div>
                                 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">

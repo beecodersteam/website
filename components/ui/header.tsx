@@ -42,27 +42,27 @@ export default function Header() {
               </li> */}
               <li>
                 <Link href="/#mission" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Missão</Link>
+                  Mission</Link>
               </li>
               <li>
                 <Link href="/#services" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Serviços</Link>
+                  Services</Link>
               </li>
               <li>
                 <Link href="/#hive" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Colmeia</Link>
+                  Hive</Link>
               </li>
               <li>
                 <Link href="/#portifolio" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Projetos</Link>
+                  Projects</Link>
               </li>
               <li>
                 <Link href="/#technologies" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Tecnologias</Link>
+                  Technologies</Link>
               </li>
               <li>
                 <Link href="/#contact" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                  Contato</Link>
+                  Contact</Link>
               </li>
               {/* <li>
                 <Link href="/signup" className="btn-sm text-white border-1 border-white bg-transparent hover:bg-white hover:text-beePrimary-normal ml-3">

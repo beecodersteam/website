@@ -11,8 +11,8 @@ export default function ServicesSection() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4 text-beePrimary-normal session" id="services">Nossos serviços</h2>
-            <p className="text-md md:text-xl text-gray-600">Oferecemos uma gama diversificada de soluções e serviços especializados, projetados para impulsionar o seu negócio no cenário digital. Com uma equipe de profissionais altamente qualificados, estamos comprometidos em entregar excelência e inovação em cada projeto, garantindo resultados que superam as expectativas de nossos clientes. </p>
+            <h2 className="h2 mb-4 text-beePrimary-normal session" id="services">Our Services</h2>
+            <p className="text-md md:text-xl text-gray-600">We offer a diverse range of specialized solutions and services designed to propel your business into the digital landscape. With a team of highly qualified professionals, we are committed to delivering excellence and innovation in every project, ensuring results that exceed our clients' expectations.</p>
           </div>
 
 
@@ -32,8 +32,8 @@ export default function ServicesSection() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Sistemas Web</h4>
-              <p className="text-gray-600 text-center">Desenvolvimento de software abrangente e inovador, adaptado para atender às necessidades de nossos clientes.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Web Systems</h4>
+              <p className="text-gray-600 text-center">Comprehensive and innovative software development tailored to meet our clients' needs.</p>
             </div>
 
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl" data-aos="zoom-in">
@@ -48,8 +48,8 @@ export default function ServicesSection() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Apicativos Móveis</h4>
-              <p className="text-gray-600 text-center">Desenvolvimento de software abrangente e inovador, adaptado para atender às necessidades de nossos clientes.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Mobile Applications</h4>
+              <p className="text-gray-600 text-center">Comprehensive and innovative software development tailored to meet our clients' needs.</p>
             </div>
             {/* 2nd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl" data-aos="zoom-in">
@@ -64,7 +64,7 @@ export default function ServicesSection() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">UI/UX Design</h4>
-              <p className="text-gray-600 text-center">Um serviço de UI/UX Design que visa criar experiências digitais cativantes e centradas no usuário.</p>
+              <p className="text-gray-600 text-center">A UI/UX design service aimed at creating engaging, user-centered digital experiences.</p>
             </div>
 
             {/* 3rd item */}
@@ -80,8 +80,8 @@ export default function ServicesSection() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Marketing Digital</h4>
-              <p className="text-gray-600 text-center">Estratégias de marketing digital eficazes e personalizadas, voltadas para a visibilidade online e aos objetivos de negócios.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Digital Marketing</h4>
+              <p className="text-gray-600 text-center">Effective and personalized digital marketing strategies focused on online visibility and business objectives.</p>
             </div>
 
             {/* 4th item */}
@@ -97,8 +97,8 @@ export default function ServicesSection() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Near-Shore</h4>
-              <p className="text-gray-600 text-center">Oferecemos as vantagens da terceirização, mantendo suas operações comerciais mais perto de casa.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Nearshore</h4>
+              <p className="text-gray-600 text-center">We offer the advantages of outsourcing while keeping your business operations closer to home.</p>
             </div>
 
             {/* 5th item */}
@@ -113,8 +113,8 @@ export default function ServicesSection() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Terceirização</h4>
-              <p className="text-gray-600 text-center">Atuamos como empregador legal dos seus prestadores de serviços, cuidando de todos os aspectos do seu empregado.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Outsourcing</h4>
+              <p className="text-gray-600 text-center">We act as the legal employer for your service providers, handling all aspects of your workforce.</p>
             </div>
 
             {/* 6th item */}

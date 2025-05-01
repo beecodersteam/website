@@ -12,8 +12,8 @@ export default function Highlights() {
               </svg>
 
               <p className="ml-4">
-                <strong>4 países </strong><br/>
-                <small>de atuação</small>
+                <strong>4 countries</strong><br/>
+                <small>of operation</small>
               </p>
             </div>
           </div>
@@ -25,8 +25,8 @@ export default function Highlights() {
               </svg>
 
               <p className="ml-2">
-                <strong>+ 10 anos</strong> <br/>
-                <small>de experiência</small>
+                <strong>+ 10 years</strong><br/>
+                <small>of experience</small>
               </p>
             </div>
           </div>
@@ -38,8 +38,8 @@ export default function Highlights() {
               </svg>
 
               <p className="ml-2">
-                <strong>+ 30 clientes</strong> <br/>
-                <small>satisfeitos</small>
+                <strong>+ 30 clients</strong><br/>
+                <small>satisfied</small>
               </p>
             </div>
           </div>
