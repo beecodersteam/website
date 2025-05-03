@@ -12,13 +12,30 @@ export default function Footer() {
         {/* Top area: Blocks */}
         <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
 
-          {/* 1st block */}
-          <div className="sm:col-span-12 lg:col-span-3">
+          {/* 1st column */}
+          <div className="sm:col-span-12 lg:col-span-4">
             <div className="mb-2">
               <LogoHorizBlack />
             </div>
             <div className="text-sm text-gray-600">
-              
+              <p className="mb-4">Empowering businesses with innovative software solutions tailored to your needs. Let’s build the future together!</p>
+            </div>
+          </div>
+
+          {/* 2nd column */}
+          <div className="sm:col-span-12 lg:col-span-4">
+            
+          </div>
+
+          {/* 3rd column */}
+          <div className="sm:col-span-12 lg:col-span-4">
+            <div className="text-sm text-gray-600">
+              <h3 className="text-lg font-bold mb-2">Get in Touch</h3>
+              <p className="mb-4">Have questions or ready to start your project?
+                <br /> Reach out to us:</p>
+              <p>Phone: <a href="tel:+351910657140" className="text-beePrimary-normal hover:underline">+351 910 657 140</a></p>
+              <p>WhatsApp: <a href="https://wa.me/+351910657140" target="_blank" className="text-beePrimary-normal hover:underline">Chat with us</a></p>
+              <p>Email: <a href="mailto:contact@beecoders.club" className="text-beePrimary-normal hover:underline">contact@beecoders.club</a></p>
             </div>
           </div>
 
@@ -27,6 +44,8 @@ export default function Footer() {
         {/* Bottom area */}
         <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
           
+          {/* Contact Info */}
+          {/* Removed duplicate phone and WhatsApp information */}
 
           {/* Social as */}
           <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">

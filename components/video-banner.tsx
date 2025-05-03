@@ -8,7 +8,7 @@ export default function VideoContainer({ videoSrc, children }: VideoContainerPro
     return (
         <section className="relative w-screen bg-beePrimary-darkest justify-center overflow-hidden flex flex-col">
 
-            <video className="absolute top-50 left-50 w-full h-full object-cover opacity-15" autoPlay muted loop playsInline>
+            <video className="absolute top-50 left-50 w-full h-full object-cover opacity-20" autoPlay muted loop playsInline>
                 <source key={videoSrc} src={videoSrc} type="video/mp4" />
                 Seu broser não suporta video
             </video>

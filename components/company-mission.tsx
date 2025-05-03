@@ -18,8 +18,8 @@ export default function CompanyMission() {
               <Image src="/images/pexels-03.jpg" alt="mission image" width={600} height={500} className="rounded-lg overflow-hidden" />
             </div>
             <div className="rounded-lg overflow-auto col-span-1 md:ml-6 mt-6 md:mt-0" data-aos="fade-down" data-aos-offset="100">
-              <p className="text-md md:text-xl text-gray-600">At Bee Coders, our mission is to drive our clients' success through innovative and customized software solutions. We are committed to turning ideas into reality by providing high-quality software development services that meet each client's unique needs.</p>
-              <p className="text-md md:text-xl text-gray-600 mt-4">Our commitment is to excellence, innovation, and integrity. We work with transparency and maintain high ethical standards in all our interactions. Our goal is to build long-term relationships based on trust and client satisfaction.</p>
+              <p className="text-md md:text-xl text-gray-600">At Bee Coders, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.</p>
+              <p className="text-md md:text-xl text-gray-600 mt-4">We pride ourselves on a commitment to excellence, creativity, and integrity. By fostering transparency and upholding the highest ethical standards, we aim to build enduring partnerships founded on trust and client satisfaction.</p>
             </div>
           </div>
 
