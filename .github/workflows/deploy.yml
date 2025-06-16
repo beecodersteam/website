@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -49,21 +49,20 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Configure base path
-        run: echo "NEXT_PUBLIC_BASE_PATH=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-      - name: Verify Node and npm versions
-        run: |
-          echo "Node version: $(node --version)"
-          echo "npm version: $(npm --version)"
-          echo "Next.js version: $(npx next --version)"
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v3
+        with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
       - name: Restore cache
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: |
             .next/cache
@@ -76,38 +75,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          NODE_ENV: production
-      - name: List build output
-        run: |
-          echo "Listing root directory:"
-          ls -la
-          echo "Checking if out directory exists:"
-          if [ -d "./out" ]; then
-            echo "✅ out directory exists"
-            echo "Content of out directory:"
-            ls -la ./out
-            echo "Number of files in out:"
-            find ./out -type f | wc -l
-          else
-            echo "❌ out directory does not exist"
-            echo "Available directories:"
-            ls -la | grep ^d
-            echo "Checking for .next directory:"
-            if [ -d "./.next" ]; then
-              echo ".next directory exists"
-              ls -la ./.next
-            fi
-            echo "Manually creating out directory from .next..."
-            mkdir -p out
-            if [ -d "./.next/static" ]; then
-              cp -r ./.next/static ./out/_next/
-            fi
-            echo "Checking next.config.mjs:"
-            cat next.config.mjs
-          fi
+      - name: Test folders
+        run: ls -la
+      # - name: Static HTML export with Next.js
+      #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./out
 
