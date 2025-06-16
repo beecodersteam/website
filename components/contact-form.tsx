@@ -43,10 +43,10 @@ export default function ContactForm() {
                 {/* CTA form */}
                 <form className="w-full lg:w-auto">
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
-                    <input type="text" className="form-input w-full appearance-none bg-white border border-gray-700 focus:border-gray-600 rounded-md px-4 py-3 mb-2 h-24 text-white placeholder-gray-500" placeholder="Your message…" aria-label="Your message…" />
+                    <textarea className="form-input w-full appearance-none bg-white border border-gray-300 focus:border-beePrimary-light focus:ring-2 focus:ring-beePrimary-light rounded-md px-4 py-3 mb-2 h-24 text-gray-900 placeholder-gray-500 resize-none" placeholder="Your message…" aria-label="Your message…" />
                   </div>
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
-                    <input type="email" className="form-input w-full appearance-none bg-white border border-gray-700 focus:border-gray-600 rounded-md px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" aria-label="Your email…" />
+                    <input type="email" className="form-input w-full appearance-none bg-white border border-gray-300 focus:border-beePrimary-light focus:ring-2 focus:ring-beePrimary-light rounded-md px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-gray-900 placeholder-gray-500" placeholder="Your email…" aria-label="Your email…" />
                     <a className="btn text-beePrimary-normal bg-beeSecondary-normal hover:bg-beeSecondary-dark shadow rounded-md" href="#0">Send</a>
                   </div>
 
