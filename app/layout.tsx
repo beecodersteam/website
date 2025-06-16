@@ -21,10 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 export const metadata = {
-  metadataBase: new URL('https://www.beecoders.net'),
+  metadataBase: new URL('https://www.beecoders.club'),
   title: 'Bee Coders',
   description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence',
   keywords: 'beecoders, community, developers, software development, mobile apps',
-  image: 'https://www.beecoders.net/images/og-beecoders.png',
+  image: 'https://www.beecoders.club/images/og-beecoders.png',
   start_url: '/',
 }
