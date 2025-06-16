@@ -53,6 +53,8 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Configure base path
+        run: echo "NEXT_PUBLIC_BASE_PATH=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
       - name: Verify Node and npm versions
         run: |
           echo "Node version: $(node --version)"
@@ -105,7 +107,7 @@ jobs:
             cat next.config.mjs
           fi
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./out
 
