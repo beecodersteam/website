@@ -53,14 +53,13 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Verify Node and npm versions
+        run: |
+          echo "Node version: $(node --version)"
+          echo "npm version: $(npm --version)"
+          echo "Next.js version: $(npx next --version)"
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -75,6 +74,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NODE_ENV: production
       - name: List build output
         run: |
           echo "Listing root directory:"
@@ -82,11 +83,26 @@ jobs:
           echo "Checking if out directory exists:"
           if [ -d "./out" ]; then
             echo "✅ out directory exists"
+            echo "Content of out directory:"
             ls -la ./out
+            echo "Number of files in out:"
+            find ./out -type f | wc -l
           else
             echo "❌ out directory does not exist"
             echo "Available directories:"
             ls -la | grep ^d
+            echo "Checking for .next directory:"
+            if [ -d "./.next" ]; then
+              echo ".next directory exists"
+              ls -la ./.next
+            fi
+            echo "Manually creating out directory from .next..."
+            mkdir -p out
+            if [ -d "./.next/static" ]; then
+              cp -r ./.next/static ./out/_next/
+            fi
+            echo "Checking next.config.mjs:"
+            cat next.config.mjs
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
