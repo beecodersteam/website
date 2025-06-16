@@ -75,10 +75,19 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Test folders
-        run: ls -la
-      # - name: Static HTML export with Next.js
-      #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
+      - name: List build output
+        run: |
+          echo "Listing root directory:"
+          ls -la
+          echo "Checking if out directory exists:"
+          if [ -d "./out" ]; then
+            echo "✅ out directory exists"
+            ls -la ./out
+          else
+            echo "❌ out directory does not exist"
+            echo "Available directories:"
+            ls -la | grep ^d
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
