@@ -13,15 +13,15 @@ export default function Hero() {
         </h1>
         <div className="max-w-3xl">
           <p className="text-md md:text-xl text-white mb-8" data-aos="zoom-y-out" data-aos-delay="200" data-aos-duration="500">
-            At BeeCoders, we bring your ideas to life, crafting innovative digital solutions that redefine possibilities. <strong>Let’s build great things together</strong>.</p>
+            <strong>At BeeCoders</strong>, we specialize in transforming your ideas into cutting-edge digital solutions. <strong>Partner with us</strong> to redefine what's possible and build extraordinary experiences together.</p>
           <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div>
-              <a className="btn text-beeSecondary-light bg-beePrimary-normal hover:bg-beePrimary-light w-full mb-4 sm:w-auto sm:mb-0" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300" href="#0">
+              <a className="btn text-beeSecondary-light bg-beePrimary-normal hover:bg-beePrimary-light w-full mb-4 sm:w-auto sm:mb-0" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300" href="mailto:contact@beecoders.club">
                 Join Our Hive
               </a>
             </div>
             <div>
-              <a className="btn text-beePrimary-dark bg-beeSecondary-normal hover:bg-beeSecondary-light w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#0">
+              <a className="btn text-beePrimary-dark bg-beeSecondary-normal hover:bg-beeSecondary-light w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#contact">
                 Let’s Collaborate
               </a>
             </div>
