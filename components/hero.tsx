@@ -1,9 +1,27 @@
 "use client"
+import { useState, useEffect } from 'react'
 import VideoContainer from './video-banner'
 
+const videos = [
+    "backgrounds/office-group.mp4",
+    "backgrounds/office-wood.mp4",
+    "backgrounds/office-phone.mp4",
+    "backgrounds/office-toghether.mp4",
+    "backgrounds/office-agreement.mp4",
+    "backgrounds/network-blacklines.mp4",
+];
+function getRandomVideo() {
+  return videos[Math.floor(Math.random() * videos.length)];
+}
+
 export default function Hero() {
+  const [videoSrc, setVideoSrc] = useState("") // fallback
+
+  useEffect(() => {
+    setVideoSrc(getRandomVideo())
+  }, [])
   return (
-    <VideoContainer videoSrc={getRandomVideo()}>
+    <VideoContainer videoSrc={videoSrc}>
       <div className='text-center'>
         <h1 className="text-3xl md:text-5xl text-white font-extrabold drop-shadow-md tracking-tighter mb-4" data-aos="zoom-in">
           Transforming <br />
@@ -30,18 +48,5 @@ export default function Hero() {
       </div>
     </VideoContainer>
   )
-  // create a function to return a random number between 0 and 20
-  function getRandomVideo() {
-    var videos = [
-      // "backgrounds/office-group.mp4",
-      // "backgrounds/office-wood.mp4",
-      // "backgrounds/office-phone.mp4",
-      // "backgrounds/office-toghether.mp4",
-      "backgrounds/office-agreement.mp4",
-      // "backgrounds/network-blacklines.mp4",
-    ];
-
-    return videos[Math.floor(Math.random() * videos.length)];
-  }
 }
 
