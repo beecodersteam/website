@@ -88,39 +88,10 @@ export default function TestimonielasCarousel() {
   };
 
   return (
-    <div className="relative w-full md:max-w-4xl md:mx-auto px-4 md:px-8">
-      <style jsx global>{`
-        .custom-dots {
-          bottom: -40px !important;
-          display: flex !important;
-          justify-content: center !important;
-          list-style: none !important;
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-        .custom-dots li {
-          margin: 0 6px !important;
-        }
-        @media (min-width: 768px) {
-          .custom-dots {
-            bottom: -40px !important;
-          }
-          .custom-dots li {
-            margin: 0 8px !important;
-          }
-        }
-        .custom-dots li.slick-active div {
-          background-color: #FFA500 !important;
-          transform: scale(1.2) !important;
-        }
-        .slick-slider {
-          position: relative;
-        }
-      `}</style>
-      
+    <div className="relative w-full md:max-w-4xl md:mx-auto px-0 md:px-8">
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div key={index} className="px-2 md:px-4">
+          <div key={index} className="md:px-4">
             <div className="bg-white rounded-3xl border border-gray-200 shadow-lg p-6 md:p-12 mx-auto md:max-w-3xl relative overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-beePrimary-normal/10 to-beeSecondary-normal/10 rounded-bl-full"></div>
