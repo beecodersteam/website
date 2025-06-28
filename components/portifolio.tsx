@@ -1,221 +1,203 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
+import { MusicalNoteIcon, PresentationChartBarIcon, ShieldCheckIcon, RectangleStackIcon, BoltIcon, TruckIcon } from "@heroicons/react/24/outline";
 import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
+import TeamPic4 from "@/public/images/projects/ajrent.png";
+
+// Structured portfolio data
+const portfolioProjects = [
+    {
+        id: 1,
+        title: "Nitelive",
+        category: "Entertainment Platform",
+        description: "Your real-time guide to the best places, putting fun at your fingertips.",
+        fullDescription: "A comprehensive entertainment platform that connects users with real-time information about events, venues, and activities. Built with modern web technologies to deliver seamless user experiences.",
+        image: TeamPic1,
+        technologies: ["React", "Node.js", "MongoDB", "Real-time APIs"],
+        features: ["Real-time venue information", "Event discovery", "Social integration", "Location-based services"],
+        icon: <MusicalNoteIcon className="w-6 h-6" />,
+        gradient: "from-beePrimary-light to-beePrimary-normal"
+    },
+    {
+        id: 2,
+        title: "Alfabets",
+        category: "Business Management",
+        description: "Comprehensive web system and application for managing betting houses operations.",
+        fullDescription: "A sophisticated business management platform designed specifically for betting house operations, featuring comprehensive analytics, user management, and real-time transaction processing.",
+        image: TeamPic2,
+        technologies: ["React", "TypeScript", "PostgreSQL", "Docker"],
+        features: ["Transaction management", "Analytics dashboard", "User administration", "Security protocols"],
+        icon: <PresentationChartBarIcon className="w-6 h-6" />,
+        gradient: "from-beePrimary-normal to-beePrimary-dark"
+    },
+    {
+        id: 3,
+        title: "Mulher + Segura",
+        category: "Social Impact",
+        description: "Protective system and application designed for women under protective measures.",
+        fullDescription: "A critical safety platform providing emergency assistance, location tracking, and support network features for women in vulnerable situations, built with privacy and security as top priorities.",
+        image: TeamPic3,
+        technologies: ["React Native", "Firebase", "Geolocation", "Push Notifications"],
+        features: ["Emergency alerts", "Location tracking", "Support network", "Privacy protection"],
+        icon: <ShieldCheckIcon className="w-6 h-6" />,
+        gradient: "from-beePrimary-normal to-beePrimary-dark"
+    },
+    {
+        id: 4,
+        title: "AJ Rent",
+        category: "Automotive Platform",
+        description: "Modern React application for a rent-a-car company with seamless booking experience.",
+        fullDescription: "A comprehensive car rental platform built with React, featuring vehicle catalog, booking management, customer dashboard, and payment integration for a complete rental experience.",
+        image: TeamPic4,
+        technologies: ["React", "JavaScript", "REST API", "Payment Gateway"],
+        features: ["Vehicle catalog", "Online booking", "Payment processing", "Customer dashboard"],
+        icon: <TruckIcon className="w-6 h-6" />,
+        gradient: "from-beePrimary-dark to-beePrimary-normal"
+    }
+];
 
 export default function Portifolio() {
-    const [tab, setTab] = useState<number>(1);
+    const [activeProject, setActiveProject] = useState<number>(1);
+    const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
 
-    const tabs = useRef<HTMLDivElement>(null);
-    const heightFix = () => {
-        if (tabs.current && tabs.current.parentElement)
-            tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
-    };
-
-    useEffect(() => {
-        heightFix();
-    }, []);
     return (
-        <section className="relative">
-            <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-                {/* Section content */}
-                <div className="md:grid md:grid-cols-12 md:gap-6">
-                    {/* Content */}
-                    <div
-                        className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
-                        data-aos="fade-right"
-                    >
-                        <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                            <h3 className="h3 mb-3 text-beePrimary-normal session" id="portifolio">Latest Projects</h3>
-                            <p className="text-xl text-gray-600">
-                                On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.
-                            </p>
-                        </div>
-                        {/* Tabs buttons */}
-                        <div className="mb-8 md:mb-0">
-                            <a
-                                className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1
-                                    ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                                    : "bg-gray-200 border-transparent"
-                                    }`}
-                                href="#0"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setTab(1);
-                                }}
-                            >
-                                <div>
-                                    <div className="font-bold leading-snug tracking-tight mb-1">
-                                        Nitelive
-                                    </div>
-                                    <div className="text-gray-600">
-                                        Nitelive is your real-time guide to the best places, putting fun at your fingertips.
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                                    <svg
-                                        className="w-3 h-3 fill-current"
-                                        viewBox="0 0 12 12"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"
-                                            fillRule="nonzero"
-                                        />
-                                    </svg>
-                                </div>
-                            </a>
-                            <a
-                                className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2
-                                    ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                                    : "bg-gray-200 border-transparent"
-                                    }`}
-                                href="#0"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setTab(2);
-                                }}
-                            >
-                                <div>
-                                    <div className="font-bold leading-snug tracking-tight mb-1">
-                                        Alfabets
-                                    </div>
-                                    <div className="text-gray-600">
-                                        Web system and application for managing betting houses.
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                                    <svg
-                                        className="w-3 h-3 fill-current"
-                                        viewBox="0 0 12 12"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
-                                    </svg>
-                                </div>
-                            </a>
+        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
+            {/* Background decorations */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-beePrimary-light/20 to-beePrimary-normal/20 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
+            </div>
 
-                            <a
-                                className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 3
-                                    ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
-                                    : "bg-gray-200 border-transparent"
-                                    }`}
-                                href="#0"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setTab(3);
-                                }}
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section Header */}
+                <div className="text-center mb-16" data-aos="fade-up">
+                    <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
+                        <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
+                        <span className="text-beePrimary-normal font-semibold text-sm">OUR PORTFOLIO</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6" id="portifolio">
+                        <span className="bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark bg-clip-text text-transparent">
+                            Highlighted Projects
+                        </span>
+                    </h2>
+                    <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.
+                    </p>
+                </div>
+
+                {/* Portfolio Content */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Project Selection */}
+                    <div className="space-y-4" data-aos="fade-right">
+                        {portfolioProjects.map((project) => (
+                            <button
+                                key={project.id}
+                                onClick={() => setActiveProject(project.id)}
+                                className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
+                                    activeProject === project.id
+                                        ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
+                                        : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
+                                }`}
                             >
-                                <div>
-                                    <div className="font-bold leading-snug tracking-tight mb-1">
-                                        Safer Women
+                                <div className="flex items-start space-x-4">
+                                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${project.gradient} flex items-center justify-center text-white shadow-lg`}>
+                                        {project.icon}
                                     </div>
-                                    <div className="text-gray-600">
-                                        System and application for women under protective measures.
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center space-x-2 mb-2">
+                                            <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                                            <span className="px-2 py-1 bg-beePrimary-light/20 text-beePrimary-dark text-xs rounded-full font-medium">
+                                                {project.category}
+                                            </span>
+                                        </div>
+                                        <p className="text-gray-600 leading-relaxed">{project.description}</p>
+                                        
+                                        {activeProject === project.id && (
+                                            <div className="mt-4 space-y-3">
+                                                <div className="flex flex-wrap gap-2">
+                                                    {project.technologies.map((tech, index) => (
+                                                        <span key={index} className="px-3 py-1 bg-gradient-to-r from-beePrimary-light/20 to-beePrimary-normal/20 text-beePrimary-dark text-sm rounded-full font-medium">
+                                                            {tech}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
+                                    <div className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                        activeProject === project.id ? 'bg-beePrimary-normal scale-125' : 'bg-gray-300'
+                                    }`}></div>
                                 </div>
-                                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                                    <svg
-                                        className="w-3 h-3 fill-current"
-                                        viewBox="0 0 12 12"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z"
-                                            fill="#191919"
-                                            fillRule="nonzero"
-                                        />
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
+                            </button>
+                        ))}
                     </div>
 
-                    {/* Tabs items */}
-                    <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
-                        <div className="transition-all">
-                            <div
-                                className="relative flex flex-col text-center lg:text-right"
-                                data-aos="zoom-y-out"
-                                ref={tabs}
-                            >
-                                {/* Item 1 */}
+                    {/* Project Display */}
+                    <div className="relative" data-aos="fade-left">
+                        <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                            {/* Project Image - Header do Card */}
+                            <div className="relative group">
+                                <div className="absolute inset-0 bg-gradient-to-r from-beePrimary-normal/20 to-beePrimary-dark/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <Transition
-                                    show={tab === 1}
+                                    show={true}
                                     appear={true}
-                                    className="w-full"
-                                    enter="transition ease-in-out duration-700 transform order-first"
-                                    enterFrom="opacity-0 translate-y-16"
-                                    enterTo="opacity-100 translate-y-0"
-                                    leave="transition ease-in-out duration-300 transform absolute"
-                                    leaveFrom="opacity-100 translate-y-0"
-                                    leaveTo="opacity-0 -translate-y-16"
-                                    beforeEnter={() => heightFix()}
-                                    unmount={false}
+                                    enter="transition-all duration-500"
+                                    enterFrom="opacity-0 scale-95"
+                                    enterTo="opacity-100 scale-100"
                                 >
-                                    <div className="relative inline-flex flex-col">
+                                    <div className="relative overflow-hidden">
                                         <Image
-                                            className="md:max-w-none mx-auto rounded"
-                                            src={TeamPic1}
-                                            width={500}
-                                            height="462"
-                                            alt="Features bg"
+                                            src={currentProject.image}
+                                            width={600}
+                                            height={400}
+                                            alt={currentProject.title}
+                                            className="w-full h-82 object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
-                                    </div>
-                                </Transition>
-                                {/* Item 2 */}
-                                <Transition
-                                    show={tab === 2}
-                                    appear={true}
-                                    className="w-full"
-                                    enter="transition ease-in-out duration-700 transform order-first"
-                                    enterFrom="opacity-0 translate-y-16"
-                                    enterTo="opacity-100 translate-y-0"
-                                    leave="transition ease-in-out duration-300 transform absolute"
-                                    leaveFrom="opacity-100 translate-y-0"
-                                    leaveTo="opacity-0 -translate-y-16"
-                                    beforeEnter={() => heightFix()}
-                                    unmount={false}
-                                >
-                                    <div className="relative inline-flex flex-col">
-                                        <Image
-                                            className="md:max-w-none mx-auto rounded"
-                                            src={TeamPic2}
-                                            width={500}
-                                            height="462"
-                                            alt="Features bg"
-                                        />
-                                    </div>
-                                </Transition>
-                                {/* Item 3 */}
-                                <Transition
-                                    show={tab === 3}
-                                    appear={true}
-                                    className="w-full"
-                                    enter="transition ease-in-out duration-700 transform order-first"
-                                    enterFrom="opacity-0 translate-y-16"
-                                    enterTo="opacity-100 translate-y-0"
-                                    leave="transition ease-in-out duration-300 transform absolute"
-                                    leaveFrom="opacity-100 translate-y-0"
-                                    leaveTo="opacity-0 -translate-y-16"
-                                    beforeEnter={() => heightFix()}
-                                    unmount={false}
-                                >
-                                    <div className="relative inline-flex flex-col">
-                                        <Image
-                                            className="md:max-w-none mx-auto rounded"
-                                            src={TeamPic3}
-                                            width={500}
-                                            height="462"
-                                            alt="Features bg"
-                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                        <div className="absolute bottom-4 left-4 right-4">
+                                            <div className="flex items-center space-x-2">
+                                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${currentProject.gradient} flex items-center justify-center text-white`}>
+                                                    {currentProject.icon}
+                                                </div>
+                                                <span className="text-white font-semibold">{currentProject.title}</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </Transition>
                             </div>
+
+                            {/* Project Details */}
+                            <div className="p-8 space-y-4">
+                                <div>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{currentProject.title}</h3>
+                                    
+                                </div>
+
+                                {/* Key Features */}
+                                <div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Main Features</h4>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        {currentProject.features.map((feature, index) => (
+                                            <div key={index} className="flex items-center space-x-3 p-3 bg-beePrimary-light/10 rounded-xl">
+                                                <div className="w-2 h-2 bg-beePrimary-normal rounded-full"></div>
+                                                <span className="text-sm font-medium text-gray-700">{feature}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Floating decoration */}
+                        <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark rounded-full flex items-center justify-center text-white shadow-lg">
+                            <BoltIcon className="w-6 h-6" />
                         </div>
                     </div>
                 </div>
