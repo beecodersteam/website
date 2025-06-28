@@ -33,7 +33,7 @@ export default function Testimonials() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what industry leaders and satisfied clients have to say about their experience working with BeeCoders.
+            Don't just take our word for it. Here's what satisfied clients have to say about their experience working with BeeCoders.
           </p>
         </div>
 
