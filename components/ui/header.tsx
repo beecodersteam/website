@@ -26,7 +26,7 @@ export default function Header() {
   }, [top])
 
   return (
-    <header className={`fixed w-full z-30 bg-opacity-70 bg-beePrimary-normal border-b-4 border-beeSecondary-normal transition duration-300 ease-in-out ${!top ? 'md:bg-opacity-80 backdrop-blur-sm shadow-lg' : ''}`}>
+    <header className={`fixed w-full z-30 bg-opacity-70 bg-beePrimary-normal border-b-4 border-beeSecondary-normal transition duration-300 ease-in-out ${!top ? 'md:bg-opacity-80 backdrop-blur-sm shadow-xl' : ''}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
 
