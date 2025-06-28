@@ -50,7 +50,7 @@ const highlights: HighlightItem[] = [
 
 export default function Highlights() {
   return (
-    <section className="relative bg-gradient-to-br bg-gray-200 py-8 lg:py-12">
+    <section className="relative bg-gradient-to-br bg-slate-200 py-8 lg:py-12">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -71,15 +71,15 @@ export default function Highlights() {
               data-aos-delay={100 + (index * 100)}
             >
               {/* Icon Container */}
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-light to-beePrimary-dark rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <div className="text-white">
                   {highlight.icon}
                 </div>
               </div>
 
               {/* Number */}
-              <div className="mb-2">
-                <span className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-beePrimary-dark to-beeSecondary-dark bg-clip-text text-transparent">
+              <div className="mb-1">
+                <span className="text-4xl lg:text-4xl font-bold bg-gradient-to-r from-beePrimary-light to-beePrimary-dark bg-clip-text text-transparent">
                   {highlight.number}
                 </span>
               </div>
