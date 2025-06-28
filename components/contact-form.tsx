@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from '@/lib/i18n'
 
-// External Discord Webhook URL - configure in .env.local
-const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || ''
+// Discord Webhook URL hardcoded para build estático
+const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1384249226262876200/fIDaRVvMrvFghL3EOTcDA84-Vgiv8OtR_-F4lccaTb8iZSrOus9WNAM_-5JSBCppwiRz'
 
 export default function ContactForm() {
   const { t } = useTranslation('sections');
@@ -38,13 +38,6 @@ export default function ContactForm() {
     if (!formData.email.includes('@')) {
       setStatus('error')
       setErrorMessage(String(t('contact.form.validation.validEmail')))
-      return
-    }
-
-    // Check if Discord webhook is configured
-    if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL.includes('YOUR_WEBHOOK_ID')) {
-      setStatus('error')
-      setErrorMessage(String(t('contact.form.validation.webhookNotConfigured')))
       return
     }
 
