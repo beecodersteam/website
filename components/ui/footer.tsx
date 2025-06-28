@@ -1,10 +1,8 @@
 'use client';
 
 import { LogoHorizBlack } from './logo'
-import { LogoYoutube, LogoInstagram, LogoLinkedin, LogoGithub } from 'react-ionicons'
 import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { 
-  MapPinIcon, 
   PhoneIcon, 
   EnvelopeIcon, 
   GlobeAltIcon,
@@ -212,13 +210,6 @@ export default function Footer() {
                   >
                     contact@beecoders.club
                   </a>
-                </div>
-                
-                <div className="flex items-center space-x-3 group">
-                  <div className="w-10 h-10 bg-purple-500/10 rounded-xl border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 group-hover:border-purple-500/40 transition-colors duration-300">
-                    <GlobeAltIcon className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <span className="text-gray-600 font-medium">beecoders.club</span>
                 </div>
               </div>
             </div>
