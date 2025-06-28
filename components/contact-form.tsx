@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
 
-// External API URL - configure here
-const API_URL = 'https://formspree.io/f/xanjjzqp'
+// External Discord Webhook URL - configure in .env.local
+const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -39,29 +39,65 @@ export default function ContactForm() {
       return
     }
 
+    // Check if Discord webhook is configured
+    if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL.includes('YOUR_WEBHOOK_ID')) {
+      setStatus('error')
+      setErrorMessage('Discord webhook is not configured. Please contact the administrator.')
+      return
+    }
+
     setIsLoading(true)
     setStatus('idle')
     setErrorMessage('')
 
     try {
-      const response = await fetch(API_URL, {
+      // Create Discord embed message
+      const embed = {
+        title: "🐝 New Contact Form Submission - Bee Coders",
+        color: 0xFFA500, // Orange color matching Bee Coders theme
+        fields: [
+          {
+            name: "📧 Email",
+            value: formData.email,
+            inline: true
+          },
+          {
+            name: "💬 Message",
+            value: formData.message,
+            inline: false
+          },
+          {
+            name: "⏰ Timestamp",
+            value: new Date().toLocaleString(),
+            inline: true
+          }
+        ],
+        footer: {
+          text: "Bee Coders Contact Form",
+          icon_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png"
+        },
+        timestamp: new Date().toISOString()
+      }
+
+      const response = await fetch(DISCORD_WEBHOOK_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: formData.email,
-          message: formData.message,
-          timestamp: new Date().toISOString()
+          username: "Bee Coders Contact Form",
+          avatar_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png",
+          embeds: [embed]
         })
       })
 
       if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`)
+        if (response.status === 404) {
+          throw new Error('Discord webhook not found. Please check the webhook URL.')
+        }
+        throw new Error(`Failed to send message: ${response.status} ${response.statusText}`)
       }
 
-      const result = await response.json()
-      
       setStatus('success')
       setFormData({ email: '', message: '' }) // Clear form
       
