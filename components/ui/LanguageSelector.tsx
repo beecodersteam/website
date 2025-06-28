@@ -3,10 +3,11 @@
 import { useTranslation } from '@/lib/i18n';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import { BR, US } from 'country-flag-icons/react/3x2';
 
 const languages = [
-  { code: 'en' as const, name: 'English', flag: '🇺🇸' },
-  { code: 'pt' as const, name: 'Português', flag: '🇧🇷' },
+  { code: 'en' as const, name: 'English', flag: <US className="w-5 h-5 text-white" /> },
+  { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5 text-white" /> },
 ];
 
 export default function LanguageSelector() {
@@ -29,7 +30,7 @@ export default function LanguageSelector() {
       >
         <GlobeAltIcon className="w-4 h-4 text-white" />
         <span className="text-sm text-white">{currentLanguage.flag}</span>
-        <span className="text-sm text-white hidden sm:block">{currentLanguage.name}</span>
+        {/* <span className="text-sm text-white hidden sm:block">{currentLanguage.code.toUpperCase()}</span> */}
       </button>
       
       {isOpen && (

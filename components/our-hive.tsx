@@ -96,7 +96,7 @@ export default function OurHive() {
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-beePrimary-dark">BeeCoders</span> {t('hive.description')}
+                  <strong>Bee Coders</strong> {t('hive.description')}
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {t('hive.description2')}

@@ -23,8 +23,8 @@ export default function CompanyMission() {
             {t('mission.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-700 leading-relaxed w-4/5 mx-auto">
-            {t('mission.description', { components: [<strong />] })}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {t('mission.description', { components: [<strong key="b1" />] })}
           </p>
         </div>
 
