@@ -52,9 +52,9 @@ export default function ServicesSection() {
     <section className="relative bg-beePrimary-normal py-16 lg:py-24 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-50">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-beeSecondary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-beeSecondary-normal rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-beeSecondary rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       {/* Geometric pattern overlay */}
