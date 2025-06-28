@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import { MusicalNoteIcon, PresentationChartBarIcon, ShieldCheckIcon, RectangleStackIcon, BoltIcon, TruckIcon } from "@heroicons/react/24/outline";
@@ -18,13 +18,12 @@ const portfolioProjects = [
         category: "Entertainment",
         country: "Netherlands",
         countryFlag: <NL className="w-5 h-4" />,
-        // description: "A mobile app to guide people to the best places to have fun in the city.",
         description: "Cross-platform mobile app with real-time location services that helps users discover the best venues and events in their city.",
         image: TeamPic1,
         technologies: ["Flutter", "Java", "Firebase", "Geolocation"],
         features: ["Real-time venue information", "Event discovery", "Social integration", "Location-based services"],
         icon: <MusicalNoteIcon className="w-6 h-6" />,
-        gradient: "from-beePrimary-light to-beePrimary-normal"
+        gradient: "from-beePrimary-normal to-beePrimary-dark"
     },
     {
         id: 4,
@@ -32,7 +31,6 @@ const portfolioProjects = [
         category: "Mobility",
         country: "Portugal",
         countryFlag: <PT className="w-5 h-4" />,
-        // description: "Application for a rent-a-car company with seamless booking experience.",
         description: "Web platform, featuring vehicle catalog, booking management, customer dashboard, and payment integration for a complete rental experience.",
         image: TeamPic4,
         technologies: ["React", "PHP", "REST API", "Payment Gateway"],
@@ -46,7 +44,6 @@ const portfolioProjects = [
         category: "Sporting Bets",
         country: "Brazil",
         countryFlag: <BR className="w-5 h-4" />,
-        // description: "A mobile app for managing betting houses operations in Brazil.",
         description: "A white labeled app for betting houses, featuring real-time integration with sports data apis.",
         image: TeamPic2,
         technologies: ["Flutter", "Ruby", "Firebase", "Geolocation"],
@@ -60,7 +57,6 @@ const portfolioProjects = [
         category: "Social",
         country: "Brazil",
         countryFlag: <BR className="w-5 h-4" />,
-        // description: "Protective system and application designed for women under protective measures.",
         description: "A safety platform that provides emergency assistance, location tracking, and support features for women in vulnerable situations.",
         image: TeamPic3,
         technologies: ["Flutter", "PHP", "Firebase", "Mercure", "Geolocation"],
@@ -73,6 +69,25 @@ const portfolioProjects = [
 export default function Portifolio() {
     const [activeProject, setActiveProject] = useState<number>(1);
     const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
+    const projectDisplayRef = useRef<HTMLDivElement>(null);
+
+    const handleProjectClick = (projectId: number) => {
+        setActiveProject(projectId);
+        
+        // Scroll to project display on mobile/tablet, with a small delay to ensure state is updated
+        setTimeout(() => {
+            if (projectDisplayRef.current) {
+                const yOffset = -100; // Offset to account for fixed header
+                const element = projectDisplayRef.current;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    };
 
     return (
         <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
@@ -107,7 +122,7 @@ export default function Portifolio() {
                         {portfolioProjects.map((project) => (
                             <button
                                 key={project.id}
-                                onClick={() => setActiveProject(project.id)}
+                                onClick={() => handleProjectClick(project.id)}
                                 className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${activeProject === project.id
                                         ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
                                         : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
@@ -124,12 +139,7 @@ export default function Portifolio() {
                                                 {project.category}
                                             </span>
                                         </div>
-                                        <div className="flex items-center space-x-2 mb-2">
-                                            <div className="flex items-center space-x-1">
-                                                {project.countryFlag}
-                                                <span className="text-xs text-gray-600">{project.country}</span>
-                                            </div>
-                                        </div>
+                                        
                                         <p className="text-gray-600 leading-relaxed">{project.description}</p>
 
                                         {activeProject === project.id && (
@@ -146,7 +156,7 @@ export default function Portifolio() {
                     </div>
 
                     {/* Project Display */}
-                    <div className="relative" data-aos="fade-left">
+                    <div className="relative" data-aos="fade-left" ref={projectDisplayRef}>
                         <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
                             {/* Project Image - Header do Card */}
                             <div className="relative group">
@@ -164,7 +174,7 @@ export default function Portifolio() {
                                             width={600}
                                             height={400}
                                             alt={currentProject.title}
-                                            className="w-full h-82 object-cover transition-transform duration-300 group-hover:scale-105"
+                                            className="w-full h-64 md:h-64 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                                         <div className="absolute bottom-4 left-4 right-4">
