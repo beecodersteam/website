@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 export default function CompanyMission() {
   return (
@@ -47,9 +48,7 @@ export default function CompanyMission() {
                 <div className="flex items-center space-x-3">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <CheckCircleIcon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <div>
@@ -70,29 +69,17 @@ export default function CompanyMission() {
               <div className="space-y-4">
                 {[
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    ),
+                    icon: <BoltIcon className="w-5 h-5" />,
                     title: "Innovation",
                     description: "Cutting-edge solutions that push boundaries and drive progress."
                   },
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    ),
+                    icon: <CheckCircleIcon className="w-5 h-5" />,
                     title: "Excellence",
                     description: "Unwavering commitment to quality in every aspect of our work."
                   },
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                    ),
+                    icon: <UsersIcon className="w-5 h-5" />,
                     title: "Partnership",
                     description: "Building lasting relationships based on trust and mutual success."
                   }

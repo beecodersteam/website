@@ -1,62 +1,47 @@
+import { 
+  ComputerDesktopIcon, 
+  DevicePhoneMobileIcon, 
+  PaintBrushIcon, 
+  ChartPieIcon, 
+  GlobeAltIcon, 
+  UsersIcon,
+  ArrowRightIcon 
+} from "@heroicons/react/24/outline";
+
 export default function ServicesSection() {
   const services = [
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
+      icon: <ComputerDesktopIcon className="w-8 h-8" />,
       title: "Web Systems",
       description: "Comprehensive and innovative software development tailored to meet our clients' needs.",
       features: ["Custom Development", "Scalable Architecture", "Modern Technologies", "Performance Optimization"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
+      icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
       title: "Mobile Applications",
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
       features: ["iOS & Android", "Cross-Platform", "Native Performance", "App Store Optimization"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z" />
-        </svg>
-      ),
+      icon: <PaintBrushIcon className="w-8 h-8" />,
       title: "UI/UX Design",
       description: "User-centered design services that create engaging and intuitive digital experiences.",
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-        </svg>
-      ),
+      icon: <ChartPieIcon className="w-8 h-8" />,
       title: "Digital Marketing",
       description: "Effective and personalized digital marketing strategies focused on online visibility and business objectives.",
       features: ["SEO Optimization", "Social Media", "Content Strategy", "Analytics & Insights"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <GlobeAltIcon className="w-8 h-8" />,
       title: "Nearshore Solutions",
       description: "We offer the advantages of outsourcing while keeping your business operations closer to home.",
       features: ["Time Zone Alignment", "Cultural Compatibility", "Cost Efficiency", "Quality Assurance"]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      icon: <UsersIcon className="w-8 h-8" />,
       title: "Team Outsourcing",
       description: "We act as the legal employer for your service providers, handling all aspects of your workforce.",
       features: ["Dedicated Teams", "Legal Compliance", "HR Management", "Flexible Scaling"]
@@ -138,9 +123,7 @@ export default function ServicesSection() {
 
                 {/* Hover arrow indicator */}
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg className="w-6 h-6 text-beePrimary-normal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  <ArrowRightIcon className="w-6 h-6 text-beePrimary-normal" />
                 </div>
               </div>
             </div>

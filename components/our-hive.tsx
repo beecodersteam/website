@@ -1,38 +1,30 @@
+import { 
+  BookOpenIcon, 
+  UsersIcon, 
+  DocumentIcon, 
+  TrophyIcon,
+  ArrowRightIcon 
+} from "@heroicons/react/24/outline";
+
 export default function OurHive() {
   const hiveFeatures = [
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
+      icon: <BookOpenIcon className="w-6 h-6" />,
       title: "Continuous Learning",
       description: "Access to cutting-edge training and skill development programs"
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      icon: <UsersIcon className="w-6 h-6" />,
       title: "Professional Network",
       description: "Connect with like-minded IT professionals and industry experts"
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14-7v18a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2h5l5 4v5z" />
-        </svg>
-      ),
+      icon: <DocumentIcon className="w-6 h-6" />,
       title: "Exclusive Resources",
       description: "Premium content, tools, and resources for professional growth"
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3a4 4 0 118 0v4M3 16l5-5 5 5M3 16h10" />
-        </svg>
-      ),
+      icon: <TrophyIcon className="w-6 h-6" />,
       title: "Career Growth",
       description: "Opportunities for advancement and skill enhancement"
     }
@@ -58,7 +50,7 @@ export default function OurHive() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="mission">
+          <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="our-hive">
             Our Hive
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
@@ -92,9 +84,7 @@ export default function OurHive() {
                 <div className="flex items-center space-x-3">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
+                      <UsersIcon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <div>
@@ -127,9 +117,7 @@ export default function OurHive() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Join Our Hive
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
               </a>
             </div>
           </div>

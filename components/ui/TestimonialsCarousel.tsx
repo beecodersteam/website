@@ -4,11 +4,12 @@ import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft, FaStar, FaQuoteLeft } from "react-icons/fa";
+import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 
 const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   <div 
     {...props}
-    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer hidden md:block"
     style={{
       ...props.style,
       right: '-60px',
@@ -23,7 +24,7 @@ const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
 const PrevArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   <div 
     {...props}
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer hidden md:block"
     style={{
       ...props.style,
       left: '-60px',
@@ -85,10 +86,10 @@ export default function TestimonielasCarousel() {
   };
 
   return (
-    <div className="relative max-w-4xl mx-auto px-8">
+    <div className="relative w-full md:max-w-4xl md:mx-auto px-4 md:px-8">
       <style jsx global>{`
         .custom-dots {
-          bottom: -60px !important;
+          bottom: -40px !important;
           display: flex !important;
           justify-content: center !important;
           list-style: none !important;
@@ -96,7 +97,15 @@ export default function TestimonielasCarousel() {
           padding: 0 !important;
         }
         .custom-dots li {
-          margin: 0 8px !important;
+          margin: 0 6px !important;
+        }
+        @media (min-width: 768px) {
+          .custom-dots {
+            bottom: -60px !important;
+          }
+          .custom-dots li {
+            margin: 0 8px !important;
+          }
         }
         .custom-dots li.slick-active div {
           background-color: #FFA500 !important;
@@ -109,24 +118,24 @@ export default function TestimonielasCarousel() {
       
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div key={index} className="px-4">
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 mx-auto max-w-3xl relative overflow-hidden">
+          <div key={index} className="px-2 md:px-4">
+            <div className="bg-white rounded-3xl border border-gray-200 shadow-lg p-6 md:p-12 mx-auto md:max-w-3xl relative overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-beePrimary-normal/10 to-beeSecondary-normal/10 rounded-bl-full"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-beeSecondary-normal/10 to-beePrimary-normal/10 rounded-tr-full"></div>
               
               {/* Quote icon */}
-              <div className="absolute top-8 left-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal rounded-full flex items-center justify-center">
-                  <FaQuoteLeft className="text-white w-5 h-5" />
+              <div className="absolute top-6 left-6 md:top-8 md:left-8">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal rounded-full flex items-center justify-center">
+                  <FaQuoteLeft className="text-white w-4 h-4 md:w-5 md:h-5" />
                 </div>
               </div>
 
               <div className="relative z-10">
                 {/* Header with avatar and info */}
-                <div className="flex flex-col md:flex-row items-center md:items-start mb-8">
-                  <div className="relative mb-6 md:mb-0 md:mr-6">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal p-1">
+                <div className="flex flex-col md:flex-row items-center md:items-start mb-6 md:mb-8">
+                  <div className="relative mb-4 md:mb-0 md:mr-6">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal p-1">
                       <Image
                         className="w-full h-full rounded-full object-cover"
                         src={item.img}
@@ -136,20 +145,20 @@ export default function TestimonielasCarousel() {
                       />
                     </div>
                     {/* Online indicator */}
-                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-4 border-white"></div>
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-green-500 rounded-full border-3 md:border-4 border-white"></div>
                   </div>
 
                   <div className="text-center md:text-left flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">{item.name}</h3>
-                    <p className="text-beePrimary-normal font-medium mb-1">{item.profession}</p>
-                    <p className="text-gray-600 text-sm mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1">{item.name}</h3>
+                    <p className="text-beePrimary-normal font-medium mb-1 text-sm md:text-base">{item.profession}</p>
+                    <p className="text-gray-600 text-xs md:text-sm mb-3">
                       <span className="font-medium">{item.company}</span> • {item.projectType}
                     </p>
                     
                     {/* Rating */}
-                    <div className="flex items-center justify-center md:justify-start space-x-1 mb-4">
+                    <div className="flex items-center justify-center md:justify-start space-x-1 mb-3 md:mb-4">
                       {renderStars(item.rating)}
-                      <span className="ml-2 text-sm text-gray-600 font-medium">
+                      <span className="ml-2 text-xs md:text-sm text-gray-600 font-medium">
                         {item.rating}.0
                       </span>
                     </div>
@@ -157,15 +166,13 @@ export default function TestimonielasCarousel() {
                 </div>
 
                 {/* Review text */}
-                <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed italic mb-6 relative">
+                <blockquote className="text-xs md:text-sm text-gray-700 leading-relaxed italic mb-4 md:mb-6 relative">
                   "{item.review}"
                 </blockquote>
 
                 {/* Trust badge */}
-                <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+                <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-500">
+                  <ShieldCheckIcon className="w-3 h-3 md:w-4 md:h-4 text-green-500" />
                   <span>Verified Client Review</span>
                 </div>
               </div>

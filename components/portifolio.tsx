@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
+import { MusicalNoteIcon, PresentationChartBarIcon, ShieldCheckIcon, RectangleStackIcon, BoltIcon, TruckIcon } from "@heroicons/react/24/outline";
 import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
+import TeamPic4 from "@/public/images/projects/ajrent.png";
 
 // Structured portfolio data
 const portfolioProjects = [
@@ -18,11 +20,7 @@ const portfolioProjects = [
         image: TeamPic1,
         technologies: ["React", "Node.js", "MongoDB", "Real-time APIs"],
         features: ["Real-time venue information", "Event discovery", "Social integration", "Location-based services"],
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
-            </svg>
-        ),
+        icon: <MusicalNoteIcon className="w-6 h-6" />,
         gradient: "from-beePrimary-light to-beePrimary-normal"
     },
     {
@@ -34,28 +32,32 @@ const portfolioProjects = [
         image: TeamPic2,
         technologies: ["React", "TypeScript", "PostgreSQL", "Docker"],
         features: ["Transaction management", "Analytics dashboard", "User administration", "Security protocols"],
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l-1-3m1 3l-3-3m-3 3h4" />
-            </svg>
-        ),
+        icon: <PresentationChartBarIcon className="w-6 h-6" />,
         gradient: "from-beePrimary-normal to-beePrimary-dark"
     },
     {
         id: 3,
-        title: "Safer Women",
+        title: "Mulher + Segura",
         category: "Social Impact",
         description: "Protective system and application designed for women under protective measures.",
         fullDescription: "A critical safety platform providing emergency assistance, location tracking, and support network features for women in vulnerable situations, built with privacy and security as top priorities.",
         image: TeamPic3,
         technologies: ["React Native", "Firebase", "Geolocation", "Push Notifications"],
         features: ["Emergency alerts", "Location tracking", "Support network", "Privacy protection"],
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-            </svg>
-        ),
+        icon: <ShieldCheckIcon className="w-6 h-6" />,
         gradient: "from-beePrimary-normal to-beePrimary-dark"
+    },
+    {
+        id: 4,
+        title: "AJ Rent",
+        category: "Automotive Platform",
+        description: "Modern React application for a rent-a-car company with seamless booking experience.",
+        fullDescription: "A comprehensive car rental platform built with React, featuring vehicle catalog, booking management, customer dashboard, and payment integration for a complete rental experience.",
+        image: TeamPic4,
+        technologies: ["React", "JavaScript", "REST API", "Payment Gateway"],
+        features: ["Vehicle catalog", "Online booking", "Payment processing", "Customer dashboard"],
+        icon: <TruckIcon className="w-6 h-6" />,
+        gradient: "from-beePrimary-dark to-beePrimary-normal"
     }
 ];
 
@@ -75,9 +77,7 @@ export default function Portifolio() {
                 {/* Section Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
                     <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
-                        <svg className="w-5 h-5 text-beePrimary-normal mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
+                        <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
                         <span className="text-beePrimary-normal font-semibold text-sm">OUR PORTFOLIO</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6" id="portifolio">
@@ -197,9 +197,7 @@ export default function Portifolio() {
 
                         {/* Floating decoration */}
                         <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark rounded-full flex items-center justify-center text-white shadow-lg">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
+                            <BoltIcon className="w-6 h-6" />
                         </div>
                     </div>
                 </div>
