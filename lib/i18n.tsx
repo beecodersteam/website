@@ -1,13 +1,12 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode, isValidElement, cloneElement } from 'react';
-
-type Locale = 'en' | 'pt';
+import { Locale, defaultLocale, loadClientTranslations, updateDocumentMeta, detectBrowserLocale } from './seo-i18n';
 
 interface I18nContextType {
   locale: Locale;
   changeLocale: (locale: Locale) => Promise<void>;
-  t: (key: string, options?: any) => ReactNode; // Allow returning ReactNode
+  t: (key: string, options?: any) => ReactNode;
   isLoading: boolean;
 }
 
@@ -19,23 +18,14 @@ const translations: Record<Locale, Record<string, any>> = {
   pt: {}
 };
 
-// Function to load translations
+// Function to load translations (client-side)
 async function loadTranslations(locale: Locale) {
   if (Object.keys(translations[locale]).length > 0) {
     return;
   }
 
-  try {
-    const [common, portfolio, sections] = await Promise.all([
-      fetch(`/locales/${locale}/common.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
-      fetch(`/locales/${locale}/portfolio.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
-      fetch(`/locales/${locale}/sections.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
-    ]);
-
-    translations[locale] = { common, portfolio, sections };
-  } catch (error) {
-    console.warn('Error loading translations:', error);
-  }
+  const translationData = await loadClientTranslations(locale);
+  translations[locale] = translationData;
 }
 
 // Function to get nested value
@@ -45,17 +35,28 @@ function getNestedValue(obj: any, path: string): any {
   }, obj);
 }
 
-// Function to interpolate React components
-function interpolate(text: string, components: ReactNode[]): ReactNode {
+// Function to interpolate React components and simple variables
+function interpolate(text: string, components: ReactNode[], variables?: Record<string, string>): ReactNode {
+  let processedText = text;
+  
+  // First, handle simple variable interpolation {{ variable }}
+  if (variables) {
+    Object.entries(variables).forEach(([key, value]) => {
+      const variableRegex = new RegExp(`{{\\s*${key}\\s*}}`, 'g');
+      processedText = processedText.replace(variableRegex, value);
+    });
+  }
+  
+  // Then handle React component interpolation <0>content</0>
   const result: ReactNode[] = [];
-  const regex = /<(\d)>(.*?)<\/\1>/g;
+  const componentRegex = /<(\d)>(.*?)<\/\1>/g;
   let lastIndex = 0;
   let match;
 
-  while ((match = regex.exec(text)) !== null) {
+  while ((match = componentRegex.exec(processedText)) !== null) {
     // Push the text before the match
     if (match.index > lastIndex) {
-      result.push(text.substring(lastIndex, match.index));
+      result.push(processedText.substring(lastIndex, match.index));
     }
 
     const componentIndex = parseInt(match[1], 10);
@@ -63,44 +64,34 @@ function interpolate(text: string, components: ReactNode[]): ReactNode {
     const component = components[componentIndex];
 
     if (component && isValidElement(component)) {
-      result.push(cloneElement(component, { key: lastIndex, children: content }));
+      result.push(cloneElement(component as any, { key: lastIndex, children: content }));
     } else {
       // Fallback for non-component interpolation or errors
       result.push(content);
     }
 
-    lastIndex = regex.lastIndex;
+    lastIndex = componentRegex.lastIndex;
   }
 
   // Push the remaining text after the last match
-  if (lastIndex < text.length) {
-    result.push(text.substring(lastIndex));
+  if (lastIndex < processedText.length) {
+    result.push(processedText.substring(lastIndex));
   }
 
-  return result;
+  // If no components were processed, return the string directly
+  return result.length <= 1 ? (result[0] || processedText) : result;
 }
 
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('en');
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
+  const [isLoading, setIsLoading] = useState(true);  useEffect(() => {
     const initLocale = async () => {
-      let initialLocale: Locale = 'en';
-      
-      if (typeof window !== 'undefined') {
-        const saved = localStorage.getItem('preferred-locale') as Locale;
-        if (saved && ['en', 'pt'].includes(saved)) {
-          initialLocale = saved;
-        } else {
-          const browserLang = navigator.language.split('-')[0] as Locale;
-          initialLocale = ['en', 'pt'].includes(browserLang) ? browserLang : 'en';
-        }
-      }
-      
+      const initialLocale = detectBrowserLocale();
+
       setLocale(initialLocale);
       await loadTranslations(initialLocale);
+      updateDocumentMeta(initialLocale); // Update SEO meta tags
       setIsLoading(false);
     };
 
@@ -111,6 +102,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     await loadTranslations(newLocale);
     setLocale(newLocale);
+    updateDocumentMeta(newLocale); // Update SEO meta tags
     
     if (typeof window !== 'undefined') {
       localStorage.setItem('preferred-locale', newLocale);
@@ -120,7 +112,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   };
 
   const t = (key: string, options?: any): ReactNode => {
-    const { returnObjects = false, components = [] } = options || {};
+    const { returnObjects = false, components = [], ...variables } = options || {};
     
     let namespace = 'common';
     let translationKey = key;
@@ -144,8 +136,20 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       return value;
     }
 
-    if (typeof value === 'string' && components.length > 0) {
-      return interpolate(value, components);
+    if (typeof value === 'string') {
+      // Handle both component and variable interpolation
+      if (components.length > 0 || Object.keys(variables).length > 0) {
+        return interpolate(value, components, variables);
+      }
+      
+      // Handle simple variable interpolation without components
+      let processedValue = value;
+      Object.entries(variables).forEach(([varKey, varValue]) => {
+        const variableRegex = new RegExp(`{{\\s*${varKey}\\s*}}`, 'g');
+        processedValue = processedValue.replace(variableRegex, String(varValue));
+      });
+      
+      return processedValue;
     }
 
     return value;
@@ -184,5 +188,3 @@ export function useI18n() {
   }
   return context;
 }
-
-export type { Locale };
