@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from '@/lib/i18n';
 
 export default function CompanyMission() {
+  const { t } = useTranslation('sections');
+
   return (
     <section className="relative bg-gradient-to-br from-white via-gray-50 to-slate-100 py-16 overflow-hidden">
       {/* Background decorative elements */}
@@ -11,17 +14,17 @@ export default function CompanyMission() {
       </div>
 
       {/* Decorative line separator */}
-      
+
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         {/* Section header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="mission">
-            Our Mission
+            {t('mission.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-700 leading-relaxed w-4/5 mx-auto">
-            At <span className="font-semibold text-beePrimary-dark">BeeCoders</span>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.
+            {t('mission.description', { components: [<strong />] })}
           </p>
         </div>
 
@@ -32,17 +35,17 @@ export default function CompanyMission() {
             <div className="relative">
               {/* Main image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <Image 
-                  src="/images/pexels-01.jpg" 
-                  alt="Team collaboration and innovation" 
-                  width={500} 
-                  height={500} 
-                  className="object-cover w-full h-full transition-transform duration-700 hover:scale-125" 
+                <Image
+                  src="/images/pexels-01.jpg"
+                  alt="Team collaboration and innovation"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full transition-transform duration-700 hover:scale-125"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-beePrimary-normal/20 to-transparent opacity-60"></div>
               </div>
-              
+
               {/* Floating card */}
               <div className="absolute -bottom-2 -right-6 bg-white rounded-xl shadow-xl p-6 max-w-xs border border-gray-100">
                 <div className="flex items-center space-x-3">

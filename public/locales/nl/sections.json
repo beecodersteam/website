@@ -1,0 +1,132 @@
+{
+  "mission": {
+    "title": "Onze Missie",
+    "subtitle": "Innovatie Versterken Door Technologie",
+    "description": "We zijn toegewijd aan het creëren van innovatieve digitale oplossingen die bedrijven transformeren en het leven van mensen verbeteren. Onze missie is het overbruggen van de kloof tussen geavanceerde technologie en toepassingen in de echte wereld."
+  },
+  "hero": {
+    "title": "De Toekomst Bouwen met Code",
+    "subtitle": "Innovatieve oplossingen voor de digitale wereld",
+    "cta": "Ontdek Ons Werk"
+  },
+  "hive": {
+    "title": "Onze Bijenkorf",
+    "subtitle": "Waar Innovatie Samenwerking Ontmoet",
+    "description": "We zijn een gemeenschap van gepassioneerde ontwikkelaars, ontwerpers en technologie-enthousiastelingen die samenwerken om buitengewone digitale oplossingen te creëren.",
+    "join": "Word Lid van de Bijenkorf",
+    "stats": {
+      "projects": "Geleverde Projecten",
+      "clients": "Tevreden Klanten",
+      "countries": "Landen Bediend",
+      "technologies": "Beheerste Technologieën"
+    },
+    "features": {
+      "innovation": {
+        "title": "Innovatie",
+        "description": "Geavanceerde oplossingen die grenzen verleggen en vooruitgang stimuleren."
+      },
+      "collaboration": {
+        "title": "Samenwerking",
+        "description": "Teamwerk en communicatie staan centraal in alles wat we doen."
+      },
+      "excellence": {
+        "title": "Excellentie",
+        "description": "Onwrikbare toewijding aan kwaliteit in elk aspect van ons werk."
+      },
+      "growth": {
+        "title": "Groei",
+        "description": "Continu leren en verbeteren voor onszelf en onze klanten."
+      }
+    }
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "subtitle": "We bieden een breed scala aan gespecialiseerde oplossingen en diensten ontworpen om uw bedrijf vooruit te stuwen in het digitale landschap. Met een team van hooggekwalificeerde professionals zijn we toegewijd aan het leveren van excellentie en innovatie in elk project.",
+    "webSystems": {
+      "title": "Websystemen",
+      "description": "Uitgebreide en innovatieve softwareontwikkeling op maat van de behoeften van onze klanten.",
+      "features": ["Aangepaste Ontwikkeling", "Schaalbare Architectuur", "Moderne Technologieën", "Prestatie Optimalisatie"]
+    },
+    "mobileApps": {
+      "title": "Mobiele Applicaties",
+      "description": "Native en cross-platform mobiele apps die uitzonderlijke gebruikerservaringen leveren.",
+      "features": ["iOS & Android", "Cross-Platform", "Native Prestaties", "App Store Optimalisatie"]
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "Gebruikersgerichte designdiensten die boeiende en intuïtieve digitale ervaringen creëren.",
+      "features": ["Gebruikersonderzoek", "Wireframing", "Prototyping", "Ontwerpsystemen"]
+    },
+    "digitalMarketing": {
+      "title": "Digitale Marketing",
+      "description": "Effectieve en gepersonaliseerde digitale marketingstrategieën gericht op online zichtbaarheid en bedrijfsdoelstellingen.",
+      "features": ["SEO Optimalisatie", "Sociale Media", "Content Strategie", "Analytics & Inzichten"]
+    },
+    "nearshore": {
+      "title": "Nearshore Oplossingen",
+      "description": "We bieden de voordelen van outsourcing terwijl we uw bedrijfsactiviteiten dichter bij huis houden.",
+      "features": ["Tijdzone Afstemming", "Culturele Compatibiliteit", "Kostenefficiëntie", "Kwaliteitsborging"]
+    },
+    "teamOutsourcing": {
+      "title": "Team Outsourcing",
+      "description": "We fungeren als juridische werkgever voor uw dienstverleners en behandelen alle aspecten van uw workforce.",
+      "features": ["Toegewijde Teams", "Juridische Compliance", "HR Management", "Flexibele Schaling"]
+    }
+  },
+  "technologies": {
+    "title": "Technologieën die we gebruiken",
+    "subtitle": "We gebruiken geavanceerde technologie om innovatieve oplossingen aan onze klanten te leveren"
+  },
+  "testimonials": {
+    "title": "Wat Onze Klanten Zeggen",
+    "subtitle": "Klantgetuigenissen",
+    "description": "Geloof niet alleen ons woord. Hier is wat tevreden klanten te zeggen hebben over hun ervaring met werken met **Bee Coders**.",
+    "verifiedReview": "Geverifieerde Klantbeoordeling"
+  },
+  "contact": {
+    "title": "Heb je iets te zeggen?",
+    "subtitle": "Stuur ons een bericht. We kunnen niet wachten om van je te horen.",
+    "form": {
+      "messagePlaceholder": "Jouw bericht…",
+      "emailPlaceholder": "Jouw email…",
+      "sendButton": "Versturen",
+      "successMessage": "✓ Bericht succesvol verzonden! We reageren snel.",
+      "defaultMessage": "We reageren zo snel mogelijk.",
+      "validation": {
+        "fillAllFields": "Vul alstublieft alle velden in.",
+        "validEmail": "Voer alstublieft een geldig e-mailadres in.",
+        "webhookNotConfigured": "Discord webhook is niet geconfigureerd. Neem contact op met de beheerder.",
+        "sendError": "Fout bij het verzenden van bericht. Probeer opnieuw."
+      }
+    }
+  },
+  "footer": {
+    "description": "Bedrijven versterken met innovatieve softwareoplossingen op maat van uw behoeften. Laten we samen de toekomst bouwen!",
+    "followUs": "Volg Ons",
+    "services": {
+      "title": "Onze Diensten",
+      "items": ["Webontwikkeling", "Mobiele Applicaties", "UI/UX Design", "Digitale Marketing", "Team Outsourcing", "Nearshore Oplossingen"]
+    },
+    "company": {
+      "title": "Bedrijf",
+      "aboutUs": "Over Ons",
+      "portfolio": "Ons Portfolio",
+      "technologies": "Technologieën",
+      "testimonials": "Getuigenissen",
+      "hive": "Onze Bijenkorf",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Neem Contact Op",
+      "description": "Klaar om uw volgende project te starten? Laten we bespreken hoe we u kunnen helpen uw doelen te bereiken.",
+      "whatsapp": "WhatsApp Chat"
+    },
+    "legal": {
+      "allRightsReserved": "Alle rechten voorbehouden.",
+      "privacyPolicy": "Privacybeleid",
+      "termsOfService": "Servicevoorwaarden",
+      "madeWith": "Gemaakt met",
+      "location": "in Portugal"
+    }
+  }
+}

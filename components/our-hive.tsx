@@ -5,30 +5,24 @@ import {
   TrophyIcon,
   ArrowRightIcon 
 } from "@heroicons/react/24/outline";
+import { useTranslation } from '@/lib/i18n';
 
 export default function OurHive() {
-  const hiveFeatures = [
-    {
-      icon: <BookOpenIcon className="w-6 h-6" />,
-      title: "Continuous Learning",
-      description: "Access to cutting-edge training and skill development programs"
-    },
-    {
-      icon: <UsersIcon className="w-6 h-6" />,
-      title: "Professional Network",
-      description: "Connect with like-minded IT professionals and industry experts"
-    },
-    {
-      icon: <DocumentIcon className="w-6 h-6" />,
-      title: "Exclusive Resources",
-      description: "Premium content, tools, and resources for professional growth"
-    },
-    {
-      icon: <TrophyIcon className="w-6 h-6" />,
-      title: "Career Growth",
-      description: "Opportunities for advancement and skill enhancement"
-    }
+  const { t } = useTranslation('sections');
+  const featuresData = t('hive.features', { returnObjects: true });
+
+  const icons = [
+    <BookOpenIcon className="w-6 h-6" />,
+    <UsersIcon className="w-6 h-6" />,
+    <DocumentIcon className="w-6 h-6" />,
+    <TrophyIcon className="w-6 h-6" />
   ];
+
+  const hiveFeatures = Array.isArray(featuresData) ? featuresData.map((feature, index) => ({
+    icon: icons[index],
+    title: feature.title,
+    description: feature.description,
+  })) : [];
 
   return (
     <section className="relative bg-gradient-to-br from-slate-100 py-16 lg:py-24 overflow-hidden">
@@ -51,11 +45,11 @@ export default function OurHive() {
         {/* Section header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="our-hive">
-            Our Hive
+            {t('hive.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            A thriving community where innovation meets collaboration, empowering IT professionals to achieve their full potential.
+            {t('hive.subtitle')}
           </p>
         </div>
 
@@ -69,7 +63,7 @@ export default function OurHive() {
                 <div className="aspect-video">
                   <iframe 
                     src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" 
-                    title="BeeCoders Hive Community Video" 
+                    title="Bee Coders Hive Community Video" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen 
                     className="absolute inset-0 w-full h-full object-cover"
@@ -88,8 +82,8 @@ export default function OurHive() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">30+ Members</p>
-                    <p className="text-xs text-gray-600">Growing community</p>
+                    <p className="text-sm font-semibold text-gray-900">{t('hive.highlight.title')}</p>
+                    <p className="text-xs text-gray-600">{t('hive.highlight.description')}</p>
                   </div>
                 </div>
               </div>
@@ -102,10 +96,10 @@ export default function OurHive() {
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-beePrimary-dark">BeeCoders</span> promotes a continuous learning and collaboration environment, enabling IT professionals to connect, share knowledge, and grow together in an ever-evolving digital landscape.
+                  <span className="font-semibold text-beePrimary-dark">BeeCoders</span> {t('hive.description')}
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Through specialized training, networking events, and exclusive resources, we strive to drive professional development and enhance the skills of our community members.
+                  {t('hive.description2')}
                 </p>
               </div>
             </div>

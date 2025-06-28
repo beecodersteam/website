@@ -1,3 +1,5 @@
+'use client'
+
 // write a default page content for a contact page
 export default function Page(){
     return (

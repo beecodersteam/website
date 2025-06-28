@@ -2,11 +2,13 @@
 
 import { useState } from 'react'
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
+import { useTranslation } from '@/lib/i18n'
 
 // External Discord Webhook URL - configure in .env.local
-const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || 'https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN'
+const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || ''
 
 export default function ContactForm() {
+  const { t } = useTranslation('sections');
   const [formData, setFormData] = useState({
     email: '',
     message: ''
@@ -29,20 +31,20 @@ export default function ContactForm() {
     // Basic validation
     if (!formData.email || !formData.message) {
       setStatus('error')
-      setErrorMessage('Please fill in all fields.')
+      setErrorMessage(String(t('contact.form.validation.fillAllFields')))
       return
     }
 
     if (!formData.email.includes('@')) {
       setStatus('error')
-      setErrorMessage('Please enter a valid email.')
+      setErrorMessage(String(t('contact.form.validation.validEmail')))
       return
     }
 
     // Check if Discord webhook is configured
     if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL.includes('YOUR_WEBHOOK_ID')) {
       setStatus('error')
-      setErrorMessage('Discord webhook is not configured. Please contact the administrator.')
+      setErrorMessage(String(t('contact.form.validation.webhookNotConfigured')))
       return
     }
 
@@ -104,7 +106,7 @@ export default function ContactForm() {
     } catch (error) {
       console.error('Error sending email:', error)
       setStatus('error')
-      setErrorMessage(error instanceof Error ? error.message : 'Error sending message. Please try again.')
+      setErrorMessage(error instanceof Error ? error.message : String(t('contact.form.validation.sendError')))
     } finally {
       setIsLoading(false)
     }
@@ -147,8 +149,8 @@ export default function ContactForm() {
 
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h3 text-white mb-2">Got something to say?</h3>
-                <p className="text-gray-300 text-lg mb-6">Send us a message. We can't wait to hear from you.</p>
+                <h3 className="h3 text-white mb-2">{t('contact.title')}</h3>
+                <p className="text-gray-300 text-lg mb-6">{t('contact.subtitle')}</p>
 
                 {/* CTA form */}
                 <form className="w-full lg:w-auto" onSubmit={handleSubmit}>
@@ -158,8 +160,8 @@ export default function ContactForm() {
                       value={formData.message}
                       onChange={handleInputChange}
                       className="form-input w-full appearance-none bg-white border border-gray-300 focus:border-beePrimary-light focus:ring-2 focus:ring-beePrimary-light rounded-md px-4 py-3 mb-2 h-24 text-gray-900 placeholder-gray-500 resize-none" 
-                      placeholder="Your message…" 
-                      aria-label="Your message…"
+                      placeholder={String(t('contact.form.messagePlaceholder'))} 
+                      aria-label={String(t('contact.form.messagePlaceholder'))}
                       disabled={isLoading}
                       required
                     />
@@ -171,8 +173,8 @@ export default function ContactForm() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="form-input w-full appearance-none bg-white border border-gray-300 focus:border-beePrimary-light focus:ring-2 focus:ring-beePrimary-light rounded-md px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-gray-900 placeholder-gray-500" 
-                      placeholder="Your email…" 
-                      aria-label="Your email…"
+                      placeholder={String(t('contact.form.emailPlaceholder'))} 
+                      aria-label={String(t('contact.form.emailPlaceholder'))}
                       disabled={isLoading}
                       required
                     />
@@ -184,20 +186,20 @@ export default function ContactForm() {
                       {isLoading ? (
                         <ArrowPathIcon className="animate-spin h-4 w-4" />
                       ) : (
-                        'Send'
+                        t('contact.form.sendButton')
                       )}
                     </button>
                   </div>
 
                   {/* Status messages */}
                   {status === 'success' && (
-                    <p className="text-sm text-green-300 mt-3">✓ Message sent successfully! We'll respond shortly.</p>
+                    <p className="text-sm text-green-300 mt-3">{t('contact.form.successMessage')}</p>
                   )}
                   {status === 'error' && (
                     <p className="text-sm text-red-400 mt-3">✗ {errorMessage}</p>
                   )}
                   {status === 'idle' && !isLoading && (
-                    <p className="text-sm text-gray-300 mt-3">We'll respond as soon as possible.</p>
+                    <p className="text-sm text-gray-300 mt-3">{t('contact.form.defaultMessage')}</p>
                   )}
                 </form>
               </div>

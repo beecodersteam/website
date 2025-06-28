@@ -1,0 +1,218 @@
+{
+    "hero": {
+        "title": "Transforming Your Vision into Reality",
+        "subtitle": "At BeeCoders, we specialize in transforming your ideas into cutting-edge digital solutions. Partner with us to build extraordinary experiences together.",
+        "cta": "Join our hive"
+    },
+    "highlights": {
+        "items": [
+            {
+                "number": "4+",
+                "description": "Countries",
+                "subtext": "Expanding our presence globally"
+            },
+            {
+                "number": "6+",
+                "description": "Years",
+                "subtext": "Of proven industry experience"
+            },
+            {
+                "number": "20+",
+                "description": "Happy Clients",
+                "subtext": "Trusted partnerships worldwide"
+            },
+            {
+                "number": "30+",
+                "description": "Projects",
+                "subtext": "Successfully delivered solutions"
+            }
+        ]
+    },
+    "mission": {
+        "title": "Our Mission",
+        "subtitle": "Empowering Innovation Through Technology",
+        "description": "At <0>Bee Coders</0>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.",
+        "floatingCard": {
+            "title": "Quality Driven",
+            "description": "Excellence in every project"
+        },
+        "values": [
+            {
+                "title": "Innovation",
+                "description": "Cutting-edge solutions that push boundaries and drive progress."
+            },
+            {
+                "title": "Excellence",
+                "description": "Unwavering commitment to quality in every aspect of our work."
+            },
+            {
+                "title": "Partnership",
+                "description": "Building long-term relationships based on trust and collaboration."
+            }
+        ]
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "We offer a diverse range of specialized solutions and services designed to propel your business into the digital landscape. With a team of highly qualified professionals, we are committed to delivering excellence and innovation in every project.",
+        "webSystems": {
+            "title": "Web Systems",
+            "description": "Comprehensive and innovative software development tailored to meet our clients' needs.",
+            "features": [
+                "Custom Development",
+                "Scalable Architecture",
+                "Modern Technologies",
+                "Performance Optimization"
+            ]
+        },
+        "mobileApps": {
+            "title": "Mobile Applications",
+            "description": "Native and cross-platform mobile apps that deliver exceptional user experiences.",
+            "features": [
+                "iOS & Android",
+                "Cross-Platform",
+                "Native Performance",
+                "App Store Optimization"
+            ]
+        },
+        "uiuxDesign": {
+            "title": "UI/UX Design",
+            "description": "User-centered design services that create engaging and intuitive digital experiences.",
+            "features": [
+                "User Research",
+                "Wireframing",
+                "Prototyping",
+                "Design Systems"
+            ]
+        },
+        "digitalMarketing": {
+            "title": "Digital Marketing",
+            "description": "Effective and personalized digital marketing strategies focused on online visibility and business objectives.",
+            "features": [
+                "SEO Optimization",
+                "Social Media",
+                "Content Strategy",
+                "Analytics & Insights"
+            ]
+        },
+        "nearshore": {
+            "title": "Nearshore Solutions",
+            "description": "We offer the advantages of outsourcing while keeping your business operations closer to home.",
+            "features": [
+                "Time Zone Alignment",
+                "Cultural Compatibility",
+                "Cost Efficiency",
+                "Quality Assurance"
+            ]
+        },
+        "teamOutsourcing": {
+            "title": "Team Outsourcing",
+            "description": "We act as the legal employer for your service providers, handling all aspects of your workforce.",
+            "features": [
+                "Dedicated Teams",
+                "Legal Compliance",
+                "HR Management",
+                "Flexible Scaling"
+            ]
+        }
+    },
+    "hive": {
+        "title": "Our Hive",
+        "subtitle": "A thriving community where innovation meets collaboration, empowering IT professionals to achieve their full potential.",
+        "description": "promotes a continuous learning and collaboration environment, enabling IT professionals to connect, share knowledge, and grow together in an ever-evolving digital landscape. Through specialized training, networking events, and exclusive resources, we strive to drive professional development and enhance the skills of our community members.",
+        "join": "Join the Hive",
+        "highlight": {
+            "title": "30+ Members",
+            "description": "Growing community"
+        },
+        "features": [
+            {
+                "title": "Continuous Learning",
+                "description": "Access to cutting-edge training and skill development programs"
+            },
+            {
+                "title": "Professional Network",
+                "description": "Connect with like-minded IT professionals and industry experts"
+            },
+            {
+                "title": "Exclusive Resources",
+                "description": "Premium content, tools, and resources for professional growth"
+            },
+            {
+                "title": "Career Growth",
+                "description": "Continuous learning and improvement for ourselves and our clients"
+            }
+        ]
+    },
+    "portfolio": {
+        "badge": "Our Portfolio",
+        "title": "Highlighted Projects",
+        "subtitle": "On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.",
+        "description": "We take pride in delivering exceptional software solutions that meet the unique needs of our clients. Our portfolio reflects our commitment to quality, creativity, and client satisfaction.",
+        "viewProject": "View Project",
+        "loading": "Loading...",
+        "error": "Error loading portfolio items"
+    },
+    "technologies": {
+        "title": "Technologies we use",
+        "subtitle": "We use cutting-edge technology to deliver innovative solutions to our clients"
+    },
+    "testimonials": {
+        "title": "What Our Clients Say",
+        "subtitle": "Client Testimonials",
+        "description": "Don't just take our word for it. Here's what satisfied clients have to say about their experience working with <0>Bee Coders</0>.",
+        "verifiedReview": "Verified Client Review"
+    },
+    "contact": {
+        "title": "Got something to say?",
+        "subtitle": "Send us a message. We can't wait to hear from you.",
+        "form": {
+            "messagePlaceholder": "Your message…",
+            "emailPlaceholder": "Your email…",
+            "sendButton": "Send",
+            "successMessage": "✓ Message sent successfully! We'll respond shortly.",
+            "defaultMessage": "We'll respond as soon as possible.",
+            "validation": {
+                "fillAllFields": "Please fill in all fields.",
+                "validEmail": "Please enter a valid email.",
+                "webhookNotConfigured": "Discord webhook is not configured. Please contact the administrator.",
+                "sendError": "Error sending message. Please try again."
+            }
+        }
+    },
+    "footer": {
+        "description": "Empowering businesses with innovative software solutions tailored to your needs. Let's build the future together!",
+        "followUs": "Follow Us",
+        "services": {
+            "title": "Our Services",
+            "items": [
+                "Web Development",
+                "Mobile Applications",
+                "UI/UX Design",
+                "Digital Marketing",
+                "Team Outsourcing",
+                "Nearshore Solutions"
+            ]
+        },
+        "company": {
+            "title": "Company",
+            "aboutUs": "About Us",
+            "portfolio": "Our Portfolio",
+            "technologies": "Technologies",
+            "testimonials": "Testimonials",
+            "hive": "Our Hive",
+            "contact": "Contact"
+        },
+        "contact": {
+            "title": "Get in Touch",
+            "description": "Ready to start your next project? Let's discuss how we can help you achieve your goals.",
+            "whatsapp": "WhatsApp Chat"
+        },
+        "legal": {
+            "allRightsReserved": "All rights reserved.",
+            "privacyPolicy": "Privacy Policy",
+            "termsOfService": "Terms of Service",
+            "madeWith": "Made with",
+            "location": "in Portugal"
+        }
+    }
+}

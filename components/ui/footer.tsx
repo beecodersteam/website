@@ -1,3 +1,5 @@
+'use client';
+
 import { LogoHorizBlack } from './logo'
 import { LogoYoutube, LogoInstagram, LogoLinkedin, LogoGithub } from 'react-ionicons'
 import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -9,26 +11,33 @@ import {
   ArrowRightIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from '@/lib/i18n';
 
 export default function Footer() {
+  const { t } = useTranslation('sections');
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    "Web Development",
-    "Mobile Applications", 
-    "UI/UX Design",
-    "Digital Marketing",
-    "Team Outsourcing",
-    "Nearshore Solutions"
-  ];
+  const getServices = () => {
+    const services = t('footer.services.items', { returnObjects: true });
+    return Array.isArray(services) ? services : [
+      "Web Development",
+      "Mobile Applications", 
+      "UI/UX Design",
+      "Digital Marketing",
+      "Team Outsourcing",
+      "Nearshore Solutions"
+    ];
+  };
+
+  const services = getServices();
 
   const company = [
-    { name: "About Us", href: "#mission" },
-    { name: "Our Portfolio", href: "#portifolio" },
-    { name: "Technologies", href: "#technologies" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Our Hive", href: "#our-hive" },
-    { name: "Contact", href: "#contact" }
+    { name: t('footer.company.aboutUs'), href: "#mission" },
+    { name: t('footer.company.portfolio'), href: "#portifolio" },
+    { name: t('footer.company.technologies'), href: "#technologies" },
+    { name: t('footer.company.testimonials'), href: "#testimonials" },
+    { name: t('footer.company.hive'), href: "#our-hive" },
+    { name: t('footer.company.contact'), href: "#contact" }
   ];
 
   const socialLinks = [
@@ -87,12 +96,12 @@ export default function Footer() {
               <LogoHorizBlack />
             </div>
             <p className="text-gray-600 leading-relaxed">
-              Empowering businesses with innovative software solutions tailored to your needs. Let's build the future together!
+              {t('footer.description')}
             </p>
             
             {/* Social Media */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-beePrimary-dark">Follow Us</h4>
+              <h4 className="text-lg font-semibold text-beePrimary-dark">{t('footer.followUs')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -119,7 +128,7 @@ export default function Footer() {
           {/* Services */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-beePrimary-dark border-b border-beePrimary-normal/30 pb-3">
-              Our Services
+              {t('footer.services.title')}
             </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
@@ -139,7 +148,7 @@ export default function Footer() {
           {/* Company Links */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-beePrimary-dark border-b border-beePrimary-normal/30 pb-3">
-              Company
+              {t('footer.company.title')}
             </h3>
             <ul className="space-y-3">
               {company.map((link, index) => (
@@ -159,11 +168,11 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-beePrimary-dark border-b border-beePrimary-normal/30 pb-3">
-              Get in Touch
+              {t('footer.contact.title')}
             </h3>
             <div className="space-y-4">
               <p className="text-gray-600 leading-relaxed">
-                Ready to start your next project? Let's discuss how we can help you achieve your goals.
+                {t('footer.contact.description')}
               </p>
               
               <div className="space-y-3">
@@ -189,7 +198,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium"
                   >
-                    WhatsApp Chat
+                    {t('footer.contact.whatsapp')}
                   </a>
                 </div>
                 
@@ -221,23 +230,23 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between py-8 space-y-4 md:space-y-0">
             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
               <p className="text-gray-500 text-sm">
-                &copy; {currentYear} BeeCoders Club. All rights reserved.
+                &copy; {currentYear} Bee Coders Club. {t('footer.legal.allRightsReserved')}
               </p>
               <div className="flex space-x-4 text-sm">
                 <a href="#" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
-                  Privacy Policy
+                  {t('footer.legal.privacyPolicy')}
                 </a>
                 <span className="text-gray-400">•</span>
                 <a href="#" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
-                  Terms of Service
+                  {t('footer.legal.termsOfService')}
                 </a>
               </div>
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-gray-500">
-              <span>Made with</span>
+              <span>{t('footer.legal.madeWith')}</span>
               <span className="text-red-500">❤️</span>
-              <span>in Portugal</span>
+              <span>{t('footer.legal.location')}</span>
             </div>
           </div>
         </div>

@@ -7,46 +7,58 @@ import {
   UsersIcon,
   ArrowRightIcon 
 } from "@heroicons/react/24/outline";
+import { useTranslation } from '@/lib/i18n';
 
 export default function ServicesSection() {
-  const services = [
-    {
-      icon: <ComputerDesktopIcon className="w-8 h-8" />,
-      title: "Web Systems",
-      description: "Comprehensive and innovative software development tailored to meet our clients' needs.",
-      features: ["Custom Development", "Scalable Architecture", "Modern Technologies", "Performance Optimization"]
-    },
-    {
-      icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS & Android", "Cross-Platform", "Native Performance", "App Store Optimization"]
-    },
-    {
-      icon: <PaintBrushIcon className="w-8 h-8" />,
-      title: "UI/UX Design",
-      description: "User-centered design services that create engaging and intuitive digital experiences.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
-    },
-    {
-      icon: <ChartPieIcon className="w-8 h-8" />,
-      title: "Digital Marketing",
-      description: "Effective and personalized digital marketing strategies focused on online visibility and business objectives.",
-      features: ["SEO Optimization", "Social Media", "Content Strategy", "Analytics & Insights"]
-    },
-    {
-      icon: <GlobeAltIcon className="w-8 h-8" />,
-      title: "Nearshore Solutions",
-      description: "We offer the advantages of outsourcing while keeping your business operations closer to home.",
-      features: ["Time Zone Alignment", "Cultural Compatibility", "Cost Efficiency", "Quality Assurance"]
-    },
-    {
-      icon: <UsersIcon className="w-8 h-8" />,
-      title: "Team Outsourcing",
-      description: "We act as the legal employer for your service providers, handling all aspects of your workforce.",
-      features: ["Dedicated Teams", "Legal Compliance", "HR Management", "Flexible Scaling"]
-    }
-  ];
+  const { t } = useTranslation('sections');
+
+  const getServiceData = () => {
+    const getFeatures = (key: string) => {
+      const features = t(key, { returnObjects: true });
+      return Array.isArray(features) ? features : [];
+    };
+
+    return [
+      {
+        icon: <ComputerDesktopIcon className="w-8 h-8" />,
+        title: t('services.webSystems.title'),
+        description: t('services.webSystems.description'),
+        features: getFeatures('services.webSystems.features')
+      },
+      {
+        icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
+        title: t('services.mobileApps.title'),
+        description: t('services.mobileApps.description'),
+        features: getFeatures('services.mobileApps.features')
+      },
+      {
+        icon: <PaintBrushIcon className="w-8 h-8" />,
+        title: t('services.uiuxDesign.title'),
+        description: t('services.uiuxDesign.description'),
+        features: getFeatures('services.uiuxDesign.features')
+      },
+      {
+        icon: <ChartPieIcon className="w-8 h-8" />,
+        title: t('services.digitalMarketing.title'),
+        description: t('services.digitalMarketing.description'),
+        features: getFeatures('services.digitalMarketing.features')
+      },
+      {
+        icon: <GlobeAltIcon className="w-8 h-8" />,
+        title: t('services.nearshore.title'),
+        description: t('services.nearshore.description'),
+        features: getFeatures('services.nearshore.features')
+      },
+      {
+        icon: <UsersIcon className="w-8 h-8" />,
+        title: t('services.teamOutsourcing.title'),
+        description: t('services.teamOutsourcing.description'),
+        features: getFeatures('services.teamOutsourcing.features')
+      }
+    ];
+  };
+
+  const services = getServiceData();
 
   return (
     <section className="relative bg-beePrimary-normal py-16 lg:py-24 overflow-hidden">
@@ -72,11 +84,11 @@ export default function ServicesSection() {
         <div className="text-center mb-10">
           
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 session" id="services">
-            Our Services
+            {t('services.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            We offer a diverse range of specialized solutions and services designed to propel your business into the digital landscape. With a team of highly qualified professionals, we are committed to delivering excellence and innovation in every project.
+            {t('services.subtitle')}
           </p>
         </div>
 

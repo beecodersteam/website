@@ -4,9 +4,12 @@ import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import { Bars3Icon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { useTranslation } from '@/lib/i18n'
+import MobileLanguageSelector from './MobileLanguageSelector'
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
+  const { t } = useTranslation('common')
 
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
@@ -63,27 +66,32 @@ export default function MobileMenu() {
           <ul className="px-5 py-2">
             <li>
               <Link href="/#mission" className="flex font-medium text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Mission</Link>
+                {t('navigation.mission')}</Link>
             </li>
             <li>
               <Link href="/#services" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Services</Link>
+                {t('navigation.services')}</Link>
             </li>
             <li>
               <Link href="/#our-hive" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Hive</Link>
+                {t('navigation.hive')}</Link>
             </li>
             <li>
               <Link href="/#portifolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Projects</Link>
+                {t('navigation.portfolio')}</Link>
             </li>
             <li>
               <Link href="/#technologies" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Technologies</Link>
+                {t('navigation.technologies')}</Link>
             </li>
             <li>
               <Link href="/#contact" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
-                Contact</Link>
+                {t('navigation.contact')}</Link>
+            </li>
+            <li className="pt-4 border-t border-gray-200 mt-4">
+              <div className="flex justify-center">
+                <MobileLanguageSelector />
+              </div>
             </li>
             {/* <li>
               <Link href="/signin" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Sign in</Link>

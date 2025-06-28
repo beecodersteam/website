@@ -1,0 +1,46 @@
+{
+  "title": "Highlighted Projects",
+  "subtitle": "On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.",
+  "projects": {
+    "nitelive": {
+      "category": "Entertainment",
+      "description": "Cross-platform mobile app with real-time location services that helps users discover the best venues and events in their city.",
+      "features": [
+        "Real-time venue information",
+        "Event discovery", 
+        "Social integration",
+        "Location-based services"
+      ]
+    },
+    "ajrent": {
+      "category": "Mobility", 
+      "description": "Web platform, featuring vehicle catalog, booking management, customer dashboard, and payment integration for a complete rental experience.",
+      "features": [
+        "Vehicle catalog",
+        "Online booking",
+        "Payment processing", 
+        "Customer dashboard"
+      ]
+    },
+    "alfabets": {
+      "category": "Sporting Bets",
+      "description": "A white labeled app for betting houses, featuring real-time integration with sports data apis.",
+      "features": [
+        "White label app",
+        "Analytics dashboard",
+        "Real time results",
+        "Security protocols"
+      ]
+    },
+    "mulhersegura": {
+      "category": "Social",
+      "description": "A safety platform that provides emergency assistance, location tracking, and support features for women in vulnerable situations.",
+      "features": [
+        "Emergency alerts",
+        "Location tracking",
+        "Support network", 
+        "Privacy protection"
+      ]
+    }
+  }
+}

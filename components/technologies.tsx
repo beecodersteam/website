@@ -10,8 +10,10 @@ import {
 } from "react-icons/fa";
 import IconRuby from "./ui/tech/RubyonRails";
 import IconBxlFlutter from "./ui/tech/Flutter";
+import { useTranslation } from '@/lib/i18n';
 
 export default function Technologies() {
+  const { t } = useTranslation('sections');
   return (
     <section className="relative">
       <div
@@ -53,10 +55,10 @@ export default function Technologies() {
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="200">
               <p className="h2 mb-4 text-white session" id="technologies">
-                Technologies we use
+                {t('technologies.title')}
               </p>
               <p className="text-white h6 font-light">
-                We use cutting-edge technology to deliver innovative solutions to our clients
+                {t('technologies.subtitle')}
               </p>
             </div>
             <div className="sm:col-span-2" data-aos="slide-left" data-aos-offset="200">

@@ -1,4 +1,6 @@
+'use client';
 import { GlobeAltIcon, ClockIcon, UsersIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "@/lib/i18n";
 
 interface HighlightItem {
   icon: React.ReactNode;
@@ -7,34 +9,22 @@ interface HighlightItem {
   subtext: string;
 }
 
-const highlights: HighlightItem[] = [
-  {
-    icon: <GlobeAltIcon className="w-8 h-8" />,
-    number: "4+",
-    description: "Countries",
-    subtext: "Expanding our presence globally"
-  },
-  {
-    icon: <ClockIcon className="w-8 h-8" />,
-    number: "6+",
-    description: "Years",
-    subtext: "Of proven industry experience"
-  },
-  {
-    icon: <UsersIcon className="w-8 h-8" />,
-    number: "20+",
-    description: "Happy Clients",
-    subtext: "Trusted partnerships worldwide"
-  },
-  {
-    icon: <SparklesIcon className="w-8 h-8" />,
-    number: "30+",
-    description: "Projects",
-    subtext: "Successfully delivered solutions"
-  }
-];
-
 export default function Highlights() {
+  const { t } = useTranslation('sections');
+  const highlightItems = t('highlights.items', { returnObjects: true });
+
+  const icons = [
+    <GlobeAltIcon className="w-8 h-8" />,
+    <ClockIcon className="w-8 h-8" />,
+    <UsersIcon className="w-8 h-8" />,
+    <SparklesIcon className="w-8 h-8" />
+  ];
+
+  const highlights: HighlightItem[] = Array.isArray(highlightItems) ? highlightItems.map((item, index) => ({
+    ...item,
+    icon: icons[index]
+  })) : [];
+
   return (
     <section className="relative bg-gradient-to-br bg-slate-200 py-8 lg:py-12">
       {/* Background Pattern */}

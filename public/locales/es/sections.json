@@ -1,0 +1,132 @@
+{
+  "mission": {
+    "title": "Nuestra Misión",
+    "subtitle": "Potenciando la Innovación a Través de la Tecnología",
+    "description": "Nos dedicamos a crear soluciones digitales innovadoras que transforman negocios y mejoran la vida de las personas. Nuestra misión es cerrar la brecha entre tecnología de vanguardia y aplicaciones del mundo real."
+  },
+  "hero": {
+    "title": "Construyendo el Futuro con Código",
+    "subtitle": "Soluciones innovadoras para el mundo digital",
+    "cta": "Descubre Nuestro Trabajo"
+  },
+  "hive": {
+    "title": "Nuestra Colmena",
+    "subtitle": "Donde la Innovación se Encuentra con la Colaboración",
+    "description": "Somos una comunidad de desarrolladores apasionados, diseñadores y entusiastas de la tecnología trabajando juntos para crear soluciones digitales extraordinarias.",
+    "join": "Únete a la Colmena",
+    "stats": {
+      "projects": "Proyectos Entregados",
+      "clients": "Clientes Satisfechos",
+      "countries": "Países Atendidos",
+      "technologies": "Tecnologías Dominadas"
+    },
+    "features": {
+      "innovation": {
+        "title": "Innovación",
+        "description": "Soluciones de vanguardia que empujan límites e impulsan el progreso."
+      },
+      "collaboration": {
+        "title": "Colaboración",
+        "description": "El trabajo en equipo y la comunicación están en el corazón de todo lo que hacemos."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Compromiso inquebrantable con la calidad en todos los aspectos de nuestro trabajo."
+      },
+      "growth": {
+        "title": "Crecimiento",
+        "description": "Aprendizaje y mejora continuos para nosotros y nuestros clientes."
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos una gama diversa de soluciones y servicios especializados diseñados para impulsar su negocio hacia el panorama digital. Con un equipo de profesionales altamente calificados, estamos comprometidos a entregar excelencia e innovación en cada proyecto.",
+    "webSystems": {
+      "title": "Sistemas Web",
+      "description": "Desarrollo de software integral e innovador adaptado a las necesidades de nuestros clientes.",
+      "features": ["Desarrollo Personalizado", "Arquitectura Escalable", "Tecnologías Modernas", "Optimización de Rendimiento"]
+    },
+    "mobileApps": {
+      "title": "Aplicaciones Móviles",
+      "description": "Aplicaciones móviles nativas y multiplataforma que ofrecen experiencias excepcionales al usuario.",
+      "features": ["iOS & Android", "Multiplataforma", "Rendimiento Nativo", "Optimización App Store"]
+    },
+    "uiuxDesign": {
+      "title": "Diseño UI/UX",
+      "description": "Servicios de diseño centrados en el usuario que crean experiencias digitales atractivas e intuitivas.",
+      "features": ["Investigación de Usuario", "Wireframing", "Prototipado", "Sistemas de Diseño"]
+    },
+    "digitalMarketing": {
+      "title": "Marketing Digital",
+      "description": "Estrategias de marketing digital efectivas y personalizadas enfocadas en visibilidad online y objetivos comerciales.",
+      "features": ["Optimización SEO", "Redes Sociales", "Estrategia de Contenido", "Analytics & Insights"]
+    },
+    "nearshore": {
+      "title": "Soluciones Nearshore",
+      "description": "Ofrecemos las ventajas del outsourcing manteniendo sus operaciones comerciales más cerca de casa.",
+      "features": ["Alineación de Zona Horaria", "Compatibilidad Cultural", "Eficiencia de Costos", "Garantía de Calidad"]
+    },
+    "teamOutsourcing": {
+      "title": "Outsourcing de Equipo",
+      "description": "Actuamos como empleador legal para sus proveedores de servicios, manejando todos los aspectos de su fuerza laboral.",
+      "features": ["Equipos Dedicados", "Cumplimiento Legal", "Gestión de RRHH", "Escalado Flexible"]
+    }
+  },
+  "technologies": {
+    "title": "Tecnologías que usamos",
+    "subtitle": "Utilizamos tecnología de vanguardia para entregar soluciones innovadoras a nuestros clientes"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "Testimonios de Clientes",
+    "description": "No solo tomes nuestra palabra. Aquí está lo que clientes satisfechos tienen que decir sobre su experiencia trabajando con **Bee Coders**.",
+    "verifiedReview": "Reseña de Cliente Verificada"
+  },
+  "contact": {
+    "title": "¿Tienes algo que decir?",
+    "subtitle": "Envíanos un mensaje. No podemos esperar a escucharte.",
+    "form": {
+      "messagePlaceholder": "Tu mensaje…",
+      "emailPlaceholder": "Tu email…",
+      "sendButton": "Enviar",
+      "successMessage": "✓ ¡Mensaje enviado exitosamente! Responderemos pronto.",
+      "defaultMessage": "Responderemos tan pronto como sea posible.",
+      "validation": {
+        "fillAllFields": "Por favor, llena todos los campos.",
+        "validEmail": "Por favor, ingresa un email válido.",
+        "webhookNotConfigured": "Webhook de Discord no está configurado. Contacta al administrador.",
+        "sendError": "Error enviando mensaje. Por favor intenta de nuevo."
+      }
+    }
+  },
+  "footer": {
+    "description": "Empoderando negocios con soluciones de software innovadoras adaptadas a sus necesidades. ¡Construyamos el futuro juntos!",
+    "followUs": "Síguenos",
+    "services": {
+      "title": "Nuestros Servicios",
+      "items": ["Desarrollo Web", "Aplicaciones Móviles", "Diseño UI/UX", "Marketing Digital", "Outsourcing de Equipo", "Soluciones Nearshore"]
+    },
+    "company": {
+      "title": "Empresa",
+      "aboutUs": "Acerca de Nosotros",
+      "portfolio": "Nuestro Portafolio",
+      "technologies": "Tecnologías",
+      "testimonials": "Testimonios",
+      "hive": "Nuestra Colmena",
+      "contact": "Contacto"
+    },
+    "contact": {
+      "title": "Ponte en Contacto",
+      "description": "¿Listo para comenzar tu próximo proyecto? Discutamos cómo podemos ayudarte a alcanzar tus objetivos.",
+      "whatsapp": "Chat WhatsApp"
+    },
+    "legal": {
+      "allRightsReserved": "Todos los derechos reservados.",
+      "privacyPolicy": "Política de Privacidad",
+      "termsOfService": "Términos de Servicio",
+      "madeWith": "Hecho con",
+      "location": "en Portugal"
+    }
+  }
+}
