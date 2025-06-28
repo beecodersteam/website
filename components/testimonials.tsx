@@ -1,7 +1,9 @@
 import TestimonielasCarousel from "./ui/TestimonialsCarousel";
 import { InformationCircleIcon, CheckCircleIcon, StarIcon, ShieldCheckIcon } from '@heroicons/react/24/solid';
+import { useTranslation } from '@/lib/i18n';
 
 export default function Testimonials() {
+  const { t } = useTranslation('sections');
   return (
     <section className="relative py-20  bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
       {/* Background decorative elements */}
@@ -21,12 +23,15 @@ export default function Testimonials() {
         <div className="text-center mb-16" data-aos="fade-up">
           <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 rounded-full text-sm font-medium text-beePrimary-normal mb-6">
             <InformationCircleIcon className="w-4 h-4 mr-2" />
-            Client Testimonials
+            {t('testimonials.subtitle')}
           </div>
           
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 session" id="testimonials">
+            {t('testimonials.title')}
+          </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what satisfied clients have to say about their experience working with <strong>Bee Coders</strong>.
+            {t('testimonials.description', { components: [<strong key="highlight" />] })}
           </p>
         </div>
 

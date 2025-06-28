@@ -1,0 +1,46 @@
+{
+  "title": "Projetos em Destaque",
+  "subtitle": "Em nossa jornada, a busca pela excelência é constante. Cada projeto em nosso portfólio reflete nosso compromisso com os mais altos padrões de qualidade.",
+  "projects": {
+    "nitelive": {
+      "category": "Entretenimento",
+      "description": "Aplicativo móvel multiplataforma com serviços de localização em tempo real que ajuda os usuários a descobrir os melhores locais e eventos da cidade.",
+      "features": [
+        "Informações de locais em tempo real",
+        "Descoberta de eventos",
+        "Integração social",
+        "Serviços baseados em localização"
+      ]
+    },
+    "ajrent": {
+      "category": "Mobilidade",
+      "description": "Plataforma web com catálogo de veículos, gestão de reservas, painel do cliente e integração de pagamentos para uma experiência completa de aluguel.",
+      "features": [
+        "Catálogo de veículos",
+        "Reserva online",
+        "Processamento de pagamentos",
+        "Painel do cliente"
+      ]
+    },
+    "alfabets": {
+      "category": "Apostas Esportivas",
+      "description": "Aplicativo white label para casas de apostas, com integração em tempo real com APIs de dados esportivos.",
+      "features": [
+        "Aplicativo white label",
+        "Painel de análises",
+        "Resultados em tempo real",
+        "Protocolos de segurança"
+      ]
+    },
+    "mulhersegura": {
+      "category": "Social",
+      "description": "Plataforma de segurança que oferece assistência de emergência, rastreamento de localização e recursos de suporte para mulheres em situações vulneráveis.",
+      "features": [
+        "Alertas de emergência",
+        "Rastreamento de localização",
+        "Rede de suporte",
+        "Proteção de privacidade"
+      ]
+    }
+  }
+}

@@ -5,69 +5,79 @@ import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import { MusicalNoteIcon, PresentationChartBarIcon, ShieldCheckIcon, RectangleStackIcon, BoltIcon, TruckIcon } from "@heroicons/react/24/outline";
 import { NL, BR, PT } from 'country-flag-icons/react/3x2';
+import { useTranslation } from '@/lib/i18n';
 import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
 import TeamPic4 from "@/public/images/projects/ajrent.png";
 
 // Structured portfolio data
-const portfolioProjects = [
-    {
-        id: 1,
-        title: "Nitelive",
-        category: "Entertainment",
-        country: "Netherlands",
-        countryFlag: <NL className="w-5 h-4" />,
-        description: "Cross-platform mobile app with real-time location services that helps users discover the best venues and events in their city.",
-        image: TeamPic1,
-        technologies: ["Flutter", "Java", "Firebase", "Geolocation"],
-        features: ["Real-time venue information", "Event discovery", "Social integration", "Location-based services"],
-        icon: <MusicalNoteIcon className="w-6 h-6" />,
-        gradient: "from-beePrimary-normal to-beePrimary-dark"
-    },
-    {
-        id: 4,
-        title: "AJ Rent",
-        category: "Mobility",
-        country: "Portugal",
-        countryFlag: <PT className="w-5 h-4" />,
-        description: "Web platform, featuring vehicle catalog, booking management, customer dashboard, and payment integration for a complete rental experience.",
-        image: TeamPic4,
-        technologies: ["React", "PHP", "REST API", "Payment Gateway"],
-        features: ["Vehicle catalog", "Online booking", "Payment processing", "Customer dashboard"],
-        icon: <TruckIcon className="w-6 h-6" />,
-        gradient: "from-beePrimary-dark to-beePrimary-normal"
-    },
-    {
-        id: 2,
-        title: "Alfabets",
-        category: "Sporting Bets",
-        country: "Brazil",
-        countryFlag: <BR className="w-5 h-4" />,
-        description: "A white labeled app for betting houses, featuring real-time integration with sports data apis.",
-        image: TeamPic2,
-        technologies: ["Flutter", "Ruby", "Firebase", "Geolocation"],
-        features: ["White label app", "Analytics dashboard", "Real time results", "Security protocols"],
-        icon: <PresentationChartBarIcon className="w-6 h-6" />,
-        gradient: "from-beePrimary-normal to-beePrimary-dark"
-    },
-    {
-        id: 3,
-        title: "Mulher + Segura",
-        category: "Social",
-        country: "Brazil",
-        countryFlag: <BR className="w-5 h-4" />,
-        description: "A safety platform that provides emergency assistance, location tracking, and support features for women in vulnerable situations.",
-        image: TeamPic3,
-        technologies: ["Flutter", "PHP", "Firebase", "Mercure", "Geolocation"],
-        features: ["Emergency alerts", "Location tracking", "Support network", "Privacy protection"],
-        icon: <ShieldCheckIcon className="w-6 h-6" />,
-        gradient: "from-beePrimary-normal to-beePrimary-dark"
-    }
-];
+const getPortfolioProjects = (t: any) => {
+    const getFeatures = (key: string) => {
+        const features = t(key, { returnObjects: true });
+        return Array.isArray(features) ? features : [];
+    };
+
+    return [
+        {
+            id: 1,
+            title: "Nitelive",
+            category: t('portfolio:projects.nitelive.category') || "Entertainment",
+            country: "Netherlands",
+            countryFlag: <NL className="w-5 h-4" />,
+            description: t('portfolio:projects.nitelive.description') || "Cross-platform mobile app with real-time location services.",
+            image: TeamPic1,
+            technologies: ["Flutter", "Java", "Firebase", "Geolocation"],
+            features: getFeatures('portfolio:projects.nitelive.features'),
+            icon: <MusicalNoteIcon className="w-6 h-6" />,
+            gradient: "from-beePrimary-normal to-beePrimary-dark"
+        },
+        {
+            id: 4,
+            title: "AJ Rent",
+            category: t('portfolio:projects.ajrent.category') || "Mobility",
+            country: "Portugal",
+            countryFlag: <PT className="w-5 h-4" />,
+            description: t('portfolio:projects.ajrent.description') || "Web platform with vehicle catalog and booking management.",
+            image: TeamPic4,
+            technologies: ["React", "PHP", "REST API", "Payment Gateway"],
+            features: getFeatures('portfolio:projects.ajrent.features'),
+            icon: <TruckIcon className="w-6 h-6" />,
+            gradient: "from-beePrimary-dark to-beePrimary-normal"
+        },
+        {
+            id: 2,
+            title: "Alfabets",
+            category: t('portfolio:projects.alfabets.category') || "Sporting Bets",
+            country: "Brazil",
+            countryFlag: <BR className="w-5 h-4" />,
+            description: t('portfolio:projects.alfabets.description') || "White label app for betting houses.",
+            image: TeamPic2,
+            technologies: ["Flutter", "Ruby", "Firebase", "Geolocation"],
+            features: getFeatures('portfolio:projects.alfabets.features'),
+            icon: <PresentationChartBarIcon className="w-6 h-6" />,
+            gradient: "from-beePrimary-normal to-beePrimary-dark"
+        },
+        {
+            id: 3,
+            title: "Mulher + Segura",
+            category: t('portfolio:projects.mulhersegura.category') || "Social",
+            country: "Brazil",
+            countryFlag: <BR className="w-5 h-4" />,
+            description: t('portfolio:projects.mulhersegura.description') || "Safety platform for women in vulnerable situations.",
+            image: TeamPic3,
+            technologies: ["Flutter", "PHP", "Firebase", "Mercure", "Geolocation"],
+            features: getFeatures('portfolio:projects.mulhersegura.features'),
+            icon: <ShieldCheckIcon className="w-6 h-6" />,
+            gradient: "from-beePrimary-normal to-beePrimary-dark"
+        }
+    ];
+};
 
 export default function Portifolio() {
     const [activeProject, setActiveProject] = useState<number>(1);
+    const { t } = useTranslation();
+    const portfolioProjects = getPortfolioProjects(t);
     const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
     const projectDisplayRef = useRef<HTMLDivElement>(null);
 
@@ -102,16 +112,16 @@ export default function Portifolio() {
                 <div className="text-center mb-16 session" data-aos="fade-up" id="portifolio">
                     <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
                         <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
-                        <span className="text-beePrimary-normal font-semibold text-sm">OUR PORTFOLIO</span>
+                        <span className="text-beePrimary-normal font-semibold text-sm">{t('common:common.ourPortfolio')}</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         <span className="bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark bg-clip-text text-transparent">
-                            Highlighted Projects
+                            {t('portfolio:title')}
                         </span>
                     </h2>
                     <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        On our journey, the pursuit of excellence is constant. Each project in our portfolio reflects our commitment to the highest quality standards.
+                        {t('portfolio:subtitle')}
                     </p>
                 </div>
 
@@ -204,9 +214,9 @@ export default function Portifolio() {
 
                                 {/* Technologies */}
                                 <div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Technologies</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">{t('common:common.technologies')}</h4>
                                     <div className="flex flex-wrap gap-2 mb-6">
-                                        {currentProject.technologies.map((tech, index) => (
+                                        {currentProject.technologies.map((tech: string, index: number) => (
                                             <span key={index} className="px-3 py-1 bg-gradient-to-r from-beePrimary-light/20 to-beePrimary-normal/20 text-beePrimary-dark text-sm rounded-full font-medium">
                                                 {tech}
                                             </span>
@@ -216,9 +226,9 @@ export default function Portifolio() {
 
                                 {/* Key Features */}
                                 <div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Main Features</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">{t('common:common.mainFeatures')}</h4>
                                     <div className="grid grid-cols-2 gap-3">
-                                        {currentProject.features.map((feature, index) => (
+                                        {Array.isArray(currentProject.features) && currentProject.features.map((feature: string, index: number) => (
                                             <div key={index} className="flex items-center space-x-3 p-3 bg-beePrimary-light/10 rounded-xl">
                                                 <div className="w-2 h-2 bg-beePrimary-normal rounded-full"></div>
                                                 <span className="text-sm font-medium text-gray-700">{feature}</span>

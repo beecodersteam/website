@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "mission": "Mission",
+    "services": "Services",
+    "hive": "Our Hive", 
+    "portfolio": "Portfolio",
+    "technologies": "Technologies",
+    "contact": "Contact"
+  },
+  "cta": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Let's collaborate",
+    "viewProject": "View Project",
+    "sendMessage": "Send Message"
+  },
+  "common": {
+    "technologies": "Technologies",
+    "mainFeatures": "Main Features",
+    "country": "Country",
+    "category": "Category",
+    "ourPortfolio": "OUR PORTFOLIO",
+    "loading": "Loading...",
+    "error": "Error"
+  }
+}

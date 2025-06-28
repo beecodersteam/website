@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft, FaStar, FaQuoteLeft } from "react-icons/fa";
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
+import { useTranslation } from '@/lib/i18n';
 
 const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   <div 
@@ -37,6 +38,7 @@ const PrevArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
 );
 
 export default function TestimonielasCarousel() {
+  const { t } = useTranslation('sections');
   const settings = {
     dots: true,
     speed: 800,
@@ -173,7 +175,7 @@ export default function TestimonielasCarousel() {
                 {/* Trust badge */}
                 <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-500">
                   <ShieldCheckIcon className="w-3 h-3 md:w-4 md:h-4 text-green-500" />
-                  <span>Verified Client Review</span>
+                  <span>{t('testimonials.verifiedReview')}</span>
                 </div>
               </div>
             </div>

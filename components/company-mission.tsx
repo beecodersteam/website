@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from '@/lib/i18n';
 
 export default function CompanyMission() {
+  const { t } = useTranslation('sections');
+
   return (
     <section className="relative bg-gradient-to-br from-white via-gray-50 to-slate-100 py-16 overflow-hidden">
       {/* Background decorative elements */}
@@ -11,17 +14,17 @@ export default function CompanyMission() {
       </div>
 
       {/* Decorative line separator */}
-      
+
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         {/* Section header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="mission">
-            Our Mission
+            {t('mission.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-700 leading-relaxed w-4/5 mx-auto">
-            At <span className="font-semibold text-beePrimary-dark">BeeCoders</span>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {t('mission.description', { components: [<strong key="b1" />] })}
           </p>
         </div>
 
@@ -32,17 +35,17 @@ export default function CompanyMission() {
             <div className="relative">
               {/* Main image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <Image 
-                  src="/images/pexels-01.jpg" 
-                  alt="Team collaboration and innovation" 
-                  width={500} 
-                  height={500} 
-                  className="object-cover w-full h-full transition-transform duration-700 hover:scale-125" 
+                <Image
+                  src="/images/pexels-01.jpg"
+                  alt="Team collaboration and innovation"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full transition-transform duration-700 hover:scale-125"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-beePrimary-normal/20 to-transparent opacity-60"></div>
               </div>
-              
+
               {/* Floating card */}
               <div className="absolute -bottom-2 -right-6 bg-white rounded-xl shadow-xl p-6 max-w-xs border border-gray-100">
                 <div className="flex items-center space-x-3">
@@ -52,8 +55,8 @@ export default function CompanyMission() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Quality Driven</p>
-                    <p className="text-xs text-gray-600">Excellence in every project</p>
+                    <p className="text-sm font-semibold text-gray-900">{t('mission.floatingCard.title')}</p>
+                    <p className="text-xs text-gray-600">{t('mission.floatingCard.description')}</p>
                   </div>
                 </div>
               </div>
@@ -65,23 +68,23 @@ export default function CompanyMission() {
 
             {/* Key Values */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-slate-600 mb-4">Our Core Values</h3>
+              <h3 className="text-2xl font-bold text-slate-600 mb-4">{t('mission.subtitle')}</h3>
               <div className="space-y-4">
                 {[
                   {
                     icon: <BoltIcon className="w-5 h-5" />,
-                    title: "Innovation",
-                    description: "Cutting-edge solutions that push boundaries and drive progress."
+                    title: t('mission.values.0.title'),
+                    description: t('mission.values.0.description')
                   },
                   {
                     icon: <CheckCircleIcon className="w-5 h-5" />,
-                    title: "Excellence",
-                    description: "Unwavering commitment to quality in every aspect of our work."
+                    title: t('mission.values.1.title'),
+                    description: t('mission.values.1.description')
                   },
                   {
                     icon: <UsersIcon className="w-5 h-5" />,
-                    title: "Partnership",
-                    description: "Building lasting relationships based on trust and mutual success."
+                    title: t('mission.values.2.title'),
+                    description: t('mission.values.2.description')
                   }
                 ].map((value, index) => (
                   <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-100 shadow-lg hover:bg-white/80 transition-all duration-300">
