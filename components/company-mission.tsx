@@ -55,8 +55,8 @@ export default function CompanyMission() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Quality Driven</p>
-                    <p className="text-xs text-gray-600">Excellence in every project</p>
+                    <p className="text-sm font-semibold text-gray-900">{t('mission.floatingCard.title')}</p>
+                    <p className="text-xs text-gray-600">{t('mission.floatingCard.description')}</p>
                   </div>
                 </div>
               </div>
@@ -68,23 +68,23 @@ export default function CompanyMission() {
 
             {/* Key Values */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-slate-600 mb-4">Our Core Values</h3>
+              <h3 className="text-2xl font-bold text-slate-600 mb-4">{t('mission.subtitle')}</h3>
               <div className="space-y-4">
                 {[
                   {
                     icon: <BoltIcon className="w-5 h-5" />,
-                    title: "Innovation",
-                    description: "Cutting-edge solutions that push boundaries and drive progress."
+                    title: t('mission.values.0.title'),
+                    description: t('mission.values.0.description')
                   },
                   {
                     icon: <CheckCircleIcon className="w-5 h-5" />,
-                    title: "Excellence",
-                    description: "Unwavering commitment to quality in every aspect of our work."
+                    title: t('mission.values.1.title'),
+                    description: t('mission.values.1.description')
                   },
                   {
                     icon: <UsersIcon className="w-5 h-5" />,
-                    title: "Partnership",
-                    description: "Building lasting relationships based on trust and mutual success."
+                    title: t('mission.values.2.title'),
+                    description: t('mission.values.2.description')
                   }
                 ].map((value, index) => (
                   <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-100 shadow-lg hover:bg-white/80 transition-all duration-300">

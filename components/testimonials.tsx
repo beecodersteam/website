@@ -31,7 +31,7 @@ export default function Testimonials() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            {t('testimonials.description', { components: [<strong />] })}
+            {t('testimonials.description', { components: [<strong key="highlight" />] })}
           </p>
         </div>
 

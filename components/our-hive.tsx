@@ -12,10 +12,10 @@ export default function OurHive() {
   const featuresData = t('hive.features', { returnObjects: true });
 
   const icons = [
-    <BookOpenIcon className="w-6 h-6" />,
-    <UsersIcon className="w-6 h-6" />,
-    <DocumentIcon className="w-6 h-6" />,
-    <TrophyIcon className="w-6 h-6" />
+    <BookOpenIcon className="w-6 h-6" key="book" />,
+    <UsersIcon className="w-6 h-6" key="users" />,
+    <DocumentIcon className="w-6 h-6" key="document" />,
+    <TrophyIcon className="w-6 h-6" key="trophy" />
   ];
 
   const hiveFeatures = Array.isArray(featuresData) ? featuresData.map((feature, index) => ({

@@ -1,132 +1,219 @@
 {
-  "mission": {
-    "title": "Nossa Missão",
-    "subtitle": "Capacitando a Inovação Através da Tecnologia",
-    "description": "Dedicamo-nos a criar soluções digitais inovadoras que transformam empresas e melhoram a vida das pessoas. Nossa missão é preencher a lacuna entre tecnologia de ponta e aplicações do mundo real."
-  },
-  "hero": {
-    "title": "Construindo o Futuro com Código",
-    "subtitle": "Soluções inovadoras para o mundo digital",
-    "cta": "Descubra Nosso Trabalho"
-  },
-  "hive": {
-    "title": "Nossa Colmeia",
-    "subtitle": "Onde Inovação Encontra Colaboração",
-    "description": "Somos uma comunidade de desenvolvedores apaixonados, designers e entusiastas de tecnologia trabalhando juntos para criar soluções digitais extraordinárias.",
-    "join": "Junte-se à Colmeia",
-    "stats": {
-      "projects": "Projetos Entregues",
-      "clients": "Clientes Satisfeitos",
-      "countries": "Países Atendidos",
-      "technologies": "Tecnologias Dominadas"
+    "hero": {
+        "title": "Transformando",
+        "titleHighlight": "Sua Visão em Realidade",
+        "subtitle": "<0>Bee Coders</0>, é especializada em transformar suas ideias em soluções digitais de ponta. Faça parceria conosco para construir experiências extraordinárias juntos.",
+        "cta": "Junte-se à nossa colmeia"
     },
-    "features": {
-      "innovation": {
-        "title": "Inovação",
-        "description": "Soluções de ponta que ultrapassam limites e impulsionam o progresso."
-      },
-      "collaboration": {
-        "title": "Colaboração",
-        "description": "Trabalho em equipe e comunicação estão no centro de tudo que fazemos."
-      },
-      "excellence": {
-        "title": "Excelência",
-        "description": "Compromisso inabalável com a qualidade em todos os aspectos do nosso trabalho."
-      },
-      "growth": {
-        "title": "Crescimento",
-        "description": "Aprendizado e melhoria contínuos para nós e nossos clientes."
-      }
-    }
-  },
-  "services": {
-    "title": "Nossos Serviços",
-    "subtitle": "Oferecemos uma gama diversificada de soluções e serviços especializados projetados para impulsionar seu negócio para o cenário digital. Com uma equipe de profissionais altamente qualificados, estamos comprometidos em entregar excelência e inovação em cada projeto.",
-    "webSystems": {
-      "title": "Sistemas Web",
-      "description": "Desenvolvimento de software abrangente e inovador adaptado às necessidades dos nossos clientes.",
-      "features": ["Desenvolvimento Personalizado", "Arquitetura Escalável", "Tecnologias Modernas", "Otimização de Performance"]
+    "highlights": {
+        "items": [
+            {
+                "number": "4+",
+                "description": "Países",
+                "subtext": "Expandindo nossa presença globalmente"
+            },
+            {
+                "number": "6+",
+                "description": "Anos",
+                "subtext": "De experiência comprovada na indústria"
+            },
+            {
+                "number": "20+",
+                "description": "Clientes Felizes",
+                "subtext": "Parcerias confiáveis em todo o mundo"
+            },
+            {
+                "number": "30+",
+                "description": "Projetos",
+                "subtext": "Soluções entregues com sucesso"
+            }
+        ]
     },
-    "mobileApps": {
-      "title": "Aplicações Móveis",
-      "description": "Aplicativos móveis nativos e multiplataforma que oferecem experiências excepcionais ao usuário.",
-      "features": ["iOS & Android", "Multiplataforma", "Performance Nativa", "Otimização App Store"]
+    "mission": {
+        "title": "Nossa Missão",
+        "subtitle": "Capacitando a Inovação Através da Tecnologia",
+        "description": "Na <0>Bee Coders</0>, dedicamo-nos a capacitar empresas entregando soluções de software inovadoras e personalizadas. Nossa missão é transformar sua visão em realidade através de serviços de desenvolvimento de alta qualidade que se alinham com seus objetivos únicos.",
+        "floatingCard": {
+            "title": "Focado na Qualidade",
+            "description": "Excelência em cada projeto"
+        },
+        "values": [
+            {
+                "title": "Inovação",
+                "description": "Soluções de ponta que ultrapassam limites e impulsionam o progresso."
+            },
+            {
+                "title": "Excelência",
+                "description": "Compromisso inabalável com a qualidade em todos os aspectos do nosso trabalho."
+            },
+            {
+                "title": "Parceria",
+                "description": "Construindo relacionamentos de longo prazo baseados em confiança e colaboração."
+            }
+        ]
     },
-    "uiuxDesign": {
-      "title": "Design UI/UX",
-      "description": "Serviços de design centrados no usuário que criam experiências digitais envolventes e intuitivas.",
-      "features": ["Pesquisa de Usuário", "Wireframing", "Prototipagem", "Sistemas de Design"]
-    },
-    "digitalMarketing": {
-      "title": "Marketing Digital",
-      "description": "Estratégias de marketing digital eficazes e personalizadas focadas na visibilidade online e objetivos de negócio.",
-      "features": ["Otimização SEO", "Redes Sociais", "Estratégia de Conteúdo", "Analytics & Insights"]
-    },
-    "nearshore": {
-      "title": "Soluções Nearshore",
-      "description": "Oferecemos as vantagens do outsourcing mantendo suas operações comerciais mais próximas de casa.",
-      "features": ["Alinhamento de Fuso Horário", "Compatibilidade Cultural", "Eficiência de Custos", "Garantia de Qualidade"]
-    },
-    "teamOutsourcing": {
-      "title": "Outsourcing de Equipe",
-      "description": "Atuamos como empregador legal para seus prestadores de serviços, cuidando de todos os aspectos da sua força de trabalho.",
-      "features": ["Equipes Dedicadas", "Conformidade Legal", "Gestão de RH", "Escalonamento Flexível"]
-    }
-  },
-  "technologies": {
-    "title": "Tecnologias que usamos",
-    "subtitle": "Usamos tecnologia de ponta para entregar soluções inovadoras aos nossos clientes"
-  },
-  "testimonials": {
-    "title": "O Que Nossos Clientes Dizem",
-    "subtitle": "Depoimentos de Clientes",
-    "description": "Não acredite apenas na nossa palavra. Veja o que clientes satisfeitos têm a dizer sobre sua experiência trabalhando com a **Bee Coders**.",
-    "verifiedReview": "Avaliação de Cliente Verificada"
-  },
-  "contact": {
-    "title": "Tem algo a dizer?",
-    "subtitle": "Envie-nos uma mensagem. Mal podemos esperar para ouvir de você.",
-    "form": {
-      "messagePlaceholder": "Sua mensagem…",
-      "emailPlaceholder": "Seu email…",
-      "sendButton": "Enviar",
-      "successMessage": "✓ Mensagem enviada com sucesso! Responderemos em breve.",
-      "defaultMessage": "Responderemos o mais rápido possível.",
-      "validation": {
-        "fillAllFields": "Por favor, preencha todos os campos.",
-        "validEmail": "Por favor, insira um email válido.",
-        "webhookNotConfigured": "Webhook do Discord não está configurado. Entre em contato com o administrador.",
-        "sendError": "Erro ao enviar mensagem. Tente novamente."
-      }
-    }
-  },
-  "footer": {
-    "description": "Capacitando empresas com soluções de software inovadoras adaptadas às suas necessidades. Vamos construir o futuro juntos!",
-    "followUs": "Siga-nos",
     "services": {
-      "title": "Nossos Serviços",
-      "items": ["Desenvolvimento Web", "Aplicações Móveis", "Design UI/UX", "Marketing Digital", "Outsourcing de Equipe", "Soluções Nearshore"]
+        "title": "Nossos Serviços",
+        "subtitle": "Oferecemos uma gama diversificada de soluções e serviços especializados projetados para impulsionar seu negócio para o cenário digital. Com uma equipe de profissionais altamente qualificados, estamos comprometidos em entregar excelência e inovação em cada projeto.",
+        "webSystems": {
+            "title": "Sistemas Web",
+            "description": "Desenvolvimento de software abrangente e inovador adaptado às necessidades dos nossos clientes.",
+            "features": [
+                "Desenvolvimento Personalizado",
+                "Arquitetura Escalável",
+                "Tecnologias Modernas",
+                "Otimização de Performance"
+            ]
+        },
+        "mobileApps": {
+            "title": "Aplicações Móveis",
+            "description": "Aplicativos móveis nativos e multiplataforma que oferecem experiências excepcionais ao usuário.",
+            "features": [
+                "iOS & Android",
+                "Multiplataforma",
+                "Performance Nativa",
+                "Otimização App Store"
+            ]
+        },
+        "uiuxDesign": {
+            "title": "Design UI/UX",
+            "description": "Serviços de design centrados no usuário que criam experiências digitais envolventes e intuitivas.",
+            "features": [
+                "Pesquisa de Usuário",
+                "Wireframing",
+                "Prototipagem",
+                "Sistemas de Design"
+            ]
+        },
+        "digitalMarketing": {
+            "title": "Marketing Digital",
+            "description": "Estratégias de marketing digital eficazes e personalizadas focadas na visibilidade online e objetivos de negócio.",
+            "features": [
+                "Otimização SEO",
+                "Redes Sociais",
+                "Estratégia de Conteúdo",
+                "Analytics & Insights"
+            ]
+        },
+        "nearshore": {
+            "title": "Soluções Nearshore",
+            "description": "Oferecemos as vantagens do outsourcing mantendo suas operações comerciais mais próximas de casa.",
+            "features": [
+                "Alinhamento de Fuso Horário",
+                "Compatibilidade Cultural",
+                "Eficiência de Custos",
+                "Garantia de Qualidade"
+            ]
+        },
+        "teamOutsourcing": {
+            "title": "Outsourcing de Equipe",
+            "description": "Atuamos como empregador legal para seus prestadores de serviços, cuidando de todos os aspectos da sua força de trabalho.",
+            "features": [
+                "Equipes Dedicadas",
+                "Conformidade Legal",
+                "Gestão de RH",
+                "Escalonamento Flexível"
+            ]
+        }
     },
-    "company": {
-      "title": "Empresa",
-      "aboutUs": "Sobre Nós",
-      "portfolio": "Nosso Portfólio",
-      "technologies": "Tecnologias",
-      "testimonials": "Depoimentos",
-      "hive": "Nossa Colmeia",
-      "contact": "Contato"
+    "hive": {
+        "title": "Nossa Colmeia",
+        "subtitle": "Uma comunidade próspera onde a inovação encontra a colaboração, capacitando profissionais de TI a alcançar seu pleno potencial.",
+        "description": "promove um ambiente de aprendizado contínuo e colaboração, permitindo que profissionais de TI se conectem, compartilhem conhecimento e cresçam juntos em um cenário digital em constante evolução. Através de treinamentos especializados, eventos de networking e recursos exclusivos, nos esforçamos para impulsionar o desenvolvimento profissional e aprimorar as habilidades dos membros da nossa comunidade.",
+        "join": "Junte-se à Colmeia",
+        "highlight": {
+            "title": "30+ Membros",
+            "description": "Comunidade em crescimento"
+        },
+        "features": [
+            {
+                "title": "Aprendizado Contínuo",
+                "description": "Acesso a treinamentos de ponta e programas de desenvolvimento de habilidades"
+            },
+            {
+                "title": "Rede Profissional",
+                "description": "Conecte-se com profissionais de TI com ideias similares e especialistas da indústria"
+            },
+            {
+                "title": "Recursos Exclusivos",
+                "description": "Conteúdo premium, ferramentas e recursos para crescimento profissional"
+            },
+            {
+                "title": "Crescimento na Carreira",
+                "description": "Aprendizado e melhoria contínuos para nós e nossos clientes"
+            }
+        ]
+    },
+    "portfolio": {
+        "badge": "Nosso Portfólio",
+        "title": "Projetos em Destaque",
+        "subtitle": "Em nossa jornada, a busca pela excelência é constante. Cada projeto em nosso portfólio reflete nosso comprometimento com os mais altos padrões de qualidade.",
+        "description": "Orgulhamo-nos de entregar soluções de software excepcionais que atendem às necessidades únicas de nossos clientes. Nosso portfólio reflete nosso compromisso com qualidade, criatividade e satisfação do cliente.",
+        "viewProject": "Ver Projeto",
+        "loading": "Carregando...",
+        "error": "Erro ao carregar itens do portfólio"
+    },
+    "technologies": {
+        "title": "Tecnologias que usamos",
+        "subtitle": "Usamos tecnologia de ponta para entregar soluções inovadoras aos nossos clientes"
+    },
+    "testimonials": {
+        "title": "O Que Nossos Clientes Dizem",
+        "subtitle": "Depoimentos de Clientes",
+        "description": "Não acredite apenas na nossa palavra. Veja o que clientes satisfeitos têm a dizer sobre sua experiência trabalhando com a <0>Bee Coders</0>.",
+        "verifiedReview": "Avaliação de Cliente Verificada"
     },
     "contact": {
-      "title": "Entre em Contato",
-      "description": "Pronto para iniciar seu próximo projeto? Vamos discutir como podemos ajudá-lo a alcançar seus objetivos.",
-      "whatsapp": "Chat WhatsApp"
+        "title": "Tem algo a dizer?",
+        "subtitle": "Envie-nos uma mensagem. Mal podemos esperar para ouvir de você.",
+        "form": {
+            "messagePlaceholder": "Sua mensagem…",
+            "emailPlaceholder": "Seu email…",
+            "sendButton": "Enviar",
+            "successMessage": "✓ Mensagem enviada com sucesso! Responderemos em breve.",
+            "defaultMessage": "Responderemos o mais rápido possível.",
+            "validation": {
+                "fillAllFields": "Por favor, preencha todos os campos.",
+                "validEmail": "Por favor, insira um email válido.",
+                "webhookNotConfigured": "Webhook do Discord não está configurado. Entre em contato com o administrador.",
+                "sendError": "Erro ao enviar mensagem. Tente novamente."
+            }
+        }
     },
-    "legal": {
-      "allRightsReserved": "Todos os direitos reservados.",
-      "privacyPolicy": "Política de Privacidade",
-      "termsOfService": "Termos de Serviço",
-      "madeWith": "Feito com",
-      "location": "em Portugal"
+    "footer": {
+        "description": "Capacitando empresas com soluções de software inovadoras adaptadas às suas necessidades. Vamos construir o futuro juntos!",
+        "followUs": "Siga-nos",
+        "services": {
+            "title": "Nossos Serviços",
+            "items": [
+                "Desenvolvimento Web",
+                "Aplicações Móveis",
+                "Design UI/UX",
+                "Marketing Digital",
+                "Outsourcing de Equipe",
+                "Soluções Nearshore"
+            ]
+        },
+        "company": {
+            "title": "Empresa",
+            "aboutUs": "Sobre Nós",
+            "portfolio": "Nosso Portfólio",
+            "technologies": "Tecnologias",
+            "testimonials": "Depoimentos",
+            "hive": "Nossa Colmeia",
+            "contact": "Contato"
+        },
+        "contact": {
+            "title": "Entre em Contato",
+            "description": "Pronto para iniciar seu próximo projeto? Vamos discutir como podemos ajudá-lo a alcançar seus objetivos.",
+            "whatsapp": "Chat WhatsApp"
+        },
+        "legal": {
+            "allRightsReserved": "Todos os direitos reservados.",
+            "privacyPolicy": "Política de Privacidade",
+            "termsOfService": "Termos de Serviço",
+            "madeWith": "Feito com",
+            "location": "em Portugal"
+        }
     }
-  }
 }

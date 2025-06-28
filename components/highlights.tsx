@@ -14,10 +14,10 @@ export default function Highlights() {
   const highlightItems = t('highlights.items', { returnObjects: true });
 
   const icons = [
-    <GlobeAltIcon className="w-8 h-8" />,
-    <ClockIcon className="w-8 h-8" />,
-    <UsersIcon className="w-8 h-8" />,
-    <SparklesIcon className="w-8 h-8" />
+    <GlobeAltIcon className="w-8 h-8" key="globe" />,
+    <ClockIcon className="w-8 h-8" key="clock" />,
+    <UsersIcon className="w-8 h-8" key="users" />,
+    <SparklesIcon className="w-8 h-8" key="sparkles" />
   ];
 
   const highlights: HighlightItem[] = Array.isArray(highlightItems) ? highlightItems.map((item, index) => ({
