@@ -3,7 +3,7 @@ import { InformationCircleIcon, CheckCircleIcon, StarIcon, ShieldCheckIcon } fro
 
 export default function Testimonials() {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
+    <section className="relative py-20  bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating hexagons */}
@@ -24,16 +24,9 @@ export default function Testimonials() {
             Client Testimonials
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 session" id="testimonials">
-            <span className="bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal bg-clip-text text-transparent">
-              What Our Partners
-            </span>
-            <br />
-            <span className="text-gray-900">Say About Us</span>
-          </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what satisfied clients have to say about their experience working with BeeCoders.
+            Don't just take our word for it. Here's what satisfied clients have to say about their experience working with <strong>Bee Coders</strong>.
           </p>
         </div>
 
@@ -42,20 +35,6 @@ export default function Testimonials() {
           <TestimonielasCarousel />
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-20 text-center" data-aos="fade-up" data-aos-delay="400">
-          <div className="inline-flex items-center space-x-8 text-gray-500">
-            
-            <div className="flex items-center space-x-2">
-              <StarIcon className="w-5 h-5 text-beePrimary-normal" />
-              <span className="font-medium">5-Star Average Rating</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <ShieldCheckIcon className="w-5 h-5 text-beePrimary-normal" />
-              <span className="font-medium">Verified Reviews</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

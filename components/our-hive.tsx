@@ -34,8 +34,8 @@ export default function OurHive() {
     <section className="relative bg-gradient-to-br from-slate-100 py-16 lg:py-24 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-6">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-beePrimary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-72 h-72 bg-beeSecondary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-beeSecondary-normal/50 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-72 h-72 bg-beeSecondary-normal/50 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="absolute inset-0 opacity-10">
@@ -110,16 +110,7 @@ export default function OurHive() {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="pt-6">
-              <a 
-                href="mailto:contact@beecoders.club" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-beePrimary-normal to-beeSecondary-normal text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-              >
-                Join Our Hive
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </a>
-            </div>
+           
           </div>
         </div>
 
@@ -134,7 +125,7 @@ export default function OurHive() {
               data-aos-duration="600"
             >
               {/* Floating gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-beePrimary-normal/5 to-beeSecondary-normal/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-beePrimary-normal/5 to-beeSecondary-normal/5 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               
               {/* Content */}
               <div className="relative">

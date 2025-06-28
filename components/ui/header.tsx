@@ -49,7 +49,7 @@ export default function Header() {
                   Services</Link>
               </li>
               <li>
-                <Link href="/#hive" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                <Link href="/#our-hive" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
                   Hive</Link>
               </li>
               <li>

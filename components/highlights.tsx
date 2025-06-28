@@ -12,7 +12,7 @@ const highlights: HighlightItem[] = [
     icon: <GlobeAltIcon className="w-8 h-8" />,
     number: "4+",
     description: "Countries",
-    subtext: "Global presence across continents"
+    subtext: "Expanding our presence globally"
   },
   {
     icon: <ClockIcon className="w-8 h-8" />,

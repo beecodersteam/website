@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "@vercel/speed-insights": "^1.2.0",
     "aos": "^3.0.0-beta.6",
+    "country-flag-icons": "^1.5.19",
     "next": "15.3.3",
     "react": "^18",
     "react-dom": "^18",

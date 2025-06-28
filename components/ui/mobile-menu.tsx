@@ -70,11 +70,11 @@ export default function MobileMenu() {
                 Services</Link>
             </li>
             <li>
-              <Link href="/#hive" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              <Link href="/#our-hive" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                 Hive</Link>
             </li>
             <li>
-              <Link href="/#portfolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+              <Link href="/#portifolio" className="flex font-medium  text-xl w-full text-beePrimary-normal hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                 Projects</Link>
             </li>
             <li>
