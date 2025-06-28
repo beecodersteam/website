@@ -101,7 +101,7 @@ export default function TestimonielasCarousel() {
         }
         @media (min-width: 768px) {
           .custom-dots {
-            bottom: -60px !important;
+            bottom: -40px !important;
           }
           .custom-dots li {
             margin: 0 8px !important;

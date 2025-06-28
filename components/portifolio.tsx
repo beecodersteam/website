@@ -99,12 +99,12 @@ export default function Portifolio() {
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16" data-aos="fade-up">
+                <div className="text-center mb-16 session" data-aos="fade-up" id="portifolio">
                     <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
                         <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
                         <span className="text-beePrimary-normal font-semibold text-sm">OUR PORTFOLIO</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6" id="portifolio">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         <span className="bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark bg-clip-text text-transparent">
                             Highlighted Projects
                         </span>
