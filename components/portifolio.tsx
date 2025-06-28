@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
@@ -11,14 +11,16 @@ export default function Portifolio() {
     const [tab, setTab] = useState<number>(1);
 
     const tabs = useRef<HTMLDivElement>(null);
-    const heightFix = () => {
-        if (tabs.current && tabs.current.parentElement)
+    
+    const heightFix = useCallback(() => {
+        if (tabs.current && tabs.current.parentElement) {
             tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
-    };
+        }
+    }, []);
 
     useEffect(() => {
         heightFix();
-    }, []);
+    }, [heightFix]);
     return (
         <section className="relative">
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -147,7 +149,6 @@ export default function Portifolio() {
                                 <Transition
                                     show={tab === 1}
                                     appear={true}
-                                    className="w-full"
                                     enter="transition ease-in-out duration-700 transform order-first"
                                     enterFrom="opacity-0 translate-y-16"
                                     enterTo="opacity-100 translate-y-0"
@@ -157,7 +158,7 @@ export default function Portifolio() {
                                     beforeEnter={() => heightFix()}
                                     unmount={false}
                                 >
-                                    <div className="relative inline-flex flex-col">
+                                    <div className="relative inline-flex flex-col w-full">
                                         <Image
                                             className="md:max-w-none mx-auto rounded"
                                             src={TeamPic1}
@@ -171,7 +172,6 @@ export default function Portifolio() {
                                 <Transition
                                     show={tab === 2}
                                     appear={true}
-                                    className="w-full"
                                     enter="transition ease-in-out duration-700 transform order-first"
                                     enterFrom="opacity-0 translate-y-16"
                                     enterTo="opacity-100 translate-y-0"
@@ -181,7 +181,7 @@ export default function Portifolio() {
                                     beforeEnter={() => heightFix()}
                                     unmount={false}
                                 >
-                                    <div className="relative inline-flex flex-col">
+                                    <div className="relative inline-flex flex-col w-full">
                                         <Image
                                             className="md:max-w-none mx-auto rounded"
                                             src={TeamPic2}
@@ -195,7 +195,6 @@ export default function Portifolio() {
                                 <Transition
                                     show={tab === 3}
                                     appear={true}
-                                    className="w-full"
                                     enter="transition ease-in-out duration-700 transform order-first"
                                     enterFrom="opacity-0 translate-y-16"
                                     enterTo="opacity-100 translate-y-0"
@@ -205,7 +204,7 @@ export default function Portifolio() {
                                     beforeEnter={() => heightFix()}
                                     unmount={false}
                                 >
-                                    <div className="relative inline-flex flex-col">
+                                    <div className="relative inline-flex flex-col w-full">
                                         <Image
                                             className="md:max-w-none mx-auto rounded"
                                             src={TeamPic3}
