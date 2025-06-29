@@ -227,7 +227,7 @@ export default function MobileMenu() {
               {/* Optional: Add contact info or social links */}
               <div className="pt-4">
                 <p className="text-xs text-gray-400 text-center">
-                  © 2024 Bee Coders. All rights reserved.
+                  © {new Date().getFullYear()} Bee Coders. All rights reserved.
                 </p>
               </div>
             </div>

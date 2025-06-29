@@ -37,9 +37,6 @@ export default function OurHive() {
         }} />
       </div>
 
-      {/* Decorative line separator */}
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px h-20 bg-gradient-to-b from-beePrimary-light to-transparent transform translate-y-1/2"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
@@ -95,10 +92,7 @@ export default function OurHive() {
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  <strong>Bee Coders</strong> {t('hive.description', { company: '<strong>Bee Coders</strong>' })}
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  {t('hive.description2')}
+                  {t('hive.description', { components: [<strong key="b1" />] })}
                 </p>
               </div>
             </div>
