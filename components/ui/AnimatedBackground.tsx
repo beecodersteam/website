@@ -124,6 +124,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
       will-change: transform;
       contain: layout style;
       transform-origin: center;
+      clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     }
     
     .gradient-bg {
@@ -159,7 +160,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
           {hexagons.map((hex) => (
             <div 
               key={hex.id}
-              className={`absolute ${hexagonColor} w-20 h-20 rounded-lg floating-hexagon`}
+              className={`absolute ${hexagonColor} w-20 h-20 floating-hexagon`}
               style={{
                 top: `${hex.top}%`,
                 left: `${hex.left}%`,
