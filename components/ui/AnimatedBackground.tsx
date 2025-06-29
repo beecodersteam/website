@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, memo } from 'react'
+import { useMemo, memo, useState, useEffect } from 'react'
 
 interface AnimatedBackgroundProps {
   hexagonCount?: number
@@ -25,8 +25,29 @@ const AnimatedBackground = memo(function AnimatedBackground({
     to: "to-beeSecondary-light/10"
   }
 }: AnimatedBackgroundProps) {
+  // State to track if component is mounted (client-side only)
+  const [isMounted, setIsMounted] = useState(false)
+  
+  // Mount effect to enable random generation only on client
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   // Generate positions dynamically to avoid overlapping when hexagonCount changes
   const hexagons = useMemo(() => {
+    // If not mounted yet (SSR/SSG), return deterministic placeholders
+    if (!isMounted) {
+      return Array.from({ length: hexagonCount }, (_, i) => ({
+        id: i,
+        top: 10 + (i % 3) * 30, // Deterministic grid-like positions
+        left: 10 + (i % 3) * 30,
+        rotation: i * 45, // Deterministic rotations
+        scale: 0.7, // Fixed scale
+        animationDuration: 8, // Fixed duration
+        animationDelay: i * 0.5 // Staggered delays
+      }))
+    }
+
     interface Position {
       top: number
       left: number
@@ -74,7 +95,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
       animationDuration: 6 + Math.random() * 8, // Random durations 6s-14s
       animationDelay: Math.random() * 3 // Random delays 0-3s
     }))
-  }, [hexagonCount])
+  }, [hexagonCount, isMounted])
 
   // CSS-in-JS styles for better performance (no re-parsing)
   const styles = useMemo(() => `
