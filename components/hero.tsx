@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from '@/lib/i18n'
 import VideoContainer from './video-banner'
+import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
 
 const videos = [
     "backgrounds/office-group.mp4",
@@ -38,13 +39,11 @@ export default function Hero() {
             {t('hero.subtitle', { components: [<strong key="b1" />] })}</p>
           <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div>
-              <a className="btn text-beeSecondary-light bg-beePrimary-normal hover:bg-beePrimary-light w-full mb-4 sm:w-auto sm:mb-0" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300" href="mailto:contact@beecoders.club">
-                {t('hero.cta')}
-              </a>
-            </div>
-            <div>
               <a className="btn text-beePrimary-dark bg-beeSecondary-normal hover:bg-beeSecondary-light w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#contact">
-                {t('common:cta.contactUs')}
+                <>
+                    <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5 inline mr-2" />
+                  {t('common:cta.contactUs')}
+                </>
               </a>
             </div>
           </div>

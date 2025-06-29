@@ -10,6 +10,9 @@ import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
 import TeamPic4 from "@/public/images/projects/ajrent.png";
+import SectionTitle from "./ui/SectionTitle";
+import SectionSubtitle from "./ui/SectionSubtitle";
+import SectionBadge from "./ui/SectionBadge";
 
 // Structured portfolio data
 const getPortfolioProjects = (t: any) => {
@@ -76,21 +79,21 @@ const getPortfolioProjects = (t: any) => {
 
 export default function Portifolio() {
     const [activeProject, setActiveProject] = useState<number>(1);
-    const { t } = useTranslation();
+    const { t } = useTranslation('sections');
     const portfolioProjects = getPortfolioProjects(t);
     const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
     const projectDisplayRef = useRef<HTMLDivElement>(null);
 
     const handleProjectClick = (projectId: number) => {
         setActiveProject(projectId);
-        
+
         // Scroll to project display on mobile/tablet, with a small delay to ensure state is updated
         setTimeout(() => {
             if (projectDisplayRef.current) {
                 const yOffset = -100; // Offset to account for fixed header
                 const element = projectDisplayRef.current;
                 const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                
+
                 window.scrollTo({
                     top: y,
                     behavior: 'smooth'
@@ -110,19 +113,26 @@ export default function Portifolio() {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 session" data-aos="fade-up" id="portifolio">
-                    <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
-                        <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
-                        <span className="text-beePrimary-normal font-semibold text-sm">{t('common:common.ourPortfolio')}</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        <span className="bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark bg-clip-text text-transparent">
-                            {t('portfolio:title')}
-                        </span>
-                    </h2>
-                    <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        {t('portfolio:subtitle')}
-                    </p>
+                    <SectionBadge
+                        icon={<RectangleStackIcon className="w-6 h-6" />}
+                        text={t('portfolio.badge')}
+                        className="mb-4"
+                        enableAnimations={true}
+                        animationDelay={200}
+                    />
+                    <SectionTitle
+                        title={String(t('portfolio.title'))}
+                        id="our-hive"
+                        variant="centered"
+                        enableAnimations={true}
+                        animatedDivider={true}
+                    />
+                    <SectionSubtitle
+                        text={t('portfolio.subtitle', { components: [<strong key="b1" />] })}
+                        variant="centered"
+                        enableAnimations={true}
+                        animationDelay={300}
+                    />
                 </div>
 
                 {/* Portfolio Content */}
@@ -134,8 +144,8 @@ export default function Portifolio() {
                                 key={project.id}
                                 onClick={() => handleProjectClick(project.id)}
                                 className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${activeProject === project.id
-                                        ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
-                                        : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
+                                    ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
+                                    : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
                                     }`}
                             >
                                 <div className="flex items-start space-x-4">
@@ -149,7 +159,7 @@ export default function Portifolio() {
                                                 {project.category}
                                             </span>
                                         </div>
-                                        
+
                                         <p className="text-gray-600 leading-relaxed">{project.description}</p>
 
                                         {activeProject === project.id && (

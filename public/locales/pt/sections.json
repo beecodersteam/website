@@ -2,7 +2,7 @@
     "hero": {
         "title": "Transformamos",
         "titleHighlight": "Sua Visão em Realidade",
-        "subtitle": "<0>Bee Coders</0>, é especializada em transformar suas ideias em soluções digitais de ponta. Faça parceria conosco para construir experiências extraordinárias juntos.",
+        "subtitle": "A <0>Bee Coders</0>, é especializada em transformar suas ideias em soluções digitais de ponta. Seja nosso parceiro e vamos construir experiências extraordinárias juntos.",
         "cta": "Junte-se à nossa colmeia"
     },
     "highlights": {
@@ -31,12 +31,12 @@
     },
     "mission": {
         "title": "Nossa Missão",
-        "subtitle": "Capacitando a Inovação Através da Tecnologia",
-        "description": "Na <0>Bee Coders</0>, dedicamo-nos a capacitar empresas entregando soluções de software inovadoras e personalizadas. Nossa missão é transformar sua visão em realidade através de serviços de desenvolvimento de alta qualidade que se alinham com seus objetivos únicos.",
+        "subtitle": "Na <0>Bee Coders</0>, dedicamo-nos a capacitar empresas entregando soluções de software inovadoras e personalizadas. Nossa missão é transformar sua visão em realidade através de serviços de desenvolvimento de alta qualidade que se alinham com seus objetivos únicos.",
         "floatingCard": {
             "title": "Focado na Qualidade",
             "description": "Excelência em cada projeto"
         },
+        "valuesTitle": "Capacitando a Inovação Através da Tecnologia",
         "values": [
             {
                 "title": "Inovação",
@@ -159,8 +159,8 @@
     },
     "testimonials": {
         "title": "O Que Nossos Clientes Dizem",
-        "subtitle": "Depoimentos de Clientes",
-        "description": "Não acredite apenas na nossa palavra. Veja o que clientes satisfeitos têm a dizer sobre sua experiência trabalhando com a <0>Bee Coders</0>.",
+        "subtitle": "Não acredite apenas na nossa palavra. Veja o que clientes satisfeitos têm a dizer sobre sua experiência trabalhando com a <0>Bee Coders</0>.",
+        "badge": "Depoimentos de Clientes",
         "verifiedReview": "Avaliação de Cliente Verificada"
     },
     "contact": {
