@@ -5,7 +5,9 @@ import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from '@/lib/i18n'
 
 // Discord Webhook URL hardcoded para build estático
-const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1384249226262876200/fIDaRVvMrvFghL3EOTcDA84-Vgiv8OtR_-F4lccaTb8iZSrOus9WNAM_-5JSBCppwiRz'
+const WEBHOOK_ID = '1388860914454757519'
+const WEBHOOK_TOKEN = '7JiCfvj5yc_zLwhMen8IrnPCx5ZVqnize9MIsmYNZVAI9J7pvTVil-Xd0uIwp-E5w3dj'
+const DISCORD_WEBHOOK_URL = `https://discord.com/api/webhooks/${WEBHOOK_ID}/${WEBHOOK_TOKEN}`
 
 export default function ContactForm() {
   const { t } = useTranslation('sections');
