@@ -119,7 +119,7 @@
     "hive": {
         "title": "Nossa Colmeia",
         "subtitle": "Uma comunidade próspera onde a inovação encontra a colaboração, capacitando profissionais de TI a alcançar seu pleno potencial.",
-        "description": "A {{company}} promove um ambiente de aprendizado contínuo e colaboração, permitindo que profissionais de TI se conectem, compartilhem conhecimento e cresçam juntos em um cenário digital em constante evolução. Através de treinamentos especializados, eventos de networking e recursos exclusivos, nos esforçamos para impulsionar o desenvolvimento profissional e aprimorar as habilidades dos membros da nossa comunidade.",
+        "description": "A <0>Bee Coders</0> promove um ambiente de aprendizado contínuo e colaboração, permitindo que profissionais de TI se conectem, compartilhem conhecimento e cresçam juntos em um cenário digital em constante evolução. Através de treinamentos especializados, eventos de networking e recursos exclusivos, nos esforçamos para impulsionar o desenvolvimento profissional e aprimorar as habilidades dos membros da nossa comunidade.",
         "join": "Junte-se à Colmeia",
         "highlight": {
             "title": "30+ Membros",

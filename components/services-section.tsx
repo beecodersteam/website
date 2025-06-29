@@ -76,9 +76,6 @@ export default function ServicesSection() {
         }} />
       </div>
 
-      {/* Decorative line separator */}
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px h-20 bg-gradient-to-b from-white to-transparent transform translate-y-1/2"></div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
