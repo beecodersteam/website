@@ -35,7 +35,7 @@ export default function Hero() {
             {t('hero.subtitle', { components: [<strong key="b1" />] })}</p>
           <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div>
-              <a className="btn text-beePrimary-dark bg-gradient-to-br from-beeSecondary-normal to-beeSecondary-light hover:bg-beeSecondary-lighter w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#contact">
+              <a className="btn text-lg text-beePrimary-dark bg-gradient-to-br from-beeSecondary-normal to-beeSecondary-light hover:bg-beeSecondary-lighter w-full sm:w-auto sm:ml-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" href="#contact">
                 <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5 inline mr-2" />
                 {t('common:cta.contactUs')}
               </a>
