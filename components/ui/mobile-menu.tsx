@@ -60,22 +60,43 @@ export default function MobileMenu() {
     return () => document.removeEventListener('keydown', keyHandler)
   })
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll when menu is open and handle header backdrop conflict
   useEffect(() => {
     if (mobileNavOpen) {
       // Simple overflow hidden approach - no position manipulation
       document.body.style.overflow = 'hidden'
       document.documentElement.style.overflow = 'hidden'
+      
+      // Remove backdrop-filter from header to prevent conflict
+      const header = document.querySelector('header')
+      if (header) {
+        header.style.backdropFilter = 'none'
+        // ;(header.style as any).webkitBackdropFilter = 'none'
+      }
     } else {
       // Restore scroll
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
+      
+      // Restore header backdrop-filter
+      const header = document.querySelector('header')
+      if (header) {
+        header.style.backdropFilter = ''
+        // ;(header.style as any).webkitBackdropFilter = ''
+      }
     }
     
     return () => {
       // Cleanup
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
+      
+      // Ensure header backdrop is restored
+      // const header = document.querySelector('header')
+      // if (header) {
+      //   header.style.backdropFilter = ''
+      //   ;(header.style as any).webkitBackdropFilter = ''
+      // }
     }
   }, [mobileNavOpen])
 
@@ -118,7 +139,7 @@ export default function MobileMenu() {
         leaveTo="opacity-0"
       >
         <div 
-          className="fixed inset-0 z-[999998] bg-black/70 backdrop-blur-md" 
+          className="fixed inset-0 z-[999998] bg-black/65 backdrop-blur-md delay-200"
           style={{ 
             zIndex: 999998,
             position: 'fixed',
@@ -128,7 +149,8 @@ export default function MobileMenu() {
             right: 0,
             bottom: 0,
             width: '100vw',
-            height: '100vh'
+            height: '100vh',
+            willChange: 'transform', // Optimize for animationsorce hardware acceleration
           }}
           onClick={closeMenu} 
         />
@@ -179,14 +201,14 @@ export default function MobileMenu() {
                     <li key={item.href}>
                       <Link 
                         href={item.href} 
-                        className="group flex items-center px-6 py-4 text-gray-700 hover:text-beePrimary-normal hover:bg-beePrimary-light/5 transition-all duration-200"
+                        className="group flex items-center px-6 py-4 text-beePrimary-normal hover:bg-beePrimary-light/5 transition-all duration-200"
                         onClick={closeMenu}
                       >
-                        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 group-hover:bg-beePrimary-light/20 transition-colors duration-200 mr-4">
-                          <IconComponent className="w-5 h-5 text-gray-600 group-hover:text-beePrimary-normal transition-colors duration-200" />
+                        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-beePrimary-light/20 transition-colors duration-200 mr-4">
+                          <IconComponent className="w-5 h-5 text-beePrimary-normal transition-colors duration-200" />
                         </div>
                         <span className="font-medium text-base flex-1">{t(item.labelKey)}</span>
-                        <ChevronRightIcon className="w-4 h-4 text-gray-400 group-hover:text-beePrimary-normal opacity-0 group-hover:opacity-100 transition-all duration-200" />
+                        <ChevronRightIcon className="w-4 h-4 text-beePrimary-normal opacity-0 group-hover:opacity-100 transition-all duration-200" />
                       </Link>
                     </li>
                   )
