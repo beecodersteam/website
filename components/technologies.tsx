@@ -28,9 +28,9 @@ import SectionSubtitle from "./ui/SectionSubtitle";
 export default function Technologies() {
   const { t } = useTranslation('sections');
   return (
-    <section className="scroll-mt-52 relative bg-gradient-to-br from-beePrimary-light to-beePrimary-dark py-8">
+    <section className="relative bg-gradient-to-br from-beePrimary-light to-beePrimary-dark py-8">
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="sm:col-span-2 scroll-mt-52" data-aos="slide-right" data-aos-offset="100">
+        <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="100">
           <SectionTitle
             title={String(t('technologies.title'))}
             id="technologies"
@@ -46,7 +46,7 @@ export default function Technologies() {
             className="sm:col-span-4 mb-8"
           />
         </div>
-        <div className="sm:col-span-2" data-aos="slide-left" data-aos-offset="200">
+        <div className="sm:col-span-2" data-aos="slide-left">
           <div className="grid grid-cols-4 gap-4 sm:grid-cols-4 rounded-lg justify-items-center">
             <FaPhp size={56} color="white" />
             <IconRuby />

@@ -27,7 +27,7 @@ const SectionTitle = memo(function SectionTitle({
       
       {/* Main title */}
       <h2 
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight session ${titleClassName} ${id}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight scroll-mt-24 md:scroll-mt-44  ${titleClassName} ${id}`}
         {...(id && { id })}
         {...({
           'data-aos': 'fade-up',
