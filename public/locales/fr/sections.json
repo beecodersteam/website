@@ -2,7 +2,7 @@
     "hero": {
         "title": "Nous Transformons",
         "titleHighlight": "Votre Vision en Réalité",
-        "subtitle": "<0>Bee Coders</0>, se spécialise dans la transformation de vos idées en solutions numériques de pointe. Associez-vous à nous pour construire ensemble des expériences extraordinaires.",
+        "subtitle": "La <0>Bee Coders</0>, se spécialise dans la transformation de vos idées en solutions numériques de pointe. Soyez notre partenaire et construisons ensemble des expériences extraordinaires.",
         "cta": "Rejoignez notre ruche"
     },
     "highlights": {
@@ -20,7 +20,7 @@
             {
                 "number": "20+",
                 "description": "Clients Satisfaits",
-                "subtext": "Partenariats de confiance dans le monde entier"
+                "subtext": "Partenariats fiables dans le monde entier"
             },
             {
                 "number": "30+",
@@ -31,63 +31,189 @@
     },
     "mission": {
         "title": "Notre Mission",
-        "subtitle": "Nous stimulons l'innovation numérique",
-        "description": "Chez Bee Coders, nous croyons au pouvoir de la collaboration et de l'excellence technique. Notre équipe mondiale de développeurs experts travaille sans relâche pour transformer des idées complexes en solutions numériques élégantes et efficaces.",
+        "subtitle": "Chez <0>Bee Coders</0>, nous nous consacrons à autonomiser les entreprises en livrant des solutions logicielles innovantes et personnalisées. Notre mission est de transformer votre vision en réalité grâce à des services de développement de haute qualité qui s'alignent sur vos objectifs uniques.",
+        "floatingCard": {
+            "title": "Axé sur la Qualité",
+            "description": "Excellence dans chaque projet"
+        },
+        "valuesTitle": "Autonomiser l'Innovation à Travers la Technologie",
         "values": [
             {
                 "title": "Innovation",
-                "description": "Nous adoptons les dernières technologies et méthodologies pour livrer des solutions de pointe."
+                "description": "Solutions de pointe qui transcendent les limites et stimulent le progrès."
             },
             {
-                "title": "Qualité",
-                "description": "Chaque ligne de code est craftée avec précision et soumise à des standards de qualité rigoureux."
+                "title": "Excellence",
+                "description": "Engagement inébranlable envers la qualité dans tous les aspects de notre travail."
             },
             {
-                "title": "Collaboration",
-                "description": "Nous travaillons comme une équipe unie, combinant des talents divers pour atteindre des résultats exceptionnels."
+                "title": "Partenariat",
+                "description": "Construire des relations à long terme basées sur la confiance et la collaboration."
             }
         ]
     },
     "services": {
         "title": "Nos Services",
-        "subtitle": "Solutions complètes pour votre entreprise numérique",
-        "items": [
-            {
-                "title": "Développement Web",
-                "description": "Nous créons des applications web modernes, responsives et évolutives utilisant les dernières technologies."
-            },
-            {
-                "title": "Développement Mobile",
-                "description": "Nous développons des applications mobiles natives et hybrides pour iOS et Android."
-            },
-            {
-                "title": "Conseil Numérique",
-                "description": "Nous conseillons sur la transformation numérique et l'architecture de solutions technologiques."
-            }
-        ]
+        "subtitle": "Nous offrons une gamme diversifiée de solutions et services spécialisés conçus pour propulser votre entreprise vers le paysage numérique. Avec une équipe de professionnels hautement qualifiés, nous nous engageons à livrer l'excellence et l'innovation dans chaque projet.",
+        "webSystems": {
+            "title": "Systèmes Web",
+            "description": "Développement de logiciels complet et innovant adapté aux besoins de nos clients.",
+            "features": [
+                "Développement Personnalisé",
+                "Architecture Évolutive",
+                "Technologies Modernes",
+                "Optimisation des Performances"
+            ]
+        },
+        "mobileApps": {
+            "title": "Applications Mobiles",
+            "description": "Applications mobiles natives et multiplateformes qui offrent des expériences utilisateur exceptionnelles.",
+            "features": [
+                "iOS & Android",
+                "Multiplateforme",
+                "Performance Native",
+                "Optimisation App Store"
+            ]
+        },
+        "uiuxDesign": {
+            "title": "Design UI/UX",
+            "description": "Services de design centrés sur l'utilisateur qui créent des expériences numériques engageantes et intuitives.",
+            "features": [
+                "Recherche Utilisateur",
+                "Wireframing",
+                "Prototypage",
+                "Systèmes de Design"
+            ]
+        },
+        "digitalMarketing": {
+            "title": "Marketing Numérique",
+            "description": "Stratégies de marketing numérique efficaces et personnalisées axées sur la visibilité en ligne et les objectifs commerciaux.",
+            "features": [
+                "Optimisation SEO",
+                "Réseaux Sociaux",
+                "Stratégie de Contenu",
+                "Analytics & Insights"
+            ]
+        },
+        "nearshore": {
+            "title": "Solutions Nearshore",
+            "description": "Nous offrons les avantages de l'externalisation tout en gardant vos opérations commerciales plus près de chez vous.",
+            "features": [
+                "Alignement des Fuseaux Horaires",
+                "Compatibilité Culturelle",
+                "Efficacité des Coûts",
+                "Assurance Qualité"
+            ]
+        },
+        "teamOutsourcing": {
+            "title": "Externalisation d'Équipe",
+            "description": "Nous agissons comme employeur légal pour vos prestataires de services, prenant en charge tous les aspects de votre main-d'œuvre.",
+            "features": [
+                "Équipes Dédiées",
+                "Conformité Légale",
+                "Gestion RH",
+                "Mise à l'Échelle Flexible"
+            ]
+        }
     },
     "hive": {
         "title": "Notre Ruche",
-        "subtitle": "L'équipe derrière la magie",
-        "description": "Rencontrez les développeurs talentueux qui donnent vie à vos projets. Chaque membre de notre équipe apporte une expertise unique et une passion pour l'excellence.",
-        "cta": "Rencontrer l'équipe"
+        "subtitle": "Une communauté prospère où l'innovation rencontre la collaboration, permettant aux professionnels IT d'atteindre leur plein potentiel.",
+        "description": "La <0>Bee Coders</0> favorise un environnement d'apprentissage continu et de collaboration, permettant aux professionnels IT de se connecter, partager des connaissances et grandir ensemble dans un paysage numérique en constante évolution. Grâce à des formations spécialisées, des événements de réseautage et des ressources exclusives, nous nous efforçons de stimuler le développement professionnel et d'améliorer les compétences des membres de notre communauté.",
+        "join": "Rejoignez la Ruche",
+        "highlight": {
+            "title": "30+ Membres",
+            "description": "Communauté en croissance"
+        },
+        "features": [
+            {
+                "title": "Apprentissage Continu",
+                "description": "Accès à des formations de pointe et programmes de développement des compétences"
+            },
+            {
+                "title": "Réseau Professionnel",
+                "description": "Connectez-vous avec des professionnels IT partageant les mêmes idées et des experts de l'industrie"
+            },
+            {
+                "title": "Ressources Exclusives",
+                "description": "Contenu premium, outils et ressources pour la croissance professionnelle"
+            },
+            {
+                "title": "Croissance de Carrière",
+                "description": "Apprentissage et amélioration continus pour nous et nos clients"
+            }
+        ]
+    },
+    "portfolio": {
+        "badge": "Notre Portfolio",
+        "title": "Projets Vedettes",
+        "subtitle": "Dans notre parcours, la recherche de l'excellence est constante. Chaque projet de notre portfolio reflète notre engagement envers les plus hauts standards de qualité.",
+        "description": "Nous sommes fiers de livrer des solutions logicielles exceptionnelles qui répondent aux besoins uniques de nos clients. Notre portfolio reflète notre engagement envers la qualité, la créativité et la satisfaction client.",
+        "viewProject": "Voir le Projet",
+        "loading": "Chargement...",
+        "error": "Erreur lors du chargement des éléments du portfolio"
     },
     "technologies": {
         "title": "Technologies que nous utilisons",
         "subtitle": "Nous utilisons une technologie de pointe pour livrer des solutions innovantes à nos clients"
     },
+    "testimonials": {
+        "title": "Ce Que Disent Nos Clients",
+        "subtitle": "Ne vous fiez pas seulement à notre parole. Voyez ce que des clients satisfaits ont à dire sur leur expérience de travail avec <0>Bee Coders</0>.",
+        "badge": "Témoignages de Clients",
+        "verifiedReview": "Avis Client Vérifié"
+    },
     "contact": {
-        "title": "Prêt à commencer votre projet ?",
-        "subtitle": "Discutons de la façon dont nous pouvons vous aider à transformer votre vision en réalité",
+        "title": "Avez-vous quelque chose à dire ?",
+        "subtitle": "Envoyez-nous un message. Nous avons hâte d'entendre ce que vous avez à nous dire.",
         "form": {
-            "name": "Nom complet",
-            "email": "Adresse e-mail",
-            "company": "Entreprise",
-            "message": "Message",
-            "submit": "Envoyer le message",
-            "sending": "Envoi en cours...",
-            "success": "Message envoyé avec succès !",
-            "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+            "messagePlaceholder": "Votre message…",
+            "emailPlaceholder": "Votre email…",
+            "sendButton": "Envoyer",
+            "successMessage": "✓ Message envoyé avec succès ! Nous répondrons bientôt.",
+            "defaultMessage": "Nous répondrons le plus rapidement possible.",
+            "validation": {
+                "fillAllFields": "Veuillez remplir tous les champs.",
+                "validEmail": "Veuillez saisir un email valide.",
+                "webhookNotConfigured": "Webhook Discord non configuré. Contactez l'administrateur.",
+                "sendError": "Erreur lors de l'envoi du message. Veuillez réessayer."
+            }
+        }
+    },
+    "footer": {
+        "description": "Autonomiser les entreprises avec des solutions logicielles innovantes adaptées à vos besoins. Construisons l'avenir ensemble !",
+        "followUs": "Suivez-nous",
+        "services": {
+            "title": "Nos Services",
+            "items": [
+                "Développement Web",
+                "Applications Mobiles",
+                "Design UI/UX",
+                "Marketing Numérique",
+                "Externalisation d'Équipe",
+                "Solutions Nearshore"
+            ]
+        },
+        "company": {
+            "title": "Entreprise",
+            "aboutUs": "À Propos de Nous",
+            "portfolio": "Notre Portfolio",
+            "technologies": "Technologies",
+            "testimonials": "Témoignages",
+            "hive": "Notre Ruche",
+            "contact": "Contact"
+        },
+        "contact": {
+            "title": "Prenez Contact",
+            "description": "Prêt à démarrer votre prochain projet ? Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs.",
+            "whatsapp": "Chat WhatsApp"
+        },
+        "legal": {
+            "allRightsReserved": "Tous droits réservés.",
+            "privacyPolicy": "Politique de Confidentialité",
+            "termsOfService": "Conditions de Service",
+            "madeWith": "Fait avec",
+            "location": "par Bee Coders"
         }
     }
 }

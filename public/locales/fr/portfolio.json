@@ -29,7 +29,17 @@
         "Application white label",
         "Tableau de bord d'analyse",
         "Résultats en temps réel",
-        "Données sportives en direct"
+        "Protocoles de sécurité"
+      ]
+    },
+    "mulhersegura": {
+      "category": "Social",
+      "description": "Plateforme de sécurité qui offre une assistance d'urgence, un suivi de localisation et des ressources de soutien pour les femmes en situations vulnérables.",
+      "features": [
+        "Alertes d'urgence",
+        "Suivi de localisation",
+        "Réseau de soutien",
+        "Protection de la vie privée"
       ]
     }
   }

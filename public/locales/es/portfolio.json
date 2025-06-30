@@ -9,7 +9,7 @@
         "Información de lugares en tiempo real",
         "Descubrimiento de eventos",
         "Integración social",
-        "Servicios basados en ubicación"
+        "Servicios basados en localización"
       ]
     },
     "ajrent": {
@@ -17,7 +17,7 @@
       "description": "Plataforma web con catálogo de vehículos, gestión de reservas, panel del cliente e integración de pagos para una experiencia completa de alquiler.",
       "features": [
         "Catálogo de vehículos",
-        "Reserva en línea",
+        "Reserva online",
         "Procesamiento de pagos",
         "Panel del cliente"
       ]
@@ -29,7 +29,17 @@
         "Aplicación white label",
         "Panel de análisis",
         "Resultados en tiempo real",
-        "Datos deportivos en vivo"
+        "Protocolos de seguridad"
+      ]
+    },
+    "mulhersegura": {
+      "category": "Social",
+      "description": "Plataforma de seguridad que ofrece asistencia de emergencia, rastreo de ubicación y recursos de apoyo para mujeres en situaciones vulnerables.",
+      "features": [
+        "Alertas de emergencia",
+        "Rastreo de ubicación",
+        "Red de apoyo",
+        "Protección de privacidad"
       ]
     }
   }
