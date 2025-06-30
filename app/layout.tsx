@@ -1,7 +1,6 @@
-
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Header from '@/components/ui/header'
-import Footer from '@/components/ui/footer'
+import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
 import { I18nProvider } from '@/lib/i18n'
 import { staticMetadata } from '@/lib/seo-i18n'
 import './css/style.css'

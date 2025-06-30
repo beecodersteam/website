@@ -1,11 +1,12 @@
-import TestimonielasCarousel from "./ui/TestimonialsCarousel";
+import TestimonielasCarousel from "../ui/TestimonialsCarousel";
 import { InformationCircleIcon, CheckCircleIcon, StarIcon, ShieldCheckIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from '@/lib/i18n';
-import SectionBadge from "./ui/SectionBadge";
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
+
+import SectionBadge from "../ui/SectionBadge";
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
 import { RectangleStackIcon } from "@heroicons/react/24/outline";
-import AnimatedBackground from "./ui/AnimatedBackground";
+import AnimatedBackground from "../ui/AnimatedBackground";
 
 export default function Testimonials() {
   const { t } = useTranslation('sections');

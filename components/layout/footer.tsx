@@ -1,6 +1,6 @@
 'use client';
 
-import { LogoHorizBlack } from './logo'
+import { LogoHorizBlack } from '../ui/logo'
 import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { 
   PhoneIcon, 

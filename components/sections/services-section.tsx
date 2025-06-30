@@ -8,9 +8,9 @@ import {
   ArrowRightIcon 
 } from "@heroicons/react/24/outline";
 import { useTranslation } from '@/lib/i18n';
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
-import AnimatedBackground from "./ui/AnimatedBackground";
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
+import AnimatedBackground from "../ui/AnimatedBackground";
 
 export default function ServicesSection() {
   const { t } = useTranslation('sections');

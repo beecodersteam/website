@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from '@/lib/i18n'
 
 import Link from 'next/link'
-import Logo from './logo'
+import Logo from '../ui/logo'
 import Dropdown from '@/components/utils/dropdown'
 import MobileMenu from './mobile-menu'
-import LanguageSelector from './LanguageSelector'
+import LanguageSelector from '../ui/LanguageSelector'
 import React from 'react'
 
 export default function Header() {

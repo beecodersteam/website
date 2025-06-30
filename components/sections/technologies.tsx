@@ -19,11 +19,12 @@ import {
   FaLinux,
   FaDigitalOcean,
 } from "react-icons/fa";
-import IconRuby from "./ui/tech/RubyonRails";
-import IconBxlFlutter from "./ui/tech/Flutter";
+import IconRuby from "../ui/tech/RubyonRails";
+import IconBxlFlutter from "../ui/tech/Flutter";
+
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
 import { useTranslation } from '@/lib/i18n';
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
 
 export default function Technologies() {
   const { t } = useTranslation('sections');

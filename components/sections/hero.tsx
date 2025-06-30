@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react'
 import { useTranslation } from '@/lib/i18n'
-import VideoContainer from './video-banner'
+import VideoContainer from '../common/video/video-banner'
 import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
 
 const videos = [

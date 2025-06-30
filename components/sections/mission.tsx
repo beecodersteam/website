@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from '@/lib/i18n';
-import SectionSubtitle from "./ui/SectionSubtitle";
-import SectionTitle from "./ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function Mission() {
   const { t } = useTranslation('sections');

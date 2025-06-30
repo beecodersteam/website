@@ -5,9 +5,9 @@ import {
   TrophyIcon,
 } from "@heroicons/react/24/outline";
 import { useTranslation } from '@/lib/i18n';
-import AnimatedBackground from "./ui/AnimatedBackground";
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
+import AnimatedBackground from "../ui/AnimatedBackground";
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
 
 export default function OurHive() {
   const { t } = useTranslation('sections');
