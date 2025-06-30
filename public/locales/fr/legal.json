@@ -1,0 +1,125 @@
+{
+  "privacyPolicy": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Votre confidentialité est importante pour nous. Cette politique explique comment nous collectons, utilisons et protégeons vos informations.",
+    "lastUpdated": "Dernière mise à jour : 30 décembre 2024",
+    "backToHome": "Retour à l'Accueil",
+    "introduction": {
+      "title": "Introduction",
+      "content": "Chez Bee Coders, nous nous engageons à protéger votre confidentialité et à assurer la sécurité de vos informations personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web ou utilisez nos services."
+    },
+    "dataCollection": {
+      "title": "Informations que Nous Collectons",
+      "content": "Nous pouvons collecter les types d'informations suivants :",
+      "types": [
+        "Informations d'identification personnelle (nom, adresse e-mail, numéro de téléphone)",
+        "Informations techniques (adresse IP, type de navigateur, système d'exploitation)",
+        "Données d'utilisation (pages visitées, temps passé, interactions)",
+        "Données de communication (messages envoyés via nos formulaires de contact)"
+      ]
+    },
+    "dataUsage": {
+      "title": "Comment Nous Utilisons Vos Informations",
+      "content": "Nous utilisons les informations collectées aux fins suivantes :",
+      "purposes": [
+        "Pour fournir et maintenir nos services",
+        "Pour communiquer avec vous concernant les projets et mises à jour",
+        "Pour améliorer notre site web et nos services",
+        "Pour envoyer des communications marketing (avec votre consentement)",
+        "Pour respecter les obligations légales"
+      ]
+    },
+    "dataProtection": {
+      "title": "Protection des Données",
+      "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos informations personnelles contre l'accès non autorisé, l'altération, la divulgation ou la destruction. Nous révisons et mettons à jour régulièrement nos pratiques de sécurité pour garantir que vos données restent sécurisées."
+    },
+    "dataSharing": {
+      "title": "Partage d'Informations",
+      "content": "Nous ne vendons, n'échangeons ou ne transférons pas autrement vos informations personnelles à des tiers sans votre consentement explicite, sauf lorsque requis par la loi ou pour protéger nos droits et la sécurité d'autrui. Nous pouvons partager des données anonymisées et agrégées à des fins analytiques."
+    },
+    "userRights": {
+      "title": "Vos Droits",
+      "content": "Vous avez les droits suivants concernant vos informations personnelles :",
+      "rights": [
+        "Accès : Demander l'accès à vos données personnelles",
+        "Rectification : Demander la correction d'informations inexactes",
+        "Effacement : Demander la suppression de vos données personnelles",
+        "Portabilité : Demander le transfert de vos données vers un autre service",
+        "Opposition : Vous opposer au traitement de vos données personnelles"
+      ]
+    },
+    "contact": {
+      "title": "Nous Contacter",
+      "content": "Si vous avez des questions sur cette Politique de Confidentialité ou nos pratiques de données, contactez-nous :"
+    },
+    "changes": {
+      "title": "Modifications de Cette Politique",
+      "content": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date de 'Dernière mise à jour'. Nous vous encourageons à consulter cette Politique de Confidentialité périodiquement."
+    }
+  },
+  "termsOfService": {
+    "title": "Conditions de Service",
+    "subtitle": "Veuillez lire ces conditions attentivement avant d'utiliser nos services. En utilisant nos services, vous acceptez ces conditions.",
+    "lastUpdated": "Dernière mise à jour : 30 décembre 2024",
+    "backToHome": "Retour à l'Accueil",
+    "introduction": {
+      "title": "Introduction",
+      "content": "Ces Conditions de Service ('Conditions') régissent l'utilisation du site web et des services de Bee Coders. En accédant ou en utilisant nos services, vous acceptez d'être lié par ces Conditions."
+    },
+    "acceptance": {
+      "title": "Acceptation des Conditions",
+      "content": "En accédant et en utilisant notre site web et nos services, vous acceptez et convenez d'être lié par les termes et dispositions de cet accord. Si vous n'acceptez pas de respecter ce qui précède, veuillez ne pas utiliser ce service."
+    },
+    "services": {
+      "title": "Nos Services",
+      "content": "Bee Coders fournit les services suivants :",
+      "list": [
+        "Développement de logiciels personnalisés",
+        "Développement d'applications web et mobiles",
+        "Services de design UI/UX",
+        "Solutions de marketing numérique",
+        "Services d'externalisation d'équipes",
+        "Solutions de développement nearshore"
+      ]
+    },
+    "userObligations": {
+      "title": "Obligations de l'Utilisateur",
+      "content": "En tant qu'utilisateur de nos services, vous acceptez de :",
+      "obligations": [
+        "Fournir des informations exactes et complètes",
+        "Utiliser nos services uniquement à des fins légales",
+        "Respecter les droits de propriété intellectuelle",
+        "Ne pas interférer avec ou perturber nos services",
+        "Respecter toutes les lois et réglementations applicables"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Propriété Intellectuelle",
+      "content": "Tout le contenu, les marques déposées et autres propriétés intellectuelles sur notre site web et dans nos services appartiennent à Bee Coders ou à nos concédants de licence. Vous ne pouvez pas utiliser, reproduire ou distribuer tout contenu sans notre permission écrite explicite."
+    },
+    "payment": {
+      "title": "Conditions de Paiement",
+      "content": "Les conditions de paiement pour nos services seront spécifiées dans les accords de projet individuels. Généralement, nous exigeons un paiement selon les jalons convenus ou des cycles de facturation mensuelle. Les paiements en retard peuvent entraîner des frais supplémentaires."
+    },
+    "liability": {
+      "title": "Limitation de Responsabilité",
+      "content": "Dans la mesure maximale autorisée par la loi, Bee Coders ne sera pas responsable de tout dommage indirect, accessoire, spécial, consécutif ou punitif, ou de toute perte de profits ou de revenus, qu'elle soit encourue directement ou indirectement."
+    },
+    "termination": {
+      "title": "Résiliation",
+      "content": "Nous nous réservons le droit de résilier ou de suspendre votre accès à nos services à tout moment, sans préavis ni responsabilité, pour quelque raison que ce soit, y compris sans limitation si vous violez les Conditions."
+    },
+    "governingLaw": {
+      "title": "Droit Applicable",
+      "content": "Ces Conditions seront régies et interprétées conformément aux lois du Portugal, sans égard à ses dispositions de conflit de lois. Tout litige découlant de ces Conditions sera soumis à la juridiction exclusive des tribunaux portugais."
+    },
+    "contact": {
+      "title": "Informations de Contact",
+      "content": "Si vous avez des questions sur ces Conditions de Service, contactez-nous :"
+    },
+    "changes": {
+      "title": "Modifications des Conditions",
+      "content": "Nous nous réservons le droit de modifier ou de remplacer ces Conditions à tout moment. Si une révision est importante, nous essaierons de fournir au moins 30 jours de préavis avant que de nouvelles conditions n'entrent en vigueur."
+    }
+  }
+}

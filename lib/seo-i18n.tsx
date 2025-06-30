@@ -88,13 +88,14 @@ function updateOGMeta(property: string, content: string) {
 // Client-side translation loading
 export async function loadClientTranslations(locale: Locale) {
   try {
-    const [common, portfolio, sections] = await Promise.all([
+    const [common, portfolio, sections, legal] = await Promise.all([
       fetch(`/locales/${locale}/common.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
       fetch(`/locales/${locale}/portfolio.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
       fetch(`/locales/${locale}/sections.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
+      fetch(`/locales/${locale}/legal.json`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
     ]);
 
-    return { common, portfolio, sections };
+    return { common, portfolio, sections, legal };
   } catch (error) {
     console.warn('Error loading client translations:', error);
     return {};

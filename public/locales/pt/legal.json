@@ -1,0 +1,125 @@
+{
+  "privacyPolicy": {
+    "title": "Política de Privacidade",
+    "subtitle": "Sua privacidade é importante para nós. Esta política explica como coletamos, usamos e protegemos suas informações.",
+    "lastUpdated": "Última atualização: 30 de dezembro de 2024",
+    "backToHome": "Voltar ao Início",
+    "introduction": {
+      "title": "Introdução",
+      "content": "Na Bee Coders, estamos comprometidos em proteger sua privacidade e garantir a segurança de suas informações pessoais. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso site ou usa nossos serviços."
+    },
+    "dataCollection": {
+      "title": "Informações que Coletamos",
+      "content": "Podemos coletar os seguintes tipos de informação:",
+      "types": [
+        "Informações de identificação pessoal (nome, endereço de email, número de telefone)",
+        "Informações técnicas (endereço IP, tipo de navegador, sistema operacional)",
+        "Dados de uso (páginas visitadas, tempo gasto, interações)",
+        "Dados de comunicação (mensagens enviadas através dos nossos formulários de contato)"
+      ]
+    },
+    "dataUsage": {
+      "title": "Como Usamos Suas Informações",
+      "content": "Usamos as informações coletadas para os seguintes propósitos:",
+      "purposes": [
+        "Para fornecer e manter nossos serviços",
+        "Para nos comunicarmos com você sobre projetos e atualizações",
+        "Para melhorar nosso site e serviços",
+        "Para enviar comunicações de marketing (com seu consentimento)",
+        "Para cumprir obrigações legais"
+      ]
+    },
+    "dataProtection": {
+      "title": "Proteção de Dados",
+      "content": "Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição. Revisamos e atualizamos regularmente nossas práticas de segurança para garantir que seus dados permaneçam seguros."
+    },
+    "dataSharing": {
+      "title": "Compartilhamento de Informações",
+      "content": "Não vendemos, negociamos ou transferimos de outra forma suas informações pessoais para terceiros sem seu consentimento explícito, exceto quando exigido por lei ou para proteger nossos direitos e a segurança de outros. Podemos compartilhar dados anonimizados e agregados para fins analíticos."
+    },
+    "userRights": {
+      "title": "Seus Direitos",
+      "content": "Você tem os seguintes direitos em relação às suas informações pessoais:",
+      "rights": [
+        "Acesso: Solicitar acesso aos seus dados pessoais",
+        "Retificação: Solicitar correção de informações imprecisas",
+        "Apagamento: Solicitar exclusão de seus dados pessoais",
+        "Portabilidade: Solicitar transferência de seus dados para outro serviço",
+        "Oposição: Opor-se ao processamento de seus dados pessoais"
+      ]
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "content": "Se você tiver alguma dúvida sobre esta Política de Privacidade ou nossas práticas de dados, entre em contato conosco:"
+    },
+    "changes": {
+      "title": "Alterações nesta Política",
+      "content": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Notificaremos você sobre quaisquer alterações publicando a nova Política de Privacidade nesta página e atualizando a data de 'Última atualização'. Recomendamos que você revise esta Política de Privacidade periodicamente."
+    }
+  },
+  "termsOfService": {
+    "title": "Termos de Serviço",
+    "subtitle": "Leia estes termos cuidadosamente antes de usar nossos serviços. Ao usar nossos serviços, você concorda com estes termos.",
+    "lastUpdated": "Última atualização: 30 de dezembro de 2024",
+    "backToHome": "Voltar ao Início",
+    "introduction": {
+      "title": "Introdução",
+      "content": "Estes Termos de Serviço ('Termos') regem o uso do site e serviços da Bee Coders. Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos."
+    },
+    "acceptance": {
+      "title": "Aceitação dos Termos",
+      "content": "Ao acessar e usar nosso site e serviços, você aceita e concorda em ficar vinculado aos termos e disposições deste acordo. Se você não concordar em cumprir o acima, não use este serviço."
+    },
+    "services": {
+      "title": "Nossos Serviços",
+      "content": "A Bee Coders fornece os seguintes serviços:",
+      "list": [
+        "Desenvolvimento de software personalizado",
+        "Desenvolvimento de aplicações web e móveis",
+        "Serviços de design UI/UX",
+        "Soluções de marketing digital",
+        "Serviços de terceirização de equipes",
+        "Soluções de desenvolvimento nearshore"
+      ]
+    },
+    "userObligations": {
+      "title": "Obrigações do Usuário",
+      "content": "Como usuário de nossos serviços, você concorda em:",
+      "obligations": [
+        "Fornecer informações precisas e completas",
+        "Usar nossos serviços apenas para fins legais",
+        "Respeitar direitos de propriedade intelectual",
+        "Não interferir ou interromper nossos serviços",
+        "Cumprir todas as leis e regulamentos aplicáveis"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Propriedade Intelectual",
+      "content": "Todo o conteúdo, marcas registradas e outras propriedades intelectuais em nosso site e em nossos serviços são de propriedade da Bee Coders ou de nossos licenciadores. Você não pode usar, reproduzir ou distribuir qualquer conteúdo sem nossa permissão explícita por escrito."
+    },
+    "payment": {
+      "title": "Termos de Pagamento",
+      "content": "Os termos de pagamento para nossos serviços serão especificados em acordos de projeto individuais. Geralmente, exigimos pagamento de acordo com marcos acordados ou ciclos de cobrança mensal. Pagamentos em atraso podem incorrer em taxas adicionais."
+    },
+    "liability": {
+      "title": "Limitação de Responsabilidade",
+      "content": "Na máxima extensão permitida por lei, a Bee Coders não será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, ou qualquer perda de lucros ou receitas, seja incorrida direta ou indiretamente."
+    },
+    "termination": {
+      "title": "Rescisão",
+      "content": "Reservamo-nos o direito de rescindir ou suspender seu acesso aos nossos serviços a qualquer momento, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo, sem limitação, se você violar os Termos."
+    },
+    "governingLaw": {
+      "title": "Lei Aplicável",
+      "content": "Estes Termos serão regidos e interpretados de acordo com as leis de Portugal, sem considerar suas disposições de conflito de leis. Quaisquer disputas decorrentes destes Termos estarão sujeitas à jurisdição exclusiva dos tribunais portugueses."
+    },
+    "contact": {
+      "title": "Informações de Contato",
+      "content": "Se você tiver alguma dúvida sobre estes Termos de Serviço, entre em contato conosco:"
+    },
+    "changes": {
+      "title": "Alterações nos Termos",
+      "content": "Reservamo-nos o direito de modificar ou substituir estes Termos a qualquer momento. Se uma revisão for material, tentaremos fornecer pelo menos 30 dias de aviso antes de quaisquer novos termos entrarem em vigor."
+    }
+  }
+}
