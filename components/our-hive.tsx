@@ -27,7 +27,7 @@ export default function OurHive() {
   })) : [];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-100 py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-100 py-16 lg:py-24 overflow-hidden session">
       {/* Background decorative elements */}
       <AnimatedBackground 
         hexagonCount={8} 

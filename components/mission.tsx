@@ -8,7 +8,7 @@ export default function Mission() {
   const { t } = useTranslation('sections');
 
   return (
-    <section className="relative bg-gradient-to-br from-white via-gray-50 to-beePrimary-normal/10 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-white via-gray-50 to-beePrimary-normal/10 py-16 overflow-hidden session">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-beePrimary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>

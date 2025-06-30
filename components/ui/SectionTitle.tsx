@@ -30,7 +30,7 @@ const SectionTitle = memo(function SectionTitle({
     <div className={`${alignmentClass} mb-6 ${className}`}>
       {/* Main title */}
       <h2 
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight ${titleClassName}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight ${titleClassName} ${id ? 'session' : ''}`}
         {...(id && { id })}
         {...(enableAnimations && {
           'data-aos': 'fade-up',

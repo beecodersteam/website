@@ -19,7 +19,7 @@ export default function CompanyMission() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         {/* Section header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4 session" id="mission">
+          <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4" id="mission">
             {t('mission.title')}
           </h2>
           <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>

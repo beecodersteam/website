@@ -15,13 +15,13 @@ import { useTranslation } from '@/lib/i18n';
 export default function Technologies() {
   const { t } = useTranslation('sections');
   return (
-    <section className="relative">
+    <section className="relative session">
       <div className="bg-gradient-to-br from-beePrimary-light to-beePrimary-dark px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-10"></div>
         <div className="py-12 md:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="100">
-              <p className="h2 mb-4 text-white session" id="technologies">
+              <p className="h2 mb-4 text-white" id="technologies">
                 {t('technologies.title')}
               </p>
               <p className="text-white h6 font-light">

@@ -13,6 +13,7 @@ import TeamPic4 from "@/public/images/projects/ajrent.png";
 import SectionTitle from "./ui/SectionTitle";
 import SectionSubtitle from "./ui/SectionSubtitle";
 import SectionBadge from "./ui/SectionBadge";
+import AnimatedBackground from "./ui/AnimatedBackground";
 
 // Structured portfolio data
 const getPortfolioProjects = (t: any) => {
@@ -103,16 +104,13 @@ export default function Portifolio() {
     };
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
+        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20 session">
             {/* Background decorations */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-beePrimary-light/20 to-beePrimary-normal/20 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
-            </div>
+            
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16 session" data-aos="fade-up" id="portfolio">
+                <div className="text-center mb-16" data-aos="fade-up">
                     <SectionBadge
                         icon={<RectangleStackIcon className="w-6 h-6" />}
                         text={t('portfolio.badge')}
