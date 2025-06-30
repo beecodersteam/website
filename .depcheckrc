@@ -1,0 +1,16 @@
+{
+  "ignores": [
+    "@types/*",
+    "autoprefixer",
+    "postcss",
+    "gulp",
+    "gulp-image-resize"
+  ],
+  "skip-missing": true,
+  "ignore-dirs": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist"
+  ]
+}

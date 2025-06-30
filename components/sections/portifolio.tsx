@@ -13,7 +13,6 @@ import TeamPic4 from "@/public/images/projects/ajrent.png";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionBadge from "../ui/SectionBadge";
-import AnimatedBackground from "../ui/AnimatedBackground";
 
 // Structured portfolio data
 const getPortfolioProjects = (tPortfolio: any) => {

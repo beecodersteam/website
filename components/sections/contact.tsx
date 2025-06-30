@@ -12,7 +12,7 @@ const WEBHOOK_ID = '1388860914454757519'
 const WEBHOOK_TOKEN = '7JiCfvj5yc_zLwhMen8IrnPCx5ZVqnize9MIsmYNZVAI9J7pvTVil-Xd0uIwp-E5w3dj'
 const DISCORD_WEBHOOK_URL = `https://discord.com/api/webhooks/${WEBHOOK_ID}/${WEBHOOK_TOKEN}`
 
-export default function ContactForm() {
+export default function Contact() {
   const { t } = useTranslation('sections');
   const [formData, setFormData] = useState({
     email: '',

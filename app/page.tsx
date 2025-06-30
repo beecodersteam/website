@@ -2,7 +2,7 @@
 import Hero from '@/components/sections/hero'
 import OurHive from '@/components/sections/our-hive'
 import Testimonials from '@/components/sections/testimonials'
-import ContactForm from '@/components/forms/contact-form'
+import Contact from '@/components/sections/contact'
 import Mission from '@/components/sections/mission'
 import Highlights from '@/components/sections/highlights'
 import Technologies from '@/components/sections/technologies'
@@ -26,7 +26,7 @@ export default function Home() {
       <Portifolio />
       <Technologies />
       <Testimonials />
-      <ContactForm />
+      <Contact />
     </>
   )
 }

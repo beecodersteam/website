@@ -86,7 +86,7 @@ function interpolate(text: string, components: ReactNode[], variables?: Record<s
 
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('en');
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
   const [isLoading, setIsLoading] = useState(true);  useEffect(() => {
     const initLocale = async () => {
       const initialLocale = detectBrowserLocale();

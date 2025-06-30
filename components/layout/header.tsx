@@ -5,7 +5,6 @@ import { useTranslation } from '@/lib/i18n'
 
 import Link from 'next/link'
 import Logo from '../ui/logo'
-import Dropdown from '@/components/utils/dropdown'
 import MobileMenu from './mobile-menu'
 import LanguageSelector from '../ui/LanguageSelector'
 import React from 'react'
