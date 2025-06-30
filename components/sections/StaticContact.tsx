@@ -137,111 +137,167 @@ export default function StaticContact({ translations, locale }: StaticContactPro
   }
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-beePrimary-dark to-beePrimary-light overflow-hidden">
-      {/* Background decorative elements */}
-      <AnimatedBackground
-        hexagonCount={12}
-        hexagonColor="bg-white/10"
-        backgroundColors={{
-          from: "from-white/5",
-          via: "via-beePrimary-normal/20",
-          to: "to-white/5"
-        }}
-      />
+    <section id="contact" className="relative bg-gradient-to-br from-slate-50 via-white to-beePrimary-normal/5 py-12 scroll-mt-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6" id="contact">
+        <div 
+          className="relative bg-gradient-to-br from-beePrimary-normal to-beePrimary-dark rounded-3xl py-12 px-8 md:py-16 md:px-16 shadow-2xl overflow-hidden backdrop-blur-sm border border-beePrimary-light/20"
+          data-aos="zoom-y-out"
+        >
+          {/* Decorative SVG background */}
+          <div className="absolute right-0 bottom-0 pointer-events-none hidden lg:block opacity-30" aria-hidden="true">
+            <svg width="428" height="328" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient cx="35.542%" cy="34.553%" fx="35.542%" fy="34.553%" r="96.031%" id="ni-a">
+                  <stop stopColor="#DFDFDF" offset="0%"></stop>
+                  <stop stopColor="#4C4C4C" offset="44.317%"></stop>
+                  <stop stopColor="#333" offset="100%"></stop>
+                </radialGradient>
+              </defs>
+              <g fill="none" fillRule="evenodd">
+                <g fill="#FBC700">
+                  <ellipse fillOpacity=".08" cx="185" cy="15.576" rx="16" ry="15.576"></ellipse>
+                  <ellipse fillOpacity=".24" cx="100" cy="68.402" rx="24" ry="23.364"></ellipse>
+                  <ellipse fillOpacity=".12" cx="29" cy="251.231" rx="29" ry="28.231"></ellipse>
+                  <ellipse fillOpacity=".64" cx="29" cy="251.231" rx="8" ry="7.788"></ellipse>
+                  <ellipse fillOpacity=".12" cx="342" cy="31.303" rx="8" ry="7.788"></ellipse>
+                  <ellipse fillOpacity=".48" cx="62" cy="126.811" rx="2" ry="1.947"></ellipse>
+                  <ellipse fillOpacity=".12" cx="78" cy="7.072" rx="2" ry="1.947"></ellipse>
+                  <ellipse fillOpacity=".64" cx="185" cy="15.576" rx="6" ry="5.841"></ellipse>
+                </g>
+                <circle fill="#FBC700" fillOpacity="0.15" cx="276" cy="237" r="200"></circle>
+              </g>
+            </svg>
+          </div>
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <SectionTitle
-          title={String(t('contact.title'))}
-          id="contact"
-          variant="centered"
-          className="text-white"
-        />
-        <SectionSubtitle
-          text={t('contact.subtitle')}
-          variant="centered"
-          className="text-white/90 mb-12"
-          animationDelay={200}
-        />
+          {/* Animated background */}
+          <AnimatedBackground
+            hexagonCount={3}
+            hexagonColor="text-beeSecondary-normal"
+            backgroundColors={{
+              from: "from-beePrimary-normal/10",
+              via: "none",
+              to: "to-beePrimary-normal/10"
+            }}
+          />
 
-        {/* Contact form */}
-        <div className="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Email field */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-white mb-2"
-              >
-                Email <span className="text-red-300">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all"
-                placeholder={t('contact.form.emailPlaceholder')}
-                disabled={isLoading}
+          {/* Decorative floating elements */}
+          <div className="absolute top-8 left-8 w-16 h-16 bg-beeSecondary-normal/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-8 right-20 w-12 h-12 bg-white/10 rounded-full blur-lg animate-pulse" style={{animationDelay: '1s'}}></div>
+
+          {/* Content */}
+          <div className="relative flex flex-col lg:flex-row justify-between items-center">
+            {/* CTA content */}
+            <div className="text-center lg:text-left lg:max-w-xl mb-8 lg:mb-0">
+              <SectionTitle
+                title={String(t('contact.title'))}
+                id="contact"
+                variant="left"
+                color='text-white'
               />
-            </div>
 
-            {/* Message field */}
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-white mb-2"
-              >
-                Message <span className="text-red-300">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                value={formData.message}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all resize-none"
-                placeholder={t('contact.form.messagePlaceholder')}
-                disabled={isLoading}
+              <SectionSubtitle
+                text={String(t('contact.subtitle'))}
+                variant="left"
+                animationDelay={300}
+                color='text-white/90'
+                className="mb-6"
               />
+
+              {/* Contact form */}
+              <form className="w-full lg:w-auto" onSubmit={handleSubmit}>
+                {/* Message field */}
+                <div className="flex flex-col justify-center max-w-md mx-auto lg:mx-0">
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full appearance-none bg-white/95 backdrop-blur-sm border-2 border-white/20 focus:border-beeSecondary-normal focus:ring-4 focus:ring-beeSecondary-normal/30 rounded-2xl px-5 py-4 mb-4 h-32 text-gray-900 placeholder-gray-500 resize-none transition-all duration-300 shadow-lg focus:shadow-xl font-medium"
+                    placeholder={t('contact.form.messagePlaceholder')}
+                    aria-label={t('contact.form.messagePlaceholder')}
+                    disabled={isLoading}
+                    required
+                  />
+                </div>
+
+                {/* Email and Send button row */}
+                <div className="flex flex-col sm:flex-row justify-center max-w-md mx-auto lg:mx-0 gap-3">
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="flex-1 appearance-none bg-white/95 backdrop-blur-sm border-2 border-white/20 focus:border-beeSecondary-normal focus:ring-4 focus:ring-beeSecondary-normal/30 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 transition-all duration-300 shadow-lg focus:shadow-xl font-medium"
+                    placeholder={t('contact.form.emailPlaceholder')}
+                    aria-label={t('contact.form.emailPlaceholder')}
+                    disabled={isLoading}
+                    required
+                  />
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="bg-gradient-to-r from-beeSecondary-normal to-beeSecondary-dark hover:from-beeSecondary-dark hover:to-beeSecondary-darker text-beePrimary-dark font-bold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center min-w-[120px] transition-all duration-300"
+                  >
+                    {isLoading ? (
+                      <>
+                        <ArrowPathIcon className="animate-spin h-5 w-5 mr-2" />
+                        <span>Enviando...</span>
+                      </>
+                    ) : (
+                      <>
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                        {t('contact.form.sendButton')}
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {/* Enhanced Status messages */}
+                {status === 'success' && (
+                  <div className="max-w-md mx-auto lg:mx-0 mt-6 p-4 bg-green-500/20 backdrop-blur-sm border border-green-400/30 rounded-2xl">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-green-100">Mensagem enviada!</h4>
+                        <p className="text-sm text-green-200">{t('contact.form.successMessage')}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {status === 'error' && (
+                  <div className="max-w-md mx-auto lg:mx-0 mt-6 p-4 bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-2xl">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-red-100">Erro ao enviar</h4>
+                        <p className="text-sm text-red-200">{errorMessage}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {status === 'idle' && !isLoading && (
+                  <div className="max-w-md mx-auto lg:mx-0 mt-6 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
+                    <p className="text-sm text-white/80 text-center flex items-center justify-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {t('contact.form.defaultMessage')}
+                    </p>
+                  </div>
+                )}
+              </form>
             </div>
-
-            {/* Status messages */}
-            {status === 'error' && (
-              <div className="p-4 rounded-lg bg-red-500/20 border border-red-400/30">
-                <p className="text-red-200 text-sm">{errorMessage}</p>
-              </div>
-            )}
-
-            {status === 'success' && (
-              <div className="p-4 rounded-lg bg-green-500/20 border border-green-400/30">
-                <p className="text-green-200 text-sm">{t('contact.form.successMessage')}</p>
-              </div>
-            )}
-
-            {/* Submit button */}
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full flex items-center justify-center px-8 py-4 bg-white text-beePrimary-dark font-semibold rounded-lg hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-beePrimary-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? (
-                <>
-                  <ArrowPathIcon className="w-5 h-5 mr-2 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                t('contact.form.sendButton')
-              )}
-            </button>
-          </form>
-
-          {/* Additional info */}
-          <div className="mt-8 text-center">
-            <p className="text-white/70 text-sm">
-              {t('contact.form.defaultMessage')}
-            </p>
           </div>
         </div>
       </div>
