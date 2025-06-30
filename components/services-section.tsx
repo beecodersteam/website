@@ -76,7 +76,7 @@ export default function ServicesSection() {
         {/* Section header */}
         <SectionTitle
           title={String(t('services.title'))}
-          id="our-hive"
+          id="services"
           variant="centered"
           color="text-white"
           enableAnimations={true}

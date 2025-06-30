@@ -18,7 +18,7 @@ export default function Mission() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <SectionTitle
           title={String(t('mission.title'))}
-          id="our-hive"
+          id="mission"
           variant="centered"
           enableAnimations={true}
           animatedDivider={true}

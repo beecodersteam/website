@@ -112,7 +112,7 @@ export default function Portifolio() {
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16 session" data-aos="fade-up" id="portifolio">
+                <div className="text-center mb-16 session" data-aos="fade-up" id="portfolio">
                     <SectionBadge
                         icon={<RectangleStackIcon className="w-6 h-6" />}
                         text={t('portfolio.badge')}
@@ -122,7 +122,7 @@ export default function Portifolio() {
                     />
                     <SectionTitle
                         title={String(t('portfolio.title'))}
-                        id="our-hive"
+                        id="portfolio"
                         variant="centered"
                         enableAnimations={true}
                         animatedDivider={true}

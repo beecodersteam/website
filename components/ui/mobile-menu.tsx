@@ -34,7 +34,7 @@ export default function MobileMenu() {
     { href: "/#mission", labelKey: "navigation.mission", icon: BuildingOfficeIcon },
     { href: "/#services", labelKey: "navigation.services", icon: CogIcon },
     { href: "/#our-hive", labelKey: "navigation.hive", icon: UsersIcon },
-    { href: "/#portifolio", labelKey: "navigation.portfolio", icon: FolderIcon },
+    { href: "/#portfolio", labelKey: "navigation.portfolio", icon: FolderIcon },
     { href: "/#technologies", labelKey: "navigation.technologies", icon: ComputerDesktopIcon },
     { href: "/#contact", labelKey: "navigation.contact", icon: ChatBubbleLeftRightIcon },
   ]

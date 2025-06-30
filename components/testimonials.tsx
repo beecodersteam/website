@@ -33,7 +33,7 @@ export default function Testimonials() {
         />
         <SectionTitle
           title={String(t('testimonials.title'))}
-          id="our-hive"
+          id="testimonials"
           variant="centered"
           enableAnimations={true}
           animatedDivider={true}
