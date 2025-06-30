@@ -1,0 +1,36 @@
+{
+  "title": "Projets Vedettes",
+  "subtitle": "Dans notre parcours, la recherche de l'excellence est constante. Chaque projet de notre portfolio reflète notre engagement envers les plus hauts standards de qualité.",
+  "projects": {
+    "nitelive": {
+      "category": "Divertissement",
+      "description": "Application mobile multiplateforme avec services de géolocalisation en temps réel qui aide les utilisateurs à découvrir les meilleurs lieux et événements de la ville.",
+      "features": [
+        "Informations de lieux en temps réel",
+        "Découverte d'événements",
+        "Intégration sociale",
+        "Services basés sur la localisation"
+      ]
+    },
+    "ajrent": {
+      "category": "Mobilité",
+      "description": "Plateforme web avec catalogue de véhicules, gestion des réservations, tableau de bord client et intégration des paiements pour une expérience de location complète.",
+      "features": [
+        "Catalogue de véhicules",
+        "Réservation en ligne",
+        "Traitement des paiements",
+        "Tableau de bord client"
+      ]
+    },
+    "alfabets": {
+      "category": "Paris Sportifs",
+      "description": "Application white label pour les maisons de paris, avec intégration en temps réel aux APIs de données sportives.",
+      "features": [
+        "Application white label",
+        "Tableau de bord d'analyse",
+        "Résultats en temps réel",
+        "Données sportives en direct"
+      ]
+    }
+  }
+}

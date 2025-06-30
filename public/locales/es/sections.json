@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Transformamos",
+        "titleHighlight": "Tu Visión en Realidad",
+        "subtitle": "<0>Bee Coders</0>, se especializa en transformar tus ideas en soluciones digitales de vanguardia. Asóciate con nosotros para construir experiencias extraordinarias juntos.",
+        "cta": "Únete a nuestra colmena"
+    },
+    "highlights": {
+        "items": [
+            {
+                "number": "4+",
+                "description": "Países",
+                "subtext": "Expandiendo nuestra presencia globalmente"
+            },
+            {
+                "number": "6+",
+                "description": "Años",
+                "subtext": "De experiencia comprobada en la industria"
+            },
+            {
+                "number": "20+",
+                "description": "Clientes Felices",
+                "subtext": "Asociaciones confiables en todo el mundo"
+            },
+            {
+                "number": "30+",
+                "description": "Proyectos",
+                "subtext": "Soluciones entregadas exitosamente"
+            }
+        ]
+    },
+    "mission": {
+        "title": "Nuestra Misión",
+        "subtitle": "Impulsamos la innovación digital",
+        "description": "En Bee Coders, creemos en el poder de la colaboración y la excelencia técnica. Nuestro equipo global de desarrolladores expertos trabaja incansablemente para transformar ideas complejas en soluciones digitales elegantes y eficientes.",
+        "values": [
+            {
+                "title": "Innovación",
+                "description": "Adoptamos las últimas tecnologías y metodologías para entregar soluciones de vanguardia."
+            },
+            {
+                "title": "Calidad",
+                "description": "Cada línea de código es crafteada con precisión y sometida a rigurosos estándares de calidad."
+            },
+            {
+                "title": "Colaboración",
+                "description": "Trabajamos como un equipo unido, combinando talentos diversos para lograr resultados excepcionales."
+            }
+        ]
+    },
+    "services": {
+        "title": "Nuestros Servicios",
+        "subtitle": "Soluciones completas para tu negocio digital",
+        "items": [
+            {
+                "title": "Desarrollo Web",
+                "description": "Creamos aplicaciones web modernas, responsivas y escalables utilizando las últimas tecnologías."
+            },
+            {
+                "title": "Desarrollo Móvil",
+                "description": "Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android."
+            },
+            {
+                "title": "Consultoría Digital",
+                "description": "Asesoramos en la transformación digital y arquitectura de soluciones tecnológicas."
+            }
+        ]
+    },
+    "hive": {
+        "title": "Nuestra Colmena",
+        "subtitle": "El equipo detrás de la magia",
+        "description": "Conoce a los talentosos desarrolladores que hacen realidad tus proyectos. Cada miembro de nuestro equipo aporta experiencia única y pasión por la excelencia.",
+        "cta": "Conocer al equipo"
+    },
+    "technologies": {
+        "title": "Tecnologías que utilizamos",
+        "subtitle": "Utilizamos tecnología de vanguardia para entregar soluciones innovadoras a nuestros clientes"
+    },
+    "contact": {
+        "title": "¿Listo para comenzar tu proyecto?",
+        "subtitle": "Conversemos sobre cómo podemos ayudarte a transformar tu visión en realidad",
+        "form": {
+            "name": "Nombre completo",
+            "email": "Correo electrónico",
+            "company": "Empresa",
+            "message": "Mensaje",
+            "submit": "Enviar mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado exitosamente!",
+            "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        }
+    }
+}

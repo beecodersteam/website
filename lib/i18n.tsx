@@ -15,7 +15,9 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 // Simple cache for translations
 const translations: Record<Locale, Record<string, any>> = {
   en: {},
-  pt: {}
+  pt: {},
+  es: {},
+  fr: {}
 };
 
 // Function to load translations (client-side)

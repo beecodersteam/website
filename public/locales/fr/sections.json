@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Nous Transformons",
+        "titleHighlight": "Votre Vision en Réalité",
+        "subtitle": "<0>Bee Coders</0>, se spécialise dans la transformation de vos idées en solutions numériques de pointe. Associez-vous à nous pour construire ensemble des expériences extraordinaires.",
+        "cta": "Rejoignez notre ruche"
+    },
+    "highlights": {
+        "items": [
+            {
+                "number": "4+",
+                "description": "Pays",
+                "subtext": "Élargissant notre présence globalement"
+            },
+            {
+                "number": "6+",
+                "description": "Années",
+                "subtext": "D'expérience prouvée dans l'industrie"
+            },
+            {
+                "number": "20+",
+                "description": "Clients Satisfaits",
+                "subtext": "Partenariats de confiance dans le monde entier"
+            },
+            {
+                "number": "30+",
+                "description": "Projets",
+                "subtext": "Solutions livrées avec succès"
+            }
+        ]
+    },
+    "mission": {
+        "title": "Notre Mission",
+        "subtitle": "Nous stimulons l'innovation numérique",
+        "description": "Chez Bee Coders, nous croyons au pouvoir de la collaboration et de l'excellence technique. Notre équipe mondiale de développeurs experts travaille sans relâche pour transformer des idées complexes en solutions numériques élégantes et efficaces.",
+        "values": [
+            {
+                "title": "Innovation",
+                "description": "Nous adoptons les dernières technologies et méthodologies pour livrer des solutions de pointe."
+            },
+            {
+                "title": "Qualité",
+                "description": "Chaque ligne de code est craftée avec précision et soumise à des standards de qualité rigoureux."
+            },
+            {
+                "title": "Collaboration",
+                "description": "Nous travaillons comme une équipe unie, combinant des talents divers pour atteindre des résultats exceptionnels."
+            }
+        ]
+    },
+    "services": {
+        "title": "Nos Services",
+        "subtitle": "Solutions complètes pour votre entreprise numérique",
+        "items": [
+            {
+                "title": "Développement Web",
+                "description": "Nous créons des applications web modernes, responsives et évolutives utilisant les dernières technologies."
+            },
+            {
+                "title": "Développement Mobile",
+                "description": "Nous développons des applications mobiles natives et hybrides pour iOS et Android."
+            },
+            {
+                "title": "Conseil Numérique",
+                "description": "Nous conseillons sur la transformation numérique et l'architecture de solutions technologiques."
+            }
+        ]
+    },
+    "hive": {
+        "title": "Notre Ruche",
+        "subtitle": "L'équipe derrière la magie",
+        "description": "Rencontrez les développeurs talentueux qui donnent vie à vos projets. Chaque membre de notre équipe apporte une expertise unique et une passion pour l'excellence.",
+        "cta": "Rencontrer l'équipe"
+    },
+    "technologies": {
+        "title": "Technologies que nous utilisons",
+        "subtitle": "Nous utilisons une technologie de pointe pour livrer des solutions innovantes à nos clients"
+    },
+    "contact": {
+        "title": "Prêt à commencer votre projet ?",
+        "subtitle": "Discutons de la façon dont nous pouvons vous aider à transformer votre vision en réalité",
+        "form": {
+            "name": "Nom complet",
+            "email": "Adresse e-mail",
+            "company": "Entreprise",
+            "message": "Message",
+            "submit": "Envoyer le message",
+            "sending": "Envoi en cours...",
+            "success": "Message envoyé avec succès !",
+            "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+        }
+    }
+}

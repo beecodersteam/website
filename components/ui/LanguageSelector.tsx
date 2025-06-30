@@ -3,11 +3,13 @@
 import { useTranslation } from '@/lib/i18n';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import { BR, US } from 'country-flag-icons/react/3x2';
+import { BR, US, ES, FR } from 'country-flag-icons/react/3x2';
 
 const languages = [
   { code: 'en' as const, name: 'English', flag: <US className="w-5 h-5 text-white" /> },
   { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5 text-white" /> },
+  { code: 'es' as const, name: 'Español', flag: <ES className="w-5 h-5 text-white" /> },
+  { code: 'fr' as const, name: 'Français', flag: <FR className="w-5 h-5 text-white" /> },
 ];
 
 export default function LanguageSelector() {

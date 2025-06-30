@@ -1,0 +1,36 @@
+{
+  "title": "Proyectos Destacados",
+  "subtitle": "En nuestro viaje, la búsqueda de la excelencia es constante. Cada proyecto en nuestro portafolio refleja nuestro compromiso con los más altos estándares de calidad.",
+  "projects": {
+    "nitelive": {
+      "category": "Entretenimiento",
+      "description": "Aplicación móvil multiplataforma con servicios de localización en tiempo real que ayuda a los usuarios a descubrir los mejores lugares y eventos de la ciudad.",
+      "features": [
+        "Información de lugares en tiempo real",
+        "Descubrimiento de eventos",
+        "Integración social",
+        "Servicios basados en ubicación"
+      ]
+    },
+    "ajrent": {
+      "category": "Movilidad",
+      "description": "Plataforma web con catálogo de vehículos, gestión de reservas, panel del cliente e integración de pagos para una experiencia completa de alquiler.",
+      "features": [
+        "Catálogo de vehículos",
+        "Reserva en línea",
+        "Procesamiento de pagos",
+        "Panel del cliente"
+      ]
+    },
+    "alfabets": {
+      "category": "Apuestas Deportivas",
+      "description": "Aplicación white label para casas de apuestas, con integración en tiempo real con APIs de datos deportivos.",
+      "features": [
+        "Aplicación white label",
+        "Panel de análisis",
+        "Resultados en tiempo real",
+        "Datos deportivos en vivo"
+      ]
+    }
+  }
+}
