@@ -34,7 +34,7 @@ export default function MobileMenu() {
     { href: "/#mission", labelKey: "navigation.mission", icon: BuildingOfficeIcon },
     { href: "/#services", labelKey: "navigation.services", icon: CogIcon },
     { href: "/#our-hive", labelKey: "navigation.hive", icon: UsersIcon },
-    { href: "/#portifolio", labelKey: "navigation.portfolio", icon: FolderIcon },
+    { href: "/#portfolio", labelKey: "navigation.portfolio", icon: FolderIcon },
     { href: "/#technologies", labelKey: "navigation.technologies", icon: ComputerDesktopIcon },
     { href: "/#contact", labelKey: "navigation.contact", icon: ChatBubbleLeftRightIcon },
   ]
@@ -227,7 +227,7 @@ export default function MobileMenu() {
               {/* Optional: Add contact info or social links */}
               <div className="pt-4">
                 <p className="text-xs text-gray-400 text-center">
-                  © {new Date().getFullYear()} Bee Coders. All rights reserved.
+                  © 2024 Bee Coders. All rights reserved.
                 </p>
               </div>
             </div>

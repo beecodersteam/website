@@ -56,7 +56,7 @@ export default function Header() {
                   {t('navigation.hive')}</Link>
               </li>
               <li>
-                <Link href="/#portifolio" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                <Link href="/#portfolio" className="font-medium text-white hover:text-beeSecondary-normal px-5 py-3 flex items-center transition duration-150 ease-in-out">
                   {t('navigation.portfolio')}</Link>
               </li>
               <li>

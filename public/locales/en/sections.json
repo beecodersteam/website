@@ -31,12 +31,12 @@
     },
     "mission": {
         "title": "Our Mission",
-        "subtitle": "Empowering Innovation Through Technology",
-        "description": "At <0>Bee Coders</0>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.",
+        "subtitle": "At <0>Bee Coders</0>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.",
         "floatingCard": {
             "title": "Quality Driven",
             "description": "Excellence in every project"
         },
+        "valuesTitle": "Empowering Innovation Through Technology",
         "values": [
             {
                 "title": "Innovation",
@@ -119,7 +119,7 @@
     "hive": {
         "title": "Our Hive",
         "subtitle": "A thriving community where innovation meets collaboration, empowering IT professionals to achieve their full potential.",
-        "description": "promotes a continuous learning and collaboration environment, enabling IT professionals to connect, share knowledge, and grow together in an ever-evolving digital landscape. Through specialized training, networking events, and exclusive resources, we strive to drive professional development and enhance the skills of our community members.",
+        "description": "<0>Bee Coders</0> promotes a continuous learning and collaboration environment, enabling IT professionals to connect, share knowledge, and grow together in an ever-evolving digital landscape. Through specialized training, networking events, and exclusive resources, we strive to drive professional development and enhance the skills of our community members.",
         "join": "Join the Hive",
         "highlight": {
             "title": "30+ Members",
@@ -159,8 +159,8 @@
     },
     "testimonials": {
         "title": "What Our Clients Say",
-        "subtitle": "Client Testimonials",
-        "description": "Don't just take our word for it. Here's what satisfied clients have to say about their experience working with <0>Bee Coders</0>.",
+        "subtitle": "Don't just take our word for it. Here's what satisfied clients have to say about their experience working with <0>Bee Coders</0>.",
+        "badge": "Client Testimonials",
         "verifiedReview": "Verified Client Review"
     },
     "contact": {

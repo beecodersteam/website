@@ -1,32 +1,33 @@
 import Image from "next/image";
 import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from '@/lib/i18n';
+import SectionSubtitle from "./ui/SectionSubtitle";
+import SectionTitle from "./ui/SectionTitle";
 
-export default function CompanyMission() {
+export default function Mission() {
   const { t } = useTranslation('sections');
 
   return (
-    <section className="relative bg-gradient-to-br from-white via-gray-50 to-slate-100 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-white via-gray-50 to-beePrimary-normal/10 py-16 lg:py-24 overflow-hidden">
+    
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-beePrimary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-beeSecondary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Decorative line separator */}
-
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        {/* Section header */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl lg:text-5xl font-bold text-beePrimary-normal mb-4" id="mission">
-            {t('mission.title')}
-          </h2>
-          <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            {t('mission.description', { components: [<strong key="b1" />] })}
-          </p>
-        </div>
+        <SectionTitle
+          title={String(t('mission.title'))}
+          id="mission"
+          variant="centered"
+          animatedDivider={true}
+        />
+        <SectionSubtitle
+          text={t('mission.subtitle', { components: [<strong key="b1" />] })}
+          variant="centered"
+          animationDelay={300}
+        />
 
         {/* Main content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -68,7 +69,7 @@ export default function CompanyMission() {
 
             {/* Key Values */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-slate-600 mb-4">{t('mission.subtitle')}</h3>
+              <h3 className="text-2xl font-bold text-slate-600 mb-4">{t('mission.valuesTitle')}</h3>
               <div className="space-y-4">
                 {[
                   {

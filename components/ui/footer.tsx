@@ -31,7 +31,7 @@ export default function Footer() {
 
   const company = [
     { name: t('footer.company.aboutUs'), href: "#mission" },
-    { name: t('footer.company.portfolio'), href: "#portifolio" },
+    { name: t('footer.company.portfolio'), href: "#portfolio" },
     { name: t('footer.company.technologies'), href: "#technologies" },
     { name: t('footer.company.testimonials'), href: "#testimonials" },
     { name: t('footer.company.hive'), href: "#our-hive" },

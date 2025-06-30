@@ -10,11 +10,15 @@ import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
 import TeamPic4 from "@/public/images/projects/ajrent.png";
+import SectionTitle from "./ui/SectionTitle";
+import SectionSubtitle from "./ui/SectionSubtitle";
+import SectionBadge from "./ui/SectionBadge";
+import AnimatedBackground from "./ui/AnimatedBackground";
 
 // Structured portfolio data
-const getPortfolioProjects = (t: any) => {
+const getPortfolioProjects = (tPortfolio: any) => {
     const getFeatures = (key: string) => {
-        const features = t(key, { returnObjects: true });
+        const features = tPortfolio(key, { returnObjects: true });
         return Array.isArray(features) ? features : [];
     };
 
@@ -22,52 +26,52 @@ const getPortfolioProjects = (t: any) => {
         {
             id: 1,
             title: "Nitelive",
-            category: t('portfolio:projects.nitelive.category') || "Entertainment",
+            category: tPortfolio('projects.nitelive.category') || "Entertainment",
             country: "Netherlands",
             countryFlag: <NL className="w-5 h-4" />,
-            description: t('portfolio:projects.nitelive.description') || "Cross-platform mobile app with real-time location services.",
+            description: tPortfolio('projects.nitelive.description') || "Cross-platform mobile app with real-time location services.",
             image: TeamPic1,
             technologies: ["Flutter", "Java", "Firebase", "Geolocation"],
-            features: getFeatures('portfolio:projects.nitelive.features'),
+            features: getFeatures('projects.nitelive.features'),
             icon: <MusicalNoteIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         },
         {
             id: 4,
             title: "AJ Rent",
-            category: t('portfolio:projects.ajrent.category') || "Mobility",
+            category: tPortfolio('projects.ajrent.category') || "Mobility",
             country: "Portugal",
             countryFlag: <PT className="w-5 h-4" />,
-            description: t('portfolio:projects.ajrent.description') || "Web platform with vehicle catalog and booking management.",
+            description: tPortfolio('projects.ajrent.description') || "Web platform with vehicle catalog and booking management.",
             image: TeamPic4,
             technologies: ["React", "PHP", "REST API", "Payment Gateway"],
-            features: getFeatures('portfolio:projects.ajrent.features'),
+            features: getFeatures('projects.ajrent.features'),
             icon: <TruckIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-dark to-beePrimary-normal"
         },
         {
             id: 2,
             title: "Alfabets",
-            category: t('portfolio:projects.alfabets.category') || "Sporting Bets",
+            category: tPortfolio('projects.alfabets.category') || "Sporting Bets",
             country: "Brazil",
             countryFlag: <BR className="w-5 h-4" />,
-            description: t('portfolio:projects.alfabets.description') || "White label app for betting houses.",
+            description: tPortfolio('projects.alfabets.description') || "White label app for betting houses.",
             image: TeamPic2,
             technologies: ["Flutter", "Ruby", "Firebase", "Geolocation"],
-            features: getFeatures('portfolio:projects.alfabets.features'),
+            features: getFeatures('projects.alfabets.features'),
             icon: <PresentationChartBarIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         },
         {
             id: 3,
             title: "Mulher + Segura",
-            category: t('portfolio:projects.mulhersegura.category') || "Social",
+            category: tPortfolio('projects.mulhersegura.category') || "Social",
             country: "Brazil",
             countryFlag: <BR className="w-5 h-4" />,
-            description: t('portfolio:projects.mulhersegura.description') || "Safety platform for women in vulnerable situations.",
+            description: tPortfolio('projects.mulhersegura.description') || "Safety platform for women in vulnerable situations.",
             image: TeamPic3,
             technologies: ["Flutter", "PHP", "Firebase", "Mercure", "Geolocation"],
-            features: getFeatures('portfolio:projects.mulhersegura.features'),
+            features: getFeatures('projects.mulhersegura.features'),
             icon: <ShieldCheckIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         }
@@ -76,21 +80,22 @@ const getPortfolioProjects = (t: any) => {
 
 export default function Portifolio() {
     const [activeProject, setActiveProject] = useState<number>(1);
-    const { t } = useTranslation();
-    const portfolioProjects = getPortfolioProjects(t);
+    const { t } = useTranslation('sections');
+    const { t: tPortfolio } = useTranslation('portfolio');
+    const portfolioProjects = getPortfolioProjects(tPortfolio);
     const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
     const projectDisplayRef = useRef<HTMLDivElement>(null);
 
     const handleProjectClick = (projectId: number) => {
         setActiveProject(projectId);
-        
+
         // Scroll to project display on mobile/tablet, with a small delay to ensure state is updated
         setTimeout(() => {
             if (projectDisplayRef.current) {
                 const yOffset = -100; // Offset to account for fixed header
                 const element = projectDisplayRef.current;
                 const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                
+
                 window.scrollTo({
                     top: y,
                     behavior: 'smooth'
@@ -100,29 +105,29 @@ export default function Portifolio() {
     };
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
-            {/* Background decorations */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-beePrimary-light/20 to-beePrimary-normal/20 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
-            </div>
+        // <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
+        <section className="relative bg-gradient-to-br from-white via-white to-beePrimary-normal/0 py-16 lg:py-24 overflow-hidden">
 
+            
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16 session" data-aos="fade-up" id="portifolio">
-                    <div className="inline-flex items-center px-4 py-2 bg-beePrimary-normal/10 backdrop-blur-sm rounded-full mb-6">
-                        <RectangleStackIcon className="w-5 h-5 text-beePrimary-normal mr-2" />
-                        <span className="text-beePrimary-normal font-semibold text-sm">{t('common:common.ourPortfolio')}</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        <span className="bg-gradient-to-r from-beePrimary-normal to-beePrimary-dark bg-clip-text text-transparent">
-                            {t('portfolio:title')}
-                        </span>
-                    </h2>
-                    <div className="w-48 h-1 bg-gradient-to-r from-transparent via-beeSecondary-normal to-transparent mx-auto mb-6 rounded-full"></div>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        {t('portfolio:subtitle')}
-                    </p>
+                <div className="text-center mb-8" data-aos="fade-up">
+                    <SectionBadge
+                        icon={<RectangleStackIcon className="w-6 h-6" />}
+                        text={t('portfolio.badge')}
+                        className="mb-4"
+                    />
+                    <SectionTitle
+                        title={String(t('portfolio.title'))}
+                        id="portfolio"
+                        variant="centered"
+                        animatedDivider={true}
+                    />
+                    <SectionSubtitle
+                        text={t('portfolio.subtitle', { components: [<strong key="b1" />] })}
+                        variant="centered"
+                        animationDelay={300}
+                    />
                 </div>
 
                 {/* Portfolio Content */}
@@ -134,8 +139,8 @@ export default function Portifolio() {
                                 key={project.id}
                                 onClick={() => handleProjectClick(project.id)}
                                 className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${activeProject === project.id
-                                        ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
-                                        : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
+                                    ? 'bg-white/80 backdrop-blur-sm border-beePrimary-normal shadow-xll'
+                                    : 'bg-white/60 backdrop-blur-sm border-gray-200 hover:border-beePrimary-light hover:shadow-lg hover:scale-100'
                                     }`}
                             >
                                 <div className="flex items-start space-x-4">
@@ -149,7 +154,7 @@ export default function Portifolio() {
                                                 {project.category}
                                             </span>
                                         </div>
-                                        
+
                                         <p className="text-gray-600 leading-relaxed">{project.description}</p>
 
                                         {activeProject === project.id && (

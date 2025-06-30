@@ -3,7 +3,7 @@ import Hero from '@/components/hero'
 import OurHive from '@/components/our-hive'
 import Testimonials from '@/components/testimonials'
 import ContactForm from '@/components/contact-form'
-import CompanyMission from '@/components/company-mission'
+import Mission from '@/components/mission'
 import Highlights from '@/components/highlights'
 import Technologies from '@/components/technologies'
 import Aos from 'aos';
@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Hero />
       <Highlights/>
-      <CompanyMission />
+      <Mission />
       <ServicesSection />
       <OurHive />
       <Portifolio />
