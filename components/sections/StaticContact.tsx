@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
-import { useTranslation } from '@/lib/i18n'
+import { type Locale } from '@/lib/static-translations'
 import AnimatedBackground from '../ui/AnimatedBackground'
 import SectionTitle from '../ui/SectionTitle'
 import SectionSubtitle from '../ui/SectionSubtitle'
@@ -12,8 +12,21 @@ const WEBHOOK_ID = '1388860914454757519'
 const WEBHOOK_TOKEN = '7JiCfvj5yc_zLwhMen8IrnPCx5ZVqnize9MIsmYNZVAI9J7pvTVil-Xd0uIwp-E5w3dj'
 const DISCORD_WEBHOOK_URL = `https://discord.com/api/webhooks/${WEBHOOK_ID}/${WEBHOOK_TOKEN}`
 
-export default function ContactForm() {
-  const { t } = useTranslation('sections');
+interface StaticContactProps {
+  locale: Locale
+  translations: Record<string, any>
+}
+
+export default function StaticContact({ translations, locale }: StaticContactProps) {
+  const t = (key: string) => {
+    const keys = key.split('.');
+    let value = translations.sections;
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  };
+
   const [formData, setFormData] = useState({
     email: '',
     message: ''
@@ -30,53 +43,72 @@ export default function ContactForm() {
     }))
   }
 
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Reset status
+    setStatus('idle')
+    setErrorMessage('')
 
-    // Basic validation
-    if (!formData.email || !formData.message) {
+    // Validation
+    if (!formData.email.trim()) {
       setStatus('error')
-      setErrorMessage(String(t('contact.form.validation.fillAllFields')))
+      setErrorMessage(t('contact.form.validation.fillAllFields'))
       return
     }
 
-    if (!formData.email.includes('@')) {
+    if (!validateEmail(formData.email)) {
       setStatus('error')
-      setErrorMessage(String(t('contact.form.validation.validEmail')))
+      setErrorMessage(t('contact.form.validation.validEmail'))
+      return
+    }
+
+    if (!formData.message.trim()) {
+      setStatus('error')
+      setErrorMessage(t('contact.form.validation.fillAllFields'))
+      return
+    }
+
+    if (formData.message.trim().length < 10) {
+      setStatus('error')
+      setErrorMessage(t('contact.form.validation.fillAllFields'))
       return
     }
 
     setIsLoading(true)
-    setStatus('idle')
-    setErrorMessage('')
 
     try {
-      // Create Discord embed message
+      // Create Discord embed
       const embed = {
-        title: "🐝 New Contact Form Submission - Bee Coders",
-        color: 0xFFA500, // Orange color matching Bee Coders theme
+        title: "📨 Nova Mensagem do Site",
+        color: 0x8B5CF6,
         fields: [
           {
-            name: "📧 Email",
+            name: "Email",
             value: formData.email,
             inline: true
           },
           {
-            name: "💬 Message",
-            value: formData.message,
-            inline: false
+            name: "Idioma",
+            value: locale.toUpperCase(),
+            inline: true
           },
           {
-            name: "⏰ Timestamp",
-            value: new Date().toLocaleString(),
-            inline: true
+            name: "Mensagem",
+            value: formData.message.length > 1000 
+              ? formData.message.substring(0, 1000) + '...' 
+              : formData.message,
+            inline: false
           }
         ],
+        timestamp: new Date().toISOString(),
         footer: {
-          text: "Bee Coders Contact Form",
-          icon_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png"
-        },
-        timestamp: new Date().toISOString()
+          text: "Bee Coders Website"
+        }
       }
 
       const response = await fetch(DISCORD_WEBHOOK_URL, {
@@ -85,63 +117,59 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          username: "Bee Coders Contact Form",
-          avatar_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png",
           embeds: [embed]
         })
       })
 
-      if (!response.ok) {
-        if (response.status === 404) {
-          throw new Error('Discord webhook not found. Please check the webhook URL.')
-        }
-        throw new Error(`Failed to send message: ${response.status} ${response.statusText}`)
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ email: '', message: '' })
+      } else {
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
-
-      setStatus('success')
-      setFormData({ email: '', message: '' }) // Clear form
-
     } catch (error) {
-      console.error('Error sending email:', error)
+      console.error('Error sending message:', error)
       setStatus('error')
-      setErrorMessage(error instanceof Error ? error.message : String(t('contact.form.validation.sendError')))
+      setErrorMessage(t('contact.form.validation.sendError'))
     } finally {
       setIsLoading(false)
     }
   }
+
   return (
     <section id="contact" className="relative bg-gradient-to-br from-slate-50 via-white to-beePrimary-normal/5 py-12 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6" id="contact">
-
-
-        {/* CTA box */}
-        <div className="relative bg-gradient-to-br from-beePrimary-normal to-beePrimary-dark rounded-3xl py-12 px-8 md:py-16 md:px-16 shadow-2xl overflow-hidden backdrop-blur-sm border border-beePrimary-light/20" data-aos="zoom-y-out">
-
-          {/* Enhanced Background illustration */}
+        <div 
+          className="relative bg-gradient-to-br from-beePrimary-normal to-beePrimary-dark rounded-3xl py-12 px-8 md:py-16 md:px-16 shadow-2xl overflow-hidden backdrop-blur-sm border border-beePrimary-light/20"
+          data-aos="zoom-y-out"
+        >
+          {/* Decorative SVG background */}
           <div className="absolute right-0 bottom-0 pointer-events-none hidden lg:block opacity-30" aria-hidden="true">
             <svg width="428" height="328" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <radialGradient cx="35.542%" cy="34.553%" fx="35.542%" fy="34.553%" r="96.031%" id="ni-a">
-                  <stop stopColor="#DFDFDF" offset="0%" />
-                  <stop stopColor="#4C4C4C" offset="44.317%" />
-                  <stop stopColor="#333" offset="100%" />
+                  <stop stopColor="#DFDFDF" offset="0%"></stop>
+                  <stop stopColor="#4C4C4C" offset="44.317%"></stop>
+                  <stop stopColor="#333" offset="100%"></stop>
                 </radialGradient>
               </defs>
               <g fill="none" fillRule="evenodd">
                 <g fill="#FBC700">
-                  <ellipse fillOpacity=".08" cx="185" cy="15.576" rx="16" ry="15.576" />
-                  <ellipse fillOpacity=".24" cx="100" cy="68.402" rx="24" ry="23.364" />
-                  <ellipse fillOpacity=".12" cx="29" cy="251.231" rx="29" ry="28.231" />
-                  <ellipse fillOpacity=".64" cx="29" cy="251.231" rx="8" ry="7.788" />
-                  <ellipse fillOpacity=".12" cx="342" cy="31.303" rx="8" ry="7.788" />
-                  <ellipse fillOpacity=".48" cx="62" cy="126.811" rx="2" ry="1.947" />
-                  <ellipse fillOpacity=".12" cx="78" cy="7.072" rx="2" ry="1.947" />
-                  <ellipse fillOpacity=".64" cx="185" cy="15.576" rx="6" ry="5.841" />
+                  <ellipse fillOpacity=".08" cx="185" cy="15.576" rx="16" ry="15.576"></ellipse>
+                  <ellipse fillOpacity=".24" cx="100" cy="68.402" rx="24" ry="23.364"></ellipse>
+                  <ellipse fillOpacity=".12" cx="29" cy="251.231" rx="29" ry="28.231"></ellipse>
+                  <ellipse fillOpacity=".64" cx="29" cy="251.231" rx="8" ry="7.788"></ellipse>
+                  <ellipse fillOpacity=".12" cx="342" cy="31.303" rx="8" ry="7.788"></ellipse>
+                  <ellipse fillOpacity=".48" cx="62" cy="126.811" rx="2" ry="1.947"></ellipse>
+                  <ellipse fillOpacity=".12" cx="78" cy="7.072" rx="2" ry="1.947"></ellipse>
+                  <ellipse fillOpacity=".64" cx="185" cy="15.576" rx="6" ry="5.841"></ellipse>
                 </g>
-                <circle fill="#FBC700" fillOpacity="0.15" cx="276" cy="237" r="200" />
+                <circle fill="#FBC700" fillOpacity="0.15" cx="276" cy="237" r="200"></circle>
               </g>
             </svg>
           </div>
+
+          {/* Animated background */}
           <AnimatedBackground
             hexagonCount={3}
             hexagonColor="text-beeSecondary-normal"
@@ -152,13 +180,13 @@ export default function ContactForm() {
             }}
           />
 
-          {/* Floating decoration elements */}
+          {/* Decorative floating elements */}
           <div className="absolute top-8 left-8 w-16 h-16 bg-beeSecondary-normal/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-8 right-20 w-12 h-12 bg-white/10 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-8 right-20 w-12 h-12 bg-white/10 rounded-full blur-lg animate-pulse" style={{animationDelay: '1s'}}></div>
 
+          {/* Content */}
           <div className="relative flex flex-col lg:flex-row justify-between items-center">
-
-            {/* Enhanced CTA content */}
+            {/* CTA content */}
             <div className="text-center lg:text-left lg:max-w-xl mb-8 lg:mb-0">
               <SectionTitle
                 title={String(t('contact.title'))}
@@ -175,20 +203,23 @@ export default function ContactForm() {
                 className="mb-6"
               />
 
-              {/* Enhanced CTA form */}
+              {/* Contact form */}
               <form className="w-full lg:w-auto" onSubmit={handleSubmit}>
+                {/* Message field */}
                 <div className="flex flex-col justify-center max-w-md mx-auto lg:mx-0">
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full appearance-none bg-white/95 backdrop-blur-sm border-2 border-white/20 focus:border-beeSecondary-normal focus:ring-4 focus:ring-beeSecondary-normal/30 rounded-2xl px-5 py-4 mb-4 h-32 text-gray-900 placeholder-gray-500 resize-none transition-all duration-300 shadow-lg focus:shadow-xl font-medium"
-                    placeholder={String(t('contact.form.messagePlaceholder'))}
-                    aria-label={String(t('contact.form.messagePlaceholder'))}
+                    placeholder={t('contact.form.messagePlaceholder')}
+                    aria-label={t('contact.form.messagePlaceholder')}
                     disabled={isLoading}
                     required
                   />
                 </div>
+
+                {/* Email and Send button row */}
                 <div className="flex flex-col sm:flex-row justify-center max-w-md mx-auto lg:mx-0 gap-3">
                   <input
                     type="email"
@@ -196,8 +227,8 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="flex-1 appearance-none bg-white/95 backdrop-blur-sm border-2 border-white/20 focus:border-beeSecondary-normal focus:ring-4 focus:ring-beeSecondary-normal/30 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 transition-all duration-300 shadow-lg focus:shadow-xl font-medium"
-                    placeholder={String(t('contact.form.emailPlaceholder'))}
-                    aria-label={String(t('contact.form.emailPlaceholder'))}
+                    placeholder={t('contact.form.emailPlaceholder')}
+                    aria-label={t('contact.form.emailPlaceholder')}
                     disabled={isLoading}
                     required
                   />
@@ -238,6 +269,7 @@ export default function ContactForm() {
                     </div>
                   </div>
                 )}
+                
                 {status === 'error' && (
                   <div className="max-w-md mx-auto lg:mx-0 mt-6 p-4 bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-2xl">
                     <div className="flex items-center space-x-3">
@@ -253,6 +285,7 @@ export default function ContactForm() {
                     </div>
                   </div>
                 )}
+                
                 {status === 'idle' && !isLoading && (
                   <div className="max-w-md mx-auto lg:mx-0 mt-6 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
                     <p className="text-sm text-white/80 text-center flex items-center justify-center">

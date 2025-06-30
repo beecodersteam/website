@@ -5,7 +5,6 @@ export const metadata = {
 
 import Link from 'next/link'
 import AnimatedBackground from '@/components/ui/AnimatedBackground';
-import SectionTitle from '@/components/ui/SectionTitle';
 import SectionSubtitle from '@/components/ui/SectionSubtitle';
 
 export default function SignUp() {

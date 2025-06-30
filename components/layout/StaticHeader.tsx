@@ -1,19 +1,23 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useTranslation } from '@/lib/i18n'
+import { useStaticTranslation } from '@/lib/use-static-translation'
 
 import Link from 'next/link'
 import Logo from '../ui/logo'
-import Dropdown from '@/components/utils/dropdown'
-import MobileMenu from './mobile-menu'
-import LanguageSelector from '../ui/LanguageSelector'
+import StaticMobileMenu from './StaticMobileMenu'
+import StaticLanguageSelector from '../ui/StaticLanguageSelector'
 import React from 'react'
 
-export default function Header() {
+interface HeaderProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticHeader({ translations, locale }: HeaderProps) {
 
   const [top, setTop] = useState<boolean>(true)
-  const { t } = useTranslation('common')
+  const { t } = useStaticTranslation(translations, locale)
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
@@ -55,18 +59,18 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center gap-2">
               {/* <MenuItem href="/">{t('navigation.home')}</MenuItem> */}
-              <MenuItem href="/#mission">{t('navigation.mission')}</MenuItem>
-              <MenuItem href="/#services">{t('navigation.services')}</MenuItem>
-              <MenuItem href="/#our-hive">{t('navigation.hive')}</MenuItem>
-              <MenuItem href="/#portfolio">{t('navigation.portfolio')}</MenuItem>
-              <MenuItem href="/#technologies">{t('navigation.technologies')}</MenuItem>
-              <MenuItem href="/#contact">{t('navigation.contact')}</MenuItem>
+              <MenuItem href={`/${locale}#mission`}>{String(t('common:navigation.mission'))}</MenuItem>
+              <MenuItem href={`/${locale}#services`}>{String(t('common:navigation.services'))}</MenuItem>
+              <MenuItem href={`/${locale}#our-hive`}>{String(t('common:navigation.hive'))}</MenuItem>
+              <MenuItem href={`/${locale}#portfolio`}>{String(t('common:navigation.portfolio'))}</MenuItem>
+              <MenuItem href={`/${locale}#technologies`}>{String(t('common:navigation.technologies'))}</MenuItem>
+              <MenuItem href={`/${locale}#contact`}>{String(t('common:navigation.contact'))}</MenuItem>
               <li>
-                <LanguageSelector />
+                <StaticLanguageSelector translations={translations} locale={locale} />
               </li>
             </ul>
           </nav>
-          <MobileMenu />
+          <StaticMobileMenu translations={translations} locale={locale} />
 
         </div>
       </div>

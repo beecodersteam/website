@@ -1,33 +1,23 @@
 "use client"
-import Hero from '@/components/sections/hero'
-import OurHive from '@/components/sections/our-hive'
-import Testimonials from '@/components/sections/testimonials'
-import ContactForm from '@/components/forms/contact-form'
-import Mission from '@/components/sections/mission'
-import Highlights from '@/components/sections/highlights'
-import Technologies from '@/components/sections/technologies'
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import ServicesSection from '@/components/sections/services-section'
-import Portifolio from '@/components/sections/portifolio'
+import { useRouter } from 'next/navigation';
 
 export default function Home() {  
+  const router = useRouter();
+
   useEffect(() => {
-    Aos.init({ duration: 1000 });
-  });
+    // Redirecionar para a página localizada em inglês
+    router.replace('/en');
+  }, [router]);
+
+  // Página de loading simples
   return (
-    <>
-      <Hero />
-      <Highlights/>
-      <Mission />
-      <ServicesSection />
-      <OurHive />
-      <Portifolio />
-      <Technologies />
-      <Testimonials />
-      <ContactForm />
-    </>
-  )
+    <div className="min-h-screen flex items-center justify-center bg-beePrimary-dark">
+      <div className="text-white text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
+        <p>Redirecting...</p>
+      </div>
+    </div>
+  );
 }
 

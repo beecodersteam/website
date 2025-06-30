@@ -1,27 +1,37 @@
 'use client';
 
-import { useTranslation } from '@/lib/i18n';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { BR, US, ES, FR } from 'country-flag-icons/react/3x2';
 import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const languages = [
-  { code: 'en' as const, name: 'English', flag: <US className="w-5 h-5" /> },
-  { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5" /> },
-  { code: 'es' as const, name: 'Español', flag: <ES className="w-5 h-5" /> },
-  { code: 'fr' as const, name: 'Français', flag: <FR className="w-5 h-5" /> },
+  { code: 'en' as const, name: 'English', flag: <US className="w-5 h-5" />, path: '/en' },
+  { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5" />, path: '/pt' },
+  { code: 'es' as const, name: 'Español', flag: <ES className="w-5 h-5" />, path: '/es' },
+  { code: 'fr' as const, name: 'Français', flag: <FR className="w-5 h-5" />, path: '/fr' },
 ];
 
-export default function MobileLanguageSelector() {
-  const { locale, changeLocale } = useTranslation();
+interface MobileLanguageSelectorProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticMobileLanguageSelector({ locale }: MobileLanguageSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   
   const currentLanguage = languages.find(l => l.code === locale) || languages[0];
 
-  const handleLanguageChange = async (newLocale: typeof languages[0]['code']) => {
-    await changeLocale(newLocale);
-    setIsOpen(false);
+  // Get current page path without locale prefix
+  const getPagePath = () => {
+    if (pathname === '/') return '';
+    const withoutLocale = pathname.replace(/^\/(en|pt|es|fr)/, '');
+    return withoutLocale;
   };
+
+  const pagePath = getPagePath();
 
   return (
     <div className="relative">
@@ -42,19 +52,21 @@ export default function MobileLanguageSelector() {
           />
           <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 w-48 bg-white rounded-lg shadow-lg border z-20">
             {languages.map((lang) => (
-              <button
+              <Link
                 key={lang.code}
-                onClick={() => handleLanguageChange(lang.code)}
+                href={`${lang.path}${pagePath}`}
+                onClick={() => setIsOpen(false)}
                 className={`w-full text-left px-4 py-3 hover:bg-beePrimary-light/10 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg flex items-center space-x-3 ${
                   locale === lang.code ? 'bg-beePrimary-light/20 text-beePrimary-dark' : 'text-gray-700'
                 }`}
+                prefetch={false}
               >
                 <span className="text-lg">{lang.flag}</span>
                 <span className="font-medium">{lang.name}</span>
                 {locale === lang.code && (
                   <span className="ml-auto w-2 h-2 bg-beePrimary-normal rounded-full"></span>
                 )}
-              </button>
+              </Link>
             ))}
           </div>
         </>
