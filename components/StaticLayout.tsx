@@ -2,7 +2,7 @@
 
 import { useEffect, ReactNode } from 'react'
 import StaticHeader from './layout/StaticHeader'
-import Footer from './layout/footer'
+import StaticFooter from './layout/StaticFooter'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -21,7 +21,7 @@ export default function StaticLayout({ children, translations, locale }: StaticL
     <>
       <StaticHeader translations={translations} locale={locale} />
       {children}
-      <Footer />
+      <StaticFooter translations={translations} />
     </>
   )
 }

@@ -2,11 +2,51 @@
 
 import { DocumentTextIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import Footer from '@/components/layout/footer';
+import { useEffect, useState } from 'react';
+import { type Locale } from '@/lib/static-translations';
+import StaticLayout from '@/components/StaticLayout';
 import SectionTitle from '@/components/ui/SectionTitle';
 import SectionSubtitle from '@/components/ui/SectionSubtitle';
 
 export default function TermsOfService() {
+  const [locale, setLocale] = useState<Locale>('en');
+  const [translations, setTranslations] = useState<Record<string, any>>({});
+
+  useEffect(() => {
+    // Detect locale from URL or localStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLocale = urlParams.get('lang') as Locale;
+    const browserLang = navigator.language.split('-')[0] as Locale;
+    const savedLocale = localStorage.getItem('preferredLocale') as Locale;
+    
+    const detectedLocale = urlLocale || savedLocale || browserLang || 'en';
+    const validLocale = ['en', 'pt', 'es', 'fr'].includes(detectedLocale) ? detectedLocale as Locale : 'en';
+    
+    setLocale(validLocale);
+    
+    // Load translations from public folder
+    async function loadTranslations() {
+      try {
+        const [common, sections] = await Promise.all([
+          fetch(`/locales/${validLocale}/common.json`).then(r => r.json()),
+          fetch(`/locales/${validLocale}/sections.json`).then(r => r.json())
+        ]);
+        
+        setTranslations({ common, sections });
+      } catch (error) {
+        console.error('Failed to load translations:', error);
+        // Fallback to English
+        const [common, sections] = await Promise.all([
+          fetch(`/locales/en/common.json`).then(r => r.json()),
+          fetch(`/locales/en/sections.json`).then(r => r.json())
+        ]);
+        setTranslations({ common, sections });
+      }
+    }
+    
+    loadTranslations();
+  }, []);
+
   const t = (key: string) => {
     // Simplified translations for now
     const translations: Record<string, string> = {
@@ -38,8 +78,20 @@ export default function TermsOfService() {
     return translations[key] || key;
   };
 
+  // Render loading state while translations are loading
+  if (!translations.common) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-beePrimary-dark">
+        <div className="text-white text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <>
+    <StaticLayout translations={translations} locale={locale}>
       <div className="bg-gradient-to-br from-white via-beePrimary-normal/5 to-white min-h-screen">
         {/* Header Spacing */}
         <div className="pt-24 lg:pt-32"></div>
@@ -185,7 +237,6 @@ export default function TermsOfService() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </StaticLayout>
   );
 }

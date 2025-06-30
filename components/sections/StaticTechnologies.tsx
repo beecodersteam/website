@@ -75,8 +75,8 @@ export default function StaticTechnologies({ translations }: StaticTechnologiesP
             <FaGithub className="w-12 h-12 text-white hover:scale-110 transition-transform" />
             <FaLinux className="w-12 h-12 text-yellow-500 hover:scale-110 transition-transform" />
             <FaDigitalOcean className="w-12 h-12 text-blue-500 hover:scale-110 transition-transform" />
-            <IconRuby className="w-12 h-12 hover:scale-110 transition-transform" />
-            <IconBxlFlutter className="w-12 h-12 hover:scale-110 transition-transform" />
+            <IconRuby className="w-12 h-12 text-red-700 hover:scale-110 transition-transform" />
+            <IconBxlFlutter className="w-12 h-12 text-blue-500 hover:scale-110 transition-transform" />
           </div>
         </div>
       </div>
