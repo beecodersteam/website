@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { CheckCircleIcon, BoltIcon, UsersIcon } from "@heroicons/react/24/outline";
-import { useTranslation } from '@/lib/i18n';
+import { useStaticTranslation } from '@/lib/use-static-translation';
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionTitle from "../ui/SectionTitle";
 
-export default function Mission() {
-  const { t } = useTranslation('sections');
+interface MissionProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function Mission({ translations, locale }: MissionProps) {
+  const { t } = useStaticTranslation(translations, locale);
 
   return (
     <section className="relative bg-gradient-to-br from-white via-gray-50 to-beePrimary-normal/10 py-16 lg:py-24 overflow-hidden">
@@ -55,8 +60,8 @@ export default function Mission() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">{t('mission.floatingCard.title')}</p>
-                    <p className="text-xs text-gray-600">{t('mission.floatingCard.description')}</p>
+                    <p className="text-sm font-semibold text-gray-900">{String(t('mission.floatingCard.title'))}</p>
+                    <p className="text-xs text-gray-600">{String(t('mission.floatingCard.description'))}</p>
                   </div>
                 </div>
               </div>
@@ -68,23 +73,23 @@ export default function Mission() {
 
             {/* Key Values */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-slate-600 mb-4">{t('mission.valuesTitle')}</h3>
+              <h3 className="text-2xl font-bold text-slate-600 mb-4">{String(t('mission.valuesTitle'))}</h3>
               <div className="space-y-4">
                 {[
                   {
                     icon: <BoltIcon className="w-5 h-5" />,
-                    title: t('mission.values.0.title'),
-                    description: t('mission.values.0.description')
+                    title: String(t('mission.values.0.title')),
+                    description: String(t('mission.values.0.description'))
                   },
                   {
                     icon: <CheckCircleIcon className="w-5 h-5" />,
-                    title: t('mission.values.1.title'),
-                    description: t('mission.values.1.description')
+                    title: String(t('mission.values.1.title')),
+                    description: String(t('mission.values.1.description'))
                   },
                   {
                     icon: <UsersIcon className="w-5 h-5" />,
-                    title: t('mission.values.2.title'),
-                    description: t('mission.values.2.description')
+                    title: String(t('mission.values.2.title')),
+                    description: String(t('mission.values.2.description'))
                   }
                 ].map((value, index) => (
                   <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-100 shadow-lg hover:bg-white/80 transition-all duration-300">
@@ -105,4 +110,3 @@ export default function Mission() {
     </section>
   )
 }
-

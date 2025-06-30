@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { LogoHorizBlack } from '../ui/logo'
 import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
@@ -230,13 +231,13 @@ export default function Footer() {
                 &copy; {currentYear} Bee Coders Club. {t('footer.legal.allRightsReserved')}
               </p>
               <div className="flex space-x-4 text-sm">
-                <a href="/privacy-policy" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
+                <Link href="/privacy-policy" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
                   {t('footer.legal.privacyPolicy')}
-                </a>
+                </Link>
                 <span className="text-gray-400">•</span>
-                <a href="/terms-of-service" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
+                <Link href="/terms-of-service" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
                   {t('footer.legal.termsOfService')}
-                </a>
+                </Link>
               </div>
             </div>
 

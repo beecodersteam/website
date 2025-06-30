@@ -1,6 +1,5 @@
 'use client';
 import { GlobeAltIcon, ClockIcon, UsersIcon, SparklesIcon } from "@heroicons/react/24/outline";
-import { useTranslation } from "@/lib/i18n";
 
 interface HighlightItem {
   icon: React.ReactNode;
@@ -9,9 +8,14 @@ interface HighlightItem {
   subtext: string;
 }
 
-export default function Highlights() {
-  const { t } = useTranslation('sections');
-  const highlightItems = t('highlights.items', { returnObjects: true });
+interface HighlightsProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticHighlights({ translations }: HighlightsProps) {
+  // Acessar diretamente o array de highlights
+  const highlightItems = translations.sections?.highlights?.items || [];
 
   const icons = [
     <GlobeAltIcon className="w-8 h-8" key="globe" />,
@@ -20,7 +24,7 @@ export default function Highlights() {
     <SparklesIcon className="w-8 h-8" key="sparkles" />
   ];
 
-  const highlights: HighlightItem[] = Array.isArray(highlightItems) ? highlightItems.map((item, index) => ({
+  const highlights: HighlightItem[] = Array.isArray(highlightItems) ? highlightItems.map((item: any, index: number) => ({
     ...item,
     icon: icons[index]
   })) : [];
@@ -67,4 +71,3 @@ export default function Highlights() {
     </section>
   )
 }
-

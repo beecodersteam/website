@@ -1,77 +1,75 @@
 'use client';
 
-import { useTranslation } from '@/lib/i18n';
-import { DocumentTextIcon, ExclamationTriangleIcon, UserGroupIcon } from '@heroicons/react/24/outline';
-import { useEffect } from 'react';
+import { DocumentTextIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Footer from '@/components/layout/footer';
 import SectionTitle from '@/components/ui/SectionTitle';
 import SectionSubtitle from '@/components/ui/SectionSubtitle';
 
 export default function TermsOfService() {
-  const { t } = useTranslation('legal');
-
-  // Update document title and meta tags client-side
-  useEffect(() => {
-    document.title = `${t('termsOfService.title')} - Bee Coders`;
+  const t = (key: string) => {
+    // Simplified translations for now
+    const translations: Record<string, string> = {
+      'termsOfService.title': 'Terms of Service',
+      'termsOfService.subtitle': 'Please read these terms carefully before using our services.',
+      'termsOfService.lastUpdated': 'Last updated: January 1, 2024',
+      'termsOfService.acceptance.title': '1. Acceptance of Terms',
+      'termsOfService.acceptance.content': 'By accessing and using Bee Coders services, you accept and agree to be bound by the terms and provision of this agreement.',
+      'termsOfService.services.title': '2. Description of Services',
+      'termsOfService.services.content': 'Bee Coders provides software development services, web development, mobile applications, and digital solutions.',
+      'termsOfService.userObligations.title': '3. User Obligations',
+      'termsOfService.userObligations.content': 'Users must provide accurate information and comply with all applicable laws and regulations.',
+      'termsOfService.intellectualProperty.title': '4. Intellectual Property',
+      'termsOfService.intellectualProperty.content': 'All intellectual property rights in our services and content remain with Bee Coders.',
+      'termsOfService.privacy.title': '5. Privacy',
+      'termsOfService.privacy.content': 'Your privacy is important to us. Please review our Privacy Policy.',
+      'termsOfService.limitation.title': '6. Limitation of Liability',
+      'termsOfService.limitation.content': 'Bee Coders shall not be liable for any indirect, incidental, special, or consequential damages.',
+      'termsOfService.termination.title': '7. Termination',
+      'termsOfService.termination.content': 'We may terminate or suspend access to our services immediately, without prior notice.',
+      'termsOfService.governing.title': '8. Governing Law',
+      'termsOfService.governing.content': 'These terms shall be governed by and construed in accordance with applicable laws.',
+      'termsOfService.changes.title': '9. Changes to Terms',
+      'termsOfService.changes.content': 'We reserve the right to modify these terms at any time.',
+      'termsOfService.contact.title': '10. Contact Information',
+      'termsOfService.contact.content': 'If you have any questions about these Terms, please contact us.',
+    };
     
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', String(t('termsOfService.subtitle')));
-  }, [t]);
+    return translations[key] || key;
+  };
 
   return (
-    <div className="bg-gradient-to-br from-white via-beePrimary-normal/5 to-white min-h-screen">
-      {/* Header Spacing */}
-      <div className="pt-24 lg:pt-32"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-2xl mb-6 shadow-lg">
-            <DocumentTextIcon className="w-8 h-8 text-white" />
+    <>
+      <div className="bg-gradient-to-br from-white via-beePrimary-normal/5 to-white min-h-screen">
+        {/* Header Spacing */}
+        <div className="pt-24 lg:pt-32"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-2xl mb-6 shadow-lg">
+              <DocumentTextIcon className="w-8 h-8 text-white" />
+            </div>
+            <SectionTitle
+              title={t('termsOfService.title')}
+              id="terms"
+              variant="centered"
+            />
+            <SectionSubtitle
+              text={t('termsOfService.subtitle')}
+              variant="centered"
+              animationDelay={200}
+            />
+            <p className="text-sm text-gray-500 mt-4">
+              {t('termsOfService.lastUpdated')}
+            </p>
           </div>
-          <SectionTitle
-            title={String(t('termsOfService.title'))}
-            id="terms-of-service"
-            variant="centered"
-            color="text-gray-900"
-            className="mb-4"
-          />
-          <SectionSubtitle
-            text={t('termsOfService.subtitle')}
-            variant="centered"
-            animationDelay={300}
-            color="text-gray-600"
-            className="max-w-2xl mx-auto"
-          />
-          <p className="text-sm text-gray-500 mt-4">
-            {t('termsOfService.lastUpdated')}
-          </p>
-        </div>
 
-        {/* Content */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200 p-8 md:p-12">
+          {/* Content */}
           <div className="prose prose-lg max-w-none">
-            
-            {/* Introduction */}
-            <section className="mb-8">
-              <h2 className="flex items-center text-2xl font-bold text-beePrimary-dark mb-4">
-                <DocumentTextIcon className="w-6 h-6 mr-3 text-beePrimary-normal" />
-                {t('termsOfService.introduction.title')}
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                {t('termsOfService.introduction.content')}
-              </p>
-            </section>
-
             {/* Acceptance of Terms */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.acceptance.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -79,54 +77,29 @@ export default function TermsOfService() {
               </p>
             </section>
 
-            {/* Services Description */}
+            {/* Description of Services */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.services.title')}
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed">
                 {t('termsOfService.services.content')}
               </p>
-              <ul className="space-y-2">
-                {(() => {
-                  const services = t('termsOfService.services.list', { returnObjects: true });
-                  const serviceArray = Array.isArray(services) ? services : [];
-                  return serviceArray.map((service, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-beePrimary-normal rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700">{service}</span>
-                    </li>
-                  ));
-                })()}
-              </ul>
             </section>
 
             {/* User Obligations */}
             <section className="mb-8">
-              <h2 className="flex items-center text-2xl font-bold text-beePrimary-dark mb-4">
-                <UserGroupIcon className="w-6 h-6 mr-3 text-beePrimary-normal" />
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.userObligations.title')}
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed">
                 {t('termsOfService.userObligations.content')}
               </p>
-              <ul className="space-y-2">
-                {(() => {
-                  const obligations = t('termsOfService.userObligations.obligations', { returnObjects: true });
-                  const obligationArray = Array.isArray(obligations) ? obligations : [];
-                  return obligationArray.map((obligation, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-beePrimary-normal rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700">{obligation}</span>
-                    </li>
-                  ));
-                })()}
-              </ul>
             </section>
 
             {/* Intellectual Property */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.intellectualProperty.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -134,30 +107,35 @@ export default function TermsOfService() {
               </p>
             </section>
 
-            {/* Payment Terms */}
+            {/* Privacy */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
-                {t('termsOfService.payment.title')}
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
+                {t('termsOfService.privacy.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {t('termsOfService.payment.content')}
+                {t('termsOfService.privacy.content')}
               </p>
+              <Link 
+                href="/privacy-policy" 
+                className="text-beePrimary-normal hover:text-beePrimary-dark font-medium"
+              >
+                Read our Privacy Policy →
+              </Link>
             </section>
 
             {/* Limitation of Liability */}
             <section className="mb-8">
-              <h2 className="flex items-center text-2xl font-bold text-beePrimary-dark mb-4">
-                <ExclamationTriangleIcon className="w-6 h-6 mr-3 text-amber-500" />
-                {t('termsOfService.liability.title')}
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
+                {t('termsOfService.limitation.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {t('termsOfService.liability.content')}
+                {t('termsOfService.limitation.content')}
               </p>
             </section>
 
             {/* Termination */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.termination.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -167,33 +145,17 @@ export default function TermsOfService() {
 
             {/* Governing Law */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
-                {t('termsOfService.governingLaw.title')}
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
+                {t('termsOfService.governing.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {t('termsOfService.governingLaw.content')}
+                {t('termsOfService.governing.content')}
               </p>
-            </section>
-
-            {/* Contact Information */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
-                {t('termsOfService.contact.title')}
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                {t('termsOfService.contact.content')}
-              </p>
-              <div className="bg-beePrimary-light/10 rounded-xl p-6 border border-beePrimary-light/20">
-                <p className="text-gray-700">
-                  <strong>Email:</strong> contact@beecoders.club<br />
-                  <strong>Telefone:</strong> +351 910 657 140
-                </p>
-              </div>
             </section>
 
             {/* Changes to Terms */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-beePrimary-dark mb-4">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
                 {t('termsOfService.changes.title')}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -201,19 +163,29 @@ export default function TermsOfService() {
               </p>
             </section>
 
+            {/* Contact Information */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-beePrimary-normal mb-4">
+                {t('termsOfService.contact.title')}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                {t('termsOfService.contact.content')}
+              </p>
+            </section>
+          </div>
+
+          {/* Back to home */}
+          <div className="text-center mt-12">
+            <Link 
+              href="/" 
+              className="inline-flex items-center px-6 py-3 bg-beePrimary-normal text-white font-medium rounded-lg hover:bg-beePrimary-dark transition-colors duration-200"
+            >
+              ← Back to Home
+            </Link>
           </div>
         </div>
-
-        {/* Back to Home */}
-        <div className="text-center mt-12">
-          <Link 
-            href="/" 
-            className="inline-flex items-center px-6 py-3 bg-beePrimary-normal text-white rounded-xl hover:bg-beePrimary-dark transition-colors duration-300 font-medium"
-          >
-            ← {t('termsOfService.backToHome')}
-          </Link>
-        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

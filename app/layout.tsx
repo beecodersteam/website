@@ -1,8 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Header from '@/components/layout/header'
-import Footer from '@/components/layout/footer'
 import { I18nProvider } from '@/lib/i18n'
 import { staticMetadata } from '@/lib/seo-i18n'
+import LanguageDetector from '@/components/LanguageDetector'
 import './css/style.css'
 
 export const metadata = staticMetadata;
@@ -41,11 +40,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`font-roboto antialiased bg-white text-gray-900 tracking-tight`}>
+        <LanguageDetector />
         <I18nProvider>
           <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-            <Header />
             {children}
-            <Footer />
             <SpeedInsights />
           </div>
         </I18nProvider>

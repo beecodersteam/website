@@ -4,14 +4,19 @@ import {
   DocumentIcon, 
   TrophyIcon,
 } from "@heroicons/react/24/outline";
-import { useTranslation } from '@/lib/i18n';
+import { useStaticTranslation } from '@/lib/use-static-translation';
 import AnimatedBackground from "../ui/AnimatedBackground";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 
-export default function OurHive() {
-  const { t } = useTranslation('sections');
-  const featuresData = t('hive.features', { returnObjects: true });
+interface OurHiveProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticOurHive({ translations, locale }: OurHiveProps) {
+  const { t } = useStaticTranslation(translations, locale);
+  const featuresData = translations.sections?.hive?.features || [];
 
   const icons = [
     <BookOpenIcon className="w-6 h-6" key="book" />,
@@ -20,7 +25,7 @@ export default function OurHive() {
     <TrophyIcon className="w-6 h-6" key="trophy" />
   ];
 
-  const hiveFeatures = Array.isArray(featuresData) ? featuresData.map((feature, index) => ({
+  const hiveFeatures = Array.isArray(featuresData) ? featuresData.map((feature: any, index: number) => ({
     icon: icons[index],
     title: feature.title,
     description: feature.description,
@@ -81,8 +86,8 @@ export default function OurHive() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">{t('hive.highlight.title')}</p>
-                    <p className="text-xs text-gray-600">{t('hive.highlight.description')}</p>
+                    <p className="text-sm font-semibold text-gray-900">{String(t('hive.highlight.title'))}</p>
+                    <p className="text-xs text-gray-600">{String(t('hive.highlight.description'))}</p>
                   </div>
                 </div>
               </div>
@@ -95,12 +100,14 @@ export default function OurHive() {
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {t('hive.description', { components: [<strong key="b1" />] })}
+                  {t('hive.description', { 
+                    components: [
+                      <strong key="bee-coders" className="text-beePrimary-dark font-bold" />
+                    ]
+                  })}
                 </p>
               </div>
             </div>
-
-           
           </div>
         </div>
 
@@ -141,5 +148,5 @@ export default function OurHive() {
         </div>
       </div>
     </section>
-  );
+  )
 }

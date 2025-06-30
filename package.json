@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve@latest out",
+    "build:start": "npm run build && npm run start",
+    "lint:build:start": "npm run lint:fix && npm run build && npm run start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "clean:imports": "eslint **/*.{ts,tsx} --fix --quiet",

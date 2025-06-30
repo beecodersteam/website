@@ -1,14 +1,27 @@
 import TestimonielasCarousel from "../ui/TestimonialsCarousel";
 import { StarIcon } from '@heroicons/react/24/solid';
-import { useTranslation } from '@/lib/i18n';
+import { type Locale } from '@/lib/static-translations';
 
 import SectionBadge from "../ui/SectionBadge";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import AnimatedBackground from "../ui/AnimatedBackground";
 
-export default function Testimonials() {
-  const { t } = useTranslation('sections');
+interface StaticTestimonialsProps {
+  locale: Locale
+  translations: Record<string, any>
+}
+
+export default function StaticTestimonials({ translations }: StaticTestimonialsProps) {
+  const t = (key: string) => {
+    const keys = key.split('.');
+    let value = translations.sections;
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  };
+
   return (
     <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
       {/* Background decorative elements */}
@@ -35,7 +48,7 @@ export default function Testimonials() {
           variant="centered"
         />
         <SectionSubtitle
-          text={t('testimonials.subtitle', { components: [<strong key="b1" />] })}
+          text={t('testimonials.subtitle')}
           variant="centered"
           animationDelay={300}
         />

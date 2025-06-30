@@ -14,8 +14,8 @@ import {
   ComputerDesktopIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-import MobileLanguageSelector from '../ui/MobileLanguageSelector'
-import { useTranslation } from '@/lib/i18n'
+import StaticMobileLanguageSelector from '../ui/StaticMobileLanguageSelector'
+import { useStaticTranslation } from '@/lib/use-static-translation'
 
 interface MenuItem {
   href: string;
@@ -23,20 +23,25 @@ interface MenuItem {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-export default function MobileMenu() {
+interface MobileMenuProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticMobileMenu({ translations, locale }: MobileMenuProps) {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
-  const { t } = useTranslation('common')
+  const { t } = useStaticTranslation(translations, locale)
 
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
 
   const menuItems: MenuItem[] = [
-    { href: "/#mission", labelKey: "navigation.mission", icon: BuildingOfficeIcon },
-    { href: "/#services", labelKey: "navigation.services", icon: CogIcon },
-    { href: "/#our-hive", labelKey: "navigation.hive", icon: UsersIcon },
-    { href: "/#portfolio", labelKey: "navigation.portfolio", icon: FolderIcon },
-    { href: "/#technologies", labelKey: "navigation.technologies", icon: ComputerDesktopIcon },
-    { href: "/#contact", labelKey: "navigation.contact", icon: ChatBubbleLeftRightIcon },
+    { href: `/${locale}#mission`, labelKey: "common:navigation.mission", icon: BuildingOfficeIcon },
+    { href: `/${locale}#services`, labelKey: "common:navigation.services", icon: CogIcon },
+    { href: `/${locale}#our-hive`, labelKey: "common:navigation.hive", icon: UsersIcon },
+    { href: `/${locale}#portfolio`, labelKey: "common:navigation.portfolio", icon: FolderIcon },
+    { href: `/${locale}#technologies`, labelKey: "common:navigation.technologies", icon: ComputerDesktopIcon },
+    { href: `/${locale}#contact`, labelKey: "common:navigation.contact", icon: ChatBubbleLeftRightIcon },
   ]
 
   // Close mobile menu on click outside
@@ -63,40 +68,26 @@ export default function MobileMenu() {
   // Prevent body scroll when menu is open and handle header backdrop conflict
   useEffect(() => {
     if (mobileNavOpen) {
-      // Simple overflow hidden approach - no position manipulation
       document.body.style.overflow = 'hidden'
       document.documentElement.style.overflow = 'hidden'
       
-      // Remove backdrop-filter from header to prevent conflict
       const header = document.querySelector('header')
       if (header) {
         header.style.backdropFilter = 'none'
-        // ;(header.style as any).webkitBackdropFilter = 'none'
       }
     } else {
-      // Restore scroll
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
       
-      // Restore header backdrop-filter
       const header = document.querySelector('header')
       if (header) {
         header.style.backdropFilter = ''
-        // ;(header.style as any).webkitBackdropFilter = ''
       }
     }
     
     return () => {
-      // Cleanup
       document.body.style.overflow = ''
       document.documentElement.style.overflow = ''
-      
-      // Ensure header backdrop is restored
-      // const header = document.querySelector('header')
-      // if (header) {
-      //   header.style.backdropFilter = ''
-      //   ;(header.style as any).webkitBackdropFilter = ''
-      // }
     }
   }, [mobileNavOpen])
 
@@ -150,7 +141,7 @@ export default function MobileMenu() {
             bottom: 0,
             width: '100vw',
             height: '100vh',
-            willChange: 'transform', // Optimize for animationsorce hardware acceleration
+            willChange: 'transform',
           }}
           onClick={closeMenu} 
         />
@@ -169,8 +160,8 @@ export default function MobileMenu() {
             top: 0,
             right: 0,
             height: '100vh',
-            transform: 'translateZ(0)', // Force hardware acceleration
-            willChange: 'transform', // Optimize for animations
+            transform: 'translateZ(0)',
+            willChange: 'transform',
             isolation: 'isolate'
           }}
           enter="transition-all duration-300 ease-out"
@@ -195,7 +186,7 @@ export default function MobileMenu() {
             {/* Navigation items */}
             <div className="flex-1 overflow-y-auto">
               <ul className="py-2">
-                {menuItems.map((item, _index) => {
+                {menuItems.map((item) => {
                   const IconComponent = item.icon
                   return (
                     <li key={item.href}>
@@ -207,7 +198,7 @@ export default function MobileMenu() {
                         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-beePrimary-light/20 transition-colors duration-200 mr-4">
                           <IconComponent className="w-5 h-5 text-beePrimary-normal transition-colors duration-200" />
                         </div>
-                        <span className="font-medium text-base flex-1">{t(item.labelKey)}</span>
+                        <span className="font-medium text-base flex-1">{String(t(item.labelKey))}</span>
                         <ChevronRightIcon className="w-4 h-4 text-beePrimary-normal opacity-0 group-hover:opacity-100 transition-all duration-200" />
                       </Link>
                     </li>
@@ -221,10 +212,10 @@ export default function MobileMenu() {
               {/* Language selector */}
               <div>
                 <p className="text-sm font-medium text-gray-500 mb-3">Language</p>
-                <MobileLanguageSelector />
+                <StaticMobileLanguageSelector translations={translations} locale={locale} />
               </div>
               
-              {/* Optional: Add contact info or social links */}
+              {/* Footer info */}
               <div className="pt-4">
                 <p className="text-xs text-gray-400 text-center">
                   © 2024 Bee Coders. All rights reserved.

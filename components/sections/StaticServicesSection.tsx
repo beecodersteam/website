@@ -7,56 +7,58 @@ import {
   UsersIcon,
   ArrowRightIcon 
 } from "@heroicons/react/24/outline";
-import { useTranslation } from '@/lib/i18n';
+import { useStaticTranslation } from '@/lib/use-static-translation';
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import AnimatedBackground from "../ui/AnimatedBackground";
 
-export default function ServicesSection() {
-  const { t } = useTranslation('sections');
+interface ServicesProps {
+  translations: Record<string, any>;
+  locale: string;
+}
+
+export default function StaticServicesSection({ translations, locale }: ServicesProps) {
+  const { t } = useStaticTranslation(translations, locale);
 
   const getServiceData = () => {
-    const getFeatures = (key: string) => {
-      const features = t(key, { returnObjects: true });
-      return Array.isArray(features) ? features : [];
-    };
-
+    const servicesData = translations.sections?.services || {};
+    
     return [
       {
         icon: <ComputerDesktopIcon className="w-8 h-8" />,
-        title: t('services.webSystems.title'),
-        description: t('services.webSystems.description'),
-        features: getFeatures('services.webSystems.features')
+        title: servicesData.webSystems?.title || '',
+        description: servicesData.webSystems?.description || '',
+        features: servicesData.webSystems?.features || []
       },
       {
         icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
-        title: t('services.mobileApps.title'),
-        description: t('services.mobileApps.description'),
-        features: getFeatures('services.mobileApps.features')
+        title: servicesData.mobileApps?.title || '',
+        description: servicesData.mobileApps?.description || '',
+        features: servicesData.mobileApps?.features || []
       },
       {
         icon: <PaintBrushIcon className="w-8 h-8" />,
-        title: t('services.uiuxDesign.title'),
-        description: t('services.uiuxDesign.description'),
-        features: getFeatures('services.uiuxDesign.features')
+        title: servicesData.uiuxDesign?.title || '',
+        description: servicesData.uiuxDesign?.description || '',
+        features: servicesData.uiuxDesign?.features || []
       },
       {
         icon: <ChartPieIcon className="w-8 h-8" />,
-        title: t('services.digitalMarketing.title'),
-        description: t('services.digitalMarketing.description'),
-        features: getFeatures('services.digitalMarketing.features')
+        title: servicesData.digitalMarketing?.title || '',
+        description: servicesData.digitalMarketing?.description || '',
+        features: servicesData.digitalMarketing?.features || []
       },
       {
         icon: <GlobeAltIcon className="w-8 h-8" />,
-        title: t('services.nearshore.title'),
-        description: t('services.nearshore.description'),
-        features: getFeatures('services.nearshore.features')
+        title: servicesData.nearshore?.title || '',
+        description: servicesData.nearshore?.description || '',
+        features: servicesData.nearshore?.features || []
       },
       {
         icon: <UsersIcon className="w-8 h-8" />,
-        title: t('services.teamOutsourcing.title'),
-        description: t('services.teamOutsourcing.description'),
-        features: getFeatures('services.teamOutsourcing.features')
+        title: servicesData.teamOutsourcing?.title || '',
+        description: servicesData.teamOutsourcing?.description || '',
+        features: servicesData.teamOutsourcing?.features || []
       }
     ];
   };
@@ -120,7 +122,7 @@ export default function ServicesSection() {
 
                 {/* Features list */}
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature: string, featureIndex: number) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <div className="w-2 h-2 bg-beePrimary-normal rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
