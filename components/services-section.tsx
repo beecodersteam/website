@@ -64,7 +64,7 @@ export default function ServicesSection() {
   const services = getServiceData();
 
   return (
-    <section className="relative bg-beePrimary-normal py-16 lg:py-24 overflow-hidden session">
+    <section className="relative bg-beePrimary-normal py-16 lg:py-24 overflow-hidden">
       <AnimatedBackground
         backgroundColors={{
           from: "from-beeSecondary-normal/10",

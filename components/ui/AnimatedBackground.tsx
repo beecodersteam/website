@@ -5,7 +5,6 @@ import HexagonSVG from './HexagonSVG'
 
 interface AnimatedBackgroundProps {
   hexagonCount?: number
-  enableAnimations?: boolean
   className?: string
   hexagonColor?: string
   backgroundColors?: {
@@ -17,7 +16,6 @@ interface AnimatedBackgroundProps {
 
 const AnimatedBackground = memo(function AnimatedBackground({ 
   hexagonCount = 8, 
-  enableAnimations = true,
   className = "",
   hexagonColor = "bg-beeSecondary-normal",
   backgroundColors = {
@@ -130,18 +128,12 @@ const AnimatedBackground = memo(function AnimatedBackground({
     
   `, [])
 
-  if (!enableAnimations) {
-    return (
-      <div className={`absolute inset-0 overflow-hidden ${className}`}>
-        <div className={`absolute inset-0 bg-gradient-to-br ${backgroundColors.from} ${backgroundColors.via} ${backgroundColors.to}`} />
-      </div>
-    )
-  }
+  
 
   return (
     <>
       <div className={`absolute inset-0 overflow-hidden animated-bg-container ${className}`}>
-        {/* Animated gradient background */}
+        
         <div 
           className={`absolute inset-0 bg-gradient-to-br ${backgroundColors.from} ${backgroundColors.via} ${backgroundColors.to} gradient-bg`}
           style={{ animation: 'gradientShift 15s ease infinite alternate' }}

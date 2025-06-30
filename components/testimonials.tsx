@@ -10,7 +10,7 @@ import AnimatedBackground from "./ui/AnimatedBackground";
 export default function Testimonials() {
   const { t } = useTranslation('sections');
   return (
-    <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden session">
+    <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
       {/* Background decorative elements */}
       <AnimatedBackground
         hexagonCount={8} 

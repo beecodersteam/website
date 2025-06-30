@@ -104,7 +104,7 @@ export default function Portifolio() {
     };
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20 session">
+        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
             {/* Background decorations */}
             
 

@@ -21,6 +21,6 @@
 }
 
 .session {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 160px;
     /* Ajustado para compensar altura do header fixo + espaçamento adicional */
 }

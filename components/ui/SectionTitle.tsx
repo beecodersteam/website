@@ -4,7 +4,7 @@ import { memo } from 'react'
 
 interface SectionTitleProps {
   title: string
-  id?: string
+  id: string
   variant?: 'default' | 'centered' | 'left'
   className?: string
   titleClassName?: string
@@ -30,7 +30,7 @@ const SectionTitle = memo(function SectionTitle({
     <div className={`${alignmentClass} mb-6 ${className}`}>
       {/* Main title */}
       <h2 
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight ${titleClassName} ${id ? 'session' : ''}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight session ${titleClassName} ${id}`}
         {...(id && { id })}
         {...(enableAnimations && {
           'data-aos': 'fade-up',
