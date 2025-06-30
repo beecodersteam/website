@@ -7,7 +7,7 @@ import { FaArrowRight, FaArrowLeft, FaStar, FaQuoteLeft } from "react-icons/fa";
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from '@/lib/i18n';
 
-const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
+const NextArrow = ({currentSlide: _currentSlide, slideCount: _slideCount, ...props}: CustomArrowProps) => (
   <div 
     {...props}
     className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer hidden md:block"
@@ -22,7 +22,7 @@ const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
   </div>
 );
 
-const PrevArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
+const PrevArrow = ({currentSlide: _currentSlide, slideCount: _slideCount, ...props}: CustomArrowProps) => (
   <div 
     {...props}
     className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer hidden md:block"

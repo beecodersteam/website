@@ -195,7 +195,7 @@ export default function MobileMenu() {
             {/* Navigation items */}
             <div className="flex-1 overflow-y-auto">
               <ul className="py-2">
-                {menuItems.map((item, index) => {
+                {menuItems.map((item, _index) => {
                   const IconComponent = item.icon
                   return (
                     <li key={item.href}>
