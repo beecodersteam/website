@@ -14,8 +14,8 @@ import {
   ComputerDesktopIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
+import MobileLanguageSelector from '../ui/MobileLanguageSelector'
 import { useTranslation } from '@/lib/i18n'
-import MobileLanguageSelector from './MobileLanguageSelector'
 
 interface MenuItem {
   href: string;

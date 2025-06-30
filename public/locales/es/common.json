@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "mission": "Misión",
+    "services": "Servicios",
+    "hive": "Colmena",
+    "portfolio": "Portafolio",
+    "technologies": "Tecnologías",
+    "contact": "Contacto"
+  },
+  "cta": {
+    "learnMore": "Saber Más",
+    "getStarted": "Comenzar",
+    "contactUs": "Colaboremos Juntos",
+    "viewProject": "Ver Proyecto",
+    "sendMessage": "Enviar Mensaje"
+  },
+  "common": {
+    "technologies": "Tecnologías",
+    "mainFeatures": "Características Principales",
+    "country": "País",
+    "category": "Categoría",
+    "ourPortfolio": "NUESTRO PORTAFOLIO",
+    "loading": "Cargando...",
+    "error": "Error"
+  }
+}

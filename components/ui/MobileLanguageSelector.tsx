@@ -2,12 +2,14 @@
 
 import { useTranslation } from '@/lib/i18n';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { BR, US } from 'country-flag-icons/react/3x2';
+import { BR, US, ES, FR } from 'country-flag-icons/react/3x2';
 import { useState } from 'react';
 
 const languages = [
   { code: 'en' as const, name: 'English', flag: <US className="w-5 h-5" /> },
-  { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5" /> }, 
+  { code: 'pt' as const, name: 'Português', flag: <BR className="w-5 h-5" /> },
+  { code: 'es' as const, name: 'Español', flag: <ES className="w-5 h-5" /> },
+  { code: 'fr' as const, name: 'Français', flag: <FR className="w-5 h-5" /> },
 ];
 
 export default function MobileLanguageSelector() {

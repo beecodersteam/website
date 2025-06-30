@@ -9,7 +9,6 @@ interface SectionTitleProps {
   className?: string
   titleClassName?: string
   color?: string
-  animatedDivider?: boolean
 }
 
 const SectionTitle = memo(function SectionTitle({
@@ -19,7 +18,6 @@ const SectionTitle = memo(function SectionTitle({
   className = '',
   titleClassName = '',
   color = 'text-beePrimary-dark',
-  animatedDivider = true
 }: SectionTitleProps) {
   const alignmentClass = variant === 'left' ? 'text-left' : 'text-center'
 //   const containerClass = variant === 'centered' ? 'mb-16' : 'mb-12'
@@ -29,7 +27,7 @@ const SectionTitle = memo(function SectionTitle({
       
       {/* Main title */}
       <h2 
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight session ${titleClassName} ${id}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold ${color} mb-6 leading-tight tracking-tight scroll-mt-24 md:scroll-mt-44  ${titleClassName} ${id}`}
         {...(id && { id })}
         {...({
           'data-aos': 'fade-up',
@@ -39,19 +37,17 @@ const SectionTitle = memo(function SectionTitle({
         {title}
       </h2>
       
-      {/* Animated divider */}
-      {animatedDivider && (
-        <div
-          className={`w-24 h-1 bg-gradient-to-r from-beePrimary-normal via-beeSecondary-normal to-beePrimary-normal rounded-full mb-8 ${
-            variant === 'left' ? '' : 'mx-auto'
-          } ${animatedDivider ? 'bg-[length:200%_100%] animate-gradient-x' : ''}`}
-          {...({
-            'data-aos': 'fade-right',
-            'data-aos-duration': '800',
-            'data-aos-delay': '200'
-          })}
-        />
-      )}
+      {/* Animated divider - sempre animado por padrão */}
+      <div
+        className={`w-24 h-1 bg-gradient-to-r from-beePrimary-normal via-beeSecondary-normal to-beePrimary-normal rounded-full mb-8 ${
+          variant === 'left' ? '' : 'mx-auto'
+        } bg-[length:200%_100%] animate-gradient-x`}
+        {...({
+          'data-aos': 'fade-right',
+          'data-aos-duration': '800',
+          'data-aos-delay': '200'
+        })}
+      />
     </div>
   )
 })

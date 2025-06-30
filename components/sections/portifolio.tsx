@@ -10,10 +10,10 @@ import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
 import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
 import TeamPic3 from "@/public/images/projects/mm.jpeg";
 import TeamPic4 from "@/public/images/projects/ajrent.png";
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
-import SectionBadge from "./ui/SectionBadge";
-import AnimatedBackground from "./ui/AnimatedBackground";
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
+import SectionBadge from "../ui/SectionBadge";
+import AnimatedBackground from "../ui/AnimatedBackground";
 
 // Structured portfolio data
 const getPortfolioProjects = (tPortfolio: any) => {
@@ -121,7 +121,6 @@ export default function Portifolio() {
                         title={String(t('portfolio.title'))}
                         id="portfolio"
                         variant="centered"
-                        animatedDivider={true}
                     />
                     <SectionSubtitle
                         text={t('portfolio.subtitle', { components: [<strong key="b1" />] })}

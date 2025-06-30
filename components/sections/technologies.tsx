@@ -19,16 +19,17 @@ import {
   FaLinux,
   FaDigitalOcean,
 } from "react-icons/fa";
-import IconRuby from "./ui/tech/RubyonRails";
-import IconBxlFlutter from "./ui/tech/Flutter";
+import IconRuby from "../ui/tech/RubyonRails";
+import IconBxlFlutter from "../ui/tech/Flutter";
+
+import SectionTitle from "../ui/SectionTitle";
+import SectionSubtitle from "../ui/SectionSubtitle";
 import { useTranslation } from '@/lib/i18n';
-import SectionTitle from "./ui/SectionTitle";
-import SectionSubtitle from "./ui/SectionSubtitle";
 
 export default function Technologies() {
   const { t } = useTranslation('sections');
   return (
-    <section className="relative bg-gradient-to-br from-beePrimary-light to-beePrimary-dark py-8 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-beePrimary-light to-beePrimary-dark py-8">
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="sm:col-span-2" data-aos="slide-right" data-aos-offset="100">
           <SectionTitle
@@ -36,7 +37,6 @@ export default function Technologies() {
             id="technologies"
             variant="left"
             color="text-white"
-            animatedDivider={true}
             className="sm:col-span-4 mb-8"
           />
           <SectionSubtitle
@@ -47,7 +47,7 @@ export default function Technologies() {
             className="sm:col-span-4 mb-8"
           />
         </div>
-        <div className="sm:col-span-2" data-aos="slide-left" data-aos-offset="200">
+        <div className="sm:col-span-2" data-aos="slide-left">
           <div className="grid grid-cols-4 gap-4 sm:grid-cols-4 rounded-lg justify-items-center">
             <FaPhp size={56} color="white" />
             <IconRuby />

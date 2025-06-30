@@ -1,0 +1,219 @@
+{
+    "hero": {
+        "title": "Transformamos",
+        "titleHighlight": "Tu Visión en Realidad",
+        "subtitle": "La <0>Bee Coders</0>, se especializa en transformar tus ideas en soluciones digitales de vanguardia. Sé nuestro socio y construyamos experiencias extraordinarias juntos.",
+        "cta": "Únete a nuestra colmena"
+    },
+    "highlights": {
+        "items": [
+            {
+                "number": "4+",
+                "description": "Países",
+                "subtext": "Expandiendo nuestra presencia globalmente"
+            },
+            {
+                "number": "6+",
+                "description": "Años",
+                "subtext": "De experiencia comprobada en la industria"
+            },
+            {
+                "number": "20+",
+                "description": "Clientes Felices",
+                "subtext": "Alianzas confiables en todo el mundo"
+            },
+            {
+                "number": "30+",
+                "description": "Proyectos",
+                "subtext": "Soluciones entregadas con éxito"
+            }
+        ]
+    },
+    "mission": {
+        "title": "Nuestra Misión",
+        "subtitle": "En <0>Bee Coders</0>, nos dedicamos a empoderar empresas entregando soluciones de software innovadoras y personalizadas. Nuestra misión es transformar tu visión en realidad a través de servicios de desarrollo de alta calidad que se alinean con tus objetivos únicos.",
+        "floatingCard": {
+            "title": "Enfocado en la Calidad",
+            "description": "Excelencia en cada proyecto"
+        },
+        "valuesTitle": "Empoderando la Innovación a Través de la Tecnología",
+        "values": [
+            {
+                "title": "Innovación",
+                "description": "Soluciones de vanguardia que trascienden límites e impulsan el progreso."
+            },
+            {
+                "title": "Excelencia",
+                "description": "Compromiso inquebrantable con la calidad en todos los aspectos de nuestro trabajo."
+            },
+            {
+                "title": "Alianza",
+                "description": "Construyendo relaciones a largo plazo basadas en confianza y colaboración."
+            }
+        ]
+    },
+    "services": {
+        "title": "Nuestros Servicios",
+        "subtitle": "Ofrecemos una gama diversificada de soluciones y servicios especializados diseñados para impulsar tu negocio hacia el escenario digital. Con un equipo de profesionales altamente calificados, estamos comprometidos a entregar excelencia e innovación en cada proyecto.",
+        "webSystems": {
+            "title": "Sistemas Web",
+            "description": "Desarrollo de software integral e innovador adaptado a las necesidades de nuestros clientes.",
+            "features": [
+                "Desarrollo Personalizado",
+                "Arquitectura Escalable",
+                "Tecnologías Modernas",
+                "Optimización de Rendimiento"
+            ]
+        },
+        "mobileApps": {
+            "title": "Aplicaciones Móviles",
+            "description": "Aplicaciones móviles nativas y multiplataforma que ofrecen experiencias excepcionales al usuario.",
+            "features": [
+                "iOS & Android",
+                "Multiplataforma",
+                "Rendimiento Nativo",
+                "Optimización App Store"
+            ]
+        },
+        "uiuxDesign": {
+            "title": "Diseño UI/UX",
+            "description": "Servicios de diseño centrados en el usuario que crean experiencias digitales atractivas e intuitivas.",
+            "features": [
+                "Investigación de Usuario",
+                "Wireframing",
+                "Prototipado",
+                "Sistemas de Diseño"
+            ]
+        },
+        "digitalMarketing": {
+            "title": "Marketing Digital",
+            "description": "Estrategias de marketing digital efectivas y personalizadas enfocadas en la visibilidad online y objetivos de negocio.",
+            "features": [
+                "Optimización SEO",
+                "Redes Sociales",
+                "Estrategia de Contenido",
+                "Analytics & Insights"
+            ]
+        },
+        "nearshore": {
+            "title": "Soluciones Nearshore",
+            "description": "Ofrecemos las ventajas del outsourcing manteniendo tus operaciones comerciales más cerca de casa.",
+            "features": [
+                "Alineación de Zona Horaria",
+                "Compatibilidad Cultural",
+                "Eficiencia de Costos",
+                "Garantía de Calidad"
+            ]
+        },
+        "teamOutsourcing": {
+            "title": "Outsourcing de Equipo",
+            "description": "Actuamos como empleador legal para tus prestadores de servicios, cuidando todos los aspectos de tu fuerza laboral.",
+            "features": [
+                "Equipos Dedicados",
+                "Cumplimiento Legal",
+                "Gestión de RRHH",
+                "Escalamiento Flexible"
+            ]
+        }
+    },
+    "hive": {
+        "title": "Nuestra Colmena",
+        "subtitle": "Una comunidad próspera donde la innovación encuentra la colaboración, empoderando a profesionales de TI a alcanzar su pleno potencial.",
+        "description": "La <0>Bee Coders</0> fomenta un ambiente de aprendizaje continuo y colaboración, permitiendo que profesionales de TI se conecten, compartan conocimiento y crezcan juntos en un escenario digital en constante evolución. A través de entrenamientos especializados, eventos de networking y recursos exclusivos, nos esforzamos por impulsar el desarrollo profesional y mejorar las habilidades de los miembros de nuestra comunidad.",
+        "join": "Únete a la Colmena",
+        "highlight": {
+            "title": "30+ Miembros",
+            "description": "Comunidad en crecimiento"
+        },
+        "features": [
+            {
+                "title": "Aprendizaje Continuo",
+                "description": "Acceso a entrenamientos de vanguardia y programas de desarrollo de habilidades"
+            },
+            {
+                "title": "Red Profesional",
+                "description": "Conéctate con profesionales de TI afines y expertos de la industria"
+            },
+            {
+                "title": "Recursos Exclusivos",
+                "description": "Contenido premium, herramientas y recursos para crecimiento profesional"
+            },
+            {
+                "title": "Crecimiento en la Carrera",
+                "description": "Aprendizaje y mejora continuos para nosotros y nuestros clientes"
+            }
+        ]
+    },
+    "portfolio": {
+        "badge": "Nuestro Portafolio",
+        "title": "Proyectos Destacados",
+        "subtitle": "En nuestro viaje, la búsqueda de la excelencia es constante. Cada proyecto en nuestro portafolio refleja nuestro compromiso con los más altos estándares de calidad.",
+        "description": "Nos enorgullecemos de entregar soluciones de software excepcionales que satisfacen las necesidades únicas de nuestros clientes. Nuestro portafolio refleja nuestro compromiso con la calidad, creatividad y satisfacción del cliente.",
+        "viewProject": "Ver Proyecto",
+        "loading": "Cargando...",
+        "error": "Error al cargar elementos del portafolio"
+    },
+    "technologies": {
+        "title": "Tecnologías que usamos",
+        "subtitle": "Usamos tecnología de vanguardia para entregar soluciones innovadoras a nuestros clientes"
+    },
+    "testimonials": {
+        "title": "Lo Que Dicen Nuestros Clientes",
+        "subtitle": "No solo confíes en nuestra palabra. Ve lo que clientes satisfechos tienen que decir sobre su experiencia trabajando con <0>Bee Coders</0>.",
+        "badge": "Testimonios de Clientes",
+        "verifiedReview": "Reseña de Cliente Verificada"
+    },
+    "contact": {
+        "title": "¿Tienes algo que decir?",
+        "subtitle": "Envíanos un mensaje. Estamos ansiosos por escuchar lo que tienes que decirnos.",
+        "form": {
+            "messagePlaceholder": "Tu mensaje…",
+            "emailPlaceholder": "Tu email…",
+            "sendButton": "Enviar",
+            "successMessage": "✓ ¡Mensaje enviado con éxito! Responderemos pronto.",
+            "defaultMessage": "Responderemos lo más rápido posible.",
+            "validation": {
+                "fillAllFields": "Por favor, completa todos los campos.",
+                "validEmail": "Por favor, ingresa un email válido.",
+                "webhookNotConfigured": "Webhook de Discord no está configurado. Contacta al administrador.",
+                "sendError": "Error al enviar mensaje. Inténtalo de nuevo."
+            }
+        }
+    },
+    "footer": {
+        "description": "Empoderando empresas con soluciones de software innovadoras adaptadas a tus necesidades. ¡Construyamos el futuro juntos!",
+        "followUs": "Síguenos",
+        "services": {
+            "title": "Nuestros Servicios",
+            "items": [
+                "Desarrollo Web",
+                "Aplicaciones Móviles",
+                "Diseño UI/UX",
+                "Marketing Digital",
+                "Outsourcing de Equipo",
+                "Soluciones Nearshore"
+            ]
+        },
+        "company": {
+            "title": "Empresa",
+            "aboutUs": "Sobre Nosotros",
+            "portfolio": "Nuestro Portafolio",
+            "technologies": "Tecnologías",
+            "testimonials": "Testimonios",
+            "hive": "Nuestra Colmena",
+            "contact": "Contacto"
+        },
+        "contact": {
+            "title": "Ponte en Contacto",
+            "description": "¿Listo para iniciar tu próximo proyecto? Hablemos sobre cómo podemos ayudarte a alcanzar tus objetivos.",
+            "whatsapp": "Chat WhatsApp"
+        },
+        "legal": {
+            "allRightsReserved": "Todos los derechos reservados.",
+            "privacyPolicy": "Política de Privacidad",
+            "termsOfService": "Términos de Servicio",
+            "madeWith": "Hecho con",
+            "location": "por Bee Coders"
+        }
+    }
+}

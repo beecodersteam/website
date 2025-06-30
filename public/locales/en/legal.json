@@ -1,0 +1,125 @@
+{
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy is important to us. This policy explains how we collect, use, and protect your information.",
+    "lastUpdated": "Last updated: December 30, 2024",
+    "backToHome": "Back to Home",
+    "introduction": {
+      "title": "Introduction",
+      "content": "At Bee Coders, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "We may collect the following types of information:",
+      "types": [
+        "Personal identification information (name, email address, phone number)",
+        "Technical information (IP address, browser type, operating system)",
+        "Usage data (pages visited, time spent, interactions)",
+        "Communication data (messages sent through our contact forms)"
+      ]
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "content": "We use the collected information for the following purposes:",
+      "purposes": [
+        "To provide and maintain our services",
+        "To communicate with you about projects and updates",
+        "To improve our website and services",
+        "To send marketing communications (with your consent)",
+        "To comply with legal obligations"
+      ]
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. We regularly review and update our security practices to ensure your data remains secure."
+    },
+    "dataSharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your explicit consent, except when required by law or to protect our rights and the safety of others. We may share anonymized, aggregated data for analytical purposes."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "You have the following rights regarding your personal information:",
+      "rights": [
+        "Access: Request access to your personal data",
+        "Rectification: Request correction of inaccurate information",
+        "Erasure: Request deletion of your personal data",
+        "Portability: Request transfer of your data to another service",
+        "Objection: Object to processing of your personal data"
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this Privacy Policy or our data practices, please contact us:"
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last updated' date. We encourage you to review this Privacy Policy periodically."
+    }
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "subtitle": "Please read these terms carefully before using our services. By using our services, you agree to these terms.",
+    "lastUpdated": "Last updated: December 30, 2024",
+    "backToHome": "Back to Home",
+    "introduction": {
+      "title": "Introduction",
+      "content": "These Terms of Service ('Terms') govern your use of Bee Coders' website and services. By accessing or using our services, you agree to be bound by these Terms."
+    },
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+    },
+    "services": {
+      "title": "Our Services",
+      "content": "Bee Coders provides the following services:",
+      "list": [
+        "Custom software development",
+        "Web and mobile application development",
+        "UI/UX design services",
+        "Digital marketing solutions",
+        "Team outsourcing services",
+        "Nearshore development solutions"
+      ]
+    },
+    "userObligations": {
+      "title": "User Obligations",
+      "content": "As a user of our services, you agree to:",
+      "obligations": [
+        "Provide accurate and complete information",
+        "Use our services only for lawful purposes",
+        "Respect intellectual property rights",
+        "Not interfere with or disrupt our services",
+        "Comply with all applicable laws and regulations"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "All content, trademarks, and other intellectual property on our website and in our services are owned by Bee Coders or our licensors. You may not use, reproduce, or distribute any content without our explicit written permission."
+    },
+    "payment": {
+      "title": "Payment Terms",
+      "content": "Payment terms for our services will be specified in individual project agreements. Generally, we require payment according to agreed milestones or monthly billing cycles. Late payments may incur additional fees."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "To the maximum extent permitted by law, Bee Coders shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly."
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "We reserve the right to terminate or suspend your access to our services at any time, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "These Terms shall be governed and construed in accordance with the laws of Portugal, without regard to its conflict of law provisions. Any disputes arising from these Terms will be subject to the exclusive jurisdiction of Portuguese courts."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us:"
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect."
+    }
+  }
+}

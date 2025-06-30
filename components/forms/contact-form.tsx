@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from '@/lib/i18n'
-import AnimatedBackground from './ui/AnimatedBackground'
-import SectionTitle from './ui/SectionTitle'
-import SectionSubtitle from './ui/SectionSubtitle'
+import AnimatedBackground from '../ui/AnimatedBackground'
+import SectionTitle from '../ui/SectionTitle'
+import SectionSubtitle from '../ui/SectionSubtitle'
 
 // Discord Webhook URL hardcoded para build estático
 const WEBHOOK_ID = '1388860914454757519'
@@ -110,7 +110,7 @@ export default function ContactForm() {
     }
   }
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-beePrimary-normal/5 py-12">
+    <section id="contact" className="relative bg-gradient-to-br from-slate-50 via-white to-beePrimary-normal/5 py-12 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6" id="contact">
 
 
@@ -164,9 +164,7 @@ export default function ContactForm() {
                 title={String(t('contact.title'))}
                 id="contact"
                 variant="left"
-                animatedDivider={true}
                 color='text-white'
-                
               />
 
               <SectionSubtitle
