@@ -40,19 +40,16 @@ export default function OurHive() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         
         <SectionTitle
           title={String(t('hive.title'))}
           id="our-hive"
           variant="centered"
-          enableAnimations={true}
           animatedDivider={true}
         />
         <SectionSubtitle
           text={String(t('hive.subtitle'))}
           variant="centered"
-          enableAnimations={true}
           animationDelay={300}
         />
 

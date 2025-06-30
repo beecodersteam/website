@@ -16,9 +16,9 @@ import SectionBadge from "./ui/SectionBadge";
 import AnimatedBackground from "./ui/AnimatedBackground";
 
 // Structured portfolio data
-const getPortfolioProjects = (t: any) => {
+const getPortfolioProjects = (tPortfolio: any) => {
     const getFeatures = (key: string) => {
-        const features = t(key, { returnObjects: true });
+        const features = tPortfolio(key, { returnObjects: true });
         return Array.isArray(features) ? features : [];
     };
 
@@ -26,52 +26,52 @@ const getPortfolioProjects = (t: any) => {
         {
             id: 1,
             title: "Nitelive",
-            category: t('portfolio:projects.nitelive.category') || "Entertainment",
+            category: tPortfolio('projects.nitelive.category') || "Entertainment",
             country: "Netherlands",
             countryFlag: <NL className="w-5 h-4" />,
-            description: t('portfolio:projects.nitelive.description') || "Cross-platform mobile app with real-time location services.",
+            description: tPortfolio('projects.nitelive.description') || "Cross-platform mobile app with real-time location services.",
             image: TeamPic1,
             technologies: ["Flutter", "Java", "Firebase", "Geolocation"],
-            features: getFeatures('portfolio:projects.nitelive.features'),
+            features: getFeatures('projects.nitelive.features'),
             icon: <MusicalNoteIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         },
         {
             id: 4,
             title: "AJ Rent",
-            category: t('portfolio:projects.ajrent.category') || "Mobility",
+            category: tPortfolio('projects.ajrent.category') || "Mobility",
             country: "Portugal",
             countryFlag: <PT className="w-5 h-4" />,
-            description: t('portfolio:projects.ajrent.description') || "Web platform with vehicle catalog and booking management.",
+            description: tPortfolio('projects.ajrent.description') || "Web platform with vehicle catalog and booking management.",
             image: TeamPic4,
             technologies: ["React", "PHP", "REST API", "Payment Gateway"],
-            features: getFeatures('portfolio:projects.ajrent.features'),
+            features: getFeatures('projects.ajrent.features'),
             icon: <TruckIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-dark to-beePrimary-normal"
         },
         {
             id: 2,
             title: "Alfabets",
-            category: t('portfolio:projects.alfabets.category') || "Sporting Bets",
+            category: tPortfolio('projects.alfabets.category') || "Sporting Bets",
             country: "Brazil",
             countryFlag: <BR className="w-5 h-4" />,
-            description: t('portfolio:projects.alfabets.description') || "White label app for betting houses.",
+            description: tPortfolio('projects.alfabets.description') || "White label app for betting houses.",
             image: TeamPic2,
             technologies: ["Flutter", "Ruby", "Firebase", "Geolocation"],
-            features: getFeatures('portfolio:projects.alfabets.features'),
+            features: getFeatures('projects.alfabets.features'),
             icon: <PresentationChartBarIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         },
         {
             id: 3,
             title: "Mulher + Segura",
-            category: t('portfolio:projects.mulhersegura.category') || "Social",
+            category: tPortfolio('projects.mulhersegura.category') || "Social",
             country: "Brazil",
             countryFlag: <BR className="w-5 h-4" />,
-            description: t('portfolio:projects.mulhersegura.description') || "Safety platform for women in vulnerable situations.",
+            description: tPortfolio('projects.mulhersegura.description') || "Safety platform for women in vulnerable situations.",
             image: TeamPic3,
             technologies: ["Flutter", "PHP", "Firebase", "Mercure", "Geolocation"],
-            features: getFeatures('portfolio:projects.mulhersegura.features'),
+            features: getFeatures('projects.mulhersegura.features'),
             icon: <ShieldCheckIcon className="w-6 h-6" />,
             gradient: "from-beePrimary-normal to-beePrimary-dark"
         }
@@ -81,7 +81,8 @@ const getPortfolioProjects = (t: any) => {
 export default function Portifolio() {
     const [activeProject, setActiveProject] = useState<number>(1);
     const { t } = useTranslation('sections');
-    const portfolioProjects = getPortfolioProjects(t);
+    const { t: tPortfolio } = useTranslation('portfolio');
+    const portfolioProjects = getPortfolioProjects(tPortfolio);
     const currentProject = portfolioProjects.find(p => p.id === activeProject) || portfolioProjects[0];
     const projectDisplayRef = useRef<HTMLDivElement>(null);
 
@@ -104,31 +105,27 @@ export default function Portifolio() {
     };
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
-            {/* Background decorations */}
-            
+        // <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
+        <section className="relative bg-gradient-to-br from-white via-white to-beePrimary-normal/0 py-16 lg:py-24 overflow-hidden">
 
+            
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16" data-aos="fade-up">
+                <div className="text-center mb-8" data-aos="fade-up">
                     <SectionBadge
                         icon={<RectangleStackIcon className="w-6 h-6" />}
                         text={t('portfolio.badge')}
                         className="mb-4"
-                        enableAnimations={true}
-                        animationDelay={200}
                     />
                     <SectionTitle
                         title={String(t('portfolio.title'))}
                         id="portfolio"
                         variant="centered"
-                        enableAnimations={true}
                         animatedDivider={true}
                     />
                     <SectionSubtitle
                         text={t('portfolio.subtitle', { components: [<strong key="b1" />] })}
                         variant="centered"
-                        enableAnimations={true}
                         animationDelay={300}
                     />
                 </div>

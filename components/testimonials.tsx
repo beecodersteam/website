@@ -28,20 +28,16 @@ export default function Testimonials() {
           icon={<StarIcon className="w-6 h-6" />}
           text={t('testimonials.badge')}
           className="mb-4"
-          enableAnimations={true}
-          animationDelay={200}
         />
         <SectionTitle
           title={String(t('testimonials.title'))}
           id="testimonials"
           variant="centered"
-          enableAnimations={true}
           animatedDivider={true}
         />
         <SectionSubtitle
           text={t('testimonials.subtitle', { components: [<strong key="b1" />] })}
           variant="centered"
-          enableAnimations={true}
           animationDelay={300}
         />
         

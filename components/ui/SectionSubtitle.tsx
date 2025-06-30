@@ -7,7 +7,6 @@ interface SectionSubtitleProps {
   variant?: 'default' | 'centered' | 'left'
   className?: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  enableAnimations?: boolean
   animationDelay?: number
   color?: string
 }
@@ -17,7 +16,6 @@ const SectionSubtitle = memo(function SectionSubtitle({
   variant = 'centered',
   className = '',
   size = 'lg',
-  enableAnimations = true,
   color = 'text-gray-600',
 }: SectionSubtitleProps) {
   // Size classes mapping
@@ -35,7 +33,7 @@ const SectionSubtitle = memo(function SectionSubtitle({
   return (
     <p 
       className={`${sizeClasses[size]} ${color} leading-relaxed mb-12 font-light ${alignmentClass} ${maxWidthClass} ${className}`}
-      {...(enableAnimations && {
+      {...({
         'data-aos': 'fade-up',
         'data-aos-duration': '700',
         'data-aos-delay': '300'
