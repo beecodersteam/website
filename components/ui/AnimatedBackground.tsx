@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, memo, useState, useEffect } from 'react'
+import HexagonSVG from './HexagonSVG'
 
 interface AnimatedBackgroundProps {
   hexagonCount?: number
@@ -18,7 +19,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
   hexagonCount = 8, 
   enableAnimations = true,
   className = "",
-  hexagonColor = "bg-amber-400/20",
+  hexagonColor = "bg-beeSecondary-normal",
   backgroundColors = {
     from: "from-beeSecondary-lightest/10",
     via: "via-beeSecondary-normal/10", 
@@ -105,14 +106,9 @@ const AnimatedBackground = memo(function AnimatedBackground({
     }
     
     @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(3deg); }
-      100% { transform: translateY(0) rotate(0deg); }
-    }
-    
-    @keyframes waveMotion {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      0% { transform: translateY(30px) rotate(0deg); }
+      50% { transform: translateY(-35px) rotate(3deg); }
+      100% { transform: translateY(30px) rotate(0deg); }
     }
     
     .animated-bg-container {
@@ -124,7 +120,6 @@ const AnimatedBackground = memo(function AnimatedBackground({
       will-change: transform;
       contain: layout style;
       transform-origin: center;
-      clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     }
     
     .gradient-bg {
@@ -132,10 +127,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
       background-size: 200% 200%;
     }
     
-    .wave-effect {
-      will-change: transform;
-      contain: layout style;
-    }
+    
   `, [])
 
   if (!enableAnimations) {
@@ -160,7 +152,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
           {hexagons.map((hex) => (
             <div 
               key={hex.id}
-              className={`absolute ${hexagonColor} w-20 h-20 floating-hexagon`}
+              className="absolute floating-hexagon"
               style={{
                 top: `${hex.top}%`,
                 left: `${hex.left}%`,
@@ -168,18 +160,15 @@ const AnimatedBackground = memo(function AnimatedBackground({
                 animation: `float ${hex.animationDuration}s ease-in-out infinite alternate`,
                 animationDelay: `${hex.animationDelay}s`
               }}
-            />
+            >
+              <HexagonSVG 
+                className={`${hexagonColor.replace('bg-', 'text-')} opacity-10 drop-shadow-md`}
+                size={80}
+              />
+            </div>
           ))}
         </div>
         
-        {/* Wave effect */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/30 to-transparent wave-effect"
-          style={{
-            animation: 'waveMotion 8s ease-in-out infinite',
-            maskImage: 'linear-gradient(to top, transparent, black)',
-          }}
-        />
       </div>
       
       <style jsx>{styles}</style>

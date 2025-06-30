@@ -7,7 +7,6 @@ import {
 import { useTranslation } from '@/lib/i18n';
 import AnimatedBackground from "./ui/AnimatedBackground";
 import SectionTitle from "./ui/SectionTitle";
-import SectionBadge from "./ui/SectionBadge";
 import SectionSubtitle from "./ui/SectionSubtitle";
 
 export default function OurHive() {
@@ -32,7 +31,7 @@ export default function OurHive() {
       {/* Background decorative elements */}
       <AnimatedBackground 
         hexagonCount={8} 
-        hexagonColor="bg-beePrimary-normal/10"
+        hexagonColor="bg-beePrimary-normal"
         backgroundColors={{
           from: "from-beePrimary-normal/10",
           via: "none",

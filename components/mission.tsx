@@ -9,14 +9,13 @@ export default function Mission() {
 
   return (
     <section className="relative bg-gradient-to-br from-white via-gray-50 to-beePrimary-normal/10 py-16 overflow-hidden">
-
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-beePrimary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-beeSecondary-normal rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">          
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <SectionTitle
           title={String(t('mission.title'))}
           id="our-hive"
