@@ -4,6 +4,8 @@ import { useTranslation } from '@/lib/i18n';
 import { ShieldCheckIcon, LockClosedIcon, EyeIcon } from '@heroicons/react/24/outline';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import SectionTitle from '@/components/ui/SectionTitle';
+import SectionSubtitle from '@/components/ui/SectionSubtitle';
 
 export default function PrivacyPolicy() {
   const { t } = useTranslation('legal');
@@ -33,12 +35,17 @@ export default function PrivacyPolicy() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-2xl mb-6 shadow-lg">
             <ShieldCheckIcon className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {t('privacyPolicy.title')}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('privacyPolicy.subtitle')}
-          </p>
+          <SectionTitle
+            title={String(t('privacyPolicy.title'))}
+            id="privacy-policy"
+            variant="centered"
+            className="mb-4"
+          />
+          <SectionSubtitle
+            text={t('privacyPolicy.subtitle')}
+            variant="centered"
+            className="max-w-2xl mx-auto"
+          />
           <p className="text-sm text-gray-500 mt-4">
             {t('privacyPolicy.lastUpdated')}
           </p>

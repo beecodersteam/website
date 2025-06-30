@@ -79,7 +79,6 @@ export default function ServicesSection() {
           id="services"
           variant="centered"
           color="text-white"
-          animatedDivider={true}
         />
         <SectionSubtitle
           text={t('services.subtitle', { components: [<strong key="b1" />] })}

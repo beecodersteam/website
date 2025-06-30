@@ -164,9 +164,7 @@ export default function ContactForm() {
                 title={String(t('contact.title'))}
                 id="contact"
                 variant="left"
-                animatedDivider={true}
                 color='text-white'
-                
               />
 
               <SectionSubtitle

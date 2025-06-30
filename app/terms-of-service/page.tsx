@@ -4,6 +4,8 @@ import { useTranslation } from '@/lib/i18n';
 import { DocumentTextIcon, ExclamationTriangleIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import SectionTitle from '@/components/ui/SectionTitle';
+import SectionSubtitle from '@/components/ui/SectionSubtitle';
 
 export default function TermsOfService() {
   const { t } = useTranslation('legal');
@@ -33,12 +35,20 @@ export default function TermsOfService() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-beePrimary-normal to-beeSecondary-normal rounded-2xl mb-6 shadow-lg">
             <DocumentTextIcon className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {t('termsOfService.title')}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('termsOfService.subtitle')}
-          </p>
+          <SectionTitle
+            title={String(t('termsOfService.title'))}
+            id="terms-of-service"
+            variant="centered"
+            color="text-gray-900"
+            className="mb-4"
+          />
+          <SectionSubtitle
+            text={t('termsOfService.subtitle')}
+            variant="centered"
+            animationDelay={300}
+            color="text-gray-600"
+            className="max-w-2xl mx-auto"
+          />
           <p className="text-sm text-gray-500 mt-4">
             {t('termsOfService.lastUpdated')}
           </p>

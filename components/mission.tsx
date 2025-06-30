@@ -21,7 +21,6 @@ export default function Mission() {
           title={String(t('mission.title'))}
           id="mission"
           variant="centered"
-          animatedDivider={true}
         />
         <SectionSubtitle
           text={t('mission.subtitle', { components: [<strong key="b1" />] })}

@@ -121,7 +121,6 @@ export default function Portifolio() {
                         title={String(t('portfolio.title'))}
                         id="portfolio"
                         variant="centered"
-                        animatedDivider={true}
                     />
                     <SectionSubtitle
                         text={t('portfolio.subtitle', { components: [<strong key="b1" />] })}

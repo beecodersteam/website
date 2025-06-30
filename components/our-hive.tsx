@@ -45,7 +45,6 @@ export default function OurHive() {
           title={String(t('hive.title'))}
           id="our-hive"
           variant="centered"
-          animatedDivider={true}
         />
         <SectionSubtitle
           text={String(t('hive.subtitle'))}

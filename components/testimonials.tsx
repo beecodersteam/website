@@ -33,7 +33,6 @@ export default function Testimonials() {
           title={String(t('testimonials.title'))}
           id="testimonials"
           variant="centered"
-          animatedDivider={true}
         />
         <SectionSubtitle
           text={t('testimonials.subtitle', { components: [<strong key="b1" />] })}

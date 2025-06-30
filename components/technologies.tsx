@@ -36,7 +36,6 @@ export default function Technologies() {
             id="technologies"
             variant="left"
             color="text-white"
-            animatedDivider={true}
             className="sm:col-span-4 mb-8"
           />
           <SectionSubtitle
