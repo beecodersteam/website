@@ -12,9 +12,10 @@ import {
 
 interface StaticFooterProps {
   translations: Record<string, any>
+  locale: string
 }
 
-export default function StaticFooter({ translations }: StaticFooterProps) {
+export default function StaticFooter({ translations, locale }: StaticFooterProps) {
   const t = (key: string) => {
     const keys = key.split('.');
     let value = translations.sections;
@@ -241,11 +242,11 @@ export default function StaticFooter({ translations }: StaticFooterProps) {
                 &copy; {currentYear} Bee Coders Club. {t('footer.legal.allRightsReserved')}
               </p>
               <div className="flex space-x-4 text-sm">
-                <Link href="/privacy-policy" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
+                <Link href={`/${locale}/privacy-policy`} className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
                   {t('footer.legal.privacyPolicy')}
                 </Link>
                 <span className="text-gray-400">•</span>
-                <Link href="/terms-of-service" className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
+                <Link href={`/${locale}/terms-of-service`} className="text-gray-500 hover:text-beePrimary-normal transition-colors duration-300">
                   {t('footer.legal.termsOfService')}
                 </Link>
               </div>

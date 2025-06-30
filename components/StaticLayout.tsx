@@ -21,7 +21,7 @@ export default function StaticLayout({ children, translations, locale }: StaticL
     <>
       <StaticHeader translations={translations} locale={locale} />
       {children}
-      <StaticFooter translations={translations} />
+      <StaticFooter translations={translations} locale={locale} />
     </>
   )
 }
