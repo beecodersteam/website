@@ -7,6 +7,7 @@ import StaticLayout from '@/components/StaticLayout';
 import SectionTitle from '@/components/ui/SectionTitle';
 import SectionSubtitle from '@/components/ui/SectionSubtitle';
 import SectionBadge from '@/components/ui/SectionBadge';
+import { FaComment } from 'react-icons/fa';
 
 interface StaticTermsOfServiceProps {
   locale: Locale;
@@ -259,16 +260,10 @@ export default function StaticTermsOfService({ locale, translations }: StaticTer
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="mailto:contact@beecoders.club"
-                      className="inline-flex items-center px-6 py-3 bg-beePrimary-normal text-white font-medium rounded-lg hover:bg-beePrimary-dark transition-colors duration-200"
-                    >
-                      📧 Email Us
-                    </a>
-                    <a
-                      href="#contact"
+                      href={`/${locale}/#contact`}
                       className="inline-flex items-center px-6 py-3 border-2 border-beePrimary-normal text-beePrimary-normal font-medium rounded-lg hover:bg-beePrimary-normal hover:text-white transition-colors duration-200"
                     >
-                      💬 Contact Form
+                      <FaComment className="mr-2" /> Contact Form
                     </a>
                   </div>
                 </div>
