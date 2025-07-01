@@ -1,9 +1,9 @@
 'use client'
 
-import { memo } from 'react'
+import { memo, ReactNode } from 'react'
 
 interface SectionTitleProps {
-  title: string
+  title: ReactNode
   id: string
   variant?: 'default' | 'centered' | 'left'
   className?: string

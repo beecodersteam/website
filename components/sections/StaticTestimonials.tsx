@@ -6,21 +6,15 @@ import SectionBadge from "../ui/SectionBadge";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import AnimatedBackground from "../ui/AnimatedBackground";
+import { useStaticTranslation } from "@/lib/use-static-translation";
 
 interface StaticTestimonialsProps {
   locale: Locale
   translations: Record<string, any>
 }
 
-export default function StaticTestimonials({ translations }: StaticTestimonialsProps) {
-  const t = (key: string) => {
-    const keys = key.split('.');
-    let value = translations.sections;
-    for (const k of keys) {
-      value = value?.[k];
-    }
-    return value || key;
-  };
+export default function StaticTestimonials({ translations, locale }: StaticTestimonialsProps) {
+  const { t } = useStaticTranslation(translations, locale);
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
@@ -43,12 +37,12 @@ export default function StaticTestimonials({ translations }: StaticTestimonialsP
           className="mb-4"
         />
         <SectionTitle
-          title={String(t('testimonials.title'))}
+          title={t('testimonials.title')}
           id="testimonials"
           variant="centered"
         />
         <SectionSubtitle
-          text={t('testimonials.subtitle')}
+          text={t('testimonials.subtitle', { components: [<strong key="b1" />] })}
           variant="centered"
           animationDelay={300}
         />

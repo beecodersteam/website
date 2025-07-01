@@ -35,11 +35,20 @@ export async function generateMetadata({ params }: PageProps) {
       locale: locale,
       type: 'website',
       siteName: 'Bee Coders',
+      images: [
+        {
+          url: 'https://www.beecoders.club/images/og-beecoders.png',
+          width: 1200,
+          height: 630,
+          alt: 'Bee Coders - Digital Solutions',
+        }
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: siteTitle,
       description: siteDescription,
+      images: ['https://www.beecoders.club/images/og-beecoders.png'],
     },
     alternates: {
       canonical: locale === 'en' ? 'https://www.beecoders.club' : `https://www.beecoders.club/${locale}`,
