@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate:icons": "node scripts/generate-icons.js",
+    "build": "npm run generate:icons && next build",
     "start": "npx serve@latest out",
     "build:start": "npm run build && npm run start",
     "lint:build:start": "npm run lint:fix && npm run build && npm run start",
