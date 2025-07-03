@@ -1,14 +1,16 @@
 "use client"
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { detectBrowserLocale } from '@/lib/seo-i18n'
 
 export default function Home() {  
-  const router = useRouter();
+  const router = useRouter()
 
   useEffect(() => {
-    // Redirecionar para a página localizada em inglês
-    router.replace('/en');
-  }, [router]);
+    // Detect browser language and redirect accordingly
+    const locale = detectBrowserLocale()
+    router.replace(`/${locale}`)
+  }, [router])
 
   // Página de loading simples
   return (
