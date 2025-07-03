@@ -3,6 +3,7 @@ import { I18nProvider } from '@/lib/i18n'
 import { staticMetadata } from '@/lib/seo-i18n'
 import LanguageDetector from '@/components/LanguageDetector'
 import './css/style.css'
+import Pwa from '@/components/Pwa'
 
 export const metadata = staticMetadata;
 
@@ -12,7 +13,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Basic meta tags for client-side SEO enhancement */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/icons/icon-32x32.png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="robots" content="index, follow" />
         
         {/* Language alternatives - will be enhanced client-side */}
@@ -48,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
             {process.env.NODE_ENV === 'production' && <SpeedInsights />}
           </div>
+          <Pwa />
         </I18nProvider>
       </body>
     </html>
