@@ -8,24 +8,24 @@ export const defaultLocale: Locale = 'en';
 // SEO metadata for each language (static for client-side apps)
 export const seoData = {
   en: {
-    title: 'Bee Coders - Software Development & Digital Solutions',
-    description: 'A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence in software development.',
-    keywords: 'beecoders, community, developers, software development, mobile apps, web development, digital solutions',
+    title: 'Bee Coders - Custom Software & Digital Solutions',
+    description: 'Transform your business with Bee Coders. Experts in web development, mobile apps, cloud solutions, UI/UX design and digital transformation.',
+    keywords: 'beecoders, custom software development, web development, mobile apps, cloud solutions, UI/UX design, digital transformation, technology services',
   },
   pt: {
-    title: 'Bee Coders - Desenvolvimento de Software e Soluções Digitais',
-    description: 'Uma comunidade vibrante e colaborativa de desenvolvedores ao redor do mundo, trabalhando juntos para impulsionar a inovação e excelência técnica no desenvolvimento de software.',
-    keywords: 'beecoders, comunidade, desenvolvedores, desenvolvimento de software, aplicativos móveis, desenvolvimento web, soluções digitais',
+    title: 'Bee Coders - Software Sob Medida & Soluções Digitais',
+    description: 'Impulsione seu negócio com a Bee Coders. Especialistas em desenvolvimento web, aplicativos móveis, soluções em nuvem, design UI/UX e transformação digital.',
+    keywords: 'beecoders, desenvolvimento de software sob medida, desenvolvimento web, aplicativos móveis, soluções em nuvem, design UI/UX, transformação digital, serviços de tecnologia',
   },
   es: {
-    title: 'Bee Coders - Desarrollo de Software y Soluciones Digitales',
-    description: 'Una comunidad vibrante y colaborativa de desarrolladores de todo el mundo, trabajando juntos para impulsar la innovación y excelencia técnica en el desarrollo de software.',
-    keywords: 'beecoders, comunidad, desarrolladores, desarrollo de software, aplicaciones móviles, desarrollo web, soluciones digitales',
+    title: 'Bee Coders - Software a Medida y Soluciones Digitales',
+    description: 'Impulsa tu negocio con Bee Coders. Expertos en desarrollo web, apps móviles, soluciones en la nube, diseño UI/UX y transformación digital.',
+    keywords: 'beecoders, desarrollo de software a medida, desarrollo web, aplicaciones móviles, soluciones en la nube, diseño UI/UX, transformación digital, servicios tecnológicos',
   },
   fr: {
-    title: 'Bee Coders - Développement Logiciel et Solutions Numériques',
-    description: 'Une communauté dynamique et collaborative de développeurs du monde entier, travaillant ensemble pour stimuler l\'innovation et l\'excellence technique dans le développement logiciel.',
-    keywords: 'beecoders, communauté, développeurs, développement logiciel, applications mobiles, développement web, solutions numériques',
+    title: 'Bee Coders - Logiciels Sur Mesure et Solutions Numériques',
+    description: 'Dynamisez votre entreprise avec Bee Coders. Experts en développement web, applications mobiles, solutions cloud, design UI/UX et transformation numérique.',
+    keywords: 'beecoders, développement logiciel sur mesure, développement web, applications mobiles, solutions cloud, design UI/UX, transformation numérique, services technologiques',
   }
 };
 

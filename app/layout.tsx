@@ -18,6 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Language alternatives - will be enhanced client-side */}
         <link rel="alternate" hrefLang="en" href="https://www.beecoders.club" />
         <link rel="alternate" hrefLang="pt" href="https://www.beecoders.club?lang=pt" />
+        <link rel="alternate" hrefLang="es" href="https://www.beecoders.club?lang=es" />
+        <link rel="alternate" hrefLang="fr" href="https://www.beecoders.club?lang=fr" />
         <link rel="alternate" hrefLang="x-default" href="https://www.beecoders.club" />
         
         {/* Structured data for SEO */}
