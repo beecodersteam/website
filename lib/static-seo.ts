@@ -20,7 +20,7 @@ export function generateStaticMetadata(locale: Locale = 'en'): Metadata {
       siteName: 'Bee Coders',
       images: [
         {
-          url: '/images/og-beecoders.png',
+          url: '/images/optimized/open-graph/social.jpg',
           width: 1200,
           height: 630,
           alt: seo.title,
@@ -33,7 +33,7 @@ export function generateStaticMetadata(locale: Locale = 'en'): Metadata {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
-      images: ['/images/og-beecoders.png'],
+      images: ['/images/optimized/open-graph/social.jpg'],
     },
     alternates: {
       canonical: locale === 'en' ? SITE_URL : `${SITE_URL}/${locale}`,

@@ -21,7 +21,7 @@ export default function StaticTestimonials({ translations, locale }: StaticTesti
       {/* Background decorative elements */}
       <AnimatedBackground
         hexagonCount={8} 
-        hexagonColor="bg-beePrimary-normal"
+        hexagonColor="purple"
         backgroundColors={{
           from: "from-beePrimary-normal/10",
           via: "none",

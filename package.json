@@ -6,8 +6,6 @@
     "dev": "next dev",
     "prebuild": "npm run generate:icons && npm run optimize:images",
     "build": "next build",
-    "generate:icons": "node scripts/generate-icons.js",
-    "optimize:images": "node scripts/optimize-images.js",
     "start": "npx serve@latest out",
     "build:start": "npm run build && npm run start",
     "lint:build:start": "npm run lint:fix && npm run build && npm run start",
@@ -15,7 +13,9 @@
     "lint:fix": "next lint --fix",
     "clean:imports": "eslint **/*.{ts,tsx} --fix --quiet",
     "clean:deps": "depcheck",
-    "clean:all": "npm run clean:imports && npm run clean:deps && npm run clean:images"
+    "clean:all": "npm run clean:imports && npm run clean:deps",
+    "generate:icons": "node scripts/generate-icons.js",
+    "optimize:images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",

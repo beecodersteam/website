@@ -36,9 +36,9 @@ export default function StaticOurHive({ translations, locale }: OurHiveProps) {
       {/* Background decorative elements */}
       <AnimatedBackground 
         hexagonCount={8} 
-        hexagonColor="bg-beePrimary-normal"
+        hexagonColor="yellow"
         backgroundColors={{
-          from: "from-beePrimary-normal/10",
+          from: "from-beeSecondary-normal/10",
           via: "none",
           to: "to-beePrimary-normal/10"
         }} 

@@ -10,7 +10,7 @@ import SectionSubtitle from '@/components/ui/SectionSubtitle';
 export default function SignUp() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-beePrimary-light/10 via-white to-beeSecondary-light/10 overflow-hidden pt-32 pb-16">
-      <AnimatedBackground hexagonCount={6} hexagonColor="bg-beePrimary-normal" backgroundColors={{ from: 'from-beePrimary-light/10', via: 'via-white/0', to: 'to-beeSecondary-light/10' }} />
+      <AnimatedBackground hexagonCount={6} backgroundColors={{ from: 'from-beePrimary-light/10', via: 'via-white/0', to: 'to-beeSecondary-light/10' }} />
       <div className="relative z-10 w-full max-w-md mx-auto p-8 md:p-10 bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl border border-beePrimary-light/20">
         <SectionSubtitle text="Junte-se à comunidade Bee Coders e tenha acesso a oportunidades e conteúdos exclusivos." size="md" />
         <form className="space-y-5">

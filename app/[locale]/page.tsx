@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
       siteName: 'Bee Coders',
       images: [
         {
-          url: 'https://www.beecoders.club/images/og-beecoders.png',
+          url: 'https://www.beecoders.club/images/optimized/open-graph/social.jpg',
           width: 1200,
           height: 630,
           alt: 'Bee Coders - Digital Solutions',
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: siteTitle,
       description: siteDescription,
-      images: ['https://www.beecoders.club/images/og-beecoders.png'],
+      images: ['https://www.beecoders.club/images/optimized/open-graph/social.jpg'],
     },
     alternates: {
       canonical: locale === 'en' ? 'https://www.beecoders.club' : `https://www.beecoders.club/${locale}`,

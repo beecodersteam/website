@@ -1,12 +1,12 @@
 'use client'
 
 import { useMemo, memo, useState, useEffect } from 'react'
-import HexagonSVG from './HexagonSVG'
+import Image from 'next/image'
 
 interface AnimatedBackgroundProps {
   hexagonCount?: number
   className?: string
-  hexagonColor?: string
+  hexagonColor?: 'purple' | 'yellow' | 'gray'
   backgroundColors?: {
     from: string
     via: string
@@ -17,7 +17,7 @@ interface AnimatedBackgroundProps {
 const AnimatedBackground = memo(function AnimatedBackground({ 
   hexagonCount = 8, 
   className = "",
-  hexagonColor = "bg-beeSecondary-normal",
+  hexagonColor = "purple",
   backgroundColors = {
     from: "from-beeSecondary-lightest/10",
     via: "via-beeSecondary-normal/10", 
@@ -124,43 +124,44 @@ const AnimatedBackground = memo(function AnimatedBackground({
       will-change: auto;
       background-size: 200% 200%;
     }
-    
-    
   `, [])
-
-  
 
   return (
     <>
       <div className={`absolute inset-0 overflow-hidden animated-bg-container ${className}`}>
-        
         <div 
           className={`absolute inset-0 bg-gradient-to-br ${backgroundColors.from} ${backgroundColors.via} ${backgroundColors.to} gradient-bg`}
           style={{ animation: 'gradientShift 15s ease infinite alternate' }}
         />
         
-        {/* Floating hexagons with reduced DOM nodes */}
+        {/* Hexágonos usando PNG otimizado - MÁXIMA PERFORMANCE */}
         <div className="absolute inset-0">
           {hexagons.map((hex) => (
             <div 
               key={hex.id}
-              className="absolute floating-hexagon"
+              className="absolute floating-hexagon opacity-10"
               style={{
                 top: `${hex.top}%`,
                 left: `${hex.left}%`,
+                width: '80px',
+                height: '80px',
                 transform: `rotate(${hex.rotation}deg) scale(${hex.scale}) translateZ(0)`,
                 animation: `float ${hex.animationDuration}s ease-in-out infinite alternate`,
                 animationDelay: `${hex.animationDelay}s`
               }}
             >
-              <HexagonSVG 
-                className={`${hexagonColor.replace('bg-', 'text-')} opacity-10 drop-shadow-md`}
-                size={80}
+              <Image
+                src={`/images/optimized/icons/hexagon-${hexagonColor}.png`}
+                alt=""
+                width={80}
+                height={80}
+                className="w-full h-full drop-shadow-md"
+                priority={false}
+                quality={90}
               />
             </div>
           ))}
         </div>
-        
       </div>
       
       <style jsx>{styles}</style>

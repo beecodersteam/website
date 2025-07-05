@@ -142,7 +142,7 @@ export const staticMetadata: Metadata = {
     siteName: 'Bee Coders',
     images: [
       {
-        url: '/images/og-beecoders.png',
+        url: '/images/optimized/open-graph/social.jpg',
         width: 1200,
         height: 630,
         alt: seoData.en.title,
@@ -155,7 +155,7 @@ export const staticMetadata: Metadata = {
     card: 'summary_large_image',
     title: seoData.en.title,
     description: seoData.en.description,
-    images: ['/images/og-beecoders.png'],
+    images: ['/images/optimized/open-graph/social.jpg'],
   },
   robots: {
     index: true,

@@ -15,7 +15,6 @@ const OPTIMIZED_DIR = path.join(IMAGES_DIR, 'optimized');
 const DIRECTORIES = [
   {
     source: 'bees',
-    output: 'bees',
     maxWidth: 800,
     maxHeight: 600,
     maintainAspect: true,
@@ -23,7 +22,6 @@ const DIRECTORIES = [
   },
   {
     source: 'illustrations',
-    output: 'illustrations',
     maxWidth: 800,
     maxHeight: 600,
     maintainAspect: false,
@@ -31,7 +29,6 @@ const DIRECTORIES = [
   },
   {
     source: 'logos',
-    output: 'logos',
     maxWidth: null,
     maxHeight: null,
     maintainAspect: true,
@@ -40,7 +37,6 @@ const DIRECTORIES = [
   },
   {
     source: 'portifolio',
-    output: 'portifolio',
     maxWidth: 800,
     maxHeight: 600,
     maintainAspect: false,
@@ -48,11 +44,18 @@ const DIRECTORIES = [
   },
   {
     source: 'testimonials',
-    output: 'testimonials',
     maxWidth: 150,
     maxHeight: 150,
     maintainAspect: false,
     description: 'Testimonial images (fixed 150x150)'
+  },
+  {
+    source: 'open-graph',
+    maxWidth: 1200,
+    maxHeight: 630,
+    maintainAspect: false,
+    format: 'jpg',
+    description: 'Open Graph images (fixed 1200x630)'
   }
 ];
 
@@ -103,6 +106,15 @@ async function processImage(inputPath, outputPath, config) {
       
       const finalMetadata = await sharp(outputFilePath).metadata();
       console.log(`  ✅ Optimized: ${baseName}.png (${finalMetadata.width}x${finalMetadata.height})`);
+    } else if (config.format === 'jpg') {
+      // Save as JPEG for Open Graph images
+      const outputFilePath = path.join(outputPath, `${baseName}.jpg`);
+      await processedImage
+        .jpeg({ quality: 80, chromaSubsampling: '4:2:0' })
+        .toFile(outputFilePath);
+      
+      const finalMetadata = await sharp(outputFilePath).metadata();
+      console.log(`  ✅ Optimized: ${baseName}.jpg (${finalMetadata.width}x${finalMetadata.height})`);
     } else {
       // Convert to WebP for all other images
       const outputFilePath = path.join(outputPath, `${baseName}.webp`);
@@ -122,7 +134,7 @@ async function processImage(inputPath, outputPath, config) {
 // Process a directory
 async function processDirectory(config) {
   const sourceDir = path.join(IMAGES_DIR, config.source);
-  const outputDir = path.join(OPTIMIZED_DIR, config.output);
+  const outputDir = path.join(OPTIMIZED_DIR, config.source);
 
   console.log(`\n📁 Processing: ${config.description}`);
   console.log(`   Source: ${path.relative(process.cwd(), sourceDir)}`);

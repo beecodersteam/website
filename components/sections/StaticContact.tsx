@@ -172,7 +172,7 @@ export default function StaticContact({ translations, locale }: StaticContactPro
           {/* Animated background */}
           <AnimatedBackground
             hexagonCount={3}
-            hexagonColor="text-beeSecondary-normal"
+            hexagonColor="yellow"
             backgroundColors={{
               from: "from-beePrimary-normal/10",
               via: "none",
