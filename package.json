@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run optimize-css",
-    "optimize-css": "postcss app/css/style.css -o public/css/style.min.css --env production",
+    "build": "next build",
     "start": "npx serve@latest out",
     "build:start": "npm run build && npm run start",
     "lint:build:start": "npm run lint:fix && npm run build && npm run start",
@@ -13,7 +12,10 @@
     "lint:fix": "next lint --fix",
     "clean:imports": "eslint **/*.{ts,tsx} --fix --quiet",
     "clean:deps": "depcheck",
-    "clean:all": "npm run clean:imports && npm run clean:deps"
+    "clean:all": "npm run clean:imports && npm run clean:deps",
+    "pwa:icons": "node scripts/generate-pwa-icons.js",
+    "pwa:audit": "npx lighthouse http://localhost:3000 --preset=desktop --chrome-flags='--headless' --output=html --output-path=./lighthouse-report.html",
+    "pwa:check": "npm run build && npm run start & sleep 5 && npm run pwa:audit && pkill -f serve"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -21,13 +23,15 @@
     "@vercel/speed-insights": "^1.2.0",
     "aos": "^3.0.0-beta.6",
     "country-flag-icons": "^1.5.19",
+    "cssnano": "^7.0.7",
     "next": "15.3.3",
+    "next-pwa": "^5.6.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-slick": "^0.29.0",
-    "sharp": "^0.33.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "workbox-webpack-plugin": "^7.3.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
@@ -41,6 +45,7 @@
     "eslint-config-next": "15.3.3",
     "eslint-plugin-unused-imports": "^4.1.4",
     "postcss": "^8",
+    "sharp": "^0.34.2",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
