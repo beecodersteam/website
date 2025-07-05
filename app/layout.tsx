@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Organization",
               "name": "Bee Coders",
               "url": "https://www.beecoders.club",
-              "logo": "https://www.beecoders.club/images/logos/logo-horiz-black.png",
+              "logo": "https://www.beecoders.club/images/optimized/logos/logo-horiz-black.png",
               "description": "A vibrant and collaborative community of developers around the world, working together to drive innovation and technical excellence in software development.",
               "sameAs": [
                 "https://github.com/beecoders",

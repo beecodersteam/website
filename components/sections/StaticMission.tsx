@@ -41,7 +41,7 @@ export default function Mission({ translations, locale }: MissionProps) {
               {/* Main image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="/images/pexels-01.jpg"
+                  src="/images/optimized/illustrations/pexels-01.webp"
                   alt="Team collaboration and innovation"
                   width={500}
                   height={500}

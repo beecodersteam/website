@@ -74,7 +74,7 @@ export default function Contact() {
         ],
         footer: {
           text: "Bee Coders Contact Form",
-          icon_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png"
+          icon_url: "https://beecoders.club/images/optimized/logos/logo-horiz-black.png"
         },
         timestamp: new Date().toISOString()
       }
@@ -86,7 +86,7 @@ export default function Contact() {
         },
         body: JSON.stringify({
           username: "Bee Coders Contact Form",
-          avatar_url: "https://your-domain.com/images/logos/mini/logo-horiz-black.png",
+          avatar_url: "https://beecoders.club/images/optimized/logos/logo-horiz-black.png",
           embeds: [embed]
         })
       })

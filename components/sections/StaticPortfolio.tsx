@@ -11,10 +11,10 @@ import {
   TruckIcon 
 } from '@heroicons/react/24/outline';
 import { NL, BR, PT } from 'country-flag-icons/react/3x2';
-import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
-import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
-import TeamPic3 from "@/public/images/projects/mm.jpeg";
-import TeamPic4 from "@/public/images/projects/ajrent.png";
+import TeamPic1 from "@/public/images/optimized/portifolio/nitelive.webp";
+import TeamPic2 from "@/public/images/optimized/portifolio/alfabets.webp";
+import TeamPic3 from "@/public/images/optimized/portifolio/mm.webp";
+import TeamPic4 from "@/public/images/optimized/portifolio/ajrent.webp";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionBadge from "../ui/SectionBadge";
