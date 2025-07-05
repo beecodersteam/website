@@ -233,7 +233,7 @@ export default function StaticPortfolio({ translations, locale }: PortfolioProps
                 {/* Key Features */}
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">{String(t('common:common.mainFeatures'))}</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {Array.isArray(currentProject.features) && currentProject.features.map((feature: string, index: number) => (
                       <div key={index} className="flex items-center space-x-2 p-3 bg-beePrimary-light/10 rounded-xl">
                         <ArrowRightCircleIcon className="w-4 h-4 text-beePrimary-normal flex-shrink-0" />

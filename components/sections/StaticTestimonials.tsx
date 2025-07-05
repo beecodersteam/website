@@ -20,7 +20,7 @@ export default function StaticTestimonials({ translations, locale }: StaticTesti
     <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-beePrimary-normal/5 overflow-hidden">
       {/* Background decorative elements */}
       <AnimatedBackground
-        hexagonCount={8} 
+        hexagonCount={4} 
         hexagonColor="purple"
         backgroundColors={{
           from: "from-beePrimary-normal/10",
