@@ -8,7 +8,7 @@ import BeeLogoVertBlack from '@/public/images/logos/mini/logo-vert-black.png'
 export default function Logo() {
   return (
     <Link href="/" className="block" aria-label="Cruip">
-      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className="w-48" priority />
+      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className="w-48" priority fetchPriority='high' />
     </Link>
   )
 }
