@@ -60,7 +60,7 @@ export default function TestimonielasCarousel() {
       name: `Alexandre Santos`,
       profession: "Director",
       company: "Alfasystems",
-      img: "/images/testimonials/alexandre.jpg",
+      img: "/images/optimized/testimonials/alexandre.webp",
       review: `I was extremely satisfied with Bee Coders' services. They demonstrated exceptional professionalism, delivering high-quality work within the stipulated timeframe. The team was highly competent, agile, and collaborative, making the entire process smooth and efficient. I strongly recommend their services to anyone seeking excellence in software development. Congratulations on the excellent work!`,
       rating: 5,
       projectType: "Enterprise Software Development"
@@ -69,7 +69,7 @@ export default function TestimonielasCarousel() {
       name: `Luis Amado`,
       profession: "Founder",
       company: "Nitelive",
-      img: "/images/testimonials/luis.jpeg",
+      img: "/images/optimized/testimonials/luis.webp",
       review: `Bee Coders was an inspiration from the very beginning of the project. I closely followed the team's progress and can say that the results are outstanding. Despite the project's high level of complexity, the Bee Coders team dedicated themselves from the start with great professionalism and delivered elegant solutions. Not only do I recommend hiring Bee Coders, but I also look forward to engaging their services again for the next phase of this project.`,
       rating: 5,
       projectType: "Complex Web Application"

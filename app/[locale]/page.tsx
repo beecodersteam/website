@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps) {
   // Carrega traduções para metadata
   const translations = loadAllTranslations(locale)
   const siteTitle = translations.common?.seo?.title || 'Bee Coders - Digital Solutions'
-  const siteDescription = translations.common?.seo?.description || 'Transform your vision into reality with innovative digital solutions by Bee Coders'
+  const siteDescription = translations.common?.seo?.description || 'Transform your ideas into reality with innovative digital solutions by Bee Coders'
   
   return {
     title: siteTitle,
