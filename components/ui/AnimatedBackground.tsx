@@ -91,7 +91,7 @@ const AnimatedBackground = memo(function AnimatedBackground({
           }}
         >
           <Image
-            src={`/images/optimized/icons/hexagon-${hexagonColor}.png`}
+            src={`/images/optimized/illustrations/hexagon-${hexagonColor}.png`}
             alt=""
             width={80}
             height={80}

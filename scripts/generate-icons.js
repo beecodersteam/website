@@ -1,6 +1,7 @@
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
+const pngToIco = require('png-to-ico');
 
 const sourceIcon = path.join(__dirname, '../app/icon.png');
 const outputDir = path.join(__dirname, '../public/icons');
@@ -38,44 +39,36 @@ async function generateIcons() {
       console.log(`✅ Gerado: icon-${size}x${size}.png`);
     }
 
-    // Gerar favicon específicos
-    console.log('🔧 Gerando favicons específicos...');
+    // Gerar favicon.ico com múltiplos tamanhos (16, 32, 48, 64)
+    console.log('🔧 Gerando favicon.ico...');
     
-    // favicon-16x16.png
-    await sharp(sourceIcon)
-      .resize(16, 16, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
-      .png()
-      .toFile(path.join(outputDir, 'favicon-16x16.png'));
+    const faviconSizes = [16, 32, 48, 64];
+    const pngBuffers = [];
     
-    // favicon-32x32.png
-    await sharp(sourceIcon)
-      .resize(32, 32, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
-      .png()
-      .toFile(path.join(outputDir, 'favicon-32x32.png'));
-
-    // apple-touch-icon.png (180x180 para iOS)
-    await sharp(sourceIcon)
-      .resize(180, 180, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0 } })
-      .png()
-      .toFile(path.join(outputDir, 'apple-touch-icon.png'));
-
-    // Gerar favicon.ico (usando o ícone 32x32)
-    const favicon32Path = path.join(outputDir, 'icon-32x32.png');
+    // Gerar buffers PNG para cada tamanho
+    for (const size of faviconSizes) {
+      const buffer = await sharp(sourceIcon)
+        .resize(size, size, {
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 0 }
+        })
+        .png()
+        .toBuffer();
+      
+      pngBuffers.push(buffer);
+    }
+    
+    // Converter para ICO
+    const icoBuffer = await pngToIco(pngBuffers);
+    
+    // Salvar favicon.ico no diretório de ícones e na raiz do public
     const faviconIcoPath = path.join(outputDir, 'favicon.ico');
-    
-    // Copiar o favicon para a raiz do public
     const publicFaviconPath = path.join(__dirname, '../public/favicon.ico');
     
-    await sharp(favicon32Path)
-      .resize(32, 32)
-      .png()
-      .toFile(faviconIcoPath);
-    
-    // Copiar para public/favicon.ico
-    fs.copyFileSync(faviconIcoPath, publicFaviconPath);
+    fs.writeFileSync(faviconIcoPath, icoBuffer);
+    fs.writeFileSync(publicFaviconPath, icoBuffer);
 
     console.log('✅ Gerado: favicon.ico');
-    console.log('✅ Gerado: apple-touch-icon.png');
 
     console.log('\n🎉 Todos os ícones foram gerados com sucesso!');
     console.log(`📁 Verifique o diretório: ${outputDir}`);

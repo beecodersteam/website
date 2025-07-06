@@ -36,7 +36,7 @@ const DIRECTORIES = [
     description: 'Logo images (original dimensions, PNG format)'
   },
   {
-    source: 'portifolio',
+    source: 'portfolio',
     maxWidth: 800,
     maxHeight: 600,
     maintainAspect: false,
@@ -188,7 +188,7 @@ async function optimizeImages() {
   console.log('   • Optimized images saved in: public/images/optimized/');
   console.log('\n📁 Directory structure:');
   DIRECTORIES.forEach(config => {
-    console.log(`   • ${config.source}/ → optimized/${config.output}/`);
+    console.log(`   • ${config.source}/ → optimized/${config.source}/`);
   });
   console.log('');
 }

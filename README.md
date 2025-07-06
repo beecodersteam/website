@@ -56,7 +56,7 @@ A vibrant and collaborative community of developers around the world, working to
 
 ```bash
 # Clone the repository
-git clone https://github.com/beecoders/website.git
+git clone https://github.com/beecodersteam/website.git
 cd website
 
 # Install dependencies
