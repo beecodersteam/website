@@ -44,7 +44,13 @@ export const getIconMetadata = () => ({
     other: iconConfig.other,
   },
   manifest: '/manifest.json',
+})
+
+// Configuração de viewport separada (incluindo themeColor)
+export const getViewportConfig = () => ({
   themeColor: '#6B1C8F',
+  width: 'device-width',
+  initialScale: 1,
 })
 
 // Função para verificar se todos os ícones existem

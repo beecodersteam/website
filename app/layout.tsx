@@ -1,33 +1,20 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { I18nProvider } from '@/lib/i18n'
-import { staticMetadata } from '@/lib/seo-i18n'
+import { staticMetadata, staticViewport } from '@/lib/seo-i18n'
 import LanguageDetector from '@/components/LanguageDetector'
 import './css/style.css'
 
 export const metadata = staticMetadata;
+export const viewport = staticViewport;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Basic meta tags for client-side SEO enhancement */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#6B1C8F" />
         
-        {/* PWA manifest */}
-        <link rel="manifest" href="/manifest.json" />
-        
-        {/* Favicons e ícones para navegadores modernos */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        
-        {/* Apple Touch Icons */}
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-        
-        {/* PWA meta tags */}
+        {/* PWA meta tags (não cobertos pelos metadados automáticos) */}
         <meta name="application-name" content="Bee Coders" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -36,9 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#6B1C8F" />
         <meta name="msapplication-tap-highlight" content="no" />
-        
-        {/* Fallback icon */}
-        <link rel="icon" href="/icon.png" />
         
         {/* Language alternatives - will be enhanced client-side */}
         <link rel="alternate" hrefLang="en" href="https://www.beecoders.club" />

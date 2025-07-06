@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { type Locale, locales, loadAllTranslations } from '@/lib/static-translations'
-import { getIconMetadata } from '@/lib/icon-config'
+import { getIconMetadata, getViewportConfig } from '@/lib/icon-config'
 import StaticHome from '@/components/StaticHome'
 
 interface PageProps {
@@ -12,6 +12,11 @@ interface PageProps {
 // Gera páginas estáticas para cada idioma
 export async function generateStaticParams() {
   return locales.map(locale => ({ locale }))
+}
+
+// Gera configuração de viewport
+export function generateViewport() {
+  return getViewportConfig()
 }
 
 // Gera metadata específica para cada idioma

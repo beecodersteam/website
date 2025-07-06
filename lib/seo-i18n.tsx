@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getIconMetadata } from './icon-config';
+import { getIconMetadata, getViewportConfig } from './icon-config';
 
 export type Locale = 'en' | 'pt' | 'es' | 'fr';
 
@@ -171,3 +171,6 @@ export const staticMetadata: Metadata = {
     },
   },
 };
+
+// Static viewport configuration
+export const staticViewport = getViewportConfig();
