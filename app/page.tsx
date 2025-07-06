@@ -1,8 +1,20 @@
 "use client"
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { Metadata } from 'next'
 import { detectBrowserLocale } from '@/lib/seo-i18n'
-import Head from 'next/head'
+import { getIconMetadata, getViewportConfig } from '@/lib/icon-config'
+
+// Metadados específicos para a página raiz usando App Router metadata API
+// NOTA: Estas configurações substituem o uso anterior do Head do next/head
+export const metadata: Metadata = {
+  title: 'Redirecting... | Bee Coders',
+  description: 'Redirecting to your preferred language - Bee Coders',
+  ...getIconMetadata(), // Inclui favicon, apple-touch-icon e outros ícones
+}
+
+// Viewport configuration com themeColor (seguindo padrão App Router)
+export const viewport = getViewportConfig()
 
 export default function Home() {  
   const router = useRouter()
@@ -13,24 +25,14 @@ export default function Home() {
     router.replace(`/${locale}`)
   }, [router])
 
-  // Página de loading simples com ícones garantidos
+  // Página de loading - ícones e theme color definidos via metadata/viewport exports
   return (
-    <>
-      <Head>
-        {/* Garantir ícones na página raiz durante redirecionamento */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <meta name="theme-color" content="#6B1C8F" />
-      </Head>
-      <div className="min-h-screen flex items-center justify-center bg-beePrimary-dark">
-        <div className="text-white text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
-          <p>Redirecting...</p>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-beePrimary-dark">
+      <div className="text-white text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
+        <p>Redirecting...</p>
       </div>
-    </>
+    </div>
   );
 }
 

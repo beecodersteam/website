@@ -1,4 +1,11 @@
 // Configuração centralizada de ícones para todas as páginas do site
+
+// Constantes de tema
+// NOTA: Esta cor também deve ser mantida sincronizada em:
+// - public/manifest.json (theme_color)
+// - tailwind.config.ts (beePrimary.normal)
+export const THEME_COLOR = '#6B1C8F';
+
 export const iconConfig = {
   // Ícones básicos do favicon
   favicon: [
@@ -32,7 +39,7 @@ export const iconLinks = [
   '<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />',
   '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />',
   '<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />',
-  '<meta name="theme-color" content="#6B1C8F" />',
+  `<meta name="theme-color" content="${THEME_COLOR}" />`,
   '<link rel="manifest" href="/manifest.json" />',
 ]
 
@@ -48,7 +55,7 @@ export const getIconMetadata = () => ({
 
 // Configuração de viewport separada (incluindo themeColor)
 export const getViewportConfig = () => ({
-  themeColor: '#6B1C8F',
+  themeColor: THEME_COLOR,
   width: 'device-width',
   initialScale: 1,
 })

@@ -1,6 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { I18nProvider } from '@/lib/i18n'
 import { staticMetadata, staticViewport } from '@/lib/seo-i18n'
+import { THEME_COLOR } from '@/lib/icon-config'
 import LanguageDetector from '@/components/LanguageDetector'
 import './css/style.css'
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="Bee Coders" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#6B1C8F" />
+        <meta name="msapplication-TileColor" content={THEME_COLOR} />
         <meta name="msapplication-tap-highlight" content="no" />
         
         {/* Language alternatives - will be enhanced client-side */}
