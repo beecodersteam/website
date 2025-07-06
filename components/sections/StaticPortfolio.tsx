@@ -8,16 +8,17 @@ import {
   ShieldCheckIcon, 
   RectangleStackIcon, 
   BoltIcon, 
-  TruckIcon 
+  TruckIcon
 } from '@heroicons/react/24/outline';
 import { NL, BR, PT } from 'country-flag-icons/react/3x2';
-import TeamPic1 from "@/public/images/projects/nitelive.jpeg";
-import TeamPic2 from "@/public/images/projects/alfabets.jpeg";
-import TeamPic3 from "@/public/images/projects/mm.jpeg";
-import TeamPic4 from "@/public/images/projects/ajrent.png";
+import TeamPic1 from "@/public/images/optimized/portfolio/nitelive.webp";
+import TeamPic2 from "@/public/images/optimized/portfolio/alfabets.webp";
+import TeamPic3 from "@/public/images/optimized/portfolio/mm.webp";
+import TeamPic4 from "@/public/images/optimized/portfolio/ajrent.webp";
 import SectionTitle from "../ui/SectionTitle";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionBadge from "../ui/SectionBadge";
+import { ArrowRightCircleIcon } from '@heroicons/react/16/solid';
 
 interface PortfolioProps {
   translations: Record<string, any>;
@@ -232,10 +233,10 @@ export default function StaticPortfolio({ translations, locale }: PortfolioProps
                 {/* Key Features */}
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">{String(t('common:common.mainFeatures'))}</h4>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {Array.isArray(currentProject.features) && currentProject.features.map((feature: string, index: number) => (
-                      <div key={index} className="flex items-center space-x-3 p-3 bg-beePrimary-light/10 rounded-xl">
-                        <div className="w-2 h-2 bg-beePrimary-normal rounded-full"></div>
+                      <div key={index} className="flex items-center space-x-2 p-3 bg-beePrimary-light/10 rounded-xl">
+                        <ArrowRightCircleIcon className="w-4 h-4 text-beePrimary-normal flex-shrink-0" />
                         <span className="text-sm font-medium text-gray-700">{feature}</span>
                       </div>
                     ))}

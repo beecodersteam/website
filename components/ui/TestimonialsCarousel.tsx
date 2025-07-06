@@ -3,7 +3,7 @@ import Image from "next/image";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowRight, FaArrowLeft, FaStar, FaQuoteLeft } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft, FaQuoteLeft } from "react-icons/fa";
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from '@/lib/i18n';
 
@@ -60,32 +60,19 @@ export default function TestimonielasCarousel() {
       name: `Alexandre Santos`,
       profession: "Director",
       company: "Alfasystems",
-      img: "/images/testimonials/alexandre.jpg",
+      img: "/images/optimized/testimonials/alexandre.webp",
       review: `I was extremely satisfied with Bee Coders' services. They demonstrated exceptional professionalism, delivering high-quality work within the stipulated timeframe. The team was highly competent, agile, and collaborative, making the entire process smooth and efficient. I strongly recommend their services to anyone seeking excellence in software development. Congratulations on the excellent work!`,
-      rating: 5,
       projectType: "Enterprise Software Development"
     },
     {
       name: `Luis Amado`,
       profession: "Founder",
       company: "Nitelive",
-      img: "/images/testimonials/luis.jpeg",
+      img: "/images/optimized/testimonials/luis.webp",
       review: `Bee Coders was an inspiration from the very beginning of the project. I closely followed the team's progress and can say that the results are outstanding. Despite the project's high level of complexity, the Bee Coders team dedicated themselves from the start with great professionalism and delivered elegant solutions. Not only do I recommend hiring Bee Coders, but I also look forward to engaging their services again for the next phase of this project.`,
-      rating: 5,
       projectType: "Complex Web Application"
     },
   ];
-
-  const renderStars = (rating: number) => {
-    return [...Array(5)].map((_, index) => (
-      <FaStar
-        key={index}
-        className={`${
-          index < rating ? 'text-yellow-400' : 'text-gray-300'
-        } w-5 h-5`}
-      />
-    ));
-  };
 
   return (
     <div className="relative w-full md:max-w-4xl md:mx-auto px-0 md:px-8">
@@ -127,14 +114,6 @@ export default function TestimonielasCarousel() {
                     <p className="text-gray-600 text-xs md:text-sm mb-3">
                       <span className="font-medium">{item.company}</span> • {item.projectType}
                     </p>
-                    
-                    {/* Rating */}
-                    <div className="flex items-center justify-center md:justify-start space-x-1 mb-3 md:mb-4">
-                      {renderStars(item.rating)}
-                      <span className="ml-2 text-xs md:text-sm text-gray-600 font-medium">
-                        {item.rating}.0
-                      </span>
-                    </div>
                   </div>
                 </div>
 

@@ -1,7 +1,7 @@
 {
     "hero": {
         "title": "We Transform",
-        "titleHighlight": "Your Vision into Reality",
+        "titleHighlight": "Your Ideas into Reality",
         "subtitle": "<0>Bee Coders</0>, is specialized in transforming your ideas into cutting-edge digital solutions. Partner with us to build extraordinary experiences together.",
         "cta": "Join our hive"
     },
@@ -31,7 +31,7 @@
     },
     "mission": {
         "title": "Our Mission",
-        "subtitle": "At <0>Bee Coders</0>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your vision into reality through high-quality development services that align with your unique objectives.",
+        "subtitle": "At <0>Bee Coders</0>, we are dedicated to empowering businesses by delivering innovative and tailored software solutions. Our mission is to transform your ideas into reality through high-quality development services that align with your unique objectives.",
         "floatingCard": {
             "title": "Quality Driven",
             "description": "Excellence in every project"

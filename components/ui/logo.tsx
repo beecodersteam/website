@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import BeeLogoHorizWhite from '@/public/images/logos/mini/logo-horiz-white.png'
-import BeeLogoHorizBlack from '@/public/images/logos/mini/logo-horiz-black.png'
-import BeeLogoVertWhite from '@/public/images/logos/mini/logo-vert-white.png'
-import BeeLogoVertBlack from '@/public/images/logos/mini/logo-vert-black.png'
+import BeeLogoHorizWhite from '@/public/images/optimized/logos/logo-horiz-white.png'
+import BeeLogoHorizBlack from '@/public/images/optimized/logos/logo-horiz-black.png'
+import BeeLogoVertWhite from '@/public/images/optimized/logos/logo-vert-white.png'
+import BeeLogoVertBlack from '@/public/images/optimized/logos/logo-vert-black.png'
 
 export default function Logo() {
   return (
     <Link href="/" className="block" aria-label="Cruip">
-      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className="w-48" priority />
+      <Image src={BeeLogoHorizWhite} alt="Bee Logo" className="w-48" priority fetchPriority='high' />
     </Link>
   )
 }

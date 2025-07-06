@@ -28,7 +28,7 @@ interface PageMetadataConfig {
  *   pagePath: 'privacy-policy',
  *   fallbackTitle: 'Privacy Policy',
  *   fallbackDescription: 'Your privacy is important to us...',
- *   ogImage: '/images/og-beecoders.png'
+ *   ogImage: '/images/optimized/open-graph/social.jpg'
  * })
  * 
  * @example
@@ -80,7 +80,7 @@ export function generatePageMetadata({
     : `${baseUrl}/${locale}/${pagePath}`
 
   // Imagem OpenGraph
-  const openGraphImage = ogImage || `${baseUrl}/images/og-beecoders.png`
+  const openGraphImage = ogImage || `${baseUrl}/images/optimized/open-graph/social.jpg`
 
   // Alternate languages
   const alternateLanguages = {

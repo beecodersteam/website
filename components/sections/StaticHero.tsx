@@ -10,7 +10,8 @@ const videos = [
   "backgrounds/office-phone.mp4",
   "backgrounds/office-toghether.mp4",
   "backgrounds/office-agreement.mp4",
-  // "backgrounds/network-blacklines.mp4",
+  "backgrounds/office-laptop.mp4",
+  "backgrounds/keyboard-coffee.mp4",
 ];
 
 interface HeroProps {
