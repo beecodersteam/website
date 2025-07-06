@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { type Locale, locales, loadAllTranslations } from '@/lib/static-translations'
+import { getIconMetadata } from '@/lib/icon-config'
 import StaticHome from '@/components/StaticHome'
 
 interface PageProps {
@@ -26,9 +27,13 @@ export async function generateMetadata({ params }: PageProps) {
   const siteTitle = translations.common?.seo?.title || 'Bee Coders - Digital Solutions'
   const siteDescription = translations.common?.seo?.description || 'Transform your ideas into reality with innovative digital solutions by Bee Coders'
   
+  // Combina metadados de ícones com outros metadados
+  const iconMetadata = getIconMetadata()
+  
   return {
     title: siteTitle,
     description: siteDescription,
+    ...iconMetadata,
     openGraph: {
       title: siteTitle,
       description: siteDescription,
@@ -51,9 +56,9 @@ export async function generateMetadata({ params }: PageProps) {
       images: ['https://www.beecoders.club/images/optimized/open-graph/social.jpg'],
     },
     alternates: {
-      canonical: locale === 'en' ? 'https://www.beecoders.club' : `https://www.beecoders.club/${locale}`,
+      canonical: `https://www.beecoders.club/${locale}`,
       languages: {
-        'en': 'https://www.beecoders.club',
+        'en': 'https://www.beecoders.club/en',
         'pt': 'https://www.beecoders.club/pt',
         'es': 'https://www.beecoders.club/es',
         'fr': 'https://www.beecoders.club/fr',

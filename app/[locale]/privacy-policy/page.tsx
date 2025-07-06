@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { type Locale, locales, loadAllTranslations } from '@/lib/static-translations'
 import { generateLegalMetadata } from '@/lib/page-metadata'
+import { getIconMetadata } from '@/lib/icon-config'
 import StaticPrivacyPolicy from '@/components/StaticPrivacyPolicy'
 
 interface PageProps {
@@ -18,7 +19,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params
   
-  return generateLegalMetadata(locale, 'privacyPolicy', 'privacy-policy')
+  const baseMetadata = generateLegalMetadata(locale, 'privacyPolicy', 'privacy-policy')
+  const iconMetadata = getIconMetadata()
+  
+  return {
+    ...baseMetadata,
+    ...iconMetadata,
+  }
 }
 
 export default async function PrivacyPolicyPage({ params }: PageProps) {

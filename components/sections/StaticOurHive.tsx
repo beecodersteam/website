@@ -66,7 +66,7 @@ export default function StaticOurHive({ translations, locale }: OurHiveProps) {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-black">
                 <div className="aspect-video">
                   <iframe 
-                    src="https://www.youtube.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" 
+                    src="https://www.youtube-nocookie.com/embed/A3JOb_X9_0c?si=6vHMuOCtHEloD06S" 
                     title="Bee Coders Hive Community Video" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen 
