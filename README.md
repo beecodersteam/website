@@ -237,7 +237,7 @@ Bee Coders is a global community of developers passionate about:
 
 ### Connect With Us
 - **Website**: [www.beecoders.club](https://www.beecoders.club)
-- **GitHub**: [@beecoders](https://github.com/beecoders)
+- **GitHub**: [@beecodersteam](https://github.com/beecodersteam)
 - **LinkedIn**: [Bee Coders](https://linkedin.com/company/beecoders)
 
 ---
