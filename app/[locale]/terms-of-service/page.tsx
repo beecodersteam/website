@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { type Locale, locales, loadAllTranslations } from '@/lib/static-translations'
 import { generateLegalMetadata } from '@/lib/page-metadata'
+import { getIconMetadata, getViewportConfig } from '@/lib/icon-config'
 import StaticTermsOfService from '@/components/StaticTermsOfService'
 
 interface PageProps {
@@ -14,11 +15,22 @@ export async function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }
 
+// Gera configuração de viewport
+export function generateViewport() {
+  return getViewportConfig()
+}
+
 // Gera metadata específica para cada idioma
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params
   
-  return generateLegalMetadata(locale, 'termsOfService', 'terms-of-service')
+  const baseMetadata = generateLegalMetadata(locale, 'termsOfService', 'terms-of-service')
+  const iconMetadata = getIconMetadata()
+  
+  return {
+    ...baseMetadata,
+    ...iconMetadata,
+  }
 }
 
 export default async function TermsOfServicePage({ params }: PageProps) {

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { type Locale, locales, loadAllTranslations } from '@/lib/static-translations'
 import { generateLegalMetadata } from '@/lib/page-metadata'
+import { getIconMetadata, getViewportConfig } from '@/lib/icon-config'
 import StaticPrivacyPolicy from '@/components/StaticPrivacyPolicy'
 
 interface PageProps {
@@ -14,11 +15,22 @@ export async function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }
 
+// Gera configuração de viewport
+export function generateViewport() {
+  return getViewportConfig()
+}
+
 // Gera metadata específica para cada idioma
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params
   
-  return generateLegalMetadata(locale, 'privacyPolicy', 'privacy-policy')
+  const baseMetadata = generateLegalMetadata(locale, 'privacyPolicy', 'privacy-policy')
+  const iconMetadata = getIconMetadata()
+  
+  return {
+    ...baseMetadata,
+    ...iconMetadata,
+  }
 }
 
 export default async function PrivacyPolicyPage({ params }: PageProps) {

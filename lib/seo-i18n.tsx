@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getIconMetadata, getViewportConfig } from './icon-config';
 
 export type Locale = 'en' | 'pt' | 'es' | 'fr';
 
@@ -9,23 +10,23 @@ export const defaultLocale: Locale = 'en';
 export const seoData = {
   en: {
     title: 'Bee Coders - Custom Software & Digital Solutions',
-    description: 'Transform your business with Bee Coders. Experts in web development, mobile apps, cloud solutions, UI/UX design and digital transformation.',
-    keywords: 'beecoders, custom software development, web development, mobile apps, cloud solutions, UI/UX design, digital transformation, technology services',
+    description: 'Transform your business with Bee Coders. Experts in systems development, mobile apps, cloud solutions, UI/UX design and digital transformation.',
+    keywords: 'beecoders, custom software development, systems development, mobile apps, cloud solutions, UI/UX design, digital transformation, technology services',
   },
   pt: {
     title: 'Bee Coders - Software Sob Medida & Soluções Digitais',
-    description: 'Impulsione seu negócio com a Bee Coders. Especialistas em desenvolvimento web, aplicativos móveis, soluções em nuvem, design UI/UX e transformação digital.',
-    keywords: 'beecoders, desenvolvimento de software sob medida, desenvolvimento web, aplicativos móveis, soluções em nuvem, design UI/UX, transformação digital, serviços de tecnologia',
+    description: 'Impulsione seu negócio com a Bee Coders. Especialistas em desenvolvimento de sistemas, aplicativos móveis, soluções em nuvem, design UI/UX e transformação digital.',
+    keywords: 'beecoders, desenvolvimento de software sob medida, desenvolvimento de sistemas, aplicativos móveis, sistemas, soluções em nuvem, design UI/UX, transformação digital, serviços de tecnologia',
   },
   es: {
     title: 'Bee Coders - Software a Medida y Soluciones Digitales',
-    description: 'Impulsa tu negocio con Bee Coders. Expertos en desarrollo web, apps móviles, soluciones en la nube, diseño UI/UX y transformación digital.',
-    keywords: 'beecoders, desarrollo de software a medida, desarrollo web, aplicaciones móviles, soluciones en la nube, diseño UI/UX, transformación digital, servicios tecnológicos',
+    description: 'Impulsa tu negocio con Bee Coders. Expertos en desarrollo de sistemas, aplicaciones móviles, soluciones en la nube, diseño UI/UX y transformación digital.',
+    keywords: 'beecoders, desarrollo de software a medida, desarrollo de sistemas, aplicaciones móviles, sistemas, soluciones en la nube, diseño UI/UX, transformación digital, servicios tecnológicos',
   },
   fr: {
     title: 'Bee Coders - Logiciels Sur Mesure et Solutions Numériques',
-    description: 'Dynamisez votre entreprise avec Bee Coders. Experts en développement web, applications mobiles, solutions cloud, design UI/UX et transformation numérique.',
-    keywords: 'beecoders, développement logiciel sur mesure, développement web, applications mobiles, solutions cloud, design UI/UX, transformation numérique, services technologiques',
+    description: 'Dynamisez votre entreprise avec Bee Coders. Experts en développement de systèmes, applications mobiles, solutions cloud, design UI/UX et transformation numérique.',
+    keywords: 'beecoders, développement logiciel sur mesure, développement de systèmes, applications mobiles, systèmes, solutions cloud, design UI/UX, transformation numérique, services technologiques',
   }
 };
 
@@ -135,6 +136,7 @@ export const staticMetadata: Metadata = {
   title: seoData.en.title,
   description: seoData.en.description,
   keywords: seoData.en.keywords,
+  ...getIconMetadata(),
   openGraph: {
     title: seoData.en.title,
     description: seoData.en.description,
@@ -169,3 +171,6 @@ export const staticMetadata: Metadata = {
     },
   },
 };
+
+// Static viewport configuration
+export const staticViewport = getViewportConfig();
